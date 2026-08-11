@@ -69,7 +69,8 @@ Cloudflare 检测到 push 会**自动重新部署**，无需再到 Cloudflare �
 
 ## 可选增强
 - **自定义域名**：Cloudflare 项目页 → Custom domains → 填你的域名（需域名 DNS 托管在 Cloudflare，免费）。
-- **访问统计（免费、无 cookie）**：Cloudflare 侧栏 **Analytics & Logs → Web Analytics** → 按提示把一小段 `<script>` 贴进 `raz_library.html` 的 `<head>` 即可，无需后端。
+- **访问统计（免费、无 cookie、合规）**：`raz_library.html` 的 `<head>` 已预置 Cloudflare Web Analytics 埋点脚本（目前 token 为占位符 `YOUR_TOKEN`）。
+  启用步骤：Cloudflare 侧栏 **Analytics & Logs → Web Analytics → 添加站点（填你的 pages.dev 或自定义域名）** → 复制它给的 beacon 脚本里的 `token` → 替换 `raz_library.html` 中 `data-cf-beacon='{"token": "YOUR_TOKEN"}'` 的 `YOUR_TOKEN` → 重新 `python sync_html.py && python _mkdist.py && git push` 即生效。无需后端。
 - **可用率监控**：https://uptimerobot.com 免费版加一个 URL 监控（5 分钟一次）。
 
 ---
