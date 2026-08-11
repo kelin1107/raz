@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAZ · NF 优先主题周计划（aa + A 级）</title>
+<style>
+:root{--bg:#fbfaf6;--card:#fff;--ink:#2c2a26;--muted:#8a857c;--line:#ece7dd;--accent:#e07a3f;--nf:#2f7d6e;--accent2:#5b7fb0;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+header{padding:28px 22px 18px;border-bottom:3px solid var(--accent);background:linear-gradient(180deg,#fff,#fdf6ee)}
+h1{margin:0 0 6px;font-size:23px}
+.sub{color:var(--muted);font-size:13.5px;max-width:880px}
+.meta{margin-top:10px;font-size:12.5px;color:var(--muted)}
+.meta b{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:18px 16px 60px}
+.tabs{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 6px}
+.tab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:8px 12px;border-radius:20px;cursor:pointer;font-size:13px;transition:.15s}
+.tab:hover{border-color:var(--accent)}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.ovnote{font-size:12.5px;color:var(--muted);margin:6px 2px 4px}
+table.ov{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:6px}
+table.ov th{font-size:12px;color:var(--muted);text-align:left;padding:8px 10px;background:#faf7f1;border-bottom:1px solid var(--line)}
+table.ov td{padding:9px 10px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:top}
+table.ov tr:last-child td{border-bottom:none}
+.wk{white-space:nowrap;font-weight:600}
+.wf{white-space:nowrap;color:var(--accent2);font-weight:600}
+.wb code{background:#f4efe6;padding:1px 5px;border-radius:5px;font-size:11.5px;color:#6b6356}
+.sep{color:var(--line)}
+.mini-exp{display:inline-block;background:#eef6f3;color:var(--nf);border-radius:5px;padding:1px 6px;font-size:11.5px;margin:1px 0}
+.panel{display:none;margin-top:14px}
+.panel.active{display:block}
+.whead{font-size:19px;font-weight:700;margin:18px 0 4px}
+.wintro{color:#5f594f;font-size:13.5px;background:#fff;border-left:4px solid var(--accent2);padding:10px 14px;border-radius:0 8px 8px 0;margin:6px 0 14px}
+.days{display:grid;gap:11px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.day.exp{background:#f3f9f6;border-color:#d8ebd3}
+.dh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px}
+.dnum{background:var(--accent);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:2px 8px}
+.dtitle{font-weight:700;font-size:15px}
+.dlv{font-size:11.5px;color:var(--muted);margin-left:auto}
+.dtag{font-size:11px;border-radius:6px;padding:2px 7px;font-weight:600}
+.dtag.nf{background:#e7f3ef;color:var(--nf)}
+.dtag.f{background:#fdeee2;color:var(--accent)}
+.dtag.exp{background:#d8ebd3;color:#3f7d4f}
+.drow{display:grid;grid-template-columns:108px 1fr;gap:8px;padding:4px 0;font-size:13.3px}
+.drow b{color:#6b6356;font-weight:600}
+.drow span{color:#36322c}
+code{background:#f4efe6;padding:1px 5px;border-radius:5px;font-size:11.5px;color:#6b6356}
+.ext{margin-top:14px;background:#faf7f1;border:1px dashed var(--line);border-radius:10px;padding:10px 13px;font-size:12.5px;color:#5f594f}
+.ext code{margin:0 1px}
+.printbtn{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;border:none;border-radius:24px;padding:11px 18px;font-size:14px;cursor:pointer;box-shadow:0 3px 10px rgba(224,122,63,.35)}
+@media print{body{background:#fff}.printbtn{display:none}.tabs{display:none}.panel{display:block!important;margin-top:18px}header{border-color:#ccc}.day{break-inside:avoid}}
+</style></head>
+<body>
+<header>
+  <h1>📘 RAZ · NF 优先主题周计划</h1>
+  <div class="sub">以 <b>non-fiction（科普）为优先</b> 的 6 周主题循环。每周一个主题族、5 个学习日：每日 1 本核心 NF 书 + 自然/感官活动 + 语言点 + 「画+话」认字贴士。书名/级别/句式自动对齐「RAZ 知识库 v3.10」种子数据（aa + A 级）。</div>
+  <div class="meta">种子 NF 书共 <b>127</b> 本（aa+A）｜ 编号约定：级别+本级顺序号（如 A03 = Level A 第 3 本）｜ 完整 B–Z2 与 SAZ 需从 Raz-Plus 导出补齐</div>
+</header>
+<div class="wrap">
+  <div class="tabs"><button class="tab" data-w="1">🐾 第1周 生命世界</button><button class="tab" data-w="2">🌍 第2周 地球与宇宙</button><button class="tab" data-w="3">⚡ 第3周 物质与能量</button><button class="tab" data-w="4">🧍 第4周 身体与健康</button><button class="tab" data-w="5">👥 第5周 社会与人文</button><button class="tab" data-w="6">🔢 第6周 思维与创意</button></div>
+  <div class="ovnote">🗂 总览（点上方标签看每周详情）：</div>
+  <table class="ov"><thead><tr><th style="width:74px">周</th><th style="width:96px">主题族</th><th>每日核心书 / 实验</th></tr></thead><tbody><tr><td class="wk">🐾 W1</td><td class="wf">生命世界</td><td class="wb"><code>AA60</code> The Zoo <span class='sep'>·</span> <code>A03</code> The Big Cat <span class='sep'>·</span> <code>A26</code> This Insect <span class='sep'>·</span> <code>AA14</code> The Plant <span class='sep'>·</span> <code>A06</code> What Lives Here?</td></tr><tr><td class="wk">🌍 W2</td><td class="wf">地球与宇宙</td><td class="wb"><code>AA08</code> Water <span class='sep'>·</span> <code>AA09</code> Spring <span class='sep'>·</span> <code>AA12</code> Winter <span class='sep'>·</span> <code>A12</code> Spring Weather <span class='sep'>·</span> <code>AA13</code> The Ocean</td></tr><tr><td class="wk">⚡ W3</td><td class="wf">物质与能量</td><td class="wb"><code>A46</code> Move It! <span class='sep'>·</span> <code>A37</code> Car Parts <span class='sep'>·</span> <code>A29</code> Going Places <span class='sep'>·</span> <span class="mini-exp">🔬实验日 · 沉与浮</span> <span class='sep'>·</span> <span class="mini-exp">🔬实验日 · 磁铁寻宝</span></td></tr><tr><td class="wk">🧍 W4</td><td class="wf">身体与健康</td><td class="wb"><code>A74</code> My Body <span class='sep'>·</span> <code>A86</code> My Face <span class='sep'>·</span> <code>A52</code> This Looks <span class='sep'>·</span> <code>A41</code> This Tastes <span class='sep'>·</span> <code>A67</code> Clean, Not Clean</td></tr><tr><td class="wk">👥 W5</td><td class="wf">社会与人文</td><td class="wb"><code>AA61</code> The School <span class='sep'>·</span> <code>AA59</code> The Supermarket <span class='sep'>·</span> <code>AA68</code> The Subway <span class='sep'>·</span> <code>A47</code> Our Apartment Building <span class='sep'>·</span> <code>A73</code> I Save Money</td></tr><tr><td class="wk">🔢 W6</td><td class="wf">思维与创意</td><td class="wb"><code>AA26</code> Red <span class='sep'>·</span> <code>AA29</code> One <span class='sep'>·</span> <code>AA03</code> Jump Over <span class='sep'>·</span> <code>A16</code> Shapes in Nature <span class='sep'>·</span> <code>A94</code> Opposites</td></tr></tbody></table>
+  <div class="panel" id="w1">
+    <div class="whead">🐾 第 1 周 · 生命世界</div>
+    <p class="wintro">动物与植物是低龄孩子最可能主动观察的对象。这一周把动物园、农场、昆虫、植物都变成「活教材」，用五感去碰真实世界，再回到书里巩固动物名称和简单句型。</p>
+    <div class="days"><div class="day">
+    <div class="dh"><span class="dnum">Day 1</span><span class="dtitle">The Zoo</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 动物认知</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA60</code> The Zoo（Level aa，句式：动物认知）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>去动物园/看动物绘本，玩「动物模仿秀」(学动物走/叫)；在家用动物玩偶排一排。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>动物名称词 zoo / lion / monkey / elephant，+ 句型「I see a ___.」</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一种最喜欢的动物园动物，标英文名，做「我的动物园单词卡」。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 2</span><span class="dtitle">The Big Cat</span><span class="dtag nf">NF 科普</span><span class="dlv">A · 动物认知</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A03</code> The Big Cat（Level A，句式：动物认知）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>对比大猫(狮/虎)和小猫，找毛茸茸的图或视频；用纸箱做一只「猫窝」。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>大小对比 big / little，猫科词 cat / lion / tiger。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一只大猫，写「Big cat」。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 3</span><span class="dtitle">This Insect</span><span class="dtag nf">NF 科普</span><span class="dlv">A · This句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A26</code> This Insect（Level A，句式：This句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>小区/公园「昆虫探索」，用放大镜看蚂蚁、瓢虫——只观察不抓。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>句型「This is a ___.」(This is an insect.)，词 insect / bug。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一只小虫，配「This is a bug.」</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 4</span><span class="dtitle">The Plant</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 综合</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA14</code> The Plant（Level aa，句式：综合）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>种一颗绿豆在湿棉花里，每天观察记录；或去菜园看真植物。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>植物词 plant / leaf / flower / root，+ 「I see ___.」</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画发芽的植物，标 root / leaf / flower。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 5</span><span class="dtitle">What Lives Here?</span><span class="dtag nf">NF 科普</span><span class="dlv">A · What句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A06</code> What Lives Here?（Level A，句式：What句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>聊「谁住在这里」——树洞 / 洞穴 / 鸟窝；用积木搭一个「家」给小动物。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>提问「What lives here?」，栖息地词 tree / cave / nest。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一个动物的家，写「Home」。</span></div>
+  </div></div>
+    <div class="ext"><b>📚 本族延伸阅读（26 本，从总表挑）：</b> <code>A01</code> Pond Animals、<code>A04</code> The Forest、<code>A07</code> Baby Animals、<code>A08</code> I Love Flowers、<code>A09</code> Hamster Home、<code>A11</code> Bird Goes Home、<code>A13</code> Vegetables、<code>A15</code> Hello, Butterfly、<code>A19</code> Rabbits、<code>A28</code> Fruit、<code>A51</code> Time for Eggs、<code>A55</code> A Fish Sees、<code>A98</code> This Lizard、<code>AA01</code> Farm Animals、<code>AA04</code> Pets、<code>AA05</code> Plains Animals、<code>AA06</code> Rainforest Animals、<code>AA15</code> The Chicken、<code>AA16</code> These Birds、<code>AA19</code> Animals Nap、<code>AA41</code> Counting Bugs、<code>AA42</code> One Insect、<code>AA44</code> The Street、<code>AA45</code> City Street、<code>AA55</code> The Garden、<code>AA83</code> My Garden</div>
+  </div><div class="panel" id="w2">
+    <div class="whead">🌍 第 2 周 · 地球与宇宙</div>
+    <p class="wintro">天气、季节、水——都是出门就能感知的科普。这一周用玩水盆、捡落叶、做天气表，把抽象的自然现象变成孩子手里的材料。</p>
+    <div class="days"><div class="day">
+    <div class="dh"><span class="dnum">Day 1</span><span class="dtitle">Water</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 天气水句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA08</code> Water（Level aa，句式：天气水句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>玩水感官盆(杯子/漏斗/海绵)，感受水的流动；聊「水在哪里」。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>water / rain / river / ocean，+ 「I see water.」</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一片水(河/海)，标 water。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 2</span><span class="dtitle">Spring</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 季节句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA09</code> Spring（Level aa，句式：季节句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>春游找新芽、花；用捡来的花瓣树叶做拼贴画。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>spring / warm / flower / green。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画春天，写「Spring」。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 3</span><span class="dtitle">Winter</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 季节句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA12</code> Winter（Level aa，句式：季节句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>聊冬天(冷/雪/穿厚)，没有雪就用蓝白手工做「雪人」。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>winter / cold / snow / white。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画雪人，标 snow。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 4</span><span class="dtitle">Spring Weather</span><span class="dtag nf">NF 科普</span><span class="dlv">A · 天气水句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A12</code> Spring Weather（Level A，句式：天气水句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>做「一周天气表」，每天画晴/雨/云；对应书里春雨。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>rain / cloud / wind / sun，+ 「It is ___.」</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画今天的天气，写天气词。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 5</span><span class="dtitle">The Ocean</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 天气水句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA13</code> The Ocean（Level aa，句式：天气水句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>海边/湖边捡石头贝壳(或水盆+蓝布模拟)，聊海洋动物。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>ocean / fish / wave / shell。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画大海，标 ocean。</span></div>
+  </div></div>
+    <div class="ext"><b>📚 本族延伸阅读（9 本，从总表挑）：</b> <code>A17</code> Spring and Fall、<code>A18</code> The Rainstorm、<code>AA07</code> The Coast、<code>AA10</code> Summer、<code>AA11</code> It Is Fall、<code>AA63</code> Summer Camp、<code>AA64</code> Summer Picnics、<code>AA65</code> The Post Office、<code>AA69</code> At the Lake</div>
+  </div><div class="panel" id="w3">
+    <div class="whead">⚡ 第 3 周 · 物质与能量</div>
+    <p class="wintro">提醒：aa+A 级里「物质与能量」主题的 NF 书只有 3 本(都是交通工具/力)，科普密度偏低。这一周用 3 本核心书打底，再加 2 个动手实验日(沉浮、磁铁)补上「做科学」的体验——正好对应你说的「科普词汇最稳扎稳打」。</p>
+    <div class="days"><div class="day">
+    <div class="dh"><span class="dnum">Day 1</span><span class="dtitle">Move It!</span><span class="dtag nf">NF 科普</span><span class="dlv">A · 综合</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A46</code> Move It!（Level A，句式：综合）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>推/拉小车、滚球，感受「动起来」；聊什么让东西动。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>move / push / pull / roll。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一辆会动的小车，写「Move it!」</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 2</span><span class="dtitle">Car Parts</span><span class="dtag nf">NF 科普</span><span class="dlv">A · 综合</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A37</code> Car Parts（Level A，句式：综合）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>玩玩具车，指认轮子/门/窗；用纸盒做一辆「车」贴轮子。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>wheel / door / window / car。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画车，标 wheel / door。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 3</span><span class="dtitle">Going Places</span><span class="dtag nf">NF 科普</span><span class="dlv">A · 综合</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A29</code> Going Places（Level A，句式：综合）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>聊怎么去不同地方(走/车/公交)；用积木搭「路」和「站」。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>go / car / bus / walk，+ 「We go ___.」</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一种交通工具，写它的名。</span></div>
+  </div><div class="day exp">
+      <div class="dh"><span class="dnum">Day 4</span><span class="dtitle">🔬 实验日 · 沉与浮</span><span class="dtag exp">动手实验</span></div>
+      <div class="drow"><b>🌿 活动</b><span>碗里装水，放积木/石头/塑料玩具，先猜沉/浮再试。</span></div>
+      <div class="drow"><b>🔤 语言点</b><span>float / sink / heavy / light。</span></div>
+      <div class="drow"><b>✏️ 画+话认字</b><span>画「浮起来」和「沉下去」两样东西。</span></div>
+    </div><div class="day exp">
+      <div class="dh"><span class="dnum">Day 5</span><span class="dtitle">🔬 实验日 · 磁铁寻宝</span><span class="dtag exp">动手实验</span></div>
+      <div class="drow"><b>🌿 活动</b><span>用磁铁吸硬币/回形针/积木，分「能吸/不能吸」。</span></div>
+      <div class="drow"><b>🔤 语言点</b><span>magnet / metal / stick。</span></div>
+      <div class="drow"><b>✏️ 画+话认字</b><span>画磁铁和它能吸的东西。</span></div>
+    </div></div>
+    <div class="ext">本族 NF 书已全部纳入本周核心。</div>
+  </div><div class="panel" id="w4">
+    <div class="whead">🧍 第 4 周 · 身体与健康</div>
+    <p class="wintro">身体、五感、卫生——最贴近孩子自己的科普。这一周用照镜子、味觉小尝、洗手步骤图，把「我的身体」变成可说的英语+可画的认字素材。</p>
+    <div class="days"><div class="day">
+    <div class="dh"><span class="dnum">Day 1</span><span class="dtitle">My Body</span><span class="dtag nf">NF 科普</span><span class="dlv">A · My句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A74</code> My Body（Level A，句式：My句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>唱/指「头肩膝趾」；照镜子指身体部位。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>句型「My ___」(My head / arms / legs)，body 词。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画自己，标身体部位(头/手/脚)。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 2</span><span class="dtitle">My Face</span><span class="dtag nf">NF 科普</span><span class="dlv">A · My句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A86</code> My Face（Level A，句式：My句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>照镜子认五官；用面团/黏土做一张脸。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>句型「My ___」(My eyes / nose / mouth)，face 词。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画自画像，标 eyes / nose / mouth。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 3</span><span class="dtitle">This Looks</span><span class="dtag nf">NF 科普</span><span class="dlv">A · This句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A52</code> This Looks（Level A，句式：This句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>视觉游戏——看彩色卡/窗外，说「This looks red / big」。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>句型「This looks ___.」，看/颜色词 look / red / blue。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一样「看起来___」的东西。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 4</span><span class="dtitle">This Tastes</span><span class="dtag nf">NF 科普</span><span class="dlv">A · This句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A41</code> This Tastes（Level A，句式：This句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>味觉小尝(苹果/柠檬/盐)，说甜/酸/咸——注意不过敏。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>句型「This tastes ___.」，sweet / sour / salty。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一种味道食物，写味道词。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 5</span><span class="dtitle">Clean, Not Clean</span><span class="dtag nf">NF 科普</span><span class="dlv">A · Not反义句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A67</code> Clean, Not Clean（Level A，句式：Not反义句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>洗手步骤图(湿/搓/冲/擦)；给玩具「洗澡」区分干净/脏。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>clean / dirty，+ 「Clean, not dirty.」反义词。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画「干净的手」和「脏的手」。</span></div>
+  </div></div>
+    <div class="ext"><b>📚 本族延伸阅读（9 本，从总表挑）：</b> <code>A35</code> This Feels、<code>A42</code> What Do I Hear?、<code>A50</code> This Sounds、<code>A76</code> My Hair、<code>A77</code> Athletes、<code>A83</code> Muscles、<code>A89</code> We Can Make Sounds、<code>A93</code> This Smells!、<code>AA77</code> This Kitchen</div>
+  </div><div class="panel" id="w5">
+    <div class="whead">👥 第 5 周 · 社会与人文</div>
+    <p class="wintro">学校、超市、地铁、家——孩子每天穿行其间的「社会地图」。这一周用角色扮演和观察，把地点词和「I / We」句型变成生活用语。</p>
+    <div class="days"><div class="day">
+    <div class="dh"><span class="dnum">Day 1</span><span class="dtitle">The School</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 场景认知</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA61</code> The School（Level aa，句式：场景认知）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>角色扮演「上学」——书包/老师/同学；画自己的学校。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>school / teacher / friend / book。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画学校，标 school。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 2</span><span class="dtitle">The Supermarket</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 场景认知</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA59</code> The Supermarket（Level aa，句式：场景认知）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>超市「购物清单」游戏——画 3 样要买的，找货架；数一数。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>supermarket / food / cart，+ 物品英文名。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画购物清单(3 样)，标英文名。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 3</span><span class="dtitle">The Subway</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 场景认知</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA68</code> The Subway（Level aa，句式：场景认知）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>坐地铁/公交观察站名和车厢；用纸条做「车票」。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>subway / train / station / stop。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一站地铁，标 station。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 4</span><span class="dtitle">Our Apartment Building</span><span class="dtag nf">NF 科普</span><span class="dlv">A · 场景认知</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A47</code> Our Apartment Building（Level A，句式：场景认知）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>聊「我们住哪里」——楼层/邻居/电梯；用积木搭楼房。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>building / floor / home。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画自己的家，标 home。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 5</span><span class="dtitle">I Save Money</span><span class="dtag nf">NF 科普</span><span class="dlv">A · I句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A73</code> I Save Money（Level A，句式：I句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>存钱罐游戏——投币说「I save money」；聊想买什么。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>句型「I ___」(I save / I buy)，money / coin。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画存钱罐，写「I save」。</span></div>
+  </div></div>
+    <div class="ext"><b>📚 本族延伸阅读（11 本，从总表挑）：</b> <code>A43</code> The Mall、<code>A79</code> Safe, Not Safe、<code>A87</code> All Kinds of Faces、<code>AA02</code> Go, Go, Go、<code>AA46</code> The City、<code>AA47</code> The Playground、<code>AA62</code> The Classroom、<code>AA70</code> The Backyard、<code>AA71</code> My School Bus、<code>AA80</code> We Build、<code>AA99</code> The Market</div>
+  </div><div class="panel" id="w6">
+    <div class="whead">🔢 第 6 周 · 思维与创意</div>
+    <p class="wintro">颜色、数字、方位、形状、反义词——这些是 RAZ 在低级别里 NF 密度最高的一类(49 本)。这一周把它们全变成「出门就能找」的游戏，词汇最稳扎稳打。</p>
+    <div class="days"><div class="day">
+    <div class="dh"><span class="dnum">Day 1</span><span class="dtitle">Red</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 颜色句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA26</code> Red（Level aa，句式：颜色句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>自然/家里「找红色」——红叶/红花/红车；收集红色物。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>red，+ 颜色词(红/red)。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一样红色的东西，标 red。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 2</span><span class="dtitle">One</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 数字句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA29</code> One（Level aa，句式：数字句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>数步数/数石头/数豆荚——从 1 数起；用手指比「1」。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>one / two / three… 数字，+ 数数。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画 1 个苹果，写「One」。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 3</span><span class="dtitle">Jump Over</span><span class="dtag nf">NF 科普</span><span class="dlv">aa · 介词反义</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>AA03</code> Jump Over（Level aa，句式：介词反义）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>身体游戏——jump over / under 枕头；用玩具做「越过/钻过」。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>over / under / in / out 方位词。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画「跳过」一个东西。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 4</span><span class="dtitle">Shapes in Nature</span><span class="dtag nf">NF 科普</span><span class="dlv">A · Shapes句式</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A16</code> Shapes in Nature（Level A，句式：Shapes句式）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>自然里找形状——圆石/方砖/三角叶；拓印形状。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>circle / square / triangle，+ 形状词。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一个自然里的形状。</span></div>
+  </div><div class="day">
+    <div class="dh"><span class="dnum">Day 5</span><span class="dtitle">Opposites</span><span class="dtag nf">NF 科普</span><span class="dlv">A · 介词反义</span></div>
+    <div class="drow"><b>📖 今日书</b><span><code>A94</code> Opposites（Level A，句式：介词反义）</span></div>
+    <div class="drow"><b>🌿 活动</b><span>反义词动作——big/small、up/down、in/out；照镜子做对比。</span></div>
+    <div class="drow"><b>🔤 语言点</b><span>big/little、up/down、hot/cold 反义词对。</span></div>
+    <div class="drow"><b>✏️ 画+话认字</b><span>画一对反义词(大/小)。</span></div>
+  </div></div>
+    <div class="ext"><b>📚 本族延伸阅读（44 本，从总表挑）：</b> <code>A14</code> Fruit Colors、<code>A20</code> Snake Colors、<code>A21</code> I See My Colors、<code>A22</code> Bird Colors、<code>A23</code> Bedtime Counting、<code>A24</code> Carlos Counts Kittens、<code>A25</code> Maria Counts Pumpkins、<code>A44</code> All Kinds of Buttons、<code>A60</code> I Can、<code>A68</code> Building with Blocks、<code>A90</code> In and Out、<code>A91</code> Up and Down、<code>A95</code> Hot and Cold、<code>AA20</code> Colorful eggs、<code>AA21</code> Purple、<code>AA22</code> Yellow、<code>AA23</code> Blue、<code>AA24</code> Green、<code>AA25</code> Orange、<code>AA27</code> White、<code>AA28</code> Black、<code>AA30</code> Two、<code>AA31</code> Three、<code>AA32</code> Four、<code>AA33</code> Five、<code>AA34</code> Six、<code>AA35</code> Seven、<code>AA36</code> Eight、<code>AA37</code> Nine、<code>AA38</code> Ten、<code>AA39</code> Eleven、<code>AA40</code> Twelve、<code>AA43</code> Counting Letters、<code>AA67</code> On an Airplane、<code>AA73</code> Picking Apples、<code>AA91</code> Big、<code>AA92</code> Little、<code>AA93</code> Under、<code>AA94</code> On、<code>AA95</code> In、<code>AA96</code> Out、<code>AA97</code> Off、<code>AA98</code> Over、<code>AA100</code> These Are Opposites</div>
+  </div>
+</div>
+<button class="printbtn" onclick="window.print()">🖨 打印 / 存 PDF</button>
+<script>
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById('w'+t.dataset.w).classList.add('active');
+  window.scrollTo({top:document.querySelector('.tabs').offsetTop-8,behavior:'smooth'});
+}));
+document.querySelector('.tab').classList.add('active');
+document.getElementById('w1').classList.add('active');
+</script>
+</body></html>

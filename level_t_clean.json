@@ -1,0 +1,434 @@
+[
+ [
+  1,
+  "Abigail Adams"
+ ],
+ [
+  2,
+  "Acadia National Park"
+ ],
+ [
+  3,
+  "Adventures with Abuela"
+ ],
+ [
+  4,
+  "Aladdin and the Wonderful Lamp"
+ ],
+ [
+  5,
+  "Alice\\u0027s Birthday Cake"
+ ],
+ [
+  6,
+  "Ants in My Bed"
+ ],
+ [
+  7,
+  "An Apple a Day"
+ ],
+ [
+  8,
+  "Art Around Us"
+ ],
+ [
+  9,
+  "Arthur\\u0027s Bad-News Day"
+ ],
+ [
+  10,
+  "Awesome Ants"
+ ],
+ [
+  11,
+  "Bats in the Attic"
+ ],
+ [
+  12,
+  "The Beekeeper"
+ ],
+ [
+  13,
+  "Bessie Coleman"
+ ],
+ [
+  14,
+  "Birds of Prey"
+ ],
+ [
+  15,
+  "The Black Stones"
+ ],
+ [
+  16,
+  "Blackbeard the Pirate"
+ ],
+ [
+  17,
+  "Book 10: The Fizzy Wizard"
+ ],
+ [
+  18,
+  "Book 7: The Return to the Hollow (Part I)"
+ ],
+ [
+  19,
+  "Book 8: The Return to the Hollow (Part II)"
+ ],
+ [
+  20,
+  "Book 8: Who Likes Hot Chocolate?"
+ ],
+ [
+  21,
+  "Book 9: An Interest in Interest"
+ ],
+ [
+  22,
+  "Book 9: The Return to the Hollow (Part III)"
+ ],
+ [
+  23,
+  "Breeds of Dogs"
+ ],
+ [
+  24,
+  "C Is for Canada"
+ ],
+ [
+  25,
+  "Cali and Wanda Lou"
+ ],
+ [
+  26,
+  "Captain Morty Commands the Sky"
+ ],
+ [
+  27,
+  "China"
+ ],
+ [
+  28,
+  "Code Talkers"
+ ],
+ [
+  29,
+  "Deep in the Ocean"
+ ],
+ [
+  30,
+  "Discovering Dinosaurs"
+ ],
+ [
+  31,
+  "Dr. Elizabeth Blackwell"
+ ],
+ [
+  32,
+  "Edible Bugs"
+ ],
+ [
+  33,
+  "Expedition Zero"
+ ],
+ [
+  34,
+  "Exploring Tide Pools"
+ ],
+ [
+  35,
+  "Famous First Ladies"
+ ],
+ [
+  36,
+  "The Force of Water"
+ ],
+ [
+  37,
+  "Giant Pandas"
+ ],
+ [
+  38,
+  "The Grand Canyon"
+ ],
+ [
+  39,
+  "Helen Keller"
+ ],
+ [
+  40,
+  "The Hero Maui"
+ ],
+ [
+  41,
+  "Hiking the Appalachian Trail"
+ ],
+ [
+  42,
+  "Hillary Clinton"
+ ],
+ [
+  43,
+  "The History of Halloween"
+ ],
+ [
+  44,
+  "The History of House Cats"
+ ],
+ [
+  45,
+  "History to Chew On"
+ ],
+ [
+  46,
+  "I Collect That!"
+ ],
+ [
+  47,
+  "Incredible Places to Stay"
+ ],
+ [
+  48,
+  "India"
+ ],
+ [
+  49,
+  "Jack-o\\u0027-Lanterns"
+ ],
+ [
+  50,
+  "Jane Goodall"
+ ],
+ [
+  51,
+  "Jesse Owens"
+ ],
+ [
+  52,
+  "Karate"
+ ],
+ [
+  53,
+  "Kid Inventors"
+ ],
+ [
+  54,
+  "Laura Ingalls Wilder"
+ ],
+ [
+  55,
+  "The Legend of the Giant\\u0027s Causeway"
+ ],
+ [
+  56,
+  "Let\\u0027s Make Snowflakes!"
+ ],
+ [
+  57,
+  "Like Night and Day"
+ ],
+ [
+  58,
+  "Looking for Bigfoot"
+ ],
+ [
+  59,
+  "Manatees"
+ ],
+ [
+  60,
+  "Maria Tallchief: Prima Ballerina"
+ ],
+ [
+  61,
+  "Morty Finds It No Laughing Matter"
+ ],
+ [
+  62,
+  "Mount Rushmore"
+ ],
+ [
+  63,
+  "Mud Runs"
+ ],
+ [
+  64,
+  "Muhammad Ali"
+ ],
+ [
+  65,
+  "Musical Instruments"
+ ],
+ [
+  66,
+  "My Uncle Is a Firefighter"
+ ],
+ [
+  67,
+  "Mythical Creatures of Ancient Greece"
+ ],
+ [
+  68,
+  "Nature Stinks!"
+ ],
+ [
+  69,
+  "A New Skyline"
+ ],
+ [
+  70,
+  "Ocean Animals"
+ ],
+ [
+  71,
+  "On the Lookout"
+ ],
+ [
+  72,
+  "Owen and the Tortoise"
+ ],
+ [
+  73,
+  "Pinocchio, Part 1"
+ ],
+ [
+  74,
+  "Pinocchio, Part 2"
+ ],
+ [
+  75,
+  "Pinocchio, Part 3"
+ ],
+ [
+  76,
+  "A Place for Wild Things"
+ ],
+ [
+  77,
+  "Popcorn Through the Ages"
+ ],
+ [
+  78,
+  "The Power of Wind"
+ ],
+ [
+  79,
+  "Rainbows"
+ ],
+ [
+  80,
+  "Ricardo\\u0027s Dilemma"
+ ],
+ [
+  81,
+  "Rocky Mountain National Park"
+ ],
+ [
+  82,
+  "Route 66"
+ ],
+ [
+  83,
+  "Running for Freedom"
+ ],
+ [
+  84,
+  "Sadie\\u0027s Incredible Essay"
+ ],
+ [
+  85,
+  "Sally\\u0027s Secret Ambition"
+ ],
+ [
+  86,
+  "Sam\\u0027s Fourth of July"
+ ],
+ [
+  87,
+  "Saving the Last Wild Tigers"
+ ],
+ [
+  88,
+  "Severe Weather"
+ ],
+ [
+  89,
+  "Sled Dogs to the Rescue"
+ ],
+ [
+  90,
+  "The State Hermitage: Russia\\u0027s Amazing Museum"
+ ],
+ [
+  91,
+  "The Story of the Mayflower"
+ ],
+ [
+  92,
+  "Summer Olympics Legends"
+ ],
+ [
+  93,
+  "Thomas Jefferson"
+ ],
+ [
+  94,
+  "Through a Microscope"
+ ],
+ [
+  95,
+  "Titanic Treasure"
+ ],
+ [
+  96,
+  "Tornadoes"
+ ],
+ [
+  97,
+  "Totem Poles"
+ ],
+ [
+  98,
+  "Two Make Twins"
+ ],
+ [
+  99,
+  "Vincent\\u0027s Bedroom"
+ ],
+ [
+  100,
+  "Weather Wizards: Floods"
+ ],
+ [
+  101,
+  "Weird Bird Beaks"
+ ],
+ [
+  102,
+  "What Happens When You Flush?"
+ ],
+ [
+  103,
+  "What\\u0027s in Washington, D.C.?"
+ ],
+ [
+  104,
+  "Where\\u0027s Your Hair?"
+ ],
+ [
+  105,
+  "William Shakespeare"
+ ],
+ [
+  106,
+  "Writing on the Wall"
+ ],
+ [
+  107,
+  "Yo-Yo Ma"
+ ],
+ [
+  108,
+  "You\\u0027re a Jellyfish!"
+ ]
+]

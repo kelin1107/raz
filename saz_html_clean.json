@@ -1,0 +1,390 @@
+{
+ "1": {
+  "title": "Animals, Animals",
+  "band": "GKLOW"
+ },
+ "2": {
+  "title": "Animals, Animals",
+  "band": "G1MID"
+ },
+ "3": {
+  "title": "Animals, Animals",
+  "band": "G2HIGH"
+ },
+ "4": {
+  "title": "Animals of the Air",
+  "band": "GKLOW"
+ },
+ "5": {
+  "title": "ANimals in the Ground",
+  "band": "G1MID"
+ },
+ "6": {
+  "title": "Animals of the Deep Ocean",
+  "band": "G1MID"
+ },
+ "7": {
+  "title": "Animals of the Ice and Snow",
+  "band": "G1MID"
+ },
+ "8": {
+  "title": "Animals of the Rivers",
+  "band": "G2HIGH"
+ },
+ "9": {
+  "title": "Living and Non-Living Things",
+  "band": "GKLOW"
+ },
+ "10": {
+  "title": "Living and Non-Living Things",
+  "band": "G1MID"
+ },
+ "11": {
+  "title": "Living and Non-Living Things",
+  "band": "G2HIGH"
+ },
+ "12": {
+  "title": "Babies and Parents",
+  "band": "GKLOW"
+ },
+ "13": {
+  "title": "Baobab Trees",
+  "band": "G1MID"
+ },
+ "14": {
+  "title": "Plastic",
+  "band": "G1MID"
+ },
+ "15": {
+  "title": "Wonderful Water",
+  "band": "G1MID"
+ },
+ "16": {
+  "title": "Amazing Cells",
+  "band": "G2HIGH"
+ },
+ "17": {
+  "title": "Plants",
+  "band": "GKLOW"
+ },
+ "18": {
+  "title": "Plants",
+  "band": "G1MID"
+ },
+ "19": {
+  "title": "Plants",
+  "band": "G2HIGH"
+ },
+ "20": {
+  "title": "Roses",
+  "band": "GKLOW"
+ },
+ "21": {
+  "title": "Giant Sequoias",
+  "band": "G1MID"
+ },
+ "22": {
+  "title": "City Gardening",
+  "band": "G1MID"
+ },
+ "23": {
+  "title": "PINECONES",
+  "band": "G1MID"
+ },
+ "24": {
+  "title": "POWERFUL PLANTS",
+  "band": "G2HIGH"
+ },
+ "25": {
+  "title": "Senses",
+  "band": "GKLOW"
+ },
+ "26": {
+  "title": "Senses",
+  "band": "G1MID"
+ },
+ "27": {
+  "title": "Senses",
+  "band": "G2HIGH"
+ },
+ "28": {
+  "title": "Where Are You?",
+  "band": "GKLOW"
+ },
+ "29": {
+  "title": "Helping People See and Hear",
+  "band": "G1MID"
+ },
+ "30": {
+  "title": "DOGS SMELL!",
+  "band": "G1MID"
+ },
+ "31": {
+  "title": "Where Are Its Eyes?",
+  "band": "G1MID"
+ },
+ "32": {
+  "title": "Whiskers",
+  "band": "G2HIGH"
+ },
+ "33": {
+  "title": "Earth,Moon,Sun,and Stars",
+  "band": "GKLOW"
+ },
+ "34": {
+  "title": "Earth,Moon,Sun, and Stars",
+  "band": "G1MID"
+ },
+ "36": {
+  "title": "Shapes in the Night Sky",
+  "band": "GKLOW"
+ },
+ "37": {
+  "title": "GOLDILOCKS  PLANET",
+  "band": "G1MID"
+ },
+ "38": {
+  "title": "Seasons and Sunlight",
+  "band": "G1MID"
+ },
+ "39": {
+  "title": "SHADOWS IN SPACE",
+  "band": "G1MID"
+ },
+ "40": {
+  "title": "Apollo 11",
+  "band": "G2HIGH"
+ },
+ "41": {
+  "title": "The Weather",
+  "band": "GKLOW"
+ },
+ "42": {
+  "title": "The Weather",
+  "band": "G1MID"
+ },
+ "43": {
+  "title": "The Weather",
+  "band": "G2HIGH"
+ },
+ "44": {
+  "title": "Snowflakes",
+  "band": "GKLOW"
+ },
+ "45": {
+  "title": "Cool Clouds",
+  "band": "GKMID"
+ },
+ "46": {
+  "title": "Harmful hurricanes",
+  "band": "GKMID"
+ },
+ "47": {
+  "title": "Our Shining Star",
+  "band": "GKMID"
+ },
+ "48": {
+  "title": "FORECASTING THE WEATHER",
+  "band": "GKHIGH"
+ },
+ "49": {
+  "title": "Earth&amp;#39;s Surface",
+  "band": "GKLOW"
+ },
+ "50": {
+  "title": "Earth&amp;#39;s Surface",
+  "band": "G1MID"
+ },
+ "52": {
+  "title": "Valleys",
+  "band": "GKLOW"
+ },
+ "53": {
+  "title": "Along the Coast",
+  "band": "GKMID"
+ },
+ "54": {
+  "title": "ARCHES NATIONAL PARK",
+  "band": "GKMID"
+ },
+ "55": {
+  "title": "IMPACT CRATERS",
+  "band": "GKMID"
+ },
+ "56": {
+  "title": "Land Under Water",
+  "band": "G2HIGH"
+ },
+ "57": {
+  "title": "DOING WORK",
+  "band": "GKLOW"
+ },
+ "58": {
+  "title": "DOING WORK",
+  "band": "G1MID"
+ },
+ "59": {
+  "title": "DOING WORK",
+  "band": "G2HIGH"
+ },
+ "60": {
+  "title": "My Day of Work",
+  "band": "GKLOW"
+ },
+ "61": {
+  "title": "Building a House",
+  "band": "G1MID"
+ },
+ "62": {
+  "title": "Trucks and Diggers",
+  "band": "G1MID"
+ },
+ "63": {
+  "title": "Working while Playing",
+  "band": "G1MID"
+ },
+ "64": {
+  "title": "Animals That Do WORK",
+  "band": "G2HIGH"
+ },
+ "65": {
+  "title": "ENERGY IS EVERYWHERE!",
+  "band": "GKLOW"
+ },
+ "66": {
+  "title": "ENERGY IS EVERYWHERE!",
+  "band": "G1MID"
+ },
+ "67": {
+  "title": "ENERGY IS EVERYWHERE!",
+  "band": "G2HIGH"
+ },
+ "68": {
+  "title": "IS LIGHT GOOD OR BAD?",
+  "band": "GKLOW"
+ },
+ "69": {
+  "title": "Energy on the Playground",
+  "band": "G1MID"
+ },
+ "70": {
+  "title": "Heat in the Kitchen",
+  "band": "G1MID"
+ },
+ "71": {
+  "title": "The Sound of Drums",
+  "band": "G1MID"
+ },
+ "72": {
+  "title": "STATIC ELECTRICITY",
+  "band": "G2HIGH"
+ },
+ "73": {
+  "title": "All About Light",
+  "band": ""
+ },
+ "74": {
+  "title": "All About Light",
+  "band": "G1MID"
+ },
+ "75": {
+  "title": "All About Light",
+  "band": "G2HIGH"
+ },
+ "76": {
+  "title": "Fireflies",
+  "band": "GKLOW"
+ },
+ "77": {
+  "title": "Color Blindness",
+  "band": "G1MID"
+ },
+ "78": {
+  "title": "LIGHT from SPACE",
+  "band": "G1MID"
+ },
+ "79": {
+  "title": "STAINED GLASS",
+  "band": "G1MID"
+ },
+ "80": {
+  "title": "FUN HOUSE MIRRORS",
+  "band": "G2HIGH"
+ },
+ "81": {
+  "title": "How Things Are Different",
+  "band": "GKLOW"
+ },
+ "82": {
+  "title": "How Things Are Different",
+  "band": "G1MID"
+ },
+ "83": {
+  "title": "How Things Are Different",
+  "band": "G2HIGH"
+ },
+ "84": {
+  "title": "I Made It!",
+  "band": "GKLOW"
+ },
+ "85": {
+  "title": "Let &amp;#39;s Make Pictures!",
+  "band": "G1MID"
+ },
+ "86": {
+  "title": "So Many Shoes!",
+  "band": "G1MID"
+ },
+ "87": {
+  "title": "YUM! Yuck!",
+  "band": "G1MID"
+ },
+ "88": {
+  "title": "HOMES AROUND THE WORLD",
+  "band": "G2HIGH"
+ },
+ "89": {
+  "title": "MAGNETS",
+  "band": "GKLOW"
+ },
+ "90": {
+  "title": "MAGNETS",
+  "band": "G1MID"
+ },
+ "91": {
+  "title": "MAGNETS",
+  "band": "G2HIGH"
+ },
+ "92": {
+  "title": "THINGS MOVE",
+  "band": "GKLOW"
+ },
+ "93": {
+  "title": "THINGS MOVE",
+  "band": "G1MID"
+ },
+ "94": {
+  "title": "THINGS MOVE",
+  "band": "G2HIGH"
+ },
+ "95": {
+  "title": "Magnets in Toys",
+  "band": "GKLOW"
+ },
+ "96": {
+  "title": "Finding North",
+  "band": "G1MID"
+ },
+ "97": {
+  "title": "Magnet Magic",
+  "band": "G1MID"
+ },
+ "98": {
+  "title": "Magnetic Rocks",
+  "band": "G1MID"
+ },
+ "99": {
+  "title": "Magnets in the Home",
+  "band": "G2HIGH"
+ }
+}
