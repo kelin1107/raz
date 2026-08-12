@@ -190,47 +190,23 @@
   .chkrow .ct{text-align:left;flex:1}
   .chkrow .cth{color:var(--muted);font-size:11.5px;flex:none}
 
-  /* ===== 主题书单生成器 ===== */
-  #genCard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin:18px 0;box-shadow:0 2px 8px rgba(224,122,63,.10)}
-  #genCard .gen-sub{color:var(--muted);font-size:12.5px;margin:0 0 14px;max-width:820px}
-  #genCard .gen-row{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin-bottom:6px}
-  #genCard .gen-field{display:flex;flex-direction:column;gap:5px}
-  #genCard .gen-field>label{font-size:12.5px;color:#5f594f;font-weight:600}
-  #genCard .gen-field input,#genCard .gen-field select{font-size:14px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);min-width:120px}
-  #genCard .chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
-  #genCard .chip{border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 13px;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600;transition:.15s;user-select:none}
-  #genCard .chip:hover{border-color:var(--accent)}
-  #genCard .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
-  #genCard .gen-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:4px}
-  #genCard .btn{border:none;border-radius:22px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
-  #genCard .btn-main{background:var(--accent);color:#fff;box-shadow:0 3px 10px rgba(224,122,63,.3)}
-  #genCard .btn-ghost{background:#fff;color:var(--accent);border:1px solid var(--accent)}
-  #genCard .gen-rec{margin:12px 0 4px;font-size:13.5px;background:#faf7f1;border-left:4px solid var(--accent);padding:10px 14px;border-radius:0 9px 9px 0}
-  #genCard .gen-rec b{color:var(--accent)}
-  #genArea{display:none;margin-top:16px}
-  #genPrintHead{display:none}
-  #genCard .fam-block{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
-  #genCard .fam-h{font-size:16px;font-weight:700;margin-bottom:4px}
-  #genCard .fam-h .cnt{font-size:12px;color:var(--muted);font-weight:600;margin-left:6px}
-  #genCard .fam-note{color:#5f594f;font-size:12.5px;background:#faf7f1;border-left:4px solid var(--accent2);padding:8px 12px;border-radius:0 8px 8px 0;margin:6px 0 10px}
-  #genCard .fam-note .src{display:block;color:var(--muted);font-size:11.5px;margin-top:4px}
-  #genCard .book{display:flex;align-items:center;gap:9px;padding:5px 0;border-bottom:1px dashed var(--line);font-size:13.3px}
-  #genCard .book:last-child{border-bottom:none}
-  #genCard .book code{background:#f4efe6;padding:1px 6px;border-radius:5px;font-size:11.5px;color:#6b6356;min-width:44px;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace}
-  #genCard .book .t{flex:1;color:#36322c}
-  #genCard .book .lv{font-size:11.5px;color:var(--muted);margin-left:auto}
-  #genCard .dtag{font-size:11px;border-radius:6px;padding:2px 7px;font-weight:600}
-  #genCard .dtag.nf{background:#e7f3ef;color:#2f7d6e}
-  #genCard .dtag.f{background:#fdeee2;color:#e07a3f}
-  #genCard .empty{color:var(--muted);font-size:12.5px;padding:6px 0}
-  @media print{
-    body.print-gen .tabs{display:none!important}
-    body.print-gen #genCard{border:none;box-shadow:none;padding:0;margin:0}
-    body.print-gen .gen-h,body.print-gen .gen-sub,body.print-gen .gen-row,body.print-gen .chips,body.print-gen .gen-actions,body.print-gen .gen-rec{display:none!important}
-    body.print-gen #genArea{display:block!important}
-    body.print-gen #genPrintHead{display:block!important}
-    #genCard .fam-block{break-inside:avoid}
-  }
+  /* 主题分类 · 按级别查书 */
+  .lvTabs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px}
+  .theme-intro{color:var(--muted);font-size:13.5px;margin:0 0 12px}
+  .tbook{display:flex;align-items:center;gap:10px;padding:6px 8px;margin:0 -8px;border-bottom:1px dashed var(--line);font-size:13.5px;cursor:pointer;border-radius:8px}
+  .tbook:last-child{border-bottom:none}
+  .tbook:hover{background:var(--soft)}
+  .tbook code{background:#f1f5f9;color:#334155;padding:2px 7px;border-radius:6px;font-size:11.5px;min-width:46px;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace}
+  .tbook .tt{flex:1;color:var(--ink)}
+  .tbook .tnum{font-size:12px;color:var(--muted)}
+  .tpill{font-size:11px;border-radius:6px;padding:2px 7px;font-weight:600}
+  .tpill.nf{background:var(--nf);color:var(--nfink)}
+  .tpill.f{background:#fef3c7;color:#92400e}
+  .tband{font-size:10.5px;border-radius:6px;padding:2px 6px;font-weight:600;background:#eef2ff;color:#4f5bd5;margin-left:4px}
+  .fam .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .fam .tags span{background:var(--soft);color:var(--brand);font-size:12px;padding:3px 9px;border-radius:7px}
+  .fam .src{font-size:11.5px;color:#94a3b8;margin-top:6px}
+  .fam .src b{color:#64748b}
   /* ===== NF 周计划 ===== */
   #nfPlan .nf-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 6px}
   #nfPlan .nf-tab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:8px 12px;border-radius:20px;cursor:pointer;font-size:13px;transition:.15s}
@@ -291,11 +267,11 @@
 <body>
 <header>
   <h1>📚 RAZ + SAZ 知识库</h1>
-  <p>总表 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 阅读方法 · 分级对照/SAZ 书单 · 主题书单生成 · NF 周计划 · v3.11</p>
+  <p>总表 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 阅读方法 · 分级对照/SAZ 书单 · 主题分类 · NF 周计划 · v3.12</p>
 </header>
 
 <div class="compliance">
-  ⚠️ <b>非官方整理 · 仅供研究 / 教学用途</b>。本库为<b>元数据参考（级别、AR/蓝思对应、主题书单、重复阅读规则、SAZ 单元）</b>，<b>不含任何书籍正文</b>。
+  ⚠️ <b>非官方整理 · 仅供研究 / 教学用途</b>。本库为<b>元数据参考（级别、AR/蓝思对应、主题分类、重复阅读规则、SAZ 单元）</b>，<b>不含任何书籍正文</b>。
   书名与级别体系数据来源 <span class="src">Reading A-Z / Science A-Z（Learning A-Z 商业资产）</span>，编号与官方排序一致；完整书目请从官方 Raz-Plus / Science A-Z 账号导出。
   <b>本页面不替代、不售卖任何官方订阅。</b>
 </div>
@@ -315,7 +291,7 @@
     <div class="tab" data-t="ar">🔢 分级对照</div>
     <div class="tab" data-t="ladder">🪜 阅读阶梯</div>
     <div class="tab" data-t="saz">🔬 SAZ 书单</div>
-    <div class="tab" data-t="gen">🎯 主题书单</div>
+    <div class="tab" data-t="themes">🏷️ 主题分类</div>
     <div class="tab" data-t="nf">📅 NF 周计划</div>
 
   </div>
@@ -519,45 +495,24 @@
     </div>
   </section>
 
-  <!-- ===== 主题书单生成器 ===== -->
-  <section class="panel" id="gen">
+  <!-- ===== 主题分类（含可合并主题） ===== -->
+  <section class="panel" id="themes">
+    <div class="nfbanner">
+      🌟 <b>为什么重点刷 non-fiction：</b>RAZ 非虚构覆盖动物/植物/天文/地理/物理/人体/社会，是学术英语的地基。
+      低阶（aa–C）以虚构保兴趣，但从 <b>D 级起建议逐步提高 non-fiction 比例</b>；用 SAZ 主题单元做横向拓展，同一主题跨级别复现，记得更牢。
+    </div>
     <div class="card">
-      <h2>🎯 主题书单生成器 <span class="tag">按年龄+主题一键出单</span></h2>
-      <div class="gen-card" id="genCard">
-        <div class="gen-sub">填孩子年龄与英语启蒙时长，自动推荐起点级别；勾选感兴趣的主题，一键生成可打印书单（按主题分组，含编号 / 书名 / 级别）。适合家长与老师做英语启蒙选书参考。</div>
-        <div class="gen-row">
-          <div class="gen-field"><label>孩子年龄（岁）</label><input id="genAge" type="number" min="2" max="12" value="4"></div>
-          <div class="gen-field"><label>英语启蒙时长</label><select id="genExp">
-            <option value="0" selected>还没开始 / 刚起步</option>
-            <option value="3-6">3–6 个月</option>
-            <option value="6-12">半年 – 1 年</option>
-            <option value="12-24">1 – 2 年</option>
-            <option value="24+">2 年以上</option>
-          </select></div>
-          <div class="gen-field"><label>难度跨度</label><select id="genSpan">
-            <option value="0">只读本级</option>
-            <option value="1" selected>本级 ±1（推荐）</option>
-            <option value="2">本级 ±2（宽）</option>
-          </select></div>
-          <div class="gen-field"><label>每主题最多</label><select id="genCap">
-            <option value="4">4 本</option>
-            <option value="6" selected>6 本（推荐）</option>
-            <option value="10">10 本</option>
-            <option value="999">不限</option>
-          </select></div>
-          <div class="gen-field"><label>孩子称呼（选填）</label><input id="genName" type="text" placeholder="如 宝贝" style="min-width:130px"></div>
-        </div>
-        <div class="gen-field" style="margin-bottom:6px"><label>感兴趣的主题（可多选，默认全选）</label></div>
-        <div class="chips" id="genChips"></div>
-        <div class="gen-actions">
-          <button class="btn btn-main" id="genBtn">✨ 生成书单</button>
-          <button class="btn btn-ghost" id="genPrintBtn">🖨 导出 / 打印</button>
-          <span id="genCount" style="color:var(--muted);font-size:12.5px"></span>
-        </div>
-        <div class="gen-rec" id="genRec" style="display:none"></div>
-        <div id="genPrintHead"></div>
-        <div id="genArea"></div>
+      <h2>🏷️ 主题分类 · 按级别查书</h2>
+      <p class="theme-intro">选一个 RAZ 级别，下方按 6 大主题族列出该级别全部书（编号含级别 + 标题，<span style="color:var(--green);font-weight:600">NF</span>=科普 / <span style="color:var(--accent);font-weight:600">F</span>=虚构）。点任意书可跳「重复规则」看同主题续读。</p>
+      <div class="controls">
+        <div class="lvTabs" id="themeLvTabs"></div>
       </div>
+      <div id="themeBooks"></div>
+    </div>
+    <div class="card">
+      <h2>🔗 可合并主题 <span class="tag">6 大主题族 · 联动「重复规则」</span></h2>
+      <p style="color:var(--muted);font-size:13px;margin:0 0 12px">把分散在多级别的相近主题并为 6 条主线。在「重复规则」页选书时，同主题族的书即为「重复主题」的续读推荐。</p>
+      <div id="famList"></div>
     </div>
   </section>
 
@@ -583,17 +538,17 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.11 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.12 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.11",
+    "version": "3.12",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
-    "note": "本库为元数据参考（级别、AR 对应、主题书单、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
+    "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
     "levelsCount": 29,
     "levelOrder": [
       "aa",
@@ -27526,72 +27481,50 @@ function init(){
   // 主题族下拉
   const themes=[...new Set(DATA.books.map(b=>b.theme))];
   themes.forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;$('#mTheme').appendChild(o);});
-  renderMaster(); renderMethods(); renderLevels(); renderAR(); renderSAZ(); initPickers(); renderLadder(); initGenerator(); renderNFPlan();
+  renderMaster(); renderMethods(); renderLevels(); renderAR(); renderSAZ(); initPickers(); renderLadder(); renderThemes(); renderNFPlan();
   // 默认选一本用于重复规则演示
   const def=DATA.books.find(b=>b.id==='A02')||DATA.books[0];
   if(def){ $('#repPick').value=def.id; renderRepPick(); renderRepeat(); }
 }
 
-/* ===== 主题书单生成器 ===== */
-function genFamOf(theme){
-  return DATA.themes.mergeFamilies.find(function(f){ return (f.family||'').includes(theme) || (f.merge||[]).includes(theme); });
+/* ---------- 主题分类 ---------- */
+function gotoThemes(){
+  $$('.tab').forEach(x=>x.classList.remove('active')); $$('.panel').forEach(x=>x.classList.remove('active'));
+  $('.tab[data-t="themes"]').classList.add('active'); $('#themes').classList.add('active'); window.scrollTo({top:0,behavior:'smooth'});
 }
-var GEN_READ_LEVELS = DATA.meta.levelOrder.filter(function(l){ return l!=='SAZ'; });
-var GEN_SEL = {};
-function genAgeToBaseIdx(age){
-  age = Math.max(2, Math.min(12, parseInt(age,10)||4));
-  if(age<=3) return 0;
-  if(age>=12) return 8;
-  return ({4:0,5:1,6:2,7:3,8:4,9:5,10:6,11:7})[age];
-}
-function genExpDelta(m){ return ({'0':-1,'3-6':0,'6-12':0,'12-24':1,'24+':2})[m]||0; }
-function genExpText(m){ return ({'0':'还没开始 / 刚起步','3-6':'3–6 个月','6-12':'半年 – 1 年','12-24':'1 – 2 年','24+':'2 年以上'})[m]||m; }
-function initGenerator(){
-  var cw=document.getElementById('genChips');
-  cw.innerHTML=DATA.themes.mergeFamilies.map(function(f){ GEN_SEL[f.family]=true; return '<span class="chip on" data-fam="'+esc(f.family)+'">'+esc(f.family)+'</span>'; }).join('');
-  Array.prototype.forEach.call(cw.querySelectorAll('.chip'),function(ch){
-    ch.addEventListener('click',function(){ var fam=ch.getAttribute('data-fam'); GEN_SEL[fam]=!GEN_SEL[fam]; ch.classList.toggle('on',GEN_SEL[fam]); });
-  });
-  document.getElementById('genBtn').addEventListener('click',genBooklist);
-  document.getElementById('genPrintBtn').addEventListener('click',function(){
-    var area=document.getElementById('genArea');
-    if(!area.style.display||area.style.display==='none') genBooklist();
-    document.body.classList.add('print-gen'); window.print();
-    setTimeout(function(){ document.body.classList.remove('print-gen'); },400);
-  });
-}
-function genBooklist(){
-  var age=parseInt(document.getElementById('genAge').value,10)||4;
-  var exp=document.getElementById('genExp').value;
-  var span=parseInt(document.getElementById('genSpan').value,10)||1;
-  var name=(document.getElementById('genName').value||'').trim();
-  var center=Math.max(0,Math.min(GEN_READ_LEVELS.length-1, genAgeToBaseIdx(age)+genExpDelta(exp)));
-  var lo=Math.max(0,center-span), hi=Math.min(GEN_READ_LEVELS.length-1,center+span);
-  var levels=GEN_READ_LEVELS.slice(lo,hi+1);
-  var lvSet={}; levels.forEach(function(l){ lvSet[l]=1; });
-  var rec=document.getElementById('genRec'); rec.style.display='block';
-  rec.innerHTML='<b>推荐起点：Level '+(GEN_READ_LEVELS[center]==='aa'?'AA':GEN_READ_LEVELS[center])+'</b>（年龄 '+age+' 岁 · 启蒙 '+genExpText(exp)+' · 跨度 ±'+span+'）｜ 本次覆盖级别：'+levels.map(function(l){ return l==='aa'?'AA':l; }).join(' · ');
-  var books=DATA.books.filter(function(b){ var fb=genFamOf(b.theme); return fb && lvSet[b.level] && GEN_SEL[fb.family]; });
-  var area=document.getElementById('genArea');
-  var total=0; var cap=parseInt(document.getElementById('genCap').value,10)||6; var grand=books.length;
-  var html=DATA.themes.mergeFamilies.filter(function(f){ return GEN_SEL[f.family]; }).map(function(f){
-    var list=books.filter(function(b){ var fb=genFamOf(b.theme); return fb && fb.family===f.family; });
-    list.sort(function(a,b){ return (GEN_READ_LEVELS.indexOf(a.level)-GEN_READ_LEVELS.indexOf(b.level))||a.num-b.num; });
-    if(!list.length) return '';
-    var shown=list.slice(0,cap); total+=shown.length;
-    var rows=shown.map(function(b){
-      var tag=b.type==='NF'?'nf':(b.type==='F'?'f':'');
-      return '<div class="book"><code>'+esc(b.id)+'</code><span class="t">'+esc(b.title)+'</span><span class="dtag '+tag+'">'+esc(b.type)+'</span><span class="lv">'+esc(b.level==='aa'?'AA':b.level)+'</span></div>';
-    }).join('');
-    var more=list.length>shown.length?'<div class="empty">该主题还有 '+(list.length-shown.length)+' 本未显示（共 '+list.length+' 本）</div>':'';
-    return '<div class="fam-block"><div class="fam-h">'+esc(f.family)+' <span class="cnt">'+shown.length+' / '+list.length+' 本</span></div><div class="booklist">'+rows+more+'</div></div>';
+function famOfTheme(theme){return DATA.themes.mergeFamilies.find(f=>(f.family||'').includes(theme)||(f.merge||[]).includes(theme));}
+function renderThemeBooks(lv){
+  const books=lv==='ALL'?DATA.books.slice():DATA.books.filter(b=>b.level===lv);
+  const html=DATA.themes.mergeFamilies.map(f=>{
+    const list=books.filter(b=>{const fb=famOfTheme(b.theme);return fb&&fb.family===f.family;});
+    list.sort((a,b)=>lv==='ALL'?(a.level===b.level?a.num-b.num:a.level.localeCompare(b.level)):a.num-b.num);
+    const cnt=list.length;
+    const rows=list.map(b=>`<div class="tbook" onclick="jumpRep('${esc(b.id)}')"><code>${esc(b.id)}</code><span class="tt">${esc(b.title)}</span><span class="tpill ${b.type==='NF'?'nf':(b.type==='F'?'f':'')}">${esc(b.type)}</span>${b.band?`<span class="tband">${esc(b.band)}</span>`:''}${lv==='ALL'?`<span class="tnum">${esc(b.level)}</span>`:''}</div>`).join('')||'<div style="color:var(--muted);font-size:12.5px;padding:6px 0">该级别此主题暂无种子书目。</div>';
+    return `<div class="fam"><h3>${esc(f.family)} <span style="font-size:12px;color:var(--muted);font-weight:600">${cnt} 本</span></h3>`+
+      `<div class="why">${esc(f.why)}</div>`+
+      `<div class="tags">${f.merge.map(m=>`<span>${esc(m)}</span>`).join('')}</div>`+
+      `<div class="src"><b>来源：</b>${esc(f.source)}</div>`+
+      `<div style="margin-top:10px">${rows}</div></div>`;
   }).join('');
-  if(!html) html='<div class="empty">该范围暂无匹配书目，试试放宽难度跨度或勾选更多主题。</div>';
-  area.innerHTML=html; area.style.display='block';
-  var today=new Date();
-  var ds=today.getFullYear()+'-'+('0'+(today.getMonth()+1)).slice(-2)+'-'+('0'+today.getDate()).slice(-2);
-  document.getElementById('genPrintHead').innerHTML='<h2 style="margin:0 0 6px">📚 主题书单'+(name?(' · '+esc(name)):'')+'</h2><div style="color:#8a857c;font-size:13px;margin-bottom:10px">推荐起点 Level '+(GEN_READ_LEVELS[center]==='aa'?'AA':GEN_READ_LEVELS[center])+' ｜ 覆盖 '+levels.map(function(l){ return l==='aa'?'AA':l; }).join(' · ')+' ｜ 生成日期 '+ds+'</div>';
-  document.getElementById('genCount').textContent='展示 '+total+' 本（本范围共 '+grand+' 本，每主题最多 '+cap+' 本）';
+  $('#themeBooks').innerHTML=html;
+}
+function renderThemes(){
+  // 级别选择器（只列有数据的级别）
+  const present=new Set(DATA.books.map(b=>b.level));
+  const lv=DATA.meta.levelOrder.filter(l=>present.has(l));
+  const tabs=lv.concat(['ALL']);
+  const tw=$('#themeLvTabs');
+  tw.innerHTML=tabs.map((l,i)=>`<span class="tab${i===0?' active':''}" data-lv="${l}">${l==='ALL'?'全部':(l==='aa'?'AA':l)}</span>`).join('');
+  tw.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tw.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');renderThemeBooks(t.dataset.lv);});
+  renderThemeBooks(tabs[0]);
+  // 可合并主题（6 大族总览 + 联动重复规则）
+  $('#famList').innerHTML=DATA.themes.mergeFamilies.map(f=>{
+    const nf=f.nonfiction?'<span class="pill b-nf">非虚构</span>':'';
+    return `<div class="fam"><h3>${esc(f.family)} ${nf}</h3>`+
+      `<div class="why">${esc(f.why)}</div>`+
+      `<div class="tags">${f.merge.map(m=>`<span>${esc(m)}</span>`).join('')}</div>`+
+      `<div class="src"><b>来源：</b>${esc(f.source)}</div></div>`;
+  }).join('');
 }
 
 /* ===== NF 优先主题周计划 ===== */
@@ -27785,7 +27718,7 @@ function nfBuildWeeks(fromLv,toLv){
   var allowed=order.slice(f,t+1);
   var nf=DATA.books.filter(function(b){ return b.type==='NF' && allowed.indexOf(b.level)>=0; });
   return NF_FAMILIES.map(function(fam,i){
-    var list=nf.filter(function(b){ var g=genFamOf(b.theme); return g && g.family.indexOf(fam.key)>=0; }).sort(function(a,b){
+    var list=nf.filter(function(b){ var g=famOfTheme(b.theme); return g && g.family.indexOf(fam.key)>=0; }).sort(function(a,b){
       var ai=order.indexOf(a.level), bi=order.indexOf(b.level);
       if(ai!==bi) return ai-bi;
       return a.num-b.num;
@@ -27801,7 +27734,7 @@ function nfBuildWeeks(fromLv,toLv){
 }
 var NF_BOOKS = Object.fromEntries(DATA.books.map(function(b){ return [b.id,b]; }));
 function nfExtRead(fam, core){
-  return DATA.books.filter(function(b){ var g=genFamOf(b.theme); return b.type==='NF' && g && g.family.indexOf(fam)>=0 && !core.has(b.id); }).sort(function(a,b){ return (a.level===b.level?a.num-b.num:a.level.localeCompare(b.level)); });
+  return DATA.books.filter(function(b){ var g=famOfTheme(b.theme); return b.type==='NF' && g && g.family.indexOf(fam)>=0 && !core.has(b.id); }).sort(function(a,b){ return (a.level===b.level?a.num-b.num:a.level.localeCompare(b.level)); });
 }
 function nfDayCard(day){
   if(day.kind==='exp'){
