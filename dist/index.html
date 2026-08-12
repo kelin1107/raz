@@ -20,10 +20,12 @@
   .kidnote{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;
     padding:12px 16px;border-radius:12px;margin:18px 0;font-size:13.5px}
   .kidnote b{color:#c2410c}
-  .tabs{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 22px;position:sticky;top:0;
-    background:var(--bg);padding:10px 0;z-index:10}
-  .tab{background:var(--card);border:1px solid var(--line);padding:8px 14px;border-radius:999px;
-    cursor:pointer;font-size:13.5px;color:var(--muted);transition:.15s}
+  .tabs{display:flex;flex-wrap:nowrap;gap:7px;margin:18px -18px 22px;position:sticky;top:0;
+    background:var(--bg);padding:10px 18px;z-index:10;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;-ms-overflow-style:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;background:var(--card);border:1px solid var(--line);padding:8px 14px;border-radius:999px;
+    cursor:pointer;font-size:13.5px;color:var(--muted);transition:.15s;white-space:nowrap}
   .tab:hover{border-color:var(--brand)}
   .tab.active{background:var(--brand);color:#fff;border-color:var(--brand)}
   .repTabs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px}
