@@ -247,12 +247,16 @@
   #nfPlan .nf-tab:hover{border-color:var(--accent)}
   #nfPlan .nf-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
   #nfPlan .ovnote{font-size:12.5px;color:var(--muted);margin:6px 2px 4px}
-  #nfPlan .ov-wrap{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;margin-top:6px}
-  #nfPlan table.ov{width:100%;border-collapse:collapse;background:#fff}
+  #nfPlan .ov-wrap{border:1px solid var(--line);border-radius:10px;background:#fff;margin-top:6px}
+  #nfPlan table.ov{width:100%;border-collapse:collapse;background:transparent}
   #nfPlan table.ov th{font-size:12px;color:var(--muted);text-align:left;padding:8px 10px;background:#faf7f1;border-bottom:1px solid var(--line)}
   #nfPlan table.ov td{padding:9px 10px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:top}
   #nfPlan table.ov tbody tr:nth-child(odd){background:#fcfaf7}
   #nfPlan table.ov tr:last-child td{border-bottom:none}
+  #nfPlan table.ov thead tr:first-child th:first-child{border-top-left-radius:10px}
+  #nfPlan table.ov thead tr:first-child th:last-child{border-top-right-radius:10px}
+  #nfPlan table.ov tbody tr:last-child td:first-child{border-bottom-left-radius:10px}
+  #nfPlan table.ov tbody tr:last-child td:last-child{border-bottom-right-radius:10px}
   #nfPlan .wk{white-space:nowrap;font-weight:600}
   #nfPlan .wf{white-space:nowrap;color:var(--accent2);font-weight:600}
   #nfPlan .wb code{background:#f4efe6;padding:1px 5px;border-radius:5px;font-size:11.5px;color:#6b6356}
