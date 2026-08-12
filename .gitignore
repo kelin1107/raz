@@ -22,3 +22,14 @@ __pycache__/
 # 系统
 .DS_Store
 Thumbs.db
+
+# 本地校验 / 临时脚本（非发布所需，引用本机 Edge + puppeteer-core）
+_check.js
+_inspect.js
+_inspect_nf.js
+_nf_update.py
+_script.js
+_shot.js
+_verify.js
+_verify_dist.js
+shots/

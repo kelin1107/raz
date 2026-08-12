@@ -65,9 +65,8 @@
   button.act:hover{filter:brightness(1.07)}
   table{width:100%;border-collapse:collapse;font-size:13.5px}
   th,td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:center}
-  th{background:#f1f5f9;color:#334155;font-weight:600;position:sticky;top:54px}
-  /* 总表放在 overflow:auto 容器内，sticky header 会导致首行被裁 */
-  #mTable th{position:static}
+  th{background:#f1f5f9;color:#334155;font-weight:600}
+  #sazTable td code{background:#f1f5f9;color:#334155;padding:2px 7px;border-radius:6px;font-size:12px;font-family:ui-monospace,Menlo,Consolas,monospace}
   tbody tr{cursor:pointer}
   tbody tr:hover{background:var(--soft)}
   tbody tr.sel{background:#dbeafe}
@@ -126,19 +125,6 @@
   .fam .tags span{background:var(--soft);color:var(--brand);font-size:12px;padding:3px 9px;border-radius:7px}
   .fam .src{font-size:11.5px;color:#94a3b8;margin-top:6px}
   .fam .src b{color:#64748b}
-  /* 主题分类 · 按级别查书 */
-  .lvTabs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px}
-  .theme-intro{color:var(--muted);font-size:13.5px;margin:0 0 12px}
-  .tbook{display:flex;align-items:center;gap:10px;padding:6px 8px;margin:0 -8px;border-bottom:1px dashed var(--line);font-size:13.5px;cursor:pointer;border-radius:8px}
-  .tbook:last-child{border-bottom:none}
-  .tbook:hover{background:var(--soft)}
-  .tbook code{background:#f1f5f9;color:#334155;padding:2px 7px;border-radius:6px;font-size:11.5px;min-width:46px;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace}
-  .tbook .tt{flex:1;color:var(--ink)}
-  .tbook .tnum{font-size:12px;color:var(--muted)}
-  .tpill{font-size:11px;border-radius:6px;padding:2px 7px;font-weight:600}
-  .tpill.nf{background:var(--nf);color:var(--nfink)}
-  .tpill.f{background:#fef3c7;color:#92400e}
-  .tband{font-size:10.5px;border-radius:6px;padding:2px 6px;font-weight:600;background:#eef2ff;color:#4f5bd5;margin-left:4px}
   footer{color:var(--muted);font-size:12px;text-align:center;padding:20px;border-top:1px solid var(--line);margin-top:30px}
 
   /* 总表 / 查 / 重复规则 专用 */
@@ -305,7 +291,7 @@
 <body>
 <header>
   <h1>📚 RAZ + SAZ 知识库</h1>
-  <p>总表 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 阅读方法 · 级别/AR/主题/SAZ 对照 · 主题书单生成 · NF 周计划 · v3.10</p>
+  <p>总表 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 阅读方法 · 分级对照/SAZ 书单 · 主题书单生成 · NF 周计划 · v3.11</p>
 </header>
 
 <div class="compliance">
@@ -326,10 +312,9 @@
     <div class="tab" data-t="repeat">🔁 重复规则</div>
     <div class="tab" data-t="methods">📖 阅读方法</div>
     <div class="tab" data-t="levels">📊 级别总览</div>
-    <div class="tab" data-t="ar">🔢 AR 对照</div>
+    <div class="tab" data-t="ar">🔢 分级对照</div>
     <div class="tab" data-t="ladder">🪜 阅读阶梯</div>
-    <div class="tab" data-t="themes">🏷️ 主题分类</div>
-    <div class="tab" data-t="saz">🔬 SAZ</div>
+    <div class="tab" data-t="saz">🔬 SAZ 书单</div>
     <div class="tab" data-t="gen">🎯 主题书单</div>
     <div class="tab" data-t="nf">📅 NF 周计划</div>
 
@@ -442,23 +427,32 @@
   <!-- ===== AR ===== -->
   <section class="panel" id="ar">
     <div class="card">
-      <h2>🔢 AR ↔ RAZ 互查</h2>
+      <h2>🔢 分级对照 · 多体系 ⇄ RAZ</h2>
       <div class="conv">
         <div class="convbox">
-          <p style="margin:0 0 8px;color:var(--muted)">我有 AR 值，想知道对应 RAZ 级别：</p>
-          <input type="number" id="arIn" step="0.1" min="0" max="9" placeholder="如 1.5">
-          <button id="arToRaz" class="act">查 RAZ</button>
-          <div class="result" id="arOut"></div>
+          <p style="margin:0 0 8px;color:var(--muted)">我有其他分级，想知道对应 RAZ 级别：</p>
+          <div class="controls" style="margin-bottom:10px">
+            <select id="convFrom">
+              <option value="ar">AR (ATOS)</option>
+              <option value="lex">蓝思 Lexile</option>
+              <option value="dra">DRA</option>
+              <option value="fp">F&amp;P (Guided Reading)</option>
+              <option value="ort">牛津树 ORT</option>
+            </select>
+          </div>
+          <input type="text" id="convFromIn" placeholder="如 1.5 / 200L / 16 / K / 3">
+          <button id="convFromBtn" class="act">查 RAZ</button>
+          <div class="result" id="convFromOut"></div>
         </div>
         <div class="convbox">
-          <p style="margin:0 0 8px;color:var(--muted)">我有 RAZ 级别，想知道对应 AR 区间：</p>
-          <select id="razIn"></select>
-          <button id="razToAr" class="act">查 AR</button>
-          <div class="result" id="razOut"></div>
+          <p style="margin:0 0 8px;color:var(--muted)">我有 RAZ 级别，想知道对应分级区间：</p>
+          <select id="convRaz"></select>
+          <button id="convRazBtn" class="act">查分级</button>
+          <div class="result" id="convRazOut"></div>
         </div>
       </div>
       <p style="font-size:12px;color:var(--muted);margin-top:14px">
-        说明：AR(ATOS) 与 RAZ 为近似对应，数据源自 Learning A-Z 官方级别对应表。同一 AR 值可能横跨多个 RAZ 级别，建议结合五指法则/Quiz 正确率定级。
+        说明：AR / 蓝思 / DRA / F&amp;P / 牛津树 与 RAZ 均为<b>近似对应</b>（综合 Learning A-Z 官方表与公开阅读相关性研究）。同一输入可能横跨多个 RAZ 级别，这里给出<b>最匹配的 RAZ 级别</b>；定级请结合孩子实际朗读流畅度与 Quiz 正确率。
       </p>
     </div>
   </section>
@@ -505,39 +499,26 @@
     </div>
   </section>
 
-  <!-- ===== 主题分类（含可合并主题） ===== -->
-  <section class="panel" id="themes">
-    <div class="nfbanner">
-      🌟 <b>为什么重点刷 non-fiction：</b>RAZ 非虚构覆盖动物/植物/天文/地理/物理/人体/社会，是学术英语的地基。
-      低阶（aa–C）以虚构保兴趣，但从 <b>D 级起建议逐步提高 non-fiction 比例</b>；用 SAZ 主题单元做横向拓展，同一主题跨级别复现，记得更牢。
-    </div>
-    <div class="card">
-      <h2>🏷️ 主题分类 · 按级别查书</h2>
-      <p class="theme-intro">选一个 RAZ 级别，下方按 6 大主题族列出该级别全部书（编号含级别 + 标题，<span style="color:var(--green);font-weight:600">NF</span>=科普 / <span style="color:var(--accent);font-weight:600">F</span>=虚构）。点任意书可跳「重复规则」看同主题续读。</p>
-      <div class="controls">
-        <div class="lvTabs" id="themeLvTabs"></div>
-      </div>
-      <div id="themeBooks"></div>
-    </div>
-    <div class="card">
-      <h2>🔗 可合并主题 <span class="tag">6 大主题族 · 联动「重复规则」</span></h2>
-      <p style="color:var(--muted);font-size:13px;margin:0 0 12px">把分散在多级别的相近主题并为 6 条主线。在「重复规则」页选书时，同主题族的书即为「重复主题」的续读推荐。</p>
-      <div id="famList"></div>
-    </div>
-  </section>
-
   <!-- ===== SAZ ===== -->
   <section class="panel" id="saz">
     <div class="card">
-      <h2>🔬 Science A-Z (SAZ)</h2>
-      <p style="color:var(--muted);font-size:13.5px;margin:0 0 14px" id="sazDesc"></p>
-      <div class="sazlv" id="sazLevels"></div>
-      <div id="sazDomains"></div>
-      <p style="font-size:12px;color:var(--muted);margin-top:12px" id="sazMap"></p>
+      <h2>🔬 Science A-Z (SAZ) 书目清单</h2>
+      <p style="color:var(--muted);font-size:13.5px;margin:0 0 14px">Learning A-Z 旗下独立科学分级读物，纯非虚构（科普），与 RAZ 的 non-fiction 互补。下表是库内全部 SAZ 真实书目，可按主题域、档位、书名/编号筛选。</p>
+      <div class="controls">
+        <input type="text" id="sazSearch" placeholder="搜书名 / 编号" style="min-width:220px">
+        <select id="sazDomain"><option value="">全部主题域</option></select>
+        <select id="sazBand"><option value="">全部档位</option></select>
+        <span id="sazCount" style="color:var(--muted);font-size:13px"></span>
+      </div>
+      <div style="overflow:auto;max-height:560px">
+        <table id="sazTable">
+          <thead><tr><th>编号</th><th>书名</th><th>档位</th><th>主题域</th><th>类型</th></tr></thead>
+          <tbody id="sazBody"></tbody>
+        </table>
+      </div>
     </div>
   </section>
 
-  
   <!-- ===== 主题书单生成器 ===== -->
   <section class="panel" id="gen">
     <div class="card">
@@ -585,6 +566,14 @@
     <div class="card">
       <h2>📅 NF 优先主题周计划 <span class="tag">6 周科普循环</span></h2>
       <div id="nfPlan">
+        <div class="controls" style="margin-bottom:6px;align-items:center">
+          <label style="color:var(--muted);font-size:13px">级别范围：</label>
+          <select id="nfFrom"></select>
+          <span style="color:var(--muted)">→</span>
+          <select id="nfTo"></select>
+          <button id="nfRebuild" class="act">重新生成周计划</button>
+          <span id="nfRangeNote" style="color:var(--muted);font-size:12px"></span>
+        </div>
         <div class="nf-tabs" id="nfTabs"></div>
         <div class="ovnote">🗂 总览（点上方标签看每周详情）：</div>
         <div class="ov-wrap"><table class="ov"><thead><tr><th style="width:74px">周</th><th style="width:96px">主题族</th><th>每日核心书 / 实验</th></tr></thead><tbody id="nfOv"></tbody></table></div>
@@ -594,14 +583,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.10 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.11 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.10",
+    "version": "3.11",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -27039,24 +27028,7 @@ function stageClass(stage){
 }
 function themeOf(b){ return b.theme || (b.type==='SAZ' ? 'SAZ' : ''); }
 
-/* SAZ 单元 -> 总表行 */
-function sazRows(){
-  const rows=[]; let n=0;
-  const d=DATA.saz.domains;
-  for(const k of ['life','earth','physical','process']){
-    const dom=d[k];
-    const tiers = k==='process' ? [['Easier/Medium/Harder', [dom.note?dom.label:dom.label]]] : [['Easier',dom.easier||[]],['Medium',dom.medium||[]],['Harder',dom.harder||[]]];
-    for(const [tier,units] of tiers){
-      units.forEach(u=>{
-        n++;
-        rows.push({id:'SAZ'+String(n).padStart(2,'0'), level:'SAZ', num:n, title:u,
-          type:'SAZ', theme:(dom.label.match(/[一-龥]+/)||[dom.label])[0], lang:tier, _saz:true});
-      });
-    }
-  }
-  return rows;
-}
-function allBooks(){ return DATA.books.concat(sazRows()); }
+function allBooks(){ return DATA.books; }
 
 /* ---------- Tabs ---------- */
 $$('.tab').forEach(t=>t.addEventListener('click',()=>{
@@ -27133,10 +27105,6 @@ function jumpRep(id){
   $('.tab[data-t="repeat"]').classList.add('active'); $('#repeat').classList.add('active');
   $('#repPick').value=id; renderRepPick(); renderRepeat(); window.scrollTo({top:0,behavior:'smooth'});
 }
-function gotoThemes(){
-  $$('.tab').forEach(x=>x.classList.remove('active')); $$('.panel').forEach(x=>x.classList.remove('active'));
-  $('.tab[data-t="themes"]').classList.add('active'); $('#themes').classList.add('active'); window.scrollTo({top:0,behavior:'smooth'});
-}
 $('#lkBtn').addEventListener('click',doLookup);
 $('#lkInput').addEventListener('keydown',e=>{if(e.key==='Enter')doLookup();});
 
@@ -27211,7 +27179,7 @@ function renderRepeat(){
     box.innerHTML=`<h3>${esc(fam.family)} · 主题族说明</h3>`+
       `<div class="why">${esc(fam.why)}</div>`+
       `<div class="src"><b>来源：</b>${esc(fam.source)} ｜ <b>合并子题：</b>${fam.merge.map(esc).join('、')}</div>`+
-      `<div style="margin-top:10px"><button class="bkbtn" onclick="gotoThemes()">→ 去「主题分类 / 可合并主题」看全貌</button></div>`;
+      `<div style="margin-top:10px"><button class="bkbtn" onclick="jumpRep('${esc(b.id)}')">→ 查看本书的重复规则</button></div>`;
   } else box.className='detail';
 }
 
@@ -27264,71 +27232,70 @@ function filterLevels(){
   });
 }
 
-/* ---------- AR ---------- */
+/* ---------- 分级对照 ---------- */
 function renderAR(){
-  const ri=$('#razIn'); DATA.levels.forEach(l=>{const o=document.createElement('option');o.value=l.level;o.textContent='Level '+l.level+' ('+l.stage+')';ri.appendChild(o);});
-  $('#arToRaz').onclick=()=>{
-    const v=parseFloat($('#arIn').value); const out=$('#arOut');
-    if(isNaN(v)){out.innerHTML='<span style="color:var(--red)">请输入 AR 值</span>';return;}
-    const hit=DATA.levels.filter(l=>v>=l.arLow && v<=l.arHigh);
-    out.innerHTML='<div class="big">AR '+v+' ≈</div>'+(hit.length?hit.map(l=>`<span class="chip">Level ${esc(l.level)} · ${esc(l.stage)}</span>`).join(''):'<span style="color:var(--muted)">超出库内对应范围</span>');
-  };
-  $('#razToAr').onclick=()=>{
-    const l=DATA.levels.find(x=>x.level===$('#razIn').value); const out=$('#razOut');
-    out.innerHTML=`<div class="big">Level ${esc(l.level)}</div><div style="margin-top:6px">AR 区间 <b>${l.arLow}–${l.arHigh}</b> ｜ 蓝思 ${esc(l.lexile)} ｜ ${esc(l.stage)}</div>`;
-  };
-}
-
-/* ---------- 主题分类 ---------- */
-function famOfTheme(theme){return DATA.themes.mergeFamilies.find(f=>(f.family||'').includes(theme)||(f.merge||[]).includes(theme));}
-function renderThemeBooks(lv){
-  const books=lv==='ALL'?DATA.books.slice():DATA.books.filter(b=>b.level===lv);
-  const html=DATA.themes.mergeFamilies.map(f=>{
-    const list=books.filter(b=>{const fb=famOfTheme(b.theme);return fb&&fb.family===f.family;});
-    list.sort((a,b)=>lv==='ALL'?(a.level===b.level?a.num-b.num:a.level.localeCompare(b.level)):a.num-b.num);
-    const cnt=list.length;
-    const rows=list.map(b=>`<div class="tbook" onclick="jumpRep('${esc(b.id)}')"><code>${esc(b.id)}</code><span class="tt">${esc(b.title)}</span><span class="tpill ${b.type==='NF'?'nf':(b.type==='F'?'f':'')}">${esc(b.type)}</span>${b.band?`<span class="tband">${esc(b.band)}</span>`:''}${lv==='ALL'?`<span class="tnum">${esc(b.level)}</span>`:''}</div>`).join('')||'<div style="color:var(--muted);font-size:12.5px;padding:6px 0">该级别此主题暂无种子书目。</div>';
-    return `<div class="fam"><h3>${esc(f.family)} <span style="font-size:12px;color:var(--muted);font-weight:600">${cnt} 本</span></h3>`+
-      `<div class="why">${esc(f.why)}</div>`+
-      `<div class="tags">${f.merge.map(m=>`<span>${esc(m)}</span>`).join('')}</div>`+
-      `<div class="src"><b>来源：</b>${esc(f.source)}</div>`+
-      `<div style="margin-top:10px">${rows}</div></div>`;
-  }).join('');
-  $('#themeBooks').innerHTML=html;
-}
-function renderThemes(){
-  // 级别选择器（只列有数据的级别）
-  const present=new Set(DATA.books.map(b=>b.level));
-  const lv=DATA.meta.levelOrder.filter(l=>present.has(l));
-  const tabs=lv.concat(['ALL']);
-  const tw=$('#themeLvTabs');
-  tw.innerHTML=tabs.map((l,i)=>`<span class="tab${i===0?' active':''}" data-lv="${l}">${l==='ALL'?'全部':(l==='aa'?'AA':l)}</span>`).join('');
-  tw.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tw.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');renderThemeBooks(t.dataset.lv);});
-  renderThemeBooks(tabs[0]);
-  // 可合并主题（6 大族总览 + 联动重复规则）
-  $('#famList').innerHTML=DATA.themes.mergeFamilies.map(f=>{
-    const nf=f.nonfiction?'<span class="pill b-nf">非虚构</span>':'';
-    return `<div class="fam"><h3>${esc(f.family)} ${nf}</h3>`+
-      `<div class="why">${esc(f.why)}</div>`+
-      `<div class="tags">${f.merge.map(m=>`<span>${esc(m)}</span>`).join('')}</div>`+
-      `<div class="src"><b>来源：</b>${esc(f.source)}</div></div>`;
-  }).join('');
+  const ri=$('#convRaz'); DATA.levels.forEach(l=>{const o=document.createElement('option');o.value=l.level;o.textContent='Level '+l.level+' ('+l.stage+')';ri.appendChild(o);});
+  const ph={ar:'如 1.5', lex:'如 200L / BR', dra:'如 16 / 40', fp:'如 K / P', ort:'如 3 / 9'};
+  $('#convFrom').addEventListener('change',e=>{ $('#convFromIn').placeholder=ph[e.target.value]; });
+  $('#convFromIn').placeholder=ph.ar;
+  $('#convFromBtn').addEventListener('click',()=>{
+    const m=$('#convFrom').value, raw=$('#convFromIn').value.trim(), out=$('#convFromOut');
+    if(!raw){out.innerHTML='<span style="color:var(--red)">请输入值</span>';return;}
+    let raz=null, label='';
+    if(m==='ar'){
+      const v=parseFloat(raw); if(!isFinite(v)){out.innerHTML='<span style="color:var(--red)">请输入数字 AR 值</span>';return;}
+      raz=arToRaz(v); label='AR '+v;
+    } else if(m==='lex'){
+      raz=lexToRaz(parseLex(raw)); label='蓝思 '+raw;
+    } else if(m==='dra'){
+      const v=parseInt(raw,10); if(!isFinite(v)){out.innerHTML='<span style="color:var(--red)">请输入数字 DRA 值</span>';return;}
+      raz=draToRaz(v); label='DRA '+v;
+    } else if(m==='fp'){
+      const v=raw.toUpperCase(); raz=fpToRaz(v); label='F&P '+v;
+    } else {
+      const v=parseFloat(raw); if(!isFinite(v)){out.innerHTML='<span style="color:var(--red)">请输入数字牛津树级别</span>';return;}
+      raz=ortToRaz(v); label='牛津树 '+v;
+    }
+    out.innerHTML=convCard(raz, label);
+  });
+  $('#convRazBtn').addEventListener('click',()=>{
+    const l=DATA.levels.find(x=>x.level===$('#convRaz').value); const out=$('#convRazOut');
+    out.innerHTML=`<div class="big">Level ${esc(l.level)} · ${esc(l.stage)}</div>
+      <div style="margin-top:8px;display:flex;gap:14px;flex-wrap:wrap;font-size:13px">
+        <span>👶 年龄 <b>${esc(l.ages)}岁</b></span>
+        <span>📈 AR <b>${l.arLow}–${l.arHigh}</b></span>
+        <span>📚 蓝思 <b>${esc(l.lexile)}</b></span>
+        <span>🎯 DRA <b>${esc(l.dra)}</b></span>
+        <span>📖 F&amp;P <b>${esc(l.fp)}</b></span>
+        <span>🏫 年级 <b>${esc(l.grade)}</b></span>
+      </div>
+      <p style="margin:10px 0 0;font-size:13px;color:var(--muted)">${esc(l.focus)}</p>`;
+  });
 }
 
 /* ---------- SAZ ---------- */
 function renderSAZ(){
-  $('#sazDesc').textContent=DATA.saz.desc;
-  const lv=DATA.saz.levelSystem;
-  $('#sazLevels').innerHTML=Object.values(lv).map(v=>`<div class="box">${esc(v)}</div>`).join('');
-  const d=DATA.saz.domains;
-  $('#sazDomains').innerHTML=['life','earth','physical','process'].map(k=>{
-    const dom=d[k];
-    const tiers = k==='process'
-      ? `<div class="tier"><div class="t">三档</div><div class="u"><span>${esc(dom.note||'')}</span></div></div>`
-      : ['easier','medium','harder'].map(t=>`<div class="tier"><div class="t">${t[0].toUpperCase()+t.slice(1)}</div><div class="u">${(dom[t]||[]).map(u=>`<span>${esc(u)}</span>`).join('')}</div></div>`).join('');
-    return `<div class="dom"><h3>${esc(dom.label)}</h3>${tiers}</div>`;
-  }).join('');
-  $('#sazMap').textContent=DATA.saz.razMappingNote;
+  const saz=DATA.books.filter(b=>b.level==='SAZ').sort((a,b)=>a.num-b.num);
+  const domains=[...new Set(saz.map(b=>b.theme))].sort();
+  const bands=[...new Set(saz.map(b=>b.band).filter(Boolean))].sort();
+  $('#sazDomain').innerHTML='<option value="">全部主题域</option>'+domains.map(d=>`<option value="${esc(d)}">${esc(d)}</option>`).join('');
+  $('#sazBand').innerHTML='<option value="">全部档位</option>'+bands.map(b=>`<option value="${esc(b)}">${esc(b)}</option>`).join('');
+  function draw(){
+    const q=$('#sazSearch').value.trim().toLowerCase();
+    const d=$('#sazDomain').value, b=$('#sazBand').value;
+    const list=saz.filter(x=>{
+      const okD=!d||x.theme===d;
+      const okB=!b||x.band===b;
+      const okQ=!q||x.title.toLowerCase().includes(q)||x.id.toLowerCase().includes(q);
+      return okD&&okB&&okQ;
+    });
+    $('#sazBody').innerHTML=list.map(x=>`<tr><td><code>${esc(x.id)}</code></td><td style="text-align:left">${esc(x.title)}</td><td><span class="pill b-saz">${esc(x.band||'')}</span></td><td>${esc(x.theme)}</td><td><span class="pill b-nf">NF</span></td></tr>`).join('')||'<tr><td colspan="5" style="color:var(--muted)">无匹配书目</td></tr>';
+    $('#sazCount').textContent='共 '+list.length+' 本';
+  }
+  $('#sazSearch').addEventListener('input',draw);
+  $('#sazDomain').addEventListener('change',draw);
+  $('#sazBand').addEventListener('change',draw);
+  draw();
 }
 
 /* ---------- 阅读阶梯 ---------- */
@@ -27370,7 +27337,35 @@ function lexToRaz(L){
   if(L<0) return 'aa';
   return DATA.levels[DATA.levels.length-1].level;
 }
+function parseDra(s){
+  const p=String(s).split('-').map(x=>parseInt(x.trim(),10)).filter(isFinite);
+  if(!p.length) return {lo:NaN,hi:NaN};
+  return {lo:p[0], hi:p[p.length-1]};
+}
+function draToRaz(dra){
+  if(!isFinite(dra)) return null;
+  let hit=DATA.levels.filter(l=>{ const p=parseDra(l.dra); return dra>=p.lo && dra<=p.hi; });
+  if(hit.length) return hit[0].level;
+  let best=null,bd=1e9;
+  DATA.levels.forEach(l=>{ const p=parseDra(l.dra); if(isNaN(p.lo)) return; const m=(p.lo+p.hi)/2; const d=Math.abs(m-dra); if(d<bd){bd=d;best=l;} });
+  return best?best.level:DATA.levels[0].level;
+}
+function fpToRaz(fp){
+  fp=String(fp).trim().toUpperCase();
+  const order=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','Z+'];
+  const idx=order.indexOf(fp); if(idx<0) return null;
+  let best=null,bd=1e9;
+  DATA.levels.forEach(l=>{
+    const vals=l.fp.split('-').map(x=>x.trim().toUpperCase()).filter(Boolean);
+    const mids=vals.map(v=>order.indexOf(v)).filter(i=>i>=0);
+    if(!mids.length) return;
+    const m=mids.reduce((a,b)=>a+b,0)/mids.length;
+    const d=Math.abs(m-idx); if(d<bd){bd=d;best=l;}
+  });
+  return best?best.level:DATA.levels[Math.min(idx,DATA.levels.length-1)].level;
+}
 function convCard(raz, srcLabel){
+  if(raz===null || raz===undefined) return '<span class="emptynote">无法对应，请检查输入值是否在常见范围内。</span>';
   const lv=DATA.levels.find(l=>l.level===raz);
   if(!lv) return '<span class="emptynote">未找到级别 '+esc(raz)+'。</span>';
   return `<div><span class="big">RAZ ${esc(raz)}</span> <span style="color:var(--muted)">（来自 ${esc(srcLabel)}）</span></div>
@@ -27379,7 +27374,8 @@ function convCard(raz, srcLabel){
      <span>👶 年龄 <b>${esc(lv.ages)}岁</b></span>
      <span>📈 AR <b>${lv.arLow}–${lv.arHigh}</b></span>
      <span>📚 蓝思 <b>${esc(lv.lexile)}</b></span>
-     <span>🎯 DRA <b>${esc(lv.dra)}</b> · F&amp;P <b>${esc(lv.fp)}</b></span>
+     <span>🎯 DRA <b>${esc(lv.dra)}</b></span>
+     <span>📖 F&amp;P <b>${esc(lv.fp)}</b></span>
    </div>
    <p style="margin:10px 0 0;font-size:13px;color:var(--muted)">${esc(lv.focus)}</p>`;
 }
@@ -27530,7 +27526,7 @@ function init(){
   // 主题族下拉
   const themes=[...new Set(DATA.books.map(b=>b.theme))];
   themes.forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;$('#mTheme').appendChild(o);});
-  renderMaster(); renderMethods(); renderLevels(); renderAR(); renderThemes(); renderSAZ(); initPickers(); renderLadder(); initGenerator(); renderNFPlan();
+  renderMaster(); renderMethods(); renderLevels(); renderAR(); renderSAZ(); initPickers(); renderLadder(); initGenerator(); renderNFPlan();
   // 默认选一本用于重复规则演示
   const def=DATA.books.find(b=>b.id==='A02')||DATA.books[0];
   if(def){ $('#repPick').value=def.id; renderRepPick(); renderRepeat(); }
@@ -27599,7 +27595,7 @@ function genBooklist(){
 }
 
 /* ===== NF 优先主题周计划 ===== */
-var NF_WEEKS = [
+var NF_PRESETS = [
   {
     week: 1, fam: "生命世界", emoji: "🐾",
     intro: "动物与植物是低龄孩子最可能主动观察的对象。这一周把动物园、农场、昆虫、植物都变成「活教材」，用五感去碰真实世界，再回到书里巩固动物名称和简单句型。",
@@ -27757,10 +27753,55 @@ var NF_WEEKS = [
     ],
   },
 ];
+function nfCoreOf(weeks){
+  var s=new Set();
+  weeks.forEach(function(w){ w.days.forEach(function(d){ if(d.bookId) s.add(d.bookId); }); });
+  return s;
+}
+var NF_FAMILIES = [
+  {key:"生命世界", emoji:"🐾", intro:"动物与植物是低龄孩子最可能主动观察的对象。这一周把动物园、农场、昆虫、植物都变成「活教材」，用五感去碰真实世界，再回到书里巩固动物名称和简单句型。"},
+  {key:"地球与宇宙", emoji:"🌍", intro:"天气、季节、水——都是出门就能感知的科普。这一周用玩水盆、捡落叶、做天气表，把抽象的自然现象变成孩子手里的材料。"},
+  {key:"物质与能量", emoji:"⚡", intro:"力、运动、交通工具、沉浮、磁铁——用推/拉/滚/吸的动手体验，把「物理」变成孩子能摸到的现象。"},
+  {key:"身体与健康", emoji:"🧍", intro:"身体、五感、卫生——最贴近孩子自己的科普。这一周用照镜子、味觉小尝、洗手步骤图，把「我的身体」变成可说的英语+可画的认字素材。"},
+  {key:"社会与人文", emoji:"👥", intro:"学校、超市、地铁、家——孩子每天穿行其间的「社会地图」。这一周用角色扮演和观察，把地点词和「I / We」句型变成生活用语。"},
+  {key:"思维与创意", emoji:"🔢", intro:"颜色、数字、方位、形状、反义词——这些是 RAZ 在低级别里 NF 密度最高的一类。这一周把它们全变成「出门就能找」的游戏，词汇最稳扎稳打。"}
+];
+function nfActivity(fam, b){
+  if(b) return "读《"+b.title+"》，结合真实观察或实物做拓展；鼓励孩子用书中句式描述看到的东西。";
+  var acts={"生命世界":"观察一种动植物，画下来并标英文名。","地球与宇宙":"做一个天气/水/季节的感官小实验或自然观察。","物质与能量":"用身边材料做推/拉/沉/浮/磁铁类小实验。","身体与健康":"照镜子/尝味道/做洗手图，把身体部位变成可说的英语。","社会与人文":"角色扮演一个社会场景（学校/超市/车站），用英语说 1-2 句。","思维与创意":"出门找颜色/数字/形状/反义词，画一对并标英文。"};
+  return acts[fam]||"围绕主题做一项观察或手工，并画出关键事物。";
+}
+function nfLang(fam, b){ return b ? (b.lang||"主题词汇与书中句式") : "主题核心词（见活动）"; }
+function nfDraw(fam, b){ return b ? "画《"+b.title+"》里的关键事物，写 1-2 个英文词。" : "画今天活动里最重要的一个事物，标英文。"; }
+function nfExpTitle(fam){
+  var titles={"生命世界":"观察小动物或植物","地球与宇宙":"天气/水感官盆","物质与能量":"沉与浮 · 磁铁","身体与健康":"五感小游戏","社会与人文":"社会场景角色扮演","思维与创意":"颜色/数字/形状寻宝"};
+  return "实验日 · "+(titles[fam]||"主题探索");
+}
+function nfBuildWeeks(fromLv,toLv){
+  if(fromLv==='aa' && toLv==='A') return NF_PRESETS;
+  var order=DATA.meta.levelOrder;
+  var f=order.indexOf(fromLv), t=order.indexOf(toLv);
+  if(f<0||t<0||f>t) return NF_PRESETS;
+  var allowed=order.slice(f,t+1);
+  var nf=DATA.books.filter(function(b){ return b.type==='NF' && allowed.indexOf(b.level)>=0; });
+  return NF_FAMILIES.map(function(fam,i){
+    var list=nf.filter(function(b){ var g=genFamOf(b.theme); return g && g.family.indexOf(fam.key)>=0; }).sort(function(a,b){
+      var ai=order.indexOf(a.level), bi=order.indexOf(b.level);
+      if(ai!==bi) return ai-bi;
+      return a.num-b.num;
+    });
+    var days=[];
+    for(var d=1; d<=5; d++){
+      var bk=list[d-1];
+      if(bk){ days.push({d:d, bookId:bk.id, kind:'book', activity:nfActivity(fam.key,bk), lang:nfLang(fam.key,bk), draw:nfDraw(fam.key,bk)}); }
+      else { days.push({d:d, kind:'exp', title:nfExpTitle(fam.key), activity:nfActivity(fam.key,null), lang:nfLang(fam.key,null), draw:nfDraw(fam.key,null)}); }
+    }
+    return {week:i+1, fam:fam.key, emoji:fam.emoji, intro:fam.intro, days:days};
+  });
+}
 var NF_BOOKS = Object.fromEntries(DATA.books.map(function(b){ return [b.id,b]; }));
-var NF_CORE = (function(){ var s=new Set(); NF_WEEKS.forEach(function(w){ w.days.forEach(function(d){ if(d.bookId) s.add(d.bookId); }); }); return s; })();
-function nfExtRead(fam){
-  return DATA.books.filter(function(b){ return b.type==='NF' && b.theme===fam && !NF_CORE.has(b.id); }).sort(function(a,b){ return (a.level===b.level?a.num-b.num:a.level.localeCompare(b.level)); });
+function nfExtRead(fam, core){
+  return DATA.books.filter(function(b){ var g=genFamOf(b.theme); return b.type==='NF' && g && g.family.indexOf(fam)>=0 && !core.has(b.id); }).sort(function(a,b){ return (a.level===b.level?a.num-b.num:a.level.localeCompare(b.level)); });
 }
 function nfDayCard(day){
   if(day.kind==='exp'){
@@ -27770,6 +27811,7 @@ function nfDayCard(day){
       '<div class="drow"><b>✏️ 画+话认字</b><span>'+esc(day.draw)+'</span></div></div>';
   }
   var b=NF_BOOKS[day.bookId];
+  if(!b) return '<div class="day"><div class="dh"><span class="dnum">Day '+day.d+'</span><span class="dtitle">(书目未找到)</span></div></div>';
   var tag=b.type==='NF'?'<span class="dtag nf">NF 科普</span>':'<span class="dtag f">F 虚构</span>';
   return '<div class="day"><div class="dh"><span class="dnum">Day '+day.d+'</span><span class="dtitle">'+esc(b.title)+'</span>'+tag+'<span class="dlv">'+esc(b.level)+' · '+esc(b.lang)+'</span></div>'+
     '<div class="drow"><b>📖 今日书</b><span><code>'+esc(b.id)+'</code> '+esc(b.title)+'（Level '+esc(b.level)+'，句式：'+esc(b.lang)+'）</span></div>'+
@@ -27777,22 +27819,34 @@ function nfDayCard(day){
     '<div class="drow"><b>🔤 语言点</b><span>'+esc(day.lang)+'</span></div>'+
     '<div class="drow"><b>✏️ 画+话认字</b><span>'+esc(day.draw)+'</span></div></div>';
 }
-function nfWeekPanel(w){
-  var ext=nfExtRead(w.fam);
-  var extHtml=ext.length? '<div class="ext"><b>📚 本族延伸阅读（'+ext.length+' 本，从总表挑）：</b> '+ext.map(function(b){ return '<code>'+esc(b.id)+'</code> '+esc(b.title); }).join('、')+'</div>' : '<div class="ext">本族 NF 书已全部纳入本周核心。</div>';
+function nfWeekPanel(w, core){
+  var ext=nfExtRead(w.fam, core);
+  var extHtml=ext.length? '<div class="ext"><b>📚 本族延伸阅读（'+ext.length+' 本，从总表挑）：</b> '+ext.map(function(b){ return '<code>'+esc(b.id)+'</code> '+esc(b.title); }).join('、')+'</div>' : '<div class="ext">本族在所选级别内 NF 书已全部纳入本周核心。</div>';
   return '<div class="nf-week" id="nfW'+w.week+'"><div class="whead">'+w.emoji+' 第 '+w.week+' 周 · '+esc(w.fam)+'</div><p class="wintro">'+esc(w.intro)+'</p><div class="days">'+w.days.map(nfDayCard).join('')+'</div>'+extHtml+'</div>';
 }
 function renderNFPlan(){
-  var tabs=NF_WEEKS.map(function(w){ return '<button class="nf-tab" data-w="'+w.week+'">'+w.emoji+' 第'+w.week+'周 '+esc(w.fam)+'</button>'; }).join('');
+  var levels=DATA.meta.levelOrder.filter(function(l){ return l!=='SAZ'; });
+  var fromSel=$('#nfFrom'), toSel=$('#nfTo');
+  if(!fromSel.options.length){
+    levels.forEach(function(l){ var o=document.createElement('option'); o.value=l; o.textContent=l==='aa'?'AA':l; fromSel.appendChild(o); });
+    levels.forEach(function(l){ var o=document.createElement('option'); o.value=l; o.textContent=l==='aa'?'AA':l; toSel.appendChild(o); });
+    fromSel.value='aa'; toSel.value='A';
+  }
+  var fromLv=fromSel.value, toLv=toSel.value;
+  var weeks=nfBuildWeeks(fromLv,toLv);
+  var core=nfCoreOf(weeks);
+  var note=(fromLv==='aa' && toLv==='A')?'默认展示 aa+A 的精选周计划。':'动态生成：'+fromLv+'–'+toLv+' 范围内，每个主题族优先取 5 本 NF 书，不足处用实验日补足。';
+  $('#nfRangeNote').textContent=note;
+  var tabs=weeks.map(function(w){ return '<button class="nf-tab" data-w="'+w.week+'">'+w.emoji+' 第'+w.week+'周 '+esc(w.fam)+'</button>'; }).join('');
   document.getElementById('nfTabs').innerHTML=tabs;
-  document.getElementById('nfOv').innerHTML=NF_WEEKS.map(function(w){
+  document.getElementById('nfOv').innerHTML=weeks.map(function(w){
     var books=w.days.map(function(d){
       if(d.kind==='exp') return '<span class="mini-exp">🔬'+esc(d.title)+'</span>';
-      var b=NF_BOOKS[d.bookId]; return '<code>'+esc(b.id)+'</code> '+esc(b.title);
+      var b=NF_BOOKS[d.bookId]; return b?'<code>'+esc(b.id)+'</code> '+esc(b.title):'(未找到)';
     }).join(' <span class="sep">·</span> ');
     return '<tr><td class="wk">'+w.emoji+' W'+w.week+'</td><td class="wf">'+esc(w.fam)+'</td><td class="wb">'+books+'</td></tr>';
   }).join('');
-  document.getElementById('nfWeeks').innerHTML=NF_WEEKS.map(nfWeekPanel).join('');
+  document.getElementById('nfWeeks').innerHTML=weeks.map(function(w){ return nfWeekPanel(w,core); }).join('');
   var tabEls=document.querySelectorAll('#nfPlan .nf-tab');
   tabEls.forEach(function(t){
     t.addEventListener('click',function(){
@@ -27804,13 +27858,22 @@ function renderNFPlan(){
     });
   });
   if(tabEls[0]) tabEls[0].classList.add('active');
-  var first=document.getElementById('nfW'+NF_WEEKS[0].week); if(first) first.classList.add('active');
-  document.getElementById('nfPrintBtn').addEventListener('click',function(){
-    document.body.classList.add('print-nf'); window.print();
-    setTimeout(function(){ document.body.classList.remove('print-nf'); },400);
-  });
+  var first=document.getElementById('nfW'+weeks[0].week); if(first) first.classList.add('active');
+  if(!$('#nfPrintBtn').dataset.bound){
+    $('#nfPrintBtn').addEventListener('click',function(){
+      document.body.classList.add('print-nf'); window.print();
+      setTimeout(function(){ document.body.classList.remove('print-nf'); },400);
+    });
+    $('#nfPrintBtn').dataset.bound='1';
+  }
+  if(!$('#nfRebuild').dataset.bound){
+    $('#nfRebuild').addEventListener('click',function(){
+      renderNFPlan();
+      window.scrollTo({top:document.querySelector('#nfPlan .controls').offsetTop-8,behavior:'smooth'});
+    });
+    $('#nfRebuild').dataset.bound='1';
+  }
 }
-
 init();
 </script>
 </body>
