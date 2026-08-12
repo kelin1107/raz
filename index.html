@@ -66,6 +66,8 @@
   table{width:100%;border-collapse:collapse;font-size:13.5px}
   th,td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:center}
   th{background:#f1f5f9;color:#334155;font-weight:600;position:sticky;top:54px}
+  /* 总表放在 overflow:auto 容器内，sticky header 会导致首行被裁 */
+  #mTable th{position:static}
   tbody tr{cursor:pointer}
   tbody tr:hover{background:var(--soft)}
   tbody tr.sel{background:#dbeafe}
