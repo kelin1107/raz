@@ -1,6 +1,10 @@
-# 上线指引：Cloudflare Pages（连 GitHub 自动部署）
+# 上线指引：Cloudflare Workers 静态资源（连 GitHub 自动部署）
 
-你已有 GitHub 账号 → 走 **Cloudflare Pages + Git 集成** 是最顺的：代码存在 GitHub（免费、可版本管理），Cloudflare 负责托管（免费 CDN + 自动 HTTPS），**以后 push 一下就自动重新上线**，不用每次手动传文件。
+你已有 GitHub 账号 → 走 **Cloudflare Workers + Git 集成** 是最顺的：代码存在 GitHub（免费、可版本管理），Cloudflare 负责托管（免费 CDN + 自动 HTTPS），**以后 push 一下就自动重新上线**，不用每次手动传文件。
+
+> 注：本项目实际部署为 **Cloudflare Workers 静态资源**（`wrangler.toml` 里 `[assets] directory = "./dist"`，项目名 `raz`），不是 Pages。纯静态效果一致、push 自动重部署。
+
+> 当前线上地址：`https://raz.kk.workers.dev`（账号级 workers.dev 子域已改为 `kk`）。
 
 整条链路分两部分：
 - **A. 本地 git 初始化**（本文件已替你做好提交，下面只差连远端）
