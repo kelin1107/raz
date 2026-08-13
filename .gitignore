@@ -32,4 +32,7 @@ _script.js
 _shot.js
 _verify.js
 _verify_dist.js
+_verify_xlevels.js
+lv.html
+live_*.html
 shots/
