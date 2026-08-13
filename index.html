@@ -323,7 +323,7 @@
 </head>
 <body>
 <header>
-  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.26</span></h1>
+  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.27</span></h1>
   <p>aa–Z2 + GK–G6 全级别元数据索引 · 非官方整理，仅供研究/教学用途</p>
 </header>
 
@@ -589,7 +589,7 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.26 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.27 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
@@ -27445,7 +27445,12 @@ const SAZ_HINTS = [
   {keys:['sense','eye','ear','nose','tongue','skin','see','hear','smell','taste'], read:['书里讲到哪个感官？它怎么工作？','这个感官对我们有什么保护作用？'], observe:'蒙眼摸物/闻味/听声，测试不同感官的准确度。', model:'做一张「五感轮盘」，每格写一个感官和对应器官。', tell:'用 sense、eye、ear、skin 讲一个感官是怎么工作的。'},
   {keys:['health','nutrition','exercise','sleep','hygiene'], read:['书里讲到健康的哪个方面？','为什么它对身体重要？','你可以做一件什么小事来保持健康？'], observe:'记录自己一天的喝水/运动/睡眠情况。', model:'画一张「健康一日」时间表，标出运动、吃饭、睡觉。', tell:'用 health、exercise、nutrition、sleep 讲一个健康习惯。'},
   {keys:['disease','germ','bacteria','virus','immune','vaccine'], read:['细菌/病毒和我们的身体有什么关系？','免疫系统怎么保护我们？','疫苗起什么作用？'], observe:'用放大镜/显微镜观察（或看图）细菌形状。', model:'用黏土做「好细菌」和「坏病毒」，讲免疫系统怎么识别它们。', tell:'用 germ、immune、virus、vaccine 讲身体怎么对抗病菌。'},
-  // 社会/人文（少量）
+  // 社会/人文（少量）——人文/传记类不做硬实验，改「平行阅读 + 真实拓展 + 讨论」
+  {keys:['curie','marie','radioactive','radioactivity','atom','nuclear','nobel','scientist','inventor','biography'], parallel:true,
+   read:['居里夫人是谁？书里说她做了什么重要发现（放射性）？她为什么了不起（历史上第一位两获诺贝尔奖的女性）？'],
+   parallel:{ read:'平行读：找一本同主题科学家传记绘本，或对照 SAZ 物质与能量 的「简单电路 / 清洁能源」单元，理解「放射性」其实也是一种能量。',
+             extend:'真实拓展：看一段居里夫人或放射性的纪录片（PBS / BBC / 科技馆短片）；若方便，参观一次科技馆的物理 / 化学展厅。',
+             discuss:'讨论：用 radioactivity、energy、discovery、nobel 聊——为什么她是科学史上的重要人物？女生也能成为科学家吗？放射线在医学（如 X 光）里怎么帮人？' }},
   {keys:['house','building','bridge','structure','arch'], read:['这个结构用了什么形状/材料？','它为什么能站稳？','建筑师要解决什么问题？'], observe:'找身边 3 种建筑/结构，观察底座、支撑、材料。', model:'用纸/吸管搭一座能承重的小桥或塔。', tell:'用 structure、strong、material、design 讲这个结构为什么稳固。'},
   {keys:['art','music','instrument','culture'], read:['书里讲到艺术/音乐/文化的什么知识？','它和科学有什么联系？','你能模仿其中一个现象吗？'], observe:'听一段这种音乐或看一张这种艺术品的图片。', model:'用简单材料做一个小乐器或一幅受启发的画。', tell:'用 art、sound、color、culture 讲科学怎么藏在艺术里。'}
 ];
@@ -27499,12 +27504,13 @@ function sazDomainHint(theme){
     '地球与宇宙':{read:['这个自然现象/天体最让你惊讶的地方是什么？','书里怎么解释它的形成或变化？','它和我们的生活有什么联系？'], observe:'看一段真实影像或图片，记录 3 个观察到的细节。', model:'用家里材料做一个能展示该现象的小模型。', tell:'用本单元核心词讲一个地球或宇宙现象。'},
     '物质与能量':{read:['这个科学现象需要什么条件才会发生？','书里用了什么例子帮你理解？','你能找到家里一个类似例子吗？'], observe:'做一个小观察：这种现象在家里哪里能看到？', model:'用简单材料演示这个现象。', tell:'用本单元核心词讲清楚这个现象是怎么发生的。'},
     '身体与健康':{read:['这个身体部位/健康习惯起什么作用？','如果它出问题，身体会有什么感觉？','书里建议怎么保护它？'], observe:'摸一摸/听一听/感受自己身体的这个部位。', model:'用黏土/吸管/纸做一个该身体部位或系统的简易模型。', tell:'用本单元核心词讲这个身体部位是怎么工作的。'},
-    '社会与人文':{read:['这个人文/社会话题和科学有什么关系？','书里提出了什么问题？','你能举出现实生活中的例子吗？'], observe:'在身边找一个和这话题相关的例子，拍照或画下来。', model:'用材料做一个能代表这个话题的小作品。', tell:'用本单元核心词讲这个话题为什么重要。'}
+    '社会与人文':{read:['这个人文/社会话题和科学有什么关系？','书里提出了什么问题？','你能举出现实生活中的例子吗？'], observe:'在身边找一个和这话题相关的例子，拍照或画下来。', extend:'看一段相关的纪录片/短视频，或去博物馆/科技馆找一个实物对照。', model:'用材料做一个能代表这个话题的小作品。', tell:'用本单元核心词讲这个话题为什么重要。'}
   };
   return map[theme] || map['地球与宇宙'];
 }
 /* 为单元选择最匹配的实验：hint.exp 指定标题优先（跨主题域查找）；否则按核心词/标题与实验词重叠度打分 */
 function sazMatchExp(u, hint){
+  if(u.theme==='社会与人文') return null;   // 人文/传记类不做硬实验
   var themeList=SAZ_EXP[u.theme] || SAZ_EXP['生命世界'];
   if(hint && hint.exp){
     var all=[];
@@ -27526,7 +27532,13 @@ function sazMatchExp(u, hint){
     return {exp:exp, idx:idx, score:s};
   });
   scores.sort(function(a,b){ return b.score-a.score || a.idx-b.idx; });
-  return scores[0].exp;
+  return scores[0].score>0 ? scores[0].exp : null;  // 0 重叠则不强行配实验
+}
+function sazTierLabel(band){
+  if(/LOW$/.test(band)) return 'Low 档';
+  if(/MID$/.test(band)) return 'Mid 档';
+  if(/HIGH$/.test(band)) return 'High 档';
+  return '主书';
 }
 function sazReadDay(dow,b,title,task){
   var m=sazMeta(b), lex=m.lexile?(' · Lexile '+m.lexile):'';
@@ -27536,14 +27548,27 @@ function sazActDay(dow,icon,title,text){ return {dow:dow, icon:icon, title:title
 function sazWeekDays(u, exp){
   var tiers=u.tiers, d=[];
   var hint=sazFindHint(u.title,u.theme) || sazDomainHint(u.theme);
-  var readTasks=hint.read || ['朗读后圈出今天的核心词；用 1 句英文说说这本书讲了什么。','朗读后，用自己的话解释这本书最重要的科学概念。','朗读后，找出作者用了什么证据来说明观点。'];
+  var isParallel=(u.theme==='社会与人文') || (hint && hint.parallel);
+  var readTasks=(hint && hint.read) ? hint.read : ['朗读后圈出今天的核心词；用 1 句英文说说这本书讲了什么。','朗读后，用自己的话解释这本书最重要的科学概念。','朗读后，找出作者用了什么证据来说明观点。'];
+  if(isParallel){
+    var pt=(hint && hint.parallel) ? hint.parallel : {read:readTasks, extend:hint.extend||hint.observe, discuss:hint.tell};
+    if(tiers[0]) d.push(sazReadDay('周一',tiers[0],'读 '+sazTierLabel(tiers[0].band), readTasks[0]||readTasks[readTasks.length-1]));
+    else d.push(sazActDay('周一','📖','读', readTasks[0]||'读《'+u.title+'》并圈出核心词。'));
+    var tueText = (hint && hint.parallel) ? pt.read : (readTasks[1] || pt.extend || '找一本同主题绘本或短片延伸读。');
+    d.push(sazActDay('周二','📚','平行阅读', tueText));
+    d.push(sazActDay('周三','🔎','真实拓展', pt.extend || '看一段相关纪录片，或参观科技馆/博物馆。'));
+    d.push(sazActDay('周四','🗣','讨论', pt.discuss || (hint.tell||'用核心词聊这个话题和生活的联系。')));
+    d.push(sazActDay('周五','✍️','输出', '用核心词做一张《'+u.title+'》主题海报，或列出 3 个你学到的事实。'));
+    return d;
+  }
   if(tiers[0]) d.push(sazReadDay('周一',tiers[0],'读 Low 档', readTasks[0] || readTasks[readTasks.length-1]));
   else d.push(sazActDay('周一','🔍','观察', hint.observe));
   if(tiers[1]) d.push(sazReadDay('周二',tiers[1],'读 Mid 档', readTasks[1] || readTasks[0]));
   else d.push(sazActDay('周二','🔍','观察', hint.observe));
   if(tiers[2]) d.push(sazReadDay('周三',tiers[2],'读 High 档', readTasks[2] || readTasks[1] || readTasks[0]));
   else d.push(sazActDay('周三','🧱','做模型', hint.model));
-  d.push({dow:'周四', icon:'🔬', title:'主题实验：'+exp.t, kind:'exp', exp:exp});
+  if(exp){ d.push({dow:'周四', icon:'🔬', title:'主题实验：'+exp.t, kind:'exp', exp:exp}); }
+  else { d.push(sazActDay('周四','🔎','观察与讨论', hint.observe || '观察一个相关现象，用核心词讨论它是怎么发生的。')); }
   d.push(sazActDay('周五','🗣','讲给你听', hint.tell || '用 3–5 个核心词给爸妈讲一遍这个单元；画一张科学海报'));
   return d;
 }
@@ -27554,9 +27579,12 @@ function sazBuildWeeks(theme, gb, n){
   return units.map(function(u,i){
     var emo=SAZ_EMO[u.theme]||'🔬';
     var hint=sazFindHint(u.title,u.theme);
+    var isParallel=(u.theme==='社会与人文') || (hint && hint.parallel);
     var exp=sazMatchExp(u, hint);
     var days = sazWeekDays(u, exp);
-    var intro = '本单元《'+u.title+'》'+u.gb+' 档 · '+u.theme+'。'+(hint?'按书名关键词「'+hint.keys[0]+'」定制了阅读任务与实验；':'按主题域定制了阅读任务与实验；')+'每天读一档（Low→Mid→High），周末动手做实验、用核心词复述。';
+    var intro = isParallel
+      ? '本单元《'+u.title+'》'+u.gb+' 档 · '+u.theme+'。人文/传记类不做硬实验，改为「📚 平行阅读 + 🔎 真实拓展 + 🗣 讨论」：读一本相关的书/纪录片，用核心词聊它和生活的联系。'
+      : '本单元《'+u.title+'》'+u.gb+' 档 · '+u.theme+'。'+(hint?'按书名关键词「'+hint.keys[0]+'」定制了阅读任务与实验；':'按主题域定制了阅读任务与实验；')+'每天读一档（Low→Mid→High），周末动手做实验、用核心词复述。';
     return {week:i+1, emo:emo, title:u.title, theme:u.theme, gb:u.gb, core:u.core, days:days, intro:intro};
   });
 }
