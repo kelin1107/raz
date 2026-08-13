@@ -323,7 +323,7 @@
 </head>
 <body>
 <header>
-  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.25</span></h1>
+  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.26</span></h1>
   <p>aa–Z2 + GK–G6 全级别元数据索引 · 非官方整理，仅供研究/教学用途</p>
 </header>
 
@@ -589,7 +589,7 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.25 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.26 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
@@ -27369,25 +27369,86 @@ const SAZ_EXP = {
   '生命世界':[
     {t:'种子发芽观察', c:['seed','germinate','sprout','root','soil'], m:['豆子几颗','棉花','水','透明杯','记录本'], s:['杯底铺湿棉花，放 2–3 颗豆','每天喷水保持湿润','记录第几天冒根、长叶','用核心词画一张「豆子长大图」']},
     {t:'叶子与阳光', c:['leaf','photosynthesis','plant','sunlight','stem'], m:['绿叶','放大镜','阳光','纸笔'], s:['找一片绿叶在阳光下观察叶脉','讨论叶子怎么用阳光做食物','用放大镜看气孔','画一片叶并标出叶脉']},
-    {t:'动物分类游戏', c:['classify','habitat','vertebrate','invertebrate','species'], m:['动物图卡或绘本','分类表'], s:['选 5 种动物','按栖息地分(天空/陆地/水里)','再按有无脊椎分','说出一类动物的共同特征']}
+    {t:'动物分类游戏', c:['classify','habitat','vertebrate','invertebrate','species'], m:['动物图卡或绘本','分类表'], s:['选 5 种动物','按栖息地分(天空/陆地/水里)','再按有无脊椎分','说出一类动物的共同特征']},
+    {t:'食物链拼图', c:['food','chain','predator','prey','energy'], m:['纸','笔',' magazines/图卡'], s:['画出太阳→植物→食草动物→食肉动物','标出 predator 和 prey','讨论如果中间一环消失会怎样','用核心词讲一条食物链']},
+    {t:' camouflage 躲猫猫', c:['camouflage','hide','protect','color','pattern'], m:['彩色碎纸/布料','小物件'], s:['把物品藏进同色碎纸里','换到对比色背景再藏','讨论颜色/花纹如何帮助动物躲天敌','设计一只 camouflage 动物']},
+    {t:'鸟喙适配大挑战', c:['bird','beak','adapt','food','finch'], m:['豆子/米粒','镊子','勺子','夹子','计时器'], s:['用镊子/勺子/夹子分别夹豆子','记录每种「喙」1分钟能夹多少','讨论不同喙形适合吃什么食物','联系达尔文雀鸟']}
   ],
   '地球与宇宙':[
     {t:'密封袋里的水循环', c:['water','cycle','evaporate','condense','cloud'], m:['密封袋','少量水','蓝墨水','胶带','窗户'], s:['袋内加带色水封好','贴窗上晒太阳','观察水珠凝结滑落','讲蒸发→凝结→降雨']},
     {t:'影子与太阳', c:['shadow','sun','light','position','rotate'], m:['小玩具','白纸','笔','晴天'], s:['上午把玩具放纸上描影子','中午再描一次','比较影子长短与方向','讲太阳位置变化→影子变化']},
-    {t:'岩石风化', c:['rock','weathering','erosion','change','soil'], m:['两块糖或粉笔','水','放大镜','冰箱'], s:['一块保持干燥','另一块滴水后冻融反复','观察哪块更易碎','类比岩石被风化']}
+    {t:'岩石风化', c:['rock','weathering','erosion','change','soil'], m:['两块糖或粉笔','水','放大镜','冰箱'], s:['一块保持干燥','另一块滴水后冻融反复','观察哪块更易碎','类比岩石被风化']},
+    {t:'火山小喷发', c:['volcano','magma','erupt','lava','gas'], m:['小苏打','醋','洗洁精','颜料','塑料瓶/黏土'], s:['用黏土把瓶子堆成火山','加入小苏打、洗洁精、颜料','倒入醋观察喷发','讲岩浆、气体、喷发']},
+    {t:'月相饼干/奥利奥', c:['moon','phase','orbit','sunlight','crescent'], m:['奥利奥/圆饼干','牙签','纸'], s:['画出 8 个空圆代表月相','用饼干夹心刮出新月、上弦、满月、下弦','按顺序摆成一个月相周期','讲月亮绕地球和阳光照射']},
+    {t:'纸箱森林栖息地', c:['forest','habitat','deforestation','animal','plant'], m:['纸箱','绿色纸/布','小动物模型/画','剪刀'], s:['在纸箱里做一片微缩森林','放入动物和植物','讨论森林给动物提供什么','模拟砍伐一角看栖息地破坏']},
+    {t:'彗星尾巴方向', c:['comet','tail','sun','orbit','solar'], m:['锡纸/黏土','棉线','台灯/手电筒'], s:['用锡纸搓成彗核','棉线当彗尾','开灯代表太阳','绕灯转一圈观察尾巴方向']}
   ],
   '物质与能量':[
     {t:'浮与沉', c:['float','sink','matter','heavy','light'], m:['水盆','瓶盖 / 石头 / 木块 / 纸'], s:['先猜每样浮或沉','逐一放水试','记录结果','讨论轻重与空心的关系']},
     {t:'摩擦力', c:['force','friction','motion','surface','push'], m:['小车','书','桌面与地毯'], s:['同本书在桌面推','在地毯上推','比哪边推得远','摸表面讲摩擦']},
-    {t:'声音与振动', c:['sound','vibrate','pitch','volume','wave'], m:['橡皮筋','纸盒','几粒米'], s:['橡皮筋套盒上弹','放几粒米看跳动','讲振动传声','捂耳听变化']}
+    {t:'声音与振动', c:['sound','vibrate','pitch','volume','wave'], m:['橡皮筋','纸盒','几粒米'], s:['橡皮筋套盒上弹','放几粒米看跳动','讲振动传声','捂耳听变化']},
+    {t:'磁极相吸相斥', c:['magnet','pole','attract','repel','force'], m:['2 块磁铁','回形针','纸'], s:['用磁铁吸回形针','把两块磁铁 N/N 相对感受排斥','N/S 相对感受吸引','标出南北极并画图']},
+    {t:'光的直线传播', c:['light','shadow','block','reflect','straight'], m:['手电筒','小玩具','白墙/纸'], s:['手电筒照玩具','观察墙上影子','移动手电筒看影子变化','用纸板挡住光解释光沿直线走']},
+    {t:'简单电路', c:['electricity','circuit','battery','bulb','wire'], m:['电池','小灯泡','导线/铝箔','胶带'], s:['用电池和导线让小灯泡亮','断开一处看灯泡灭','讲通路/断路','画一张电路图']}
   ],
   '身体与健康':[
     {t:'心跳与运动', c:['heart','blood','circulate','pulse','exercise'], m:['计时器','手'], s:['静坐数 15 秒脉搏×4','跳 30 秒后再数','比较前后次数','讲心脏把血送到全身']},
     {t:'消化小模型', c:['nutrient','digest','health','food','stomach'], m:['密封袋','饼干','水'], s:['袋里放饼干+水','揉捏模拟胃的消化','讲食物变糊进入小肠','画一条消化路线']},
-    {t:'五感配对', c:['sense','see','hear','smell','taste'], m:['眼罩','不同气味 / 质地小物'], s:['蒙眼摸物猜是什么','闻味猜物','听声猜物','讲眼耳鼻舌皮肤五种感官']}
+    {t:'五感配对', c:['sense','see','hear','smell','taste'], m:['眼罩','不同气味 / 质地小物'], s:['蒙眼摸物猜是什么','闻味猜物','听声猜物','讲眼耳鼻舌皮肤五种感官']},
+    {t:'肺活量比比看', c:['lung','breathe','oxygen','air','muscle'], m:['气球','吸管'], s:['深吸一口气吹气球','量量气球周长','运动后再吹一次比较','讲肺怎么把氧气吸进血液']},
+    {t:'骨骼支架', c:['bone','skeleton','muscle','support','body'], m:['吸管','绳子/橡皮筋','纸'], s:['用吸管搭一个人形骨架','讨论骨头如何支撑身体','弯曲关节处讲肌肉和骨头配合','画一张人体骨架图']}
   ]
 };
 const SAZ_EMO = {'生命世界':'🐾','地球与宇宙':'🌍','物质与能量':'⚡','身体与健康':'❤️','社会与人文':'👥'};
+/* 书名关键词 → 专属每日任务（阅读/观察/做模型/讲给你听）。未命中时按主题域兜底。 */
+const SAZ_HINTS = [
+  // 天体/宇宙
+  {keys:['comet','asteroid','meteor'], exp:'彗星尾巴方向', read:['找一找书里描述 comet/tail 的句子，画下它的样子。','彗星靠近太阳时为什么会「长尾巴」？方向有什么规律？','比较小行星、彗星和行星：轨道形状、有没有尾巴、由什么组成？'], observe:'搜一段彗星或流星的真实影像，观察它靠近太阳时尾巴的变化。', model:'用锡纸/黏土做「彗核」，棉线或纸巾做「彗尾」，演示彗星飞过太阳时尾巴为什么朝外。', tell:'用 comet、tail、orbit、sun 给爸妈讲：彗星飞过太阳时为什么会「长尾巴」？'},
+  {keys:['moon','lunar','phase'], read:['书里月相是怎么形成的？关键是什么挡住了什么？','为什么我们每天看到的月亮形状不一样？','比较满月和新月：月亮、地球、太阳三者的位置关系。'], observe:'连续 5 天晚上观察月亮形状，画下并标日期。', model:'用一个球当月亮、台灯当太阳，人当地球，转一圈观察「亮面」变化。', tell:'用 moon、phase、orbit、sunlight 讲月相是怎么变出来的。'},
+  {keys:['sun','solar','star'], read:['太阳给地球带来什么？书里举了哪些例子？','太阳为什么会发光发热？（简单版：氢变氦释放能量）','比较太阳和地球：大小、温度、距离、生命所需。'], observe:'晴天观察一天中影子的变化，记录早上/中午/傍晚的影子长短。', model:'用手电筒/台灯当太阳，小玩具当小孩，演示影子随太阳位置变化。', tell:'用 sun、light、heat、shadow 讲太阳对我们为什么重要。'},
+  {keys:['planet','solar system','earth','mars','jupiter','saturn'], read:['这个星球/天体最特别的地方是什么？','它和地球有什么相似和不同？','行星绕太阳公转的方向、形状有什么规律？'], observe:'搜一张这个星球的真实照片，描述它的颜色、表面、是否有环。', model:'用不同大小的球代表行星，按距离摆成太阳系模型。', tell:'用 planet、orbit、sun、moon 讲这个星球的特点。'},
+  {keys:['space','universe','galaxy'], read:['书里讲到宇宙的什么尺度/结构？','天文学家用什么工具观察宇宙？','为什么我们说宇宙「很大」？'], observe:'找一个星空 App，找到书里提到的星座/天体。', model:'用黑点贴纸+黑纸做一片「星系」，解释星星聚集成团。', tell:'用 space、star、galaxy、telescope 讲人类怎么探索宇宙。'},
+  // 天气/地球
+  {keys:['cloud','cool clouds','storm','rain','weather'], exp:'密封袋里的水循环', read:['书里讲到哪几种云？它们和天气有什么关系？','云是怎么形成的？关键步骤是什么？','雷暴/降雨前后，空气、云、风有什么变化？'], observe:'连续三天观察天空中的云，画下来并预测天气。', model:'用棉花/纸巾+蓝纸做一朵积云/雨云/卷云，标出形成条件。', tell:'用 cloud、water、evaporate、condense 讲云是怎么形成的。'},
+  {keys:['water cycle','cycle','evaporat','condens','rain'], read:['水循环有哪几个关键步骤？','太阳在水循环里起什么作用？','如果水没有循环，地球会怎样？'], observe:'观察一杯热水上的水汽，或窗户上的水珠，讲蒸发和凝结。', model:'画一张水循环图，标出海洋、云、雨、河流、太阳。', tell:'用 evaporate、condense、precipitate、cycle 讲水循环。'},
+  {keys:['rock','mineral','soil','fossil'], read:['书里讲到岩石/矿物/土壤的哪几个特点？','化石是怎么形成的？','不同岩石（火成岩/沉积岩/变质岩）有什么不同？'], observe:'去户外找 3 种不同的石头/土，记录颜色、质地、重量。', model:'用橡皮泥/黏土压出「化石」印记，或用糖块模拟岩石风化。', tell:'用 rock、fossil、mineral、weathering 讲一种地质变化。'},
+  {keys:['volcano','erupt','magma','lava','earthquake'], read:['火山喷发需要什么条件？','岩浆和熔岩有什么区别？','地震/火山对地形有什么影响？'], observe:'看一段火山喷发或地震的真实视频，注意喷发物和地面变化。', model:'用小苏打+醋做火山喷发，或用积木搭房子然后摇晃模拟地震。', tell:'用 volcano、magma、erupt、crust 讲地球内部能量怎么释放出来。'},
+  {keys:['ocean','sea','coast','river','lake','water'], read:['书里讲到水体的什么特点？','海洋/河流对动植物或人类有什么作用？','水里的生物怎么适应环境？'], observe:'接一盆水，观察水面波动、浮沉、溶解（加盐/糖）。', model:'用蓝纸+沙做海岸/河流剖面，标出岸边、浅水、深水。', tell:'用 ocean、habitat、water、wave 讲一种水生环境。'},
+  {keys:['forest','desert','rainforest','habitat','tundra'], exp:'纸箱森林栖息地', read:['这个栖息地有什么气候特点？','生活在这里的动植物有什么适应特征？','如果气候变了，这里会发生什么？'], observe:'找一本图鉴或视频，看 3 种这个栖息地的代表动植物。', model:'用纸箱/黏土做一个微缩栖息地，放入代表动植物。', tell:'用 habitat、climate、adapt、survive 讲这个栖息地里的生存策略。'},
+  {keys:['season','winter','summer','spring','fall','autumn'], read:['季节变化的原因是什么？','书里这个季节有什么特点？','不同季节动植物有什么变化？'], observe:'记录本周温度和白天长度，和书中季节对比。', model:'用台灯+地球仪演示季节：倾斜+绕太阳转。', tell:'用 season、orbit、tilt、sunlight 讲为什么会有四季。'},
+  {keys:['climate','atmosphere','greenhouse','pollution'], read:['大气层对地球起什么作用？','气候和天气有什么区别？','人类活动怎么影响气候/空气？'], observe:'连续记录室内外温度和空气质量（看天气 App）。', model:'用透明塑料杯+温度计做「温室效应」小实验。', tell:'用 atmosphere、climate、gas、temperature 讲气候为什么重要。'},
+  // 生命世界
+  {keys:['plant','seed','flower','tree','garden'], read:['植物生长需要哪几样东西？','书里这种植物有什么特别结构或用途？','种子是怎么传播到远处的？'], observe:'种一颗豆子或观察一盆植物，记录发芽/开花过程。', model:'用黏土/纸做一朵花，标出根、茎、叶、花、种子。', tell:'用 plant、seed、root、sunlight 讲植物怎么长大。'},
+  {keys:['leaf','photosynthesis','chlorophyll'], read:['叶子为什么是绿色的？','光合作用需要什么原料、产出什么？','叶子的结构怎么帮助它工作？'], observe:'捡几片落叶，观察叶脉、颜色、形状，做叶脉拓印。', model:'用绿色纸做叶子，画出叶脉，标出阳光、水、空气进入的方向。', tell:'用 leaf、photosynthesis、sunlight、oxygen 讲叶子怎么制造食物。'},
+  {keys:['cell','cells','organ','tissue'], read:['细胞长什么样？书里用什么比喻？','不同细胞/器官各有什么工作？','为什么细胞是生命的基本单位？'], observe:'用放大镜观察洋葱表皮或自己的口腔上皮（需家长协助）。', model:'用果冻/黏土+豆子做「细胞模型」，标出细胞核、细胞膜。', tell:'用 cell、nucleus、organ、function 讲细胞怎么组成生命。'},
+  {keys:['animal','animals','wildlife','creature'], read:['书里这种动物有什么特别之处？','它怎么获取食物、躲避天敌？','这种动物属于哪一大类（哺乳/鸟/鱼/昆虫/爬行动物）？'], observe:'看一段这种动物的真实视频，记录 3 个有趣行为。', model:'用粘土/纸盒做这种动物的模型，标出关键身体部位。', tell:'用 animal、habitat、food、body 讲这种动物怎么生存。'},
+  {keys:['bird','finch','eagle','owl','penguin'], exp:'鸟喙适配大挑战', read:['这种鸟有什么适应飞行的特征？','喙/羽毛/脚和它吃的食物/生活环境有什么关系？','达尔文的雀鸟为什么会变成不同喙形？'], observe:'窗外观察 10 分钟鸟类，记录行为和叫声。', model:'用纸折一只鸟，或用黏土做不同形状的鸟喙。', tell:'用 bird、beak、feather、adapt 讲这种鸟怎么适应环境。'},
+  {keys:['fish','shark','whale','ocean animal'], read:['水生动物怎么呼吸/游动？','鱼和哺乳动物（如鲸）有什么不同？','它们怎么适应水下生活？'], observe:'观察鱼缸或视频里的鱼，注意鳍、鳃、尾巴的动作。', model:'用黏土/纸做一条鱼，标出鳍、鳃、尾、鳞片。', tell:'用 fish、gill、fin、scale 讲鱼怎么在水里生活。'},
+  {keys:['insect','bug','butterfly','bee','ant','worm','annelid'], read:['昆虫/蠕虫身体分几部分？','它怎么帮助植物/土壤？','生命周期有哪几个阶段？'], observe:'去户外找一只昆虫或蚯蚓，观察并画下来（观察后放回）。', model:'用黏土/纸做一只昆虫，标出头、胸、腹、六条腿。', tell:'用 insect、larva、adult、pollinate 讲这种小生物的生命周期。'},
+  {keys:['food chain','food web','predator','prey','energy'], read:['食物链从哪里开始？能量怎么传递？',' predator 和 prey 是什么关系？','如果食物链断了会怎样？'], observe:'用图卡或绘本摆出 2–3 条食物链。', model:'用箭头连出太阳→植物→草食动物→肉食动物的链条。', tell:'用 food、chain、predator、prey 讲能量怎么在食物链里流动。'},
+  {keys:['adaptation','camouflage','adapt','survive'], read:['书里讲了哪些适应环境的例子？',' camouflage 是怎么帮助动物生存的？','人类有没有类似的「适应」？'], observe:'玩「找一找」：在图片里找出藏起来的动物。', model:'用彩纸做一只「变色龙」或蛾，贴在不同背景上测试隐藏效果。', tell:'用 adapt、camouflage、survive、habitat 讲一种动物的适应策略。'},
+  {keys:['life cycle','grow','change','metamorphosis','cycle'], read:['这个生物的生命周期分哪几个阶段？','每个阶段长什么样？','它和人类成长有什么不同？'], observe:'如果条件允许，养几只蚕/蝌蚪/蝴蝶幼虫并记录变化。', model:'用画纸画一个圆形生命周期图，标出 egg、larva、pupa、adult 等阶段。', tell:'用 life cycle、egg、adult、grow 讲这个生物怎么长大。'},
+  // 物质与能量
+  {keys:['light','optics','lens','rainbow','color'], read:['书里讲到光的什么性质？','彩虹/颜色是怎么形成的？','镜子/透镜怎么改变光路？'], observe:'用三棱镜或水杯观察彩虹；照镜子看左右颠倒。', model:'用镜子+手电筒做光的反射实验，画出光路。', tell:'用 light、reflect、refract、color 讲光的一种现象。'},
+  {keys:['sound','hear','noise','music','ear'], read:['声音是怎么产生的？','音调高低和振动有什么关系？','我们怎么听到声音？'], observe:'轻敲不同材质的物体，比较声音的高低和长短。', model:'用橡皮筋/瓶子和水做乐器，观察弦/空气柱越短音越高。', tell:'用 sound、vibrate、pitch、ear 讲声音是怎么传到耳朵里的。'},
+  {keys:['magnet','magnetic','attract','repel','pole'], read:['磁铁能吸什么、不能吸什么？','同极和异极相碰会怎样？','磁铁在生活里有什么用？'], observe:'用磁铁测试家里 10 样小物件，分两类。', model:'用磁铁+回形针做「磁悬浮」或钓鱼游戏，标出 N/S 极。', tell:'用 magnet、attract、repel、metal 讲磁铁的两极。'},
+  {keys:['electricity','circuit','battery','wire','bulb'], read:['一个完整电路需要什么？','开关怎么控制灯泡亮灭？','电从哪里来、到哪里去？'], observe:'观察家里 3 个电器的插头/开关/电池。', model:'用电池+导线+小灯泡搭一个完整电路，测试通路和断路。', tell:'用 electricity、circuit、battery、bulb 讲电流怎么流动。'},
+  {keys:['force','motion','push','pull','gravity','friction'], read:['书里讲到哪种力？它是怎么让物体动起来的？','摩擦力和运动有什么关系？','重力是怎么影响我们的？'], observe:'推同一本书在桌面和地毯上滑，比较远近。', model:'用小车+斜坡做实验，改变坡度/表面看滑行距离。', tell:'用 force、motion、friction、gravity 讲一种力怎么改变运动。'},
+  {keys:['matter','solid','liquid','gas','state','melt','freeze'], read:['固体/液体/气体各有什么特点？','书里这种物质怎么改变状态？','状态变化和温度有什么关系？'], observe:'观察冰块融化或水烧开冒汽，记录状态变化。', model:'用箭头画出固体→液体→气体的变化图，标出加热/冷却。', tell:'用 solid、liquid、gas、temperature 讲一种物态变化。'},
+  {keys:['heat','temperature','warm','cold','thermometer'], read:['热是怎么传递的？','书里讲到传导/对流/辐射中的哪一种？','温度怎么测量？'], observe:'用手感受金属/木头/塑料在同样环境下的温度差异。', model:'用温度计测热水、温水、冷水，记录并排序。', tell:'用 heat、temperature、warm、cold 讲热的一种传递方式。'},
+  {keys:['energy','solar','wind','water power','bioenergy'], read:['这种能源来自哪里？','它有什么好处和限制？','人们怎么把它变成电？'], observe:'观察家里/小区里使用这种能源的地方（太阳能板、风车）。', model:'用纸扇/小风车+风扇模拟风力发电，或用手电筒照太阳能小车。', tell:'用 energy、solar、wind、power 讲一种清洁能源。'},
+  // 身体与健康
+  {keys:['heart','blood','circulate','pulse'], read:['心脏的工作是什么？','血液在身体里怎么循环？','运动为什么会让心跳变快？'], observe:'静坐和运动后分别数脉搏，比较两次数字。', model:'用吸管/软管+水杯做简易「血液循环」模型。', tell:'用 heart、blood、circulate、pulse 讲心脏怎么工作。'},
+  {keys:['lung','breathe','respiration','oxygen'], read:['我们是怎么呼吸的？','肺里发生了什么？','氧气进入身体后去哪里？'], observe:'深呼吸，把手放胸口和腹部感受起伏。', model:'用塑料瓶+气球做「肺呼吸」模型，挤压瓶身看气球胀缩。', tell:'用 lung、breathe、oxygen、air 讲呼吸的过程。'},
+  {keys:['bone','skeleton','muscle','joint'], read:['骨头和肌肉怎么一起让我们动起来？','关节起什么作用？','骨骼还有什么功能？'], observe:'摸摸自己的手肘/膝盖，弯曲和伸直感受关节。', model:'用吸管+线做可活动的手臂/腿模型。', tell:'用 bone、muscle、joint、skeleton 讲身体怎么运动。'},
+  {keys:['digest','stomach','intestine','nutrient','food'], read:['食物进入身体后经过哪些地方？','每个器官对食物做了什么？','什么是营养？'], observe:'记录今天三餐，分类成蛋白质/碳水/蔬菜/水果。', model:'用一根长绳子/纸条按比例画出消化道长度。', tell:'用 digest、stomach、nutrient、intestine 讲食物怎么被身体利用。'},
+  {keys:['sense','eye','ear','nose','tongue','skin','see','hear','smell','taste'], read:['书里讲到哪个感官？它怎么工作？','这个感官对我们有什么保护作用？'], observe:'蒙眼摸物/闻味/听声，测试不同感官的准确度。', model:'做一张「五感轮盘」，每格写一个感官和对应器官。', tell:'用 sense、eye、ear、skin 讲一个感官是怎么工作的。'},
+  {keys:['health','nutrition','exercise','sleep','hygiene'], read:['书里讲到健康的哪个方面？','为什么它对身体重要？','你可以做一件什么小事来保持健康？'], observe:'记录自己一天的喝水/运动/睡眠情况。', model:'画一张「健康一日」时间表，标出运动、吃饭、睡觉。', tell:'用 health、exercise、nutrition、sleep 讲一个健康习惯。'},
+  {keys:['disease','germ','bacteria','virus','immune','vaccine'], read:['细菌/病毒和我们的身体有什么关系？','免疫系统怎么保护我们？','疫苗起什么作用？'], observe:'用放大镜/显微镜观察（或看图）细菌形状。', model:'用黏土做「好细菌」和「坏病毒」，讲免疫系统怎么识别它们。', tell:'用 germ、immune、virus、vaccine 讲身体怎么对抗病菌。'},
+  // 社会/人文（少量）
+  {keys:['house','building','bridge','structure','arch'], read:['这个结构用了什么形状/材料？','它为什么能站稳？','建筑师要解决什么问题？'], observe:'找身边 3 种建筑/结构，观察底座、支撑、材料。', model:'用纸/吸管搭一座能承重的小桥或塔。', tell:'用 structure、strong、material、design 讲这个结构为什么稳固。'},
+  {keys:['art','music','instrument','culture'], read:['书里讲到艺术/音乐/文化的什么知识？','它和科学有什么联系？','你能模仿其中一个现象吗？'], observe:'听一段这种音乐或看一张这种艺术品的图片。', model:'用简单材料做一个小乐器或一幅受启发的画。', tell:'用 art、sound、color、culture 讲科学怎么藏在艺术里。'}
+];
 function sazNorm(t){ return (t||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
 function sazTierKey(band){
   if(/LOW$/.test(band)) return 0;
@@ -27421,34 +27482,81 @@ function sazUnits(){
     return u;
   });
 }
-function sazReadDay(dow,b,title){
+/* 根据书名找专属提示；未命中返回 null，调用方用主题域兜底 */
+function sazFindHint(title, theme){
+  var nt=sazNorm(title);
+  for(var i=0;i<SAZ_HINTS.length;i++){
+    var h=SAZ_HINTS[i];
+    for(var j=0;j<h.keys.length;j++){
+      if(nt.indexOf(sazNorm(h.keys[j]))!==-1) return h;
+    }
+  }
+  return null;
+}
+function sazDomainHint(theme){
+  var map={
+    '生命世界':{read:['读完这页后，说出 2 个关于这种生物/植物的新发现。','这种生物/植物是怎么生长或生存的？','它和周围环境有什么关系？'], observe:'观察一张真实照片或标本，描述你看到的颜色、形状、动作。', model:'用黏土/纸/积木做一个模型，标出关键部位。', tell:'用本单元核心词给爸妈讲一讲这个生命是怎么生存的。'},
+    '地球与宇宙':{read:['这个自然现象/天体最让你惊讶的地方是什么？','书里怎么解释它的形成或变化？','它和我们的生活有什么联系？'], observe:'看一段真实影像或图片，记录 3 个观察到的细节。', model:'用家里材料做一个能展示该现象的小模型。', tell:'用本单元核心词讲一个地球或宇宙现象。'},
+    '物质与能量':{read:['这个科学现象需要什么条件才会发生？','书里用了什么例子帮你理解？','你能找到家里一个类似例子吗？'], observe:'做一个小观察：这种现象在家里哪里能看到？', model:'用简单材料演示这个现象。', tell:'用本单元核心词讲清楚这个现象是怎么发生的。'},
+    '身体与健康':{read:['这个身体部位/健康习惯起什么作用？','如果它出问题，身体会有什么感觉？','书里建议怎么保护它？'], observe:'摸一摸/听一听/感受自己身体的这个部位。', model:'用黏土/吸管/纸做一个该身体部位或系统的简易模型。', tell:'用本单元核心词讲这个身体部位是怎么工作的。'},
+    '社会与人文':{read:['这个人文/社会话题和科学有什么关系？','书里提出了什么问题？','你能举出现实生活中的例子吗？'], observe:'在身边找一个和这话题相关的例子，拍照或画下来。', model:'用材料做一个能代表这个话题的小作品。', tell:'用本单元核心词讲这个话题为什么重要。'}
+  };
+  return map[theme] || map['地球与宇宙'];
+}
+/* 为单元选择最匹配的实验：hint.exp 指定标题优先（跨主题域查找）；否则按核心词/标题与实验词重叠度打分 */
+function sazMatchExp(u, hint){
+  var themeList=SAZ_EXP[u.theme] || SAZ_EXP['生命世界'];
+  if(hint && hint.exp){
+    var all=[];
+    Object.keys(SAZ_EXP).forEach(function(k){ all=all.concat(SAZ_EXP[k]); });
+    var found=all.find(function(e){ return e.t===hint.exp; });
+    if(found) return found;
+  }
+  var text=(u.title+' '+u.core.join(' ')).toLowerCase();
+  var scores=themeList.map(function(exp,idx){
+    var s=0;
+    exp.c.forEach(function(w){ if(text.indexOf(w.toLowerCase())!==-1) s+=3; });
+    exp.m.forEach(function(w){ if(text.indexOf(w.toLowerCase())!==-1) s+=1; });
+    if(hint){
+      hint.keys.forEach(function(k){ 
+        var nk=sazNorm(k);
+        exp.c.forEach(function(w){ if(sazNorm(w).indexOf(nk)!==-1 || nk.indexOf(sazNorm(w))!==-1) s+=2; });
+      });
+    }
+    return {exp:exp, idx:idx, score:s};
+  });
+  scores.sort(function(a,b){ return b.score-a.score || a.idx-b.idx; });
+  return scores[0].exp;
+}
+function sazReadDay(dow,b,title,task){
   var m=sazMeta(b), lex=m.lexile?(' · Lexile '+m.lexile):'';
-  return {dow:dow, icon:'📖', title:title, kind:'read', book:b, lex:lex};
+  return {dow:dow, icon:'📖', title:title, kind:'read', book:b, lex:lex, task:task};
 }
 function sazActDay(dow,icon,title,text){ return {dow:dow, icon:icon, title:title, kind:'act', text:text}; }
 function sazWeekDays(u, exp){
   var tiers=u.tiers, d=[];
-  if(tiers[0]) d.push(sazReadDay('周一',tiers[0],'读 Low 档'));
-  else d.push(sazActDay('周一','🔍','观察','重读《'+u.title+'》，找一找书里讲的现象'));
-  if(tiers[1]) d.push(sazReadDay('周二',tiers[1],'读 Mid 档'));
-  else d.push(sazActDay('周二','🔍','观察','重读并找一找：书中哪幅图展示了核心概念？'));
-  if(tiers[2]) d.push(sazReadDay('周三',tiers[2],'读 High 档'));
-  else d.push(sazActDay('周三','🧱','做模型','用积木 / 画画做出本单元的核心概念模型'));
+  var hint=sazFindHint(u.title,u.theme) || sazDomainHint(u.theme);
+  var readTasks=hint.read || ['朗读后圈出今天的核心词；用 1 句英文说说这本书讲了什么。','朗读后，用自己的话解释这本书最重要的科学概念。','朗读后，找出作者用了什么证据来说明观点。'];
+  if(tiers[0]) d.push(sazReadDay('周一',tiers[0],'读 Low 档', readTasks[0] || readTasks[readTasks.length-1]));
+  else d.push(sazActDay('周一','🔍','观察', hint.observe));
+  if(tiers[1]) d.push(sazReadDay('周二',tiers[1],'读 Mid 档', readTasks[1] || readTasks[0]));
+  else d.push(sazActDay('周二','🔍','观察', hint.observe));
+  if(tiers[2]) d.push(sazReadDay('周三',tiers[2],'读 High 档', readTasks[2] || readTasks[1] || readTasks[0]));
+  else d.push(sazActDay('周三','🧱','做模型', hint.model));
   d.push({dow:'周四', icon:'🔬', title:'主题实验：'+exp.t, kind:'exp', exp:exp});
-  d.push(sazActDay('周五','🗣','讲给你听','用 3–5 个核心词给爸妈讲一遍这个单元；画一张科学海报'));
+  d.push(sazActDay('周五','🗣','讲给你听', hint.tell || '用 3–5 个核心词给爸妈讲一遍这个单元；画一张科学海报'));
   return d;
 }
 function sazBuildWeeks(theme, gb, n){
   var units=sazUnits().filter(function(u){ return (!theme||u.theme===theme) && (!gb||u.gb===gb); });
   units.sort(function(a,b){ return a.theme.localeCompare(b.theme)|| a.title.localeCompare(b.title); });
   if(n && n>0) units=units.slice(0, n);
-  var bank = SAZ_EXP;
   return units.map(function(u,i){
     var emo=SAZ_EMO[u.theme]||'🔬';
-    var expList = bank[u.theme] || bank['生命世界'];
-    var exp = expList[i % expList.length];
+    var hint=sazFindHint(u.title,u.theme);
+    var exp=sazMatchExp(u, hint);
     var days = sazWeekDays(u, exp);
-    var intro = '本单元《'+u.title+'》'+u.gb+' 档 · '+u.theme+'。每天读一档（Low→Mid→High），周末动手做实验、用核心词复述。';
+    var intro = '本单元《'+u.title+'》'+u.gb+' 档 · '+u.theme+'。'+(hint?'按书名关键词「'+hint.keys[0]+'」定制了阅读任务与实验；':'按主题域定制了阅读任务与实验；')+'每天读一档（Low→Mid→High），周末动手做实验、用核心词复述。';
     return {week:i+1, emo:emo, title:u.title, theme:u.theme, gb:u.gb, core:u.core, days:days, intro:intro};
   });
 }
@@ -27457,7 +27565,7 @@ function sazDayCard(d, core){
   if(d.kind==='read'){
     body='<div class="drow"><b>📖 读</b><span>《'+esc(d.book.title)+'》 <span class="pill b-saz">'+esc(d.book.band)+'</span>'+esc(d.lex)+'</span></div>'+
          '<div class="drow"><b>🔤 核心词</b><span>'+core.map(function(w){return '<code>'+esc(w)+'</code>';}).join(' ')+'</span></div>'+
-         '<div class="drow"><b>✍️ 做</b><span>朗读后圈出今天的核心词；用 1 句英文说说这本书讲了什么。</span></div>';
+         '<div class="drow"><b>✍️ 做</b><span>'+esc(d.task||'朗读后圈出今天的核心词；用 1 句英文说说这本书讲了什么。')+'</span></div>';
   } else if(d.kind==='act'){
     body='<div class="drow"><b>'+esc(d.icon)+' '+esc(d.title)+'</b><span>'+esc(d.text)+'</span></div>';
   } else if(d.kind==='exp'){
