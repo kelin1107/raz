@@ -267,7 +267,7 @@
 <body>
 <header>
   <h1>📚 RAZ + SAZ 知识库</h1>
-  <p>总表 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 阅读方法 · 分级对照/SAZ 书单 · 主题分类 · NF 周计划 · v3.13</p>
+  <p>总表 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 阅读方法 · 分级对照/SAZ 书单 · 主题分类 · NF 周计划 · v3.14</p>
 </header>
 
 <div class="compliance">
@@ -422,7 +422,7 @@
         </div>
       </div>
       <p style="font-size:12px;color:var(--muted);margin-top:14px">
-        说明：AR / 蓝思 / DRA / F&amp;P / 牛津树 / 红火箭 / 大猫 / 培生 / 海尼曼 / 兰登 / Wonders / Power Up 与 RAZ 均为<b>近似对应</b>（综合各出版社官方分级表与公开阅读相关性研究）。同一输入可能横跨多个 RAZ 级别，这里给出<b>最匹配的 RAZ 级别</b>；定级请结合孩子实际朗读流畅度与 Quiz 正确率。
+        说明：AR / 蓝思 / DRA / F&amp;P / 牛津树 / 红火箭 / 大猫 / 培生 / 海尼曼 / 兰登 / Wonders / Power Up / 国家地理 / Usborne 图书馆 / PM / 丽声 / I Can Read / 企鹅 与 RAZ 均为<b>近似对应</b>（综合各出版社官方分级表与公开阅读相关性研究）。同一输入可能横跨多个 RAZ 级别，这里给出<b>最匹配的 RAZ 级别</b>；定级请结合孩子实际朗读流畅度与 Quiz 正确率。
       </p>
     </div>
   </section>
@@ -532,14 +532,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.13 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.14 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.13",
+    "version": "3.14",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -27227,6 +27227,14 @@ function renderAR(){
         <span>📗 Wonders <b>${esc(razToX('Wonders',l.level))}</b></span>
         <span>💡 Power Up <b>${esc(razToX('Power Up',l.level))}</b></span>
       </div>
+      <div style="margin-top:6px;display:flex;gap:14px;flex-wrap:wrap;font-size:13px">
+        <span>🌍 国家地理 <b>${esc(razToX('国家地理',l.level))}</b></span>
+        <span>📚 Usborne <b>${esc(razToX('Usborne',l.level))}</b></span>
+        <span>🟣 PM <b>${esc(razToX('PM',l.level))}</b></span>
+        <span>🔊 丽声 <b>${esc(razToX('丽声',l.level))}</b></span>
+        <span>🐶 I Can Read <b>${esc(razToX('I Can Read',l.level))}</b></span>
+        <span>🐧 企鹅 <b>${esc(razToX('企鹅',l.level))}</b></span>
+      </div>
       <p style="margin:10px 0 0;font-size:13px;color:var(--muted)">${esc(l.focus)}</p>`;
   });
 }
@@ -27331,7 +27339,13 @@ const XL={
   '海尼曼':[ {lv:'A',raz:'aa'},{lv:'B',raz:'A'},{lv:'C',raz:'B'},{lv:'D',raz:'C'},{lv:'E',raz:'D'},{lv:'F',raz:'E'},{lv:'G',raz:'F'},{lv:'H',raz:'G'},{lv:'I',raz:'H'},{lv:'J',raz:'I'},{lv:'K',raz:'J'},{lv:'L',raz:'K'},{lv:'M',raz:'L'},{lv:'N',raz:'M'},{lv:'O',raz:'N'},{lv:'P',raz:'O'},{lv:'Q',raz:'P'},{lv:'R',raz:'Q'},{lv:'S',raz:'R'},{lv:'T',raz:'S'},{lv:'U',raz:'T'},{lv:'V',raz:'U'},{lv:'W',raz:'V'},{lv:'X',raz:'W'},{lv:'Y',raz:'X'},{lv:'Z',raz:'Y'} ],
   '兰登':[ {lv:'Step 1',raz:'C'},{lv:'Step 2',raz:'E'},{lv:'Step 3',raz:'G'},{lv:'Step 4',raz:'I'},{lv:'Step 5',raz:'K'} ],
   'Wonders':[ {lv:'K',raz:'aa'},{lv:'1',raz:'D'},{lv:'2',raz:'K'},{lv:'3',raz:'Q'},{lv:'4',raz:'T'},{lv:'5',raz:'W'},{lv:'6',raz:'Z'} ],
-  'Power Up':[ {lv:'Starter',raz:'aa'},{lv:'Level 1',raz:'C'},{lv:'Level 2',raz:'E'},{lv:'Level 3',raz:'G'},{lv:'Level 4',raz:'I'},{lv:'Level 5',raz:'K'},{lv:'Level 6',raz:'M'} ]
+  'Power Up':[ {lv:'Starter',raz:'aa'},{lv:'Level 1',raz:'C'},{lv:'Level 2',raz:'E'},{lv:'Level 3',raz:'G'},{lv:'Level 4',raz:'I'},{lv:'Level 5',raz:'K'},{lv:'Level 6',raz:'M'} ],
+  '国家地理':[ {lv:'Pre-reader',raz:'aa'},{lv:'Level 1',raz:'C'},{lv:'Level 2',raz:'H'},{lv:'Level 3',raz:'L'},{lv:'Level 4',raz:'O'},{lv:'Level 5',raz:'S'} ],
+  'Usborne':[ {lv:'Very First',raz:'aa'},{lv:'Level 1',raz:'D'},{lv:'Level 2',raz:'F'},{lv:'Level 3',raz:'H'},{lv:'Level 4',raz:'J'} ],
+  'PM':[ {lv:'1',raz:'aa'},{lv:'2',raz:'A'},{lv:'3',raz:'B'},{lv:'4',raz:'C'},{lv:'5',raz:'D'},{lv:'6',raz:'E'},{lv:'7',raz:'F'},{lv:'8',raz:'G'},{lv:'9',raz:'H'},{lv:'10',raz:'I'},{lv:'11',raz:'J'},{lv:'12',raz:'K'},{lv:'13',raz:'L'},{lv:'14',raz:'M'},{lv:'15',raz:'N'},{lv:'16',raz:'O'},{lv:'17',raz:'P'},{lv:'18',raz:'Q'},{lv:'19',raz:'R'},{lv:'20',raz:'S'},{lv:'21',raz:'T'},{lv:'22',raz:'U'},{lv:'23',raz:'V'},{lv:'24',raz:'W'},{lv:'25',raz:'X'},{lv:'26',raz:'Y'},{lv:'27',raz:'Z'},{lv:'28',raz:'Z'},{lv:'29',raz:'Z'},{lv:'30',raz:'Z'} ],
+  '丽声':[ {lv:'1级',raz:'aa'},{lv:'2级',raz:'C'},{lv:'3级',raz:'E'},{lv:'4级',raz:'G'},{lv:'5级',raz:'I'},{lv:'6级',raz:'K'} ],
+  'I Can Read':[ {lv:'My First',raz:'aa'},{lv:'Level 1',raz:'C'},{lv:'Level 2',raz:'F'},{lv:'Level 3',raz:'I'},{lv:'Level 4',raz:'L'} ],
+  '企鹅':[ {lv:'Easystarts',raz:'H'},{lv:'Level 1',raz:'K'},{lv:'Level 2',raz:'M'},{lv:'Level 3',raz:'O'},{lv:'Level 4',raz:'R'},{lv:'Level 5',raz:'T'},{lv:'Level 6',raz:'V'} ]
 };
 const CONV_MODES={
   ar:{label:'AR (ATOS)',ph:'如 1.5',toRaz:v=>arToRaz(v)},
@@ -27345,7 +27359,13 @@ const CONV_MODES={
   heinemann:{label:'海尼曼',ph:'如 A / G',toRaz:v=>xToRaz('海尼曼',v)},
   randhouse:{label:'兰登',ph:'如 Step 1 / Step 4',toRaz:v=>xToRaz('兰登',v)},
   wonders:{label:'Wonders',ph:'如 K / 2 / 6',toRaz:v=>xToRaz('Wonders',v)},
-  powerup:{label:'Power Up',ph:'如 Starter / Level 3',toRaz:v=>xToRaz('Power Up',v)}
+  powerup:{label:'Power Up',ph:'如 Starter / Level 3',toRaz:v=>xToRaz('Power Up',v)},
+  ng:{label:'国家地理',ph:'如 Pre-reader / Level 1',toRaz:v=>xToRaz('国家地理',v)},
+  usborne:{label:'Usborne 图书馆',ph:'如 Very First / Level 1',toRaz:v=>xToRaz('Usborne',v)},
+  pm:{label:'PM 分级',ph:'如 5 / 20',toRaz:v=>xToRaz('PM',v)},
+  risheng:{label:'丽声',ph:'如 1级 / 4级',toRaz:v=>xToRaz('丽声',v)},
+  icr:{label:'I Can Read',ph:'如 My First / Level 1',toRaz:v=>xToRaz('I Can Read',v)},
+  penguin:{label:'企鹅 Penguin',ph:'如 Easystarts / Level 1',toRaz:v=>xToRaz('企鹅',v)}
 };
 function xNorm(s){ return String(s).trim().toLowerCase().replace(/\s+/g,' '); }
 function xNum(s){ const m=String(s).match(/-?\d+(\.\d+)?/); return m?parseFloat(m[0]):NaN; }
@@ -27353,7 +27373,7 @@ function xToRaz(sys, raw){
   const list=XL[sys]; if(!list) return null;
   const q=xNorm(raw);
   let ex=list.find(o=>xNorm(o.lv)===q); if(ex) return ex.raz;
-  const q2=q.replace(new RegExp('^(红火箭|大猫|培生|海尼曼|兰登|wonders|power up|'+sys.toLowerCase()+')',''),'').trim();
+  const q2=q.replace(new RegExp('^(红火箭|大猫|培生|海尼曼|兰登|wonders|power up|国家地理|national geographic|usborne|pm|丽声|i ?can ?read|企鹅|penguin|'+sys.toLowerCase()+')',''),'').trim();
   const ex2=list.find(o=>xNorm(o.lv).replace(/^(level|lv|级)/,'')===q2.replace(/^(level|lv|级)/,''));
   if(ex2) return ex2.raz;
   const rn=xNum(raw);
