@@ -234,6 +234,8 @@
   #nfPlan .dtag.nf{background:#e7f3ef;color:#2f7d6e}
   #nfPlan .dtag.f{background:#fdeee2;color:#e07a3f}
   #nfPlan .dtag.exp{background:#d8ebd3;color:#3f7d4f}
+  #nfPlan .day .hint{display:block;margin-top:6px;font-style:normal;font-size:12px;color:#5a7a5f;background:#eef4ee;border-radius:6px;padding:4px 9px;line-height:1.5}
+  #nfPlan .badge.act-week{margin-left:8px;font-size:12px;font-weight:600;background:#fff3da;color:#b9791f;border-radius:6px;padding:2px 9px;vertical-align:middle}
   #nfPlan .nf-note{color:var(--muted);font-size:13px;margin:0 0 12px;line-height:1.6}
   #nfPlan .drow{display:grid;grid-template-columns:108px 1fr;gap:8px;padding:4px 0;font-size:13.3px}
   #nfPlan .week-ext{margin:10px 0 14px;border:1px solid var(--line);border-left:4px solid var(--brand);background:#f8f9fb;border-radius:0 12px 12px 0;padding:10px 12px}
@@ -264,7 +266,7 @@
 </head>
 <body>
 <header>
-  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.21</span></h1>
+  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.22</span></h1>
   <p>aa–Z2 + GK–G6 全级别元数据索引 · 非官方整理，仅供研究/教学用途</p>
 </header>
 
@@ -495,14 +497,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.21 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.22 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.21",
+    "version": "3.22",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -27707,6 +27709,51 @@ var STEAM_BASE={
   "社会与人文":{toddler:'在家画简单地图，按指令走。',preschool:'方位指令游戏（左/右/上）。',early:'按地图找物+画路线。',school:'做社区调研表，用英文记发现。'},
   "思维与创意":{toddler:'纽扣/积木按颜色或形状分堆。',preschool:'分类+数数（数学+分类）。',early:'找规律/模式串游戏。',school:'数据统计小项目（投票+图表）。'}
 };
+/* 每周 STEAM 项目拆成 5 天递进步骤（适龄提示与语言要求另行叠加），解决窄级别 0 书时"全实验日套话"问题 */
+var STEAM_STEPS={
+  "生命世界":[
+    {act:'选一种身边的小动物或植物，安静观察 2 分钟，说出它的颜色/大小/在做什么。',lang:'说 1–2 个身体部位/特征词（如 green / small / eat）。'},
+    {act:'把它画下来，标出 2–3 个身体部位，并用英文命名。',lang:'写/说部位词（head / leg / leaf）。'},
+    {act:'给它做一个「家」（纸盒/瓶）或喂一次食，记录它喜欢什么。',lang:'说 "It likes ___." 或画+标词。'},
+    {act:'比较两种动植物：有什么一样、有什么不一样（用图或贴纸）。',lang:'用 same / different 说一对发现。'},
+    {act:'做一张「我的自然发现」卡：贴图 + 写 1 句本周发现。',lang:'写 1 句观察句（"I saw ___."）。'}
+  ],
+  "地球与宇宙":[
+    {act:'今天出门看天，画一个天气符号（晴/多云/雨/风）。',lang:'说天气词（sunny / cloudy / rainy / windy）。'},
+    {act:'用棉花+蓝纸做「云和雨」拼贴，讲讲云怎么变成雨。',lang:'说 cloud / rain 并指认。'},
+    {act:'接一杯水放窗边，第二天看水位变低（蒸发），画下水位线。',lang:'说 "The water goes up." 或画蒸发图。'},
+    {act:'水感官盆：放 3 样小物，先猜沉/浮再试，记下结果。',lang:'说 sink / float 并标结果。'},
+    {act:'画一张「本周天气」总结图，标出英文天气词。',lang:'写 2–3 个天气词做天气表。'}
+  ],
+  "物质与能量":[
+    {act:'找 5 样家里物品，先猜轻重/沉浮，再动手试。',lang:'说 heavy / light / sink / float。'},
+    {act:'用磁铁吸不同材质（铁/木/塑料），分类并贴标签。',lang:'说 metal / wood / plastic 并分类。'},
+    {act:'搭一块斜坡，滚小球，看谁滚得远，在纸上画距离。',lang:'说 push / pull 并比较 far / near。'},
+    {act:'对比推和拉：开门、拉抽屉、推小车，说出动作。',lang:'用 push / pull 各造 1 句。'},
+    {act:'做一张「力与材料」发现卡：画图 + 写 1 句结论。',lang:'写 1 句（"___ rolls fast."）。'}
+  ],
+  "身体与健康":[
+    {act:'照镜子指认 5 个身体部位，说出英文。',lang:'说 eye / ear / nose / hand / foot。'},
+    {act:'蒙眼尝酸/甜/咸，猜是什么（感官游戏）。',lang:'说 sour / sweet / salty。'},
+    {act:'摸不同材质（软/硬/粗/滑），做配对卡片。',lang:'说 soft / hard / rough / smooth。'},
+    {act:'跳/跑/蹲，感受心跳变快，画一颗跳动的心脏。',lang:'说 fast / slow 并画 heart。'},
+    {act:'做「我的身体」海报：贴部位 + 标英文名称。',lang:'写 3–5 个身体词做海报。'}
+  ],
+  "社会与人文":[
+    {act:'画一张家里的简单地图（房间 + 箭头路线）。',lang:'说 room / here / there。'},
+    {act:'玩「听指令走」：按左/右/上/下移动身体或棋子。',lang:'听懂并说 left / right / up / down。'},
+    {act:'角色扮演超市：画价签、用玩具钱「买东西」。',lang:'说 shop / buy / money。'},
+    {act:'做一个「我的社区」：画学校/车站/公园并标英文。',lang:'说 school / bus / park。'},
+    {act:'用英文说 1 句今天学到的社会词（school / shop / bus）。',lang:'写 1 句（"I go to school."）。'}
+  ],
+  "思维与创意":[
+    {act:'出门找 5 种颜色，画下来并标英文。',lang:'说 red / blue / yellow / green / brown。'},
+    {act:'找形状：圆/方/三角，在家指认 3 样物品。',lang:'说 circle / square / triangle。'},
+    {act:'按大小或长短，给 3 样东西排顺序。',lang:'说 big / small / long / short。'},
+    {act:'找一对反义词（大/小、快/慢），画图配对。',lang:'说一对 opposite（big-small）。'},
+    {act:'做一张「我的数学发现」卡：画图 + 写数字/词。',lang:'写数字 1–5 或形状词。'}
+  ]
+};
 function nfCraftAgeHint(band){
   var m={toddler:'大人备料裁剪，孩子贴/画/命名。',preschool:'大人协助固定，孩子剪贴/组合。',early:'孩子主导，大人给材料+安全协助。',school:'独立完成，可加测量/双语标注。'};
   return m[band]||m.toddler;
@@ -27756,20 +27803,26 @@ function nfBuildWeeks(fromLv,toLv){
     for(var d=1; d<=5; d++){
       var bk=list[d-1];
       if(bk){ days.push({d:d, bookId:bk.id, kind:'book', activity:nfActivity(fam.key,bk), lang:nfLang(fam.key,bk), draw:nfDraw(fam.key,bk)}); }
-      else { days.push({d:d, kind:'exp', title:nfExpTitle(fam.key), activity:nfActivity(fam.key,null), lang:nfLang(fam.key,null), draw:nfDraw(fam.key,null)}); }
+      else {
+        var st=(STEAM_STEPS[fam.key]&&STEAM_STEPS[fam.key][d-1])||{act:'围绕主题做一项观察或动手实验。',lang:'说主题核心词。'};
+        days.push({d:d, kind:'exp', step:d-1, title:'STEAM · '+st.act.slice(0,12)+'…', activity:st.act, lang:st.lang});
+      }
     }
-    return {week:i+1, fam:fam.key, emoji:fam.emoji, intro:fam.intro, days:days};
+    return {week:i+1, fam:fam.key, emoji:fam.emoji, intro:fam.intro, bookCount:list.length, days:days};
   });
 }
 var NF_BOOKS = Object.fromEntries(DATA.books.map(function(b){ return [b.id,b]; }));
 function nfExtRead(fam, core){
   return DATA.books.filter(function(b){ var g=famOfTheme(b.theme); return b.type==='NF' && g && g.family.indexOf(fam)>=0 && !core.has(b.id); }).sort(function(a,b){ return (a.level===b.level?a.num-b.num:a.level.localeCompare(b.level)); });
 }
-function nfDayCard(day){
+function nfDayCard(day, age, fromLv, toLv){
   if(day.kind==='exp'){
-    return '<div class="day exp"><div class="dh"><span class="dnum">Day '+day.d+'</span><span class="dtitle">🔬 '+esc(day.title)+'</span><span class="dtag exp">动手实验</span></div>'+
-      '<div class="drow"><b>🌿 活动</b><span>'+esc(day.activity)+'</span></div>'+
-      '<div class="drow"><b>🔤 语言点</b><span>'+esc(day.lang)+'</span></div></div>';
+    var band=nfAgeBand(age), lv=nfLangLevel(fromLv,toLv);
+    var act=esc(day.activity)+' <i class="hint">'+esc(nfSteamAgeHint(band))+'</i>';
+    var lang=esc(day.lang)+' <i class="hint">'+esc(nfLangHint(lv))+'</i>';
+    return '<div class="day exp"><div class="dh"><span class="dnum">Day '+day.d+'</span><span class="dtitle">🔬 STEAM 第 '+(day.step+1)+' 步</span><span class="dtag exp">动手实验</span></div>'+
+      '<div class="drow"><b>🌿 活动</b><span>'+act+'</span></div>'+
+      '<div class="drow"><b>🔤 语言点</b><span>'+lang+'</span></div></div>';
   }
   var b=NF_BOOKS[day.bookId];
   if(!b) return '<div class="day"><div class="dh"><span class="dnum">Day '+day.d+'</span><span class="dtitle">(书目未找到)</span></div></div>';
@@ -27782,7 +27835,8 @@ function nfDayCard(day){
 function nfWeekPanel(w, core, age, fromLv, toLv){
   var ext=nfExtRead(w.fam, core);
   var extHtml=ext.length? '<div class="ext"><b>📚 本族延伸阅读（'+ext.length+' 本，从总表挑）：</b> '+ext.map(function(b){ return '<code>'+esc(b.id)+'</code> '+esc(b.title); }).join('、')+'</div>' : '<div class="ext">本族在所选级别内 NF 书已全部纳入本周核心。</div>';
-  return '<div class="nf-week" id="nfW'+w.week+'"><div class="whead">'+w.emoji+' 第 '+w.week+' 周 · '+esc(w.fam)+'</div><p class="wintro">'+esc(w.intro)+'</p>'+nfWeekExt(w.fam,age,fromLv,toLv)+'<div class="days">'+w.days.map(function(d){ return nfDayCard(d); }).join('')+'</div>'+extHtml+'</div>';
+  var badge = w.bookCount===0 ? '<span class="badge act-week">⚡ 纯活动周（'+fromLv+'–'+toLv+' 无此书）</span>' : '';
+  return '<div class="nf-week" id="nfW'+w.week+'"><div class="whead">'+w.emoji+' 第 '+w.week+' 周 · '+esc(w.fam)+badge+'</div><p class="wintro">'+esc(w.intro)+'</p>'+nfWeekExt(w.fam,age,fromLv,toLv)+'<div class="days">'+w.days.map(function(d){ return nfDayCard(d,age,fromLv,toLv); }).join('')+'</div>'+extHtml+'</div>';
 }
 function renderNFPlan(){
   var levels=DATA.meta.levelOrder.filter(function(l){ return l!=='SAZ'; });
@@ -27796,7 +27850,17 @@ function renderNFPlan(){
   var age=parseInt($('#nfAge').value,10)||3;
   var weeks=nfBuildWeeks(fromLv,toLv);
   var core=nfCoreOf(weeks);
-  var note=(fromLv==='aa' && toLv==='A')?'默认展示 aa+A 的精选周计划（年龄 '+age+' 岁）。':'动态生成：'+fromLv+'–'+toLv+' · 年龄 '+age+' 岁，每个主题族优先取 5 本 NF 书，不足处用实验日补足。';
+  var nfCount=DATA.books.filter(function(b){ var o=DATA.meta.levelOrder; return b.type==='NF' && o.indexOf(b.level)>=o.indexOf(fromLv) && o.indexOf(b.level)<=o.indexOf(toLv); }).length;
+  var zeroFams=weeks.filter(function(w){ return w.bookCount===0; }).length;
+  var note;
+  if(fromLv==='aa' && toLv==='A'){ note='默认展示 aa+A 的精选周计划（年龄 '+age+' 岁）。'; }
+  else {
+    note='动态生成：'+fromLv+'–'+toLv+' · 年龄 '+age+' 岁，范围内共 '+nfCount+' 本 NF 科普书。';
+    if(nfCount<15 || zeroFams>=3){
+      var sugg=DATA.meta.levelOrder[Math.min(DATA.meta.levelOrder.indexOf(toLv)+4,DATA.meta.levelOrder.length-2)];
+      note+=' ⚠️ 该范围 NF 书偏少（'+nfCount+' 本），'+zeroFams+' 个主题族无书，将以「STEAM 活动周」为主。建议扩到更大范围（如 '+fromLv+'–'+sugg+'）获得更完整的读书+动手周。';
+    }
+  }
   $('#nfRangeNote').textContent=note;
   var tabs=weeks.map(function(w){ return '<button class="nf-tab" data-w="'+w.week+'">'+w.emoji+' 第'+w.week+'周 '+esc(w.fam)+'</button>'; }).join('');
   document.getElementById('nfTabs').innerHTML=tabs;
