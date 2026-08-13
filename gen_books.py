@@ -392,6 +392,24 @@ BIO_MARK = [
     "childhood stories of","a life of","the story of","biography","autobiography",
     "washington","lincoln","shakespeare","goodall","curie","columbus","earhart","keller",
     "martin luther king","roosevelt","einstein","thomas edison","the wright","benjamin franklin",
+    # v3.31 增补：真实人物 / 传奇 / 历史人物（避免被误判 F）
+    "gandhi","buffalo soldiers","buffalo","sotomayor","terry fox","robin hood","yo-yo ma",
+    "aesop","mandela","picasso","mozart","beethoven","galileo","newton","da vinci","cleopatra",
+    "tubman","king jr","joins the supreme court","a legend in flight","the life of",
+    "the story of","the terry","the robin","the gandhi",
+]
+# 国家 / 地点 / 地理 / 文化 / 历史（v3.31 增补：这些词命中即强非虚构信号）
+COUNTRY_PLACE = [
+    "china","india","mexico","japan","africa","europe","egypt","canada","australia","brazil",
+    "russia","spain","france","italy","greece","ireland","germany","korea","continent","landform",
+    "landforms","glacier","island","peninsula","canyon","rainforest","grassland","prairie","tundra",
+    "plateau","geography","culture","tradition","festival","celebrat","muertos","diwali","passover",
+    "ramadan","kwanzaa","carnival","ancient","empire","civil war","revolution","soldier","pyramid",
+    "temple","tomb","ruins","statue","monument","map","hawaii","hula",
+]
+# 科学 / 科普（v3.31 增补：明显非虚构的科普题）
+SCI_GEO = [
+    "memory","science","hiccup","steam","engine","locomotive","park","ranger","bison","mars",
 ]
 # 具体主题关键词（命中即强非虚构信号，排除虚构黑名单后判 NF）
 NF_TOPIC = ANIMALS + PLANTS + EARTH + BODY + [
@@ -405,7 +423,7 @@ NF_TOPIC = ANIMALS + PLANTS + EARTH + BODY + [
     "motion","light","sound","magnet","electric","matter","solid","liquid","gas","climate",
     "pollution","recycle","spider","butterfly","whale","shark","penguin","elephant","tiger",
     "rocket","moon","sun","comet","meteor","telescope",
-]
+] + COUNTRY_PLACE + SCI_GEO
 def _title_is_nf(t):
     if any(k in t for k in FICTION_MARK):
         return False
@@ -629,7 +647,7 @@ if __name__ == "__main__":
         "seedCount": len(books),
     }
     data["meta"]["levelOrder"] = ["aa","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Z1","Z2","SAZ"]
-    data["meta"]["version"] = "3.30"
+    data["meta"]["version"] = "3.31"
     data["meta"]["updated"] = "2026-08-10"
     json.dump(data, open(JSON_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     # 校验
