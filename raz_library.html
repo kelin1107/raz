@@ -267,7 +267,7 @@
 <body>
 <header>
   <h1>📚 RAZ + SAZ 知识库</h1>
-  <p>总表 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 阅读方法 · 分级对照/SAZ 书单 · 主题分类 · NF 周计划 · v3.12</p>
+  <p>总表 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 阅读方法 · 分级对照/SAZ 书单 · 主题分类 · NF 周计划 · v3.13</p>
 </header>
 
 <div class="compliance">
@@ -408,13 +408,7 @@
         <div class="convbox">
           <p style="margin:0 0 8px;color:var(--muted)">我有其他分级，想知道对应 RAZ 级别：</p>
           <div class="controls" style="margin-bottom:10px">
-            <select id="convFrom">
-              <option value="ar">AR (ATOS)</option>
-              <option value="lex">蓝思 Lexile</option>
-              <option value="dra">DRA</option>
-              <option value="fp">F&amp;P (Guided Reading)</option>
-              <option value="ort">牛津树 ORT</option>
-            </select>
+            <select id="convFrom"></select>
           </div>
           <input type="text" id="convFromIn" placeholder="如 1.5 / 200L / 16 / K / 3">
           <button id="convFromBtn" class="act">查 RAZ</button>
@@ -428,7 +422,7 @@
         </div>
       </div>
       <p style="font-size:12px;color:var(--muted);margin-top:14px">
-        说明：AR / 蓝思 / DRA / F&amp;P / 牛津树 与 RAZ 均为<b>近似对应</b>（综合 Learning A-Z 官方表与公开阅读相关性研究）。同一输入可能横跨多个 RAZ 级别，这里给出<b>最匹配的 RAZ 级别</b>；定级请结合孩子实际朗读流畅度与 Quiz 正确率。
+        说明：AR / 蓝思 / DRA / F&amp;P / 牛津树 / 红火箭 / 大猫 / 培生 / 海尼曼 / 兰登 / Wonders / Power Up 与 RAZ 均为<b>近似对应</b>（综合各出版社官方分级表与公开阅读相关性研究）。同一输入可能横跨多个 RAZ 级别，这里给出<b>最匹配的 RAZ 级别</b>；定级请结合孩子实际朗读流畅度与 Quiz 正确率。
       </p>
     </div>
   </section>
@@ -538,14 +532,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.12 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.13 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.12",
+    "version": "3.13",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -27190,26 +27184,26 @@ function filterLevels(){
 /* ---------- 分级对照 ---------- */
 function renderAR(){
   const ri=$('#convRaz'); DATA.levels.forEach(l=>{const o=document.createElement('option');o.value=l.level;o.textContent='Level '+l.level+' ('+l.stage+')';ri.appendChild(o);});
-  const ph={ar:'如 1.5', lex:'如 200L / BR', dra:'如 16 / 40', fp:'如 K / P', ort:'如 3 / 9'};
-  $('#convFrom').addEventListener('change',e=>{ $('#convFromIn').placeholder=ph[e.target.value]; });
-  $('#convFromIn').placeholder=ph.ar;
+  const cf=$('#convFrom');
+  cf.innerHTML=Object.keys(CONV_MODES).map(k=>`<option value="${k}">${CONV_MODES[k].label}</option>`).join('');
+  $('#convFrom').addEventListener('change',e=>{ $('#convFromIn').placeholder=CONV_MODES[e.target.value].ph; });
+  $('#convFromIn').placeholder=CONV_MODES.ar.ph;
   $('#convFromBtn').addEventListener('click',()=>{
     const m=$('#convFrom').value, raw=$('#convFromIn').value.trim(), out=$('#convFromOut');
     if(!raw){out.innerHTML='<span style="color:var(--red)">请输入值</span>';return;}
+    const cfg=CONV_MODES[m];
     let raz=null, label='';
     if(m==='ar'){
       const v=parseFloat(raw); if(!isFinite(v)){out.innerHTML='<span style="color:var(--red)">请输入数字 AR 值</span>';return;}
       raz=arToRaz(v); label='AR '+v;
-    } else if(m==='lex'){
-      raz=lexToRaz(parseLex(raw)); label='蓝思 '+raw;
     } else if(m==='dra'){
-      const v=parseInt(raw,10); if(!isFinite(v)){out.innerHTML='<span style="color:var(--red)">请输入数字 DRA 值</span>';return;}
+      const v=parseFloat(raw); if(!isFinite(v)){out.innerHTML='<span style="color:var(--red)">请输入数字 DRA 值</span>';return;}
       raz=draToRaz(v); label='DRA '+v;
-    } else if(m==='fp'){
-      const v=raw.toUpperCase(); raz=fpToRaz(v); label='F&P '+v;
-    } else {
+    } else if(m==='ort'){
       const v=parseFloat(raw); if(!isFinite(v)){out.innerHTML='<span style="color:var(--red)">请输入数字牛津树级别</span>';return;}
       raz=ortToRaz(v); label='牛津树 '+v;
+    } else {
+      raz=cfg.toRaz(raw); label=cfg.label+' '+raw;
     }
     out.innerHTML=convCard(raz, label);
   });
@@ -27223,6 +27217,15 @@ function renderAR(){
         <span>🎯 DRA <b>${esc(l.dra)}</b></span>
         <span>📖 F&amp;P <b>${esc(l.fp)}</b></span>
         <span>🏫 年级 <b>${esc(l.grade)}</b></span>
+      </div>
+      <div style="margin-top:8px;display:flex;gap:14px;flex-wrap:wrap;font-size:13px">
+        <span>🚀 红火箭 <b>${esc(razToX('红火箭',l.level))}</b></span>
+        <span>🐱 大猫 <b>${esc(razToX('大猫',l.level))}</b></span>
+        <span>📘 培生 <b>${esc(razToX('培生',l.level))}</b></span>
+        <span>🟢 海尼曼 <b>${esc(razToX('海尼曼',l.level))}</b></span>
+        <span>📕 兰登 <b>${esc(razToX('兰登',l.level))}</b></span>
+        <span>📗 Wonders <b>${esc(razToX('Wonders',l.level))}</b></span>
+        <span>💡 Power Up <b>${esc(razToX('Power Up',l.level))}</b></span>
       </div>
       <p style="margin:10px 0 0;font-size:13px;color:var(--muted)">${esc(l.focus)}</p>`;
   });
@@ -27318,6 +27321,56 @@ function fpToRaz(fp){
     const d=Math.abs(m-idx); if(d<bd){bd=d;best=l;}
   });
   return best?best.level:DATA.levels[Math.min(idx,DATA.levels.length-1)].level;
+}
+/* ---------- 扩展分级体系（红火箭/大猫/培生/海尼曼/兰登/Wonders/Power Up）---------- */
+/* 均为近似对应（综合各出版社官方分级表与公开级别相关性研究），仅供选书参考。*/
+const XL={
+  '红火箭':[ {lv:'Lilac',raz:'aa'},{lv:'Magenta',raz:'A'},{lv:'Red',raz:'B'},{lv:'Yellow',raz:'C'},{lv:'Blue',raz:'D'},{lv:'Green',raz:'E'},{lv:'Orange',raz:'F'},{lv:'Turquoise',raz:'G'},{lv:'Purple',raz:'H'},{lv:'Gold',raz:'I'},{lv:'Silver',raz:'J'},{lv:'Emerald',raz:'K'},{lv:'Ruby',raz:'L'},{lv:'Diamond',raz:'M'},{lv:'Sapphire',raz:'N'} ],
+  '大猫':[ {lv:'Pink A',raz:'aa'},{lv:'Pink B',raz:'A'},{lv:'Red A',raz:'A'},{lv:'Red B',raz:'B'},{lv:'Yellow A',raz:'B'},{lv:'Yellow B',raz:'C'},{lv:'Blue A',raz:'C'},{lv:'Blue B',raz:'D'},{lv:'Green A',raz:'D'},{lv:'Green B',raz:'E'},{lv:'Orange A',raz:'E'},{lv:'Orange B',raz:'F'},{lv:'Turquoise A',raz:'F'},{lv:'Turquoise B',raz:'G'},{lv:'Purple A',raz:'G'},{lv:'Purple B',raz:'H'},{lv:'Gold A',raz:'H'},{lv:'Gold B',raz:'I'},{lv:'White A',raz:'I'},{lv:'White B',raz:'J'},{lv:'Lime A',raz:'J'},{lv:'Lime B',raz:'K'},{lv:'Copper',raz:'L'},{lv:'Topaz',raz:'M'},{lv:'Ruby',raz:'N'},{lv:'Emerald',raz:'O'},{lv:'Sapphire',raz:'P'},{lv:'Diamond',raz:'Q'},{lv:'Pearl',raz:'R'} ],
+  '培生':[ {lv:'预备级',raz:'aa'},{lv:'1级',raz:'A'},{lv:'2级',raz:'B'},{lv:'3级',raz:'C'},{lv:'4级',raz:'D'},{lv:'5级',raz:'E'},{lv:'6级',raz:'F'},{lv:'7级',raz:'G'},{lv:'8级',raz:'H'},{lv:'9级',raz:'I'},{lv:'10级',raz:'J'},{lv:'11级',raz:'K'},{lv:'12级',raz:'L'} ],
+  '海尼曼':[ {lv:'A',raz:'aa'},{lv:'B',raz:'A'},{lv:'C',raz:'B'},{lv:'D',raz:'C'},{lv:'E',raz:'D'},{lv:'F',raz:'E'},{lv:'G',raz:'F'},{lv:'H',raz:'G'},{lv:'I',raz:'H'},{lv:'J',raz:'I'},{lv:'K',raz:'J'},{lv:'L',raz:'K'},{lv:'M',raz:'L'},{lv:'N',raz:'M'},{lv:'O',raz:'N'},{lv:'P',raz:'O'},{lv:'Q',raz:'P'},{lv:'R',raz:'Q'},{lv:'S',raz:'R'},{lv:'T',raz:'S'},{lv:'U',raz:'T'},{lv:'V',raz:'U'},{lv:'W',raz:'V'},{lv:'X',raz:'W'},{lv:'Y',raz:'X'},{lv:'Z',raz:'Y'} ],
+  '兰登':[ {lv:'Step 1',raz:'C'},{lv:'Step 2',raz:'E'},{lv:'Step 3',raz:'G'},{lv:'Step 4',raz:'I'},{lv:'Step 5',raz:'K'} ],
+  'Wonders':[ {lv:'K',raz:'aa'},{lv:'1',raz:'D'},{lv:'2',raz:'K'},{lv:'3',raz:'Q'},{lv:'4',raz:'T'},{lv:'5',raz:'W'},{lv:'6',raz:'Z'} ],
+  'Power Up':[ {lv:'Starter',raz:'aa'},{lv:'Level 1',raz:'C'},{lv:'Level 2',raz:'E'},{lv:'Level 3',raz:'G'},{lv:'Level 4',raz:'I'},{lv:'Level 5',raz:'K'},{lv:'Level 6',raz:'M'} ]
+};
+const CONV_MODES={
+  ar:{label:'AR (ATOS)',ph:'如 1.5',toRaz:v=>arToRaz(v)},
+  lex:{label:'蓝思 Lexile',ph:'如 200L / BR',toRaz:v=>lexToRaz(parseLex(v))},
+  dra:{label:'DRA',ph:'如 16 / 40',toRaz:v=>draToRaz(v)},
+  fp:{label:'F&P (Guided)',ph:'如 K / P',toRaz:v=>fpToRaz(v)},
+  ort:{label:'牛津树 ORT',ph:'如 3 / 9',toRaz:v=>ortToRaz(v)},
+  rr:{label:'红火箭',ph:'如 Magenta / Sapphire',toRaz:v=>xToRaz('红火箭',v)},
+  bc:{label:'大猫 Big Cat',ph:'如 Pink A / Ruby',toRaz:v=>xToRaz('大猫',v)},
+  pearson:{label:'培生 Pearson',ph:'如 预备级 / 5',toRaz:v=>xToRaz('培生',v)},
+  heinemann:{label:'海尼曼',ph:'如 A / G',toRaz:v=>xToRaz('海尼曼',v)},
+  randhouse:{label:'兰登',ph:'如 Step 1 / Step 4',toRaz:v=>xToRaz('兰登',v)},
+  wonders:{label:'Wonders',ph:'如 K / 2 / 6',toRaz:v=>xToRaz('Wonders',v)},
+  powerup:{label:'Power Up',ph:'如 Starter / Level 3',toRaz:v=>xToRaz('Power Up',v)}
+};
+function xNorm(s){ return String(s).trim().toLowerCase().replace(/\s+/g,' '); }
+function xNum(s){ const m=String(s).match(/-?\d+(\.\d+)?/); return m?parseFloat(m[0]):NaN; }
+function xToRaz(sys, raw){
+  const list=XL[sys]; if(!list) return null;
+  const q=xNorm(raw);
+  let ex=list.find(o=>xNorm(o.lv)===q); if(ex) return ex.raz;
+  const q2=q.replace(new RegExp('^(红火箭|大猫|培生|海尼曼|兰登|wonders|power up|'+sys.toLowerCase()+')',''),'').trim();
+  const ex2=list.find(o=>xNorm(o.lv).replace(/^(level|lv|级)/,'')===q2.replace(/^(level|lv|级)/,''));
+  if(ex2) return ex2.raz;
+  const rn=xNum(raw);
+  if(isFinite(rn)){
+    let best=null,bd=1e9;
+    list.forEach(o=>{ const on=xNum(o.lv); if(isFinite(on)){ const d=Math.abs(on-rn); if(d<bd){bd=d;best=o;} } });
+    if(best) return best.raz;
+  }
+  return null;
+}
+function razToX(sys, raz){
+  const list=XL[sys]; if(!list) return '—';
+  const ex=list.find(o=>o.raz===raz); if(ex) return ex.lv;
+  const ord=DATA.meta.levelOrder, idx=ord.indexOf(raz); if(idx<0) return '—';
+  let best=null,bd=1e9;
+  list.forEach(o=>{ const i=ord.indexOf(o.raz); if(i<0) return; const d=Math.abs(i-idx); if(d<bd){bd=d;best=o;} });
+  return best?best.lv:'—';
 }
 function convCard(raz, srcLabel){
   if(raz===null || raz===undefined) return '<span class="emptynote">无法对应，请检查输入值是否在常见范围内。</span>';
