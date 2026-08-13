@@ -335,12 +335,12 @@ def tag_aa(title):
 
 # ---------------- D 及以上通用关键词自动打标（与 aa–C 共用同一套主题族/句式词表） ----------------
 # 说明：aa–C 为人工精标；D 及以上书目量大，采用关键词自动推导，质量足以支撑"重复规则/勾选主题"功能。
-ANIMALS = ["animal","whale","frog","bee","fish","swamp","bat","cat","dog","bird","penguin","shark",
+ANIMALS = ["animal","whale","frog","bee","fish","swamp","bat","cat","dog","bird","robin","robins","penguin","shark",
     "octopus","crab","seal","deer","horse","cow","pig","chicken","duck","owl","insect","snake",
     "turtle","lizard","worm","ant","butterfly","monkey","lion","tiger","elephant","fox","wolf",
     "rabbit","mouse","rat","goat","sheep","farm","zoo","ocean","sea","pond","forest","desert",
     "polar","arctic","jungle","reef","coral","dinosaur","otter","reindeer","fox","sloth","bear",
-    "kangaroo","loon","tadpole","horns","tongues","pet","creature","creatures"]
+    "kangaroo","loon","tadpole","horns","tongues","pet","creature","creatures","hop","hops","hopping"]
 PLANTS = ["plant","tree","flower","seed","leaf","garden","grass","vegetable","fruit","pumpkin",
     "bean","grow","root","strawberry","berry","carve","lemonade"]
 EARTH = ["weather","fog","cloud","rain","snow","wind","sun","moon","star","space","earth","rock",
@@ -384,6 +384,8 @@ def tag_generic(title):
         theme = "地球与宇宙"
     elif any(k in t for k in BODY):
         theme = "身体与健康"
+    elif any(k in t for k in ["paper airplane","paper plane","how to make paper","make paper","how to build","how to tie"]):
+        theme = "思维与创意"
     elif any(k in t for k in SOCIETY):
         theme = "社会与人文"
     elif any(k in t for k in THINK):
