@@ -369,12 +369,56 @@ NF_MARK = ["all about","all kinds of","how ","why ","where ","what ","when ","th
     "under that rock","swamps","whale watching","frog is hungry","where animals live","where plants grow",
     "future flowers","reindeer are real","all about foxes","these bees","so many fish","busy pond",
     "making pizza","let's make lemonade","let's carve a pumpkin","crazy cakes","hooray for the farmer",
-    "the leaning tower","tiny tugboat","skateboards","five seconds"]
+    "the leaning tower",    "tiny tugboat","skateboards","five seconds"]
+
+# ---------------- NF/F 类型判定增强（v3.29 修复 D+ 系统性漏标） ----------------
+# 旧逻辑：type 仅当标题命中 NF_MARK 硬编码短语才判 NF，否则默认 F。
+#   NF_MARK 是 aa–C 简单书名调的，D+ 书名变复杂后几乎不命中 → 系统性漏标（全库 NF 仅 361，实测应≈990）。
+# 新逻辑：命中 NF_MARK 直接 NF；否则"标题命中具体主题关键词(动物/植物/地球/身体/地点/操作/运动/科普) 且 不在虚构黑名单" 判 NF；
+#   传记类(人名/传记短语) 直接 NF；虚构系列/童话角色 强制 F（避免动物童话误判 NF）。
+FICTION_MARK = [
+    "goldilocks","three little","three pigs","little red riding","lion and the mouse",
+    "wolf in sheep","bonk","monster","monsters","magic","fairy tale","fairy","gnome",
+    "troll","unicorn","a dragon","the dragon","dragon's","pirate","princess","knight",
+    "wizard","witch","ghost","spooky","creepy","the greedy","the silly","the lazy",
+    "the brave little","cinderello","cinderella","sleeping beauty","snow white",
+    "gingerbread","tortoise and the","hare and the","town mouse","country mouse",
+    "puss in","emperor's new","rumplestiltskin","jack and the","curious george","santa",
+    "elves","toothache","rocket boots","spelling bee","monster snow","monster pumpkin",
+    "monster moving","monster music","monster soccer","lice","mice","the ice cream",
+]
+# 传记 / 真实人物（明显非虚构）
+BIO_MARK = [
+    "childhood stories of","a life of","the story of","biography","autobiography",
+    "washington","lincoln","shakespeare","goodall","curie","columbus","earhart","keller",
+    "martin luther king","roosevelt","einstein","thomas edison","the wright","benjamin franklin",
+]
+# 具体主题关键词（命中即强非虚构信号，排除虚构黑名单后判 NF）
+NF_TOPIC = ANIMALS + PLANTS + EARTH + BODY + [
+    "national park","state park","zoo","museum","aquarium","farm",
+    "how to","make paper","make a","how we","how i","build","robot","machine","tool",
+    "soccer","basketball","baseball","football","hockey","golf","tennis","karate","swim",
+    "skate","ski","ride","bike","bicycle","volcano","earthquake","weather","space","planet",
+    "star","galaxy","dinosaur","fossil","ocean","river","mountain","forest","desert","wetland",
+    "reef","insect","bird","fish","mammal","reptile","amphibian","plant","tree","flower","seed",
+    "body","brain","muscle","bone","teeth","healthy","exercise","food","water","energy","force",
+    "motion","light","sound","magnet","electric","matter","solid","liquid","gas","climate",
+    "pollution","recycle","spider","butterfly","whale","shark","penguin","elephant","tiger",
+    "rocket","moon","sun","comet","meteor","telescope",
+]
+def _title_is_nf(t):
+    if any(k in t for k in FICTION_MARK):
+        return False
+    if any(k in t for k in BIO_MARK):
+        return True
+    if any(k in t for k in NF_TOPIC):
+        return True
+    return False
 
 def tag_generic(title):
     t = title.lower()
-    # 类型
-    is_f = not any(k in t for k in NF_MARK)
+    # 类型（v3.29 修复：NF_MARK 或 具体主题关键词命中 且 非虚构黑名单 → NF）
+    is_nf = any(k in t for k in NF_MARK) or _title_is_nf(t)
     # 主题族（优先级：具体优先）
     if any(k in t for k in ANIMALS):
         theme = "生命世界"
@@ -427,7 +471,7 @@ def tag_generic(title):
         lang = "动物认知"
     else:
         lang = "综合"
-    return (theme, lang, "F" if is_f else "NF")
+    return (theme, lang, "NF" if is_nf else "F")
 
 # ---------------- SAZ 专用打标：Science A-Z 是科普非虚构科学分级 ----------------
 # SAZ 书名均为科学主题，主题应归入 生命/地球/物质/身体 四族；type 固定 NF（非虚构科普）。
@@ -585,7 +629,7 @@ if __name__ == "__main__":
         "seedCount": len(books),
     }
     data["meta"]["levelOrder"] = ["aa","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Z1","Z2","SAZ"]
-    data["meta"]["version"] = "3.10"
+    data["meta"]["version"] = "3.29"
     data["meta"]["updated"] = "2026-08-10"
     json.dump(data, open(JSON_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     # 校验

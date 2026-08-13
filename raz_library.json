@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.10",
+    "version": "3.29",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -4415,7 +4415,7 @@
       "level": "D",
       "num": 1,
       "title": "Grow",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -4424,7 +4424,7 @@
       "level": "D",
       "num": 2,
       "title": "Bees Feed Me",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -4496,7 +4496,7 @@
       "level": "D",
       "num": 10,
       "title": "Fog",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -4505,7 +4505,7 @@
       "level": "D",
       "num": 11,
       "title": "Clouds",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -4550,7 +4550,7 @@
       "level": "D",
       "num": 16,
       "title": "Lily the Cat",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -4595,7 +4595,7 @@
       "level": "D",
       "num": 21,
       "title": "Tadpole Teasing",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -4694,7 +4694,7 @@
       "level": "D",
       "num": 32,
       "title": "Greater Than",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "数字句式"
     },
@@ -4793,7 +4793,7 @@
       "level": "D",
       "num": 43,
       "title": "At a Fall Fair",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -4847,7 +4847,7 @@
       "level": "D",
       "num": 49,
       "title": "Nothing Scares Me!",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "Not反义句式"
     },
@@ -4865,7 +4865,7 @@
       "level": "D",
       "num": 51,
       "title": "Let's Make a Bird Feeder",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -4910,7 +4910,7 @@
       "level": "D",
       "num": 56,
       "title": "Buddy the Bear",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -5000,7 +5000,7 @@
       "level": "D",
       "num": 66,
       "title": "I Like My Hair",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "I句式"
     },
@@ -5018,7 +5018,7 @@
       "level": "D",
       "num": 68,
       "title": "Who Wants to Play Basketball?",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -5099,7 +5099,7 @@
       "level": "D",
       "num": 77,
       "title": "Sky High!",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -5117,7 +5117,7 @@
       "level": "D",
       "num": 79,
       "title": "The Sky Is Falling",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -5135,7 +5135,7 @@
       "level": "D",
       "num": 81,
       "title": "Swamp Music",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -5162,7 +5162,7 @@
       "level": "D",
       "num": 84,
       "title": "Little Loon",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -5180,7 +5180,7 @@
       "level": "D",
       "num": 86,
       "title": "Do Not Eat That!",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "Not反义句式"
     },
@@ -5288,7 +5288,7 @@
       "level": "E",
       "num": 6,
       "title": "I Am Your New Plant",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "I句式"
     },
@@ -5342,7 +5342,7 @@
       "level": "E",
       "num": 12,
       "title": "The Storm",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -5360,7 +5360,7 @@
       "level": "E",
       "num": 14,
       "title": "Sloth Wants to Snooze",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Not反义句式"
     },
@@ -5369,7 +5369,7 @@
       "level": "E",
       "num": 15,
       "title": "Class Pets",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -5558,7 +5558,7 @@
       "level": "E",
       "num": 37,
       "title": "Lunch Boxes",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -5576,7 +5576,7 @@
       "level": "E",
       "num": 39,
       "title": "Fantastic Phil",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -5585,7 +5585,7 @@
       "level": "E",
       "num": 40,
       "title": "Shoes Men Wear",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -5594,7 +5594,7 @@
       "level": "E",
       "num": 41,
       "title": "Shoes Women Wear",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -5612,7 +5612,7 @@
       "level": "E",
       "num": 43,
       "title": "Stop Snoring",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "Not反义句式"
     },
@@ -5639,7 +5639,7 @@
       "level": "E",
       "num": 46,
       "title": "Make a Tree Friend",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -5675,7 +5675,7 @@
       "level": "E",
       "num": 50,
       "title": "Hugs",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -5702,7 +5702,7 @@
       "level": "E",
       "num": 53,
       "title": "The Class Pet",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -5846,7 +5846,7 @@
       "level": "E",
       "num": 69,
       "title": "Time for Bed",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -5855,7 +5855,7 @@
       "level": "E",
       "num": 70,
       "title": "Calming Down",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "介词反义"
     },
@@ -5882,7 +5882,7 @@
       "level": "E",
       "num": 73,
       "title": "The Boy Who Cried \"Wolf!\"",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -5891,7 +5891,7 @@
       "level": "E",
       "num": 74,
       "title": "What's for Dinner?",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "What句式"
     },
@@ -5936,7 +5936,7 @@
       "level": "E",
       "num": 79,
       "title": "Wake Up, Bear!",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -5954,7 +5954,7 @@
       "level": "E",
       "num": 81,
       "title": "Bear and Kangaroo",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -5963,7 +5963,7 @@
       "level": "E",
       "num": 82,
       "title": "Runaway Snowball",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Not反义句式"
     },
@@ -6008,7 +6008,7 @@
       "level": "E",
       "num": 87,
       "title": "Zots Learns to Play",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -6062,7 +6062,7 @@
       "level": "F",
       "num": 2,
       "title": "The Food Chain",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -6071,7 +6071,7 @@
       "level": "F",
       "num": 3,
       "title": "In a Chinese Garden",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -6080,7 +6080,7 @@
       "level": "F",
       "num": 4,
       "title": ".Night Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6089,7 +6089,7 @@
       "level": "F",
       "num": 5,
       "title": "Some Birds Go",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -6098,7 +6098,7 @@
       "level": "F",
       "num": 6,
       "title": "Animal Dads",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6107,7 +6107,7 @@
       "level": "F",
       "num": 7,
       "title": "At the Watering Hole",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -6116,7 +6116,7 @@
       "level": "F",
       "num": 8,
       "title": "Seashells",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -6134,7 +6134,7 @@
       "level": "F",
       "num": 10,
       "title": "Who Needs Rain?",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -6197,7 +6197,7 @@
       "level": "F",
       "num": 17,
       "title": "Battery Power!",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6206,7 +6206,7 @@
       "level": "F",
       "num": 18,
       "title": "A Look at Fossils",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -6224,7 +6224,7 @@
       "level": "F",
       "num": 20,
       "title": "On the Moon",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -6242,7 +6242,7 @@
       "level": "F",
       "num": 22,
       "title": "Flashlight Shadow Show",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -6251,7 +6251,7 @@
       "level": "F",
       "num": 23,
       "title": "Friends in the Stars",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -6377,7 +6377,7 @@
       "level": "F",
       "num": 37,
       "title": "Fishtank Fun",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6404,7 +6404,7 @@
       "level": "F",
       "num": 40,
       "title": "Firefighters",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -6413,7 +6413,7 @@
       "level": "F",
       "num": 41,
       "title": ".Weird White House Pets",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "颜色句式"
     },
@@ -6431,7 +6431,7 @@
       "level": "F",
       "num": 43,
       "title": ".The Sunflower Hut",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -6440,7 +6440,7 @@
       "level": "F",
       "num": 44,
       "title": "Fishing with Grandpa",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6476,7 +6476,7 @@
       "level": "F",
       "num": 48,
       "title": "The Snowstorm",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Not反义句式"
     },
@@ -6512,7 +6512,7 @@
       "level": "F",
       "num": 52,
       "title": "Using Less Energy",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -6521,7 +6521,7 @@
       "level": "F",
       "num": 53,
       "title": "I Need a Snow Day!",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "I句式"
     },
@@ -6548,7 +6548,7 @@
       "level": "F",
       "num": 56,
       "title": "Rock Climbing",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -6629,7 +6629,7 @@
       "level": "F",
       "num": 65,
       "title": "Changing Seasons",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "季节句式"
     },
@@ -6647,7 +6647,7 @@
       "level": "F",
       "num": 67,
       "title": "Eat Like a Pig",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6683,7 +6683,7 @@
       "level": "F",
       "num": 71,
       "title": "A Pet for Jupe",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -6692,7 +6692,7 @@
       "level": "F",
       "num": 72,
       "title": ".Farm Friends",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6701,7 +6701,7 @@
       "level": "F",
       "num": 73,
       "title": "Needs and Wants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6728,7 +6728,7 @@
       "level": "F",
       "num": 76,
       "title": "The Giant Turnip",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6773,7 +6773,7 @@
       "level": "F",
       "num": 81,
       "title": "Scaredy Crow",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "颜色句式"
     },
@@ -6827,7 +6827,7 @@
       "level": "F",
       "num": 87,
       "title": "Monkey to the Top",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6836,7 +6836,7 @@
       "level": "F",
       "num": 88,
       "title": "Terrific Tree Houses",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -6872,7 +6872,7 @@
       "level": "G",
       "num": 2,
       "title": "A Seed Grows",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -6881,7 +6881,7 @@
       "level": "G",
       "num": 3,
       "title": "ANIMAL EYES",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6890,7 +6890,7 @@
       "level": "G",
       "num": 4,
       "title": "Beanie and the Missing Bear",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -6944,7 +6944,7 @@
       "level": "G",
       "num": 10,
       "title": "Going to the Doctor",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "Go句式"
     },
@@ -6962,7 +6962,7 @@
       "level": "G",
       "num": 12,
       "title": "Grow Tomatoes in Six Steps",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -7025,7 +7025,7 @@
       "level": "G",
       "num": 19,
       "title": "Rude Robot",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -7034,7 +7034,7 @@
       "level": "G",
       "num": 20,
       "title": "Stormingo!",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Go句式"
     },
@@ -7043,7 +7043,7 @@
       "level": "G",
       "num": 21,
       "title": "The Camel and the Pig",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7079,7 +7079,7 @@
       "level": "G",
       "num": 25,
       "title": "We Build a Robot",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "We句式"
     },
@@ -7124,7 +7124,7 @@
       "level": "G",
       "num": 30,
       "title": "Loose Tooth",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -7196,7 +7196,7 @@
       "level": "G",
       "num": 38,
       "title": "The Queen Ant's Birthday",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7223,7 +7223,7 @@
       "level": "G",
       "num": 41,
       "title": "Penny the Rude Penguin",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7232,7 +7232,7 @@
       "level": "G",
       "num": 42,
       "title": "Ants, Ants, and More Ants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7250,7 +7250,7 @@
       "level": "G",
       "num": 44,
       "title": "Building a House",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -7322,7 +7322,7 @@
       "level": "G",
       "num": 52,
       "title": "A Trip to Petra",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7340,7 +7340,7 @@
       "level": "G",
       "num": 54,
       "title": "Caring for Your Dog",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7439,7 +7439,7 @@
       "level": "G",
       "num": 65,
       "title": "Fire Safety",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -7457,7 +7457,7 @@
       "level": "G",
       "num": 67,
       "title": "Ready, Set, Bike!",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -7475,7 +7475,7 @@
       "level": "G",
       "num": 69,
       "title": "Ride, Cling, Run",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -7484,7 +7484,7 @@
       "level": "G",
       "num": 70,
       "title": "Rock Hunting",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -7493,7 +7493,7 @@
       "level": "G",
       "num": 71,
       "title": "Meet the Beetles",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7502,7 +7502,7 @@
       "level": "G",
       "num": 72,
       "title": "Squirrel Acrobats",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7511,7 +7511,7 @@
       "level": "G",
       "num": 73,
       "title": "Taking the Train",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -7520,7 +7520,7 @@
       "level": "G",
       "num": 74,
       "title": "The Spider's Web",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -7529,7 +7529,7 @@
       "level": "G",
       "num": 75,
       "title": "This Is a Bird",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "This句式"
     },
@@ -7556,7 +7556,7 @@
       "level": "G",
       "num": 78,
       "title": "The Food We Eat",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -7565,7 +7565,7 @@
       "level": "G",
       "num": 79,
       "title": "Wiggly Worms",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7601,7 +7601,7 @@
       "level": "G",
       "num": 83,
       "title": "Stars and Stripes",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -7610,7 +7610,7 @@
       "level": "G",
       "num": 84,
       "title": "Zots Learns to Share",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -7628,7 +7628,7 @@
       "level": "G",
       "num": 86,
       "title": "Dogs at Work",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7655,7 +7655,7 @@
       "level": "H",
       "num": 1,
       "title": "A Desert Counting Book",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "数字句式"
     },
@@ -7682,7 +7682,7 @@
       "level": "H",
       "num": 4,
       "title": "American Football",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Can句式"
     },
@@ -7691,7 +7691,7 @@
       "level": "H",
       "num": 5,
       "title": "Animals, Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7736,7 +7736,7 @@
       "level": "H",
       "num": 10,
       "title": "Blue Whales: Giant Mammals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "颜色句式"
     },
@@ -7745,7 +7745,7 @@
       "level": "H",
       "num": 11,
       "title": "Brainstorm Bear",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -7754,7 +7754,7 @@
       "level": "H",
       "num": 12,
       "title": "Brother Messy, Brother Neat",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -7763,7 +7763,7 @@
       "level": "H",
       "num": 13,
       "title": "Butterfly Caf&#233;",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7808,7 +7808,7 @@
       "level": "H",
       "num": 18,
       "title": "Condors: Giant Birds",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7835,7 +7835,7 @@
       "level": "H",
       "num": 21,
       "title": "Earth's Water",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -7844,7 +7844,7 @@
       "level": "H",
       "num": 22,
       "title": "Elephants: Giant Mammals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7871,7 +7871,7 @@
       "level": "H",
       "num": 25,
       "title": "Goats Are Great!",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -7880,7 +7880,7 @@
       "level": "H",
       "num": 26,
       "title": ". Grasshopper's Gross Lunch",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -7889,7 +7889,7 @@
       "level": "H",
       "num": 27,
       "title": "Grounded to Earth",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -7898,7 +7898,7 @@
       "level": "H",
       "num": 28,
       "title": "Hawaii Volcanoes National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Can句式"
     },
@@ -7961,7 +7961,7 @@
       "level": "H",
       "num": 35,
       "title": "Leap Year Birthday",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -8015,7 +8015,7 @@
       "level": "H",
       "num": 41,
       "title": "My Bones",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "My句式"
     },
@@ -8141,7 +8141,7 @@
       "level": "H",
       "num": 55,
       "title": "Sled Dogs to the Rescue",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8159,7 +8159,7 @@
       "level": "H",
       "num": 57,
       "title": "Soccer",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -8168,7 +8168,7 @@
       "level": "H",
       "num": 58,
       "title": "Spring Is Here",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -8177,7 +8177,7 @@
       "level": "H",
       "num": 59,
       "title": "Statues in the Ice",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -8195,7 +8195,7 @@
       "level": "H",
       "num": 61,
       "title": "Summer Olympics Events",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -8204,7 +8204,7 @@
       "level": "H",
       "num": 62,
       "title": "Tag-Along Goat",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -8222,7 +8222,7 @@
       "level": "H",
       "num": 64,
       "title": "The Butterfly Life Cycle",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8267,7 +8267,7 @@
       "level": "H",
       "num": 69,
       "title": "The Goat and the Singing Wolf",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -8294,7 +8294,7 @@
       "level": "H",
       "num": 72,
       "title": "The Owl and the Pussycat",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8321,7 +8321,7 @@
       "level": "H",
       "num": 75,
       "title": "WEIRD BIRD BEAKS",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8375,7 +8375,7 @@
       "level": "H",
       "num": 81,
       "title": "Our Sun",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -8411,7 +8411,7 @@
       "level": "I",
       "num": 2,
       "title": "ACADIA National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -8438,7 +8438,7 @@
       "level": "I",
       "num": 5,
       "title": "The Animal Bridge",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8465,7 +8465,7 @@
       "level": "I",
       "num": 8,
       "title": "Basketball",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -8483,7 +8483,7 @@
       "level": "I",
       "num": 10,
       "title": "Birds",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8528,7 +8528,7 @@
       "level": "I",
       "num": 15,
       "title": "Building a Bridge",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -8546,7 +8546,7 @@
       "level": "I",
       "num": 17,
       "title": "Childhood Stories of George Washington",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -8573,7 +8573,7 @@
       "level": "I",
       "num": 20,
       "title": "Discovering Dinosaurs",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Not反义句式"
     },
@@ -8600,7 +8600,7 @@
       "level": "I",
       "num": 23,
       "title": "Fantastic Flying Machines",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8609,7 +8609,7 @@
       "level": "I",
       "num": 24,
       "title": "Extreme Insects",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8654,7 +8654,7 @@
       "level": "I",
       "num": 29,
       "title": "Hockey",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -8663,7 +8663,7 @@
       "level": "I",
       "num": 30,
       "title": "Golf",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Go句式"
     },
@@ -8672,7 +8672,7 @@
       "level": "I",
       "num": 31,
       "title": "Healthy Me",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -8717,7 +8717,7 @@
       "level": "I",
       "num": 36,
       "title": "Is That a Fish?",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8726,7 +8726,7 @@
       "level": "I",
       "num": 37,
       "title": "Jane Goodall",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Go句式"
     },
@@ -8735,7 +8735,7 @@
       "level": "I",
       "num": 38,
       "title": "Karate",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -8753,7 +8753,7 @@
       "level": "I",
       "num": 40,
       "title": "Life at the Pond",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -8762,7 +8762,7 @@
       "level": "I",
       "num": 41,
       "title": "Lincoln Loved to Learn",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -8780,7 +8780,7 @@
       "level": "I",
       "num": 43,
       "title": "Komodo Dragons: Giant Reptiles",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -8870,7 +8870,7 @@
       "level": "I",
       "num": 53,
       "title": "My Brain",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "My句式"
     },
@@ -8897,7 +8897,7 @@
       "level": "I",
       "num": 56,
       "title": "My Muscles",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "My句式"
     },
@@ -8906,7 +8906,7 @@
       "level": "I",
       "num": 57,
       "title": "My Skin",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "My句式"
     },
@@ -8924,7 +8924,7 @@
       "level": "I",
       "num": 59,
       "title": "Owls Overhead",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -9005,7 +9005,7 @@
       "level": "I",
       "num": 68,
       "title": "Tian Tian, a Giant Panda",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9014,7 +9014,7 @@
       "level": "I",
       "num": 69,
       "title": "Turkeys in the Trees",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -9032,7 +9032,7 @@
       "level": "I",
       "num": 71,
       "title": "A Visit to the Zoo",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9050,7 +9050,7 @@
       "level": "I",
       "num": 73,
       "title": "Whale Sharks: Giant Fish",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9077,7 +9077,7 @@
       "level": "I",
       "num": 76,
       "title": "William Shakespeare",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -9086,7 +9086,7 @@
       "level": "I",
       "num": 77,
       "title": "Winter Vacation",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "季节句式"
     },
@@ -9140,7 +9140,7 @@
       "level": "I",
       "num": 83,
       "title": "Rocky Mountain National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -9176,7 +9176,7 @@
       "level": "J",
       "num": 3,
       "title": "Ostriches: Giant Birds",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9185,7 +9185,7 @@
       "level": "J",
       "num": 4,
       "title": "Uzzle, the Football Star",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -9257,7 +9257,7 @@
       "level": "J",
       "num": 12,
       "title": "The Creature Constitution",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9329,7 +9329,7 @@
       "level": "J",
       "num": 20,
       "title": "The Disappearing Moon",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -9347,7 +9347,7 @@
       "level": "J",
       "num": 22,
       "title": "My Heart",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "My句式"
     },
@@ -9356,7 +9356,7 @@
       "level": "J",
       "num": 23,
       "title": "Ocean Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -9383,7 +9383,7 @@
       "level": "J",
       "num": 26,
       "title": "Daisy in the Desert",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -9428,7 +9428,7 @@
       "level": "J",
       "num": 31,
       "title": "Goliath Beetles: Giant Insects",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -9545,7 +9545,7 @@
       "level": "J",
       "num": 44,
       "title": "The Story of the Statue",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -9563,7 +9563,7 @@
       "level": "J",
       "num": 46,
       "title": "The Heart of a Monkey",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9581,7 +9581,7 @@
       "level": "J",
       "num": 48,
       "title": "Goliath Bird-Eating Spiders: Giant Arachnids",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -9617,7 +9617,7 @@
       "level": "J",
       "num": 52,
       "title": "A Rainbow of Food",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -9635,7 +9635,7 @@
       "level": "J",
       "num": 54,
       "title": "Wiggly Worms",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9644,7 +9644,7 @@
       "level": "J",
       "num": 55,
       "title": "The Legend of the Giant's Causeway",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9662,7 +9662,7 @@
       "level": "J",
       "num": 57,
       "title": "Baseball",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -9671,7 +9671,7 @@
       "level": "J",
       "num": 58,
       "title": "Fall Forward Spring Back",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -9689,7 +9689,7 @@
       "level": "J",
       "num": 60,
       "title": "GOING TO THE ART MUSEUM",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "Go句式"
     },
@@ -9707,7 +9707,7 @@
       "level": "J",
       "num": 62,
       "title": "Monkey and Crocodile",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9716,7 +9716,7 @@
       "level": "J",
       "num": 63,
       "title": "Rainbows",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -9761,7 +9761,7 @@
       "level": "J",
       "num": 68,
       "title": "Sharks",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9770,7 +9770,7 @@
       "level": "J",
       "num": 69,
       "title": "Want to Be a Beaver?",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9779,7 +9779,7 @@
       "level": "J",
       "num": 70,
       "title": "The Amazing Octopus",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9824,7 +9824,7 @@
       "level": "J",
       "num": 75,
       "title": "My Uncle Is A Firefighter",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "My句式"
     },
@@ -9869,7 +9869,7 @@
       "level": "J",
       "num": 80,
       "title": "Dogs at Work",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9905,7 +9905,7 @@
       "level": "J",
       "num": 84,
       "title": "Firefighters",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -9923,7 +9923,7 @@
       "level": "J",
       "num": 86,
       "title": "Amazing Antarctica",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9959,7 +9959,7 @@
       "level": "K",
       "num": 4,
       "title": "Brainstorm Bear",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -9968,7 +9968,7 @@
       "level": "K",
       "num": 5,
       "title": "Carlos\\u0027s Family Celebration",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -9977,7 +9977,7 @@
       "level": "K",
       "num": 6,
       "title": "Chickens in My Backyard",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -10031,7 +10031,7 @@
       "level": "K",
       "num": 12,
       "title": "Extreme Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10040,7 +10040,7 @@
       "level": "K",
       "num": 13,
       "title": "Extreme Insects",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10058,7 +10058,7 @@
       "level": "K",
       "num": 15,
       "title": "Fishing in the Rain",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -10148,7 +10148,7 @@
       "level": "K",
       "num": 25,
       "title": "Hugs for Daddy",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -10157,7 +10157,7 @@
       "level": "K",
       "num": 26,
       "title": "I Fly Hot-Air Balloons",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "I句式"
     },
@@ -10229,7 +10229,7 @@
       "level": "K",
       "num": 34,
       "title": "Leap Year Birthday",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -10274,7 +10274,7 @@
       "level": "K",
       "num": 39,
       "title": "Maria\\u0027s Family Celebration",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10292,7 +10292,7 @@
       "level": "K",
       "num": 41,
       "title": "Migrating Geese",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10310,7 +10310,7 @@
       "level": "K",
       "num": 43,
       "title": "Model Rockets",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -10319,7 +10319,7 @@
       "level": "K",
       "num": 44,
       "title": "Mongo\\u0027s Migration",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -10328,7 +10328,7 @@
       "level": "K",
       "num": 45,
       "title": "New Planet, New School",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -10364,7 +10364,7 @@
       "level": "K",
       "num": 49,
       "title": "Ratty Rats",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10382,7 +10382,7 @@
       "level": "K",
       "num": 51,
       "title": "Sadko and the Sea Kingdom",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -10409,7 +10409,7 @@
       "level": "K",
       "num": 54,
       "title": "Simple Machines",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -10436,7 +10436,7 @@
       "level": "K",
       "num": 57,
       "title": "Soccer Is a Kick!",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -10454,7 +10454,7 @@
       "level": "K",
       "num": 59,
       "title": "The Sorcerer\\u0027s Apprentice",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -10472,7 +10472,7 @@
       "level": "K",
       "num": 61,
       "title": "Strange Plants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10490,7 +10490,7 @@
       "level": "K",
       "num": 63,
       "title": "Summer Olympic Events",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -10499,7 +10499,7 @@
       "level": "K",
       "num": 64,
       "title": "Tarantula!",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10544,7 +10544,7 @@
       "level": "K",
       "num": 69,
       "title": "To the Pumpkin Patch",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -10616,7 +10616,7 @@
       "level": "L",
       "num": 5,
       "title": "Big Machines",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -10697,7 +10697,7 @@
       "level": "L",
       "num": 14,
       "title": "Fantastic Flying Machines",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10742,7 +10742,7 @@
       "level": "L",
       "num": 19,
       "title": "The Gray Wolf",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10751,7 +10751,7 @@
       "level": "L",
       "num": 20,
       "title": "Harold the Hungry Plant",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10823,7 +10823,7 @@
       "level": "L",
       "num": 28,
       "title": "Insect Life Cycle",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10832,7 +10832,7 @@
       "level": "L",
       "num": 29,
       "title": "Introducing Planet Earth",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -10841,7 +10841,7 @@
       "level": "L",
       "num": 30,
       "title": "Jessica Loves Soccer",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -10868,7 +10868,7 @@
       "level": "L",
       "num": 33,
       "title": "The Lonely Woman and the Sea Spirit",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -10913,7 +10913,7 @@
       "level": "L",
       "num": 38,
       "title": "Plant Defenses",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -10922,7 +10922,7 @@
       "level": "L",
       "num": 39,
       "title": "Shoes Around the World",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -10985,7 +10985,7 @@
       "level": "L",
       "num": 46,
       "title": "United Arab Emirates",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11012,7 +11012,7 @@
       "level": "L",
       "num": 49,
       "title": "The Water Cycle",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -11021,7 +11021,7 @@
       "level": "L",
       "num": 50,
       "title": "William Shakespeare",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -11030,7 +11030,7 @@
       "level": "L",
       "num": 51,
       "title": "Wonderful Winter",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -11057,7 +11057,7 @@
       "level": "M",
       "num": 2,
       "title": "Animal Defenses",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11120,7 +11120,7 @@
       "level": "M",
       "num": 9,
       "title": "The Day It Rained Tortillas",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -11129,7 +11129,7 @@
       "level": "M",
       "num": 10,
       "title": "Empire State Building",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -11138,7 +11138,7 @@
       "level": "M",
       "num": 11,
       "title": "Endangered Birds",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "颜色句式"
     },
@@ -11147,7 +11147,7 @@
       "level": "M",
       "num": 12,
       "title": "Frogs and Toads",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11156,7 +11156,7 @@
       "level": "M",
       "num": 13,
       "title": "Giant\\u0027s Tale",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11165,7 +11165,7 @@
       "level": "M",
       "num": 14,
       "title": "Go Away, Sun!",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Go句式"
     },
@@ -11183,7 +11183,7 @@
       "level": "M",
       "num": 16,
       "title": "Hermit Crabs",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11192,7 +11192,7 @@
       "level": "M",
       "num": 17,
       "title": "History of the Bicycle",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -11201,7 +11201,7 @@
       "level": "M",
       "num": 18,
       "title": "The Hoppers Start School",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11210,7 +11210,7 @@
       "level": "M",
       "num": 19,
       "title": "Horseshoes Aren\\u0027t Just for Good Luck",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -11246,7 +11246,7 @@
       "level": "M",
       "num": 23,
       "title": "Inside Your Body",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -11282,7 +11282,7 @@
       "level": "M",
       "num": 27,
       "title": "The Legend of the Giant\\u0027s Causeway",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11327,7 +11327,7 @@
       "level": "M",
       "num": 32,
       "title": "Ocean Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -11372,7 +11372,7 @@
       "level": "M",
       "num": 37,
       "title": "A Prairie Dog\\u0027s Life",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11381,7 +11381,7 @@
       "level": "M",
       "num": 38,
       "title": "The Sleeping Dog",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11390,7 +11390,7 @@
       "level": "M",
       "num": 39,
       "title": "Snow Camping in a Quinzhee",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Not反义句式"
     },
@@ -11399,7 +11399,7 @@
       "level": "M",
       "num": 40,
       "title": "Solids All Around",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -11417,7 +11417,7 @@
       "level": "M",
       "num": 42,
       "title": "Sound All Around",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -11426,7 +11426,7 @@
       "level": "M",
       "num": 43,
       "title": "Spiders",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -11435,7 +11435,7 @@
       "level": "M",
       "num": 44,
       "title": "The Story of Rapa Nui",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -11444,7 +11444,7 @@
       "level": "M",
       "num": 45,
       "title": "Story of the Sun",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -11498,7 +11498,7 @@
       "level": "M",
       "num": 51,
       "title": "Vacation Time!",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -11534,7 +11534,7 @@
       "level": "N",
       "num": 2,
       "title": "The Animal Bridge",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11552,7 +11552,7 @@
       "level": "N",
       "num": 4,
       "title": "Awesome Ants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11570,7 +11570,7 @@
       "level": "N",
       "num": 6,
       "title": "Bedbugs Bite!",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -11606,7 +11606,7 @@
       "level": "N",
       "num": 10,
       "title": "The Butterfly Life Cycle",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11642,7 +11642,7 @@
       "level": "N",
       "num": 14,
       "title": "Coral Reefs",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11651,7 +11651,7 @@
       "level": "N",
       "num": 15,
       "title": "The Creature Constitution",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11687,7 +11687,7 @@
       "level": "N",
       "num": 19,
       "title": "Elephants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11705,7 +11705,7 @@
       "level": "N",
       "num": 21,
       "title": "Extreme Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11714,7 +11714,7 @@
       "level": "N",
       "num": 22,
       "title": "The Fishing Derby",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11732,7 +11732,7 @@
       "level": "N",
       "num": 24,
       "title": "Great Mosque of Djenn\\u00e9",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -11741,7 +11741,7 @@
       "level": "N",
       "num": 25,
       "title": "The Great Wall of China",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -11750,7 +11750,7 @@
       "level": "N",
       "num": 26,
       "title": "Grounded to Earth",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -11768,7 +11768,7 @@
       "level": "N",
       "num": 28,
       "title": "Karate",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11795,7 +11795,7 @@
       "level": "N",
       "num": 31,
       "title": "Making Rice",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -11831,7 +11831,7 @@
       "level": "N",
       "num": 35,
       "title": "Old Fears, New Trade",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -11849,7 +11849,7 @@
       "level": "N",
       "num": 37,
       "title": "Petra",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11858,7 +11858,7 @@
       "level": "N",
       "num": 38,
       "title": "Puppets",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -11867,7 +11867,7 @@
       "level": "N",
       "num": 39,
       "title": "Rainbows",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -11885,7 +11885,7 @@
       "level": "N",
       "num": 41,
       "title": "Real-Life Multiplication",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11912,7 +11912,7 @@
       "level": "N",
       "num": 44,
       "title": "Sharks",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -11930,7 +11930,7 @@
       "level": "N",
       "num": 46,
       "title": "Slithery Snakes",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12011,7 +12011,7 @@
       "level": "N",
       "num": 55,
       "title": "Watching Earth From Space",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -12020,7 +12020,7 @@
       "level": "N",
       "num": 56,
       "title": "Weird Bird Beaks",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12038,7 +12038,7 @@
       "level": "N",
       "num": 58,
       "title": "Wiggly Worms",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12065,7 +12065,7 @@
       "level": "O",
       "num": 2,
       "title": "Anansi and the Talking Watermelon",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -12074,7 +12074,7 @@
       "level": "O",
       "num": 3,
       "title": "Animals, Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12110,7 +12110,7 @@
       "level": "O",
       "num": 7,
       "title": "Badlands National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -12128,7 +12128,7 @@
       "level": "O",
       "num": 9,
       "title": "Bats",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12191,7 +12191,7 @@
       "level": "O",
       "num": 16,
       "title": "Deep in the Ocean",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -12200,7 +12200,7 @@
       "level": "O",
       "num": 17,
       "title": "A Dog\\u0027s Tale",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12209,7 +12209,7 @@
       "level": "O",
       "num": 18,
       "title": "Dogs at Work",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12218,7 +12218,7 @@
       "level": "O",
       "num": 19,
       "title": "Earth\\u0027s Water",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -12236,7 +12236,7 @@
       "level": "O",
       "num": 21,
       "title": "Giant Pumpkins",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12245,7 +12245,7 @@
       "level": "O",
       "num": 22,
       "title": "The Great Land Run",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -12254,7 +12254,7 @@
       "level": "O",
       "num": 23,
       "title": "HeroRATs: Rats Who Save Lives",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12299,7 +12299,7 @@
       "level": "O",
       "num": 28,
       "title": "I Just Want to Go to School!",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "I句式"
     },
@@ -12326,7 +12326,7 @@
       "level": "O",
       "num": 31,
       "title": "Irma\\u0027s Sandwich Shop",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12344,7 +12344,7 @@
       "level": "O",
       "num": 33,
       "title": "Jane Goodall",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Go句式"
     },
@@ -12371,7 +12371,7 @@
       "level": "O",
       "num": 36,
       "title": "Li\\u0027s Tangram Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12470,7 +12470,7 @@
       "level": "O",
       "num": 47,
       "title": "Owls Overhead",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -12488,7 +12488,7 @@
       "level": "O",
       "num": 49,
       "title": "Pecos Bill Rides a Tornado",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -12497,7 +12497,7 @@
       "level": "O",
       "num": 50,
       "title": "Pepper: The King of Spices",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -12515,7 +12515,7 @@
       "level": "O",
       "num": 52,
       "title": "Rainy-Day Savings",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -12524,7 +12524,7 @@
       "level": "O",
       "num": 53,
       "title": "Rocky Mountain National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -12533,7 +12533,7 @@
       "level": "O",
       "num": 54,
       "title": "Sally Ride",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -12542,7 +12542,7 @@
       "level": "O",
       "num": 55,
       "title": "Salt Rocks!",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -12551,7 +12551,7 @@
       "level": "O",
       "num": 56,
       "title": "The Shadow People",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -12569,7 +12569,7 @@
       "level": "O",
       "num": 58,
       "title": "Spider Monkey\\u0027s Question",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12578,7 +12578,7 @@
       "level": "O",
       "num": 59,
       "title": "The Story of the Statue",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -12587,7 +12587,7 @@
       "level": "O",
       "num": 60,
       "title": "Thomas Edison",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -12623,7 +12623,7 @@
       "level": "O",
       "num": 64,
       "title": "Whales",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12650,7 +12650,7 @@
       "level": "P",
       "num": 1,
       "title": "About Trees",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -12686,7 +12686,7 @@
       "level": "P",
       "num": 5,
       "title": "Amazing Antarctica",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12695,7 +12695,7 @@
       "level": "P",
       "num": 6,
       "title": "The Animal Data Files",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12749,7 +12749,7 @@
       "level": "P",
       "num": 12,
       "title": "Dinosaurs",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Not反义句式"
     },
@@ -12758,7 +12758,7 @@
       "level": "P",
       "num": 13,
       "title": "Discovering Dinosaurs",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Not反义句式"
     },
@@ -12794,7 +12794,7 @@
       "level": "P",
       "num": 17,
       "title": "Fall Forward, Spring Back",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -12803,7 +12803,7 @@
       "level": "P",
       "num": 18,
       "title": "Fantastic Flying Machines",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12812,7 +12812,7 @@
       "level": "P",
       "num": 19,
       "title": "Firefighters",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -12857,7 +12857,7 @@
       "level": "P",
       "num": 24,
       "title": "Great Zimbabwe",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -12866,7 +12866,7 @@
       "level": "P",
       "num": 25,
       "title": "I Am the Hope Diamond",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "I句式"
     },
@@ -12893,7 +12893,7 @@
       "level": "P",
       "num": 28,
       "title": "Jack-o\\u0027-Lanterns",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -12911,7 +12911,7 @@
       "level": "P",
       "num": 30,
       "title": "Landon\\u0027s Pumpkins",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -12929,7 +12929,7 @@
       "level": "P",
       "num": 32,
       "title": "The Legend of Sleepy Hollow",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -12938,7 +12938,7 @@
       "level": "P",
       "num": 33,
       "title": "Magnetism",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -12947,7 +12947,7 @@
       "level": "P",
       "num": 34,
       "title": "Martin Luther King, Jr.",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "介词反义"
     },
@@ -12974,7 +12974,7 @@
       "level": "P",
       "num": 37,
       "title": "My Uncle Is a Firefighter",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "My句式"
     },
@@ -12983,7 +12983,7 @@
       "level": "P",
       "num": 38,
       "title": "New Year Celebrations",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13019,7 +13019,7 @@
       "level": "P",
       "num": 42,
       "title": "Rainbows",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -13037,7 +13037,7 @@
       "level": "P",
       "num": 44,
       "title": "Rockin\\u0027 Rhythm and Sweet Harmony",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -13055,7 +13055,7 @@
       "level": "P",
       "num": 46,
       "title": "Seals, Sea Lions, and Walruses",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -13064,7 +13064,7 @@
       "level": "P",
       "num": 47,
       "title": "The Seed Sowers",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -13073,7 +13073,7 @@
       "level": "P",
       "num": 48,
       "title": "Sled Dogs to the Rescue",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13091,7 +13091,7 @@
       "level": "P",
       "num": 50,
       "title": "The Story of Jeans",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -13136,7 +13136,7 @@
       "level": "Q",
       "num": 2,
       "title": "Amelia Earhart: A Legend in Flight",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -13145,7 +13145,7 @@
       "level": "Q",
       "num": 3,
       "title": "The Ant in the Photograph",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -13190,7 +13190,7 @@
       "level": "Q",
       "num": 8,
       "title": "Book 2: Who Likes Lemonade?",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -13208,7 +13208,7 @@
       "level": "Q",
       "num": 10,
       "title": "Celebrating Food and Family",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13244,7 +13244,7 @@
       "level": "Q",
       "num": 14,
       "title": "The Farmer and the Horse",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13253,7 +13253,7 @@
       "level": "Q",
       "num": 15,
       "title": "Fireworks",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -13271,7 +13271,7 @@
       "level": "Q",
       "num": 17,
       "title": "The Great Lemon Bake-Off",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "介词反义"
     },
@@ -13307,7 +13307,7 @@
       "level": "Q",
       "num": 21,
       "title": "Hula: The Heartbeat of Hawai\\u0027i",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -13325,7 +13325,7 @@
       "level": "Q",
       "num": 23,
       "title": "Jackie Robinson",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13334,7 +13334,7 @@
       "level": "Q",
       "num": 24,
       "title": "Katie\\u0027s Forest Finds",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13343,7 +13343,7 @@
       "level": "Q",
       "num": 25,
       "title": "The Little Fir Tree",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -13388,7 +13388,7 @@
       "level": "Q",
       "num": 30,
       "title": "Morty\\u0027s Swim Surprise",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -13397,7 +13397,7 @@
       "level": "Q",
       "num": 31,
       "title": "My Earth Day Birthday",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "My句式"
     },
@@ -13415,7 +13415,7 @@
       "level": "Q",
       "num": 33,
       "title": "Mystery at Camp White Cloud",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "颜色句式"
     },
@@ -13424,7 +13424,7 @@
       "level": "Q",
       "num": 34,
       "title": "The New Soccer Ball",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -13433,7 +13433,7 @@
       "level": "Q",
       "num": 35,
       "title": "On Eagle River",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "天气水句式"
     },
@@ -13469,7 +13469,7 @@
       "level": "Q",
       "num": 39,
       "title": "Sharks",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13487,7 +13487,7 @@
       "level": "Q",
       "num": 41,
       "title": "Slithery Snakes",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13523,7 +13523,7 @@
       "level": "Q",
       "num": 45,
       "title": "Summer Olympic Events",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -13532,7 +13532,7 @@
       "level": "Q",
       "num": 46,
       "title": "The Terry Fox Story",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13541,7 +13541,7 @@
       "level": "Q",
       "num": 47,
       "title": "The WeatherBot Warning",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -13550,7 +13550,7 @@
       "level": "Q",
       "num": 48,
       "title": "Zookeeping",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13568,7 +13568,7 @@
       "level": "R",
       "num": 2,
       "title": "The Animal Bridge",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13604,7 +13604,7 @@
       "level": "R",
       "num": 6,
       "title": "The Bird\\u0027s Nest",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13622,7 +13622,7 @@
       "level": "R",
       "num": 8,
       "title": "Book 2: Charly\\u0027s New Year\\u0027s Revolution",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -13649,7 +13649,7 @@
       "level": "R",
       "num": 11,
       "title": "Book 3: Seeds and Sunflowers",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -13658,7 +13658,7 @@
       "level": "R",
       "num": 12,
       "title": "Book 4: Raining Cats, Dogs, and Other Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -13667,7 +13667,7 @@
       "level": "R",
       "num": 13,
       "title": "Book 4: Scaredy Camp",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "颜色句式"
     },
@@ -13676,7 +13676,7 @@
       "level": "R",
       "num": 14,
       "title": "Book 4: Trick or Treat?",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -13685,7 +13685,7 @@
       "level": "R",
       "num": 15,
       "title": "Catherine\\u0027s Sea of Cortez Journal",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -13712,7 +13712,7 @@
       "level": "R",
       "num": 18,
       "title": "Electric Eels!",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -13730,7 +13730,7 @@
       "level": "R",
       "num": 20,
       "title": "Glow-in-the-Dark Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13775,7 +13775,7 @@
       "level": "R",
       "num": 25,
       "title": "Itching and Scratching",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13811,7 +13811,7 @@
       "level": "R",
       "num": 29,
       "title": "Martin Luther King, Jr.",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "介词反义"
     },
@@ -13874,7 +13874,7 @@
       "level": "R",
       "num": 36,
       "title": "Nature Reuses and Recycles",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -13883,7 +13883,7 @@
       "level": "R",
       "num": 37,
       "title": "Owls Overhead",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -13910,7 +13910,7 @@
       "level": "R",
       "num": 40,
       "title": "Saved by the Stars",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -13928,7 +13928,7 @@
       "level": "R",
       "num": 42,
       "title": "Skydiving",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -13937,7 +13937,7 @@
       "level": "R",
       "num": 43,
       "title": "The Story of the Statue",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -13946,7 +13946,7 @@
       "level": "R",
       "num": 44,
       "title": "Strange Plants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -13973,7 +13973,7 @@
       "level": "R",
       "num": 47,
       "title": "Thomas Edison",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -14009,7 +14009,7 @@
       "level": "R",
       "num": 51,
       "title": "Turtle Tom",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14045,7 +14045,7 @@
       "level": "R",
       "num": 55,
       "title": "Wiggly Worms",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14108,7 +14108,7 @@
       "level": "S",
       "num": 5,
       "title": "Amazing Antarctica",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14117,7 +14117,7 @@
       "level": "S",
       "num": 6,
       "title": "Animal Discoveries",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -14126,7 +14126,7 @@
       "level": "S",
       "num": 7,
       "title": "Animal Groups: Strength in Numbers",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "数字句式"
     },
@@ -14153,7 +14153,7 @@
       "level": "S",
       "num": 10,
       "title": "Badlands National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -14234,7 +14234,7 @@
       "level": "S",
       "num": 19,
       "title": "Brainstorm Bear",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -14252,7 +14252,7 @@
       "level": "S",
       "num": 21,
       "title": "The Butterfly Life Cycle",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14288,7 +14288,7 @@
       "level": "S",
       "num": 25,
       "title": "Coral Reefs",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14306,7 +14306,7 @@
       "level": "S",
       "num": 27,
       "title": "The Creature Constitution",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14351,7 +14351,7 @@
       "level": "S",
       "num": 32,
       "title": "Dogs at Work",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14369,7 +14369,7 @@
       "level": "S",
       "num": 34,
       "title": "Earthquakes, Volcanoes, and Tsunamis",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Can句式"
     },
@@ -14396,7 +14396,7 @@
       "level": "S",
       "num": 37,
       "title": "Explorer\\u0027s Guide to World Weather",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -14405,7 +14405,7 @@
       "level": "S",
       "num": 38,
       "title": "Extreme Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14441,7 +14441,7 @@
       "level": "S",
       "num": 42,
       "title": "George Washington Carver",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -14468,7 +14468,7 @@
       "level": "S",
       "num": 45,
       "title": "The Great Gallardo\\u0027s Books",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -14477,7 +14477,7 @@
       "level": "S",
       "num": 46,
       "title": "Guardian Dogs: Penguin Protectors",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -14513,7 +14513,7 @@
       "level": "S",
       "num": 50,
       "title": "Hawaii Volcanoes National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Can句式"
     },
@@ -14531,7 +14531,7 @@
       "level": "S",
       "num": 52,
       "title": "Horseshoes Aren\\u0027t Just for Good Luck",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -14675,7 +14675,7 @@
       "level": "S",
       "num": 68,
       "title": "Miguel in the Secret Garden",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -14720,7 +14720,7 @@
       "level": "S",
       "num": 73,
       "title": "New Year Celebrations",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14756,7 +14756,7 @@
       "level": "S",
       "num": 77,
       "title": "Polar Bear\\u0027s Promise",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14765,7 +14765,7 @@
       "level": "S",
       "num": 78,
       "title": "The Power of Magnets",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -14792,7 +14792,7 @@
       "level": "S",
       "num": 81,
       "title": "Salmon: A Link in the Food Chain",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "介词反义"
     },
@@ -14801,7 +14801,7 @@
       "level": "S",
       "num": 82,
       "title": "Samson: A Horse Story",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14819,7 +14819,7 @@
       "level": "S",
       "num": 84,
       "title": "Science Dad: Lessons in Light",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -14828,7 +14828,7 @@
       "level": "S",
       "num": 85,
       "title": "Scotty\\u0027s Spring Training",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -14846,7 +14846,7 @@
       "level": "S",
       "num": 87,
       "title": "Shelter Pets Are Best",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -14927,7 +14927,7 @@
       "level": "S",
       "num": 96,
       "title": "Voyagers in Space",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -14945,7 +14945,7 @@
       "level": "S",
       "num": 98,
       "title": "Wheeling the Snake",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15017,7 +15017,7 @@
       "level": "T",
       "num": 2,
       "title": "Acadia National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -15053,7 +15053,7 @@
       "level": "T",
       "num": 6,
       "title": "Ants in My Bed",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -15089,7 +15089,7 @@
       "level": "T",
       "num": 10,
       "title": "Awesome Ants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15098,7 +15098,7 @@
       "level": "T",
       "num": 11,
       "title": "Bats in the Attic",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -15107,7 +15107,7 @@
       "level": "T",
       "num": 12,
       "title": "The Beekeeper",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15125,7 +15125,7 @@
       "level": "T",
       "num": 14,
       "title": "Birds of Prey",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15206,7 +15206,7 @@
       "level": "T",
       "num": 23,
       "title": "Breeds of Dogs",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15233,7 +15233,7 @@
       "level": "T",
       "num": 26,
       "title": "Captain Morty Commands the Sky",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -15260,7 +15260,7 @@
       "level": "T",
       "num": 29,
       "title": "Deep in the Ocean",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -15269,7 +15269,7 @@
       "level": "T",
       "num": 30,
       "title": "Discovering Dinosaurs",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Not反义句式"
     },
@@ -15305,7 +15305,7 @@
       "level": "T",
       "num": 34,
       "title": "Exploring Tide Pools",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -15323,7 +15323,7 @@
       "level": "T",
       "num": 36,
       "title": "The Force of Water",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -15332,7 +15332,7 @@
       "level": "T",
       "num": 37,
       "title": "Giant Pandas",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15350,7 +15350,7 @@
       "level": "T",
       "num": 39,
       "title": "Helen Keller",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -15395,7 +15395,7 @@
       "level": "T",
       "num": 44,
       "title": "The History of House Cats",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15440,7 +15440,7 @@
       "level": "T",
       "num": 49,
       "title": "Jack-o\\u0027-Lanterns",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15449,7 +15449,7 @@
       "level": "T",
       "num": 50,
       "title": "Jane Goodall",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Go句式"
     },
@@ -15467,7 +15467,7 @@
       "level": "T",
       "num": 52,
       "title": "Karate",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15494,7 +15494,7 @@
       "level": "T",
       "num": 55,
       "title": "The Legend of the Giant\\u0027s Causeway",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15503,7 +15503,7 @@
       "level": "T",
       "num": 56,
       "title": "Let\\u0027s Make Snowflakes!",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Not反义句式"
     },
@@ -15548,7 +15548,7 @@
       "level": "T",
       "num": 61,
       "title": "Morty Finds It No Laughing Matter",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Not反义句式"
     },
@@ -15593,7 +15593,7 @@
       "level": "T",
       "num": 66,
       "title": "My Uncle Is a Firefighter",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "My句式"
     },
@@ -15602,7 +15602,7 @@
       "level": "T",
       "num": 67,
       "title": "Mythical Creatures of Ancient Greece",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15620,7 +15620,7 @@
       "level": "T",
       "num": 69,
       "title": "A New Skyline",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -15629,7 +15629,7 @@
       "level": "T",
       "num": 70,
       "title": "Ocean Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -15701,7 +15701,7 @@
       "level": "T",
       "num": 78,
       "title": "The Power of Wind",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -15710,7 +15710,7 @@
       "level": "T",
       "num": 79,
       "title": "Rainbows",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -15728,7 +15728,7 @@
       "level": "T",
       "num": 81,
       "title": "Rocky Mountain National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -15782,7 +15782,7 @@
       "level": "T",
       "num": 87,
       "title": "Saving the Last Wild Tigers",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15791,7 +15791,7 @@
       "level": "T",
       "num": 88,
       "title": "Severe Weather",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -15800,7 +15800,7 @@
       "level": "T",
       "num": 89,
       "title": "Sled Dogs to the Rescue",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15809,7 +15809,7 @@
       "level": "T",
       "num": 90,
       "title": "The State Hermitage: Russia\\u0027s Amazing Museum",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -15818,7 +15818,7 @@
       "level": "T",
       "num": 91,
       "title": "The Story of the Mayflower",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -15827,7 +15827,7 @@
       "level": "T",
       "num": 92,
       "title": "Summer Olympics Legends",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -15890,7 +15890,7 @@
       "level": "T",
       "num": 99,
       "title": "Vincent\\u0027s Bedroom",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -15908,7 +15908,7 @@
       "level": "T",
       "num": 101,
       "title": "Weird Bird Beaks",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -15926,7 +15926,7 @@
       "level": "T",
       "num": 103,
       "title": "What\\u0027s in Washington, D.C.?",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "What句式"
     },
@@ -15935,7 +15935,7 @@
       "level": "T",
       "num": 104,
       "title": "Where\\u0027s Your Hair?",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -15944,7 +15944,7 @@
       "level": "T",
       "num": 105,
       "title": "William Shakespeare",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -15971,7 +15971,7 @@
       "level": "T",
       "num": 108,
       "title": "You\\u0027re a Jellyfish!",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16052,7 +16052,7 @@
       "level": "U",
       "num": 9,
       "title": "Book 10: The Thing in the Forest",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -16142,7 +16142,7 @@
       "level": "U",
       "num": 19,
       "title": "Growing Up Green",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "颜色句式"
     },
@@ -16187,7 +16187,7 @@
       "level": "U",
       "num": 24,
       "title": "Hubble: An Out-of-This-World Telescope",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "介词反义"
     },
@@ -16196,7 +16196,7 @@
       "level": "U",
       "num": 25,
       "title": "In Huck\\u0027s Shoes",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "介词反义"
     },
@@ -16214,7 +16214,7 @@
       "level": "U",
       "num": 27,
       "title": "Jackie Robinson",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16259,7 +16259,7 @@
       "level": "U",
       "num": 32,
       "title": "Meteors and Meteorites",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -16304,7 +16304,7 @@
       "level": "U",
       "num": 37,
       "title": "Mystery in the Moonlight",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -16376,7 +16376,7 @@
       "level": "U",
       "num": 45,
       "title": "Polar Regions of the Earth",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16394,7 +16394,7 @@
       "level": "U",
       "num": 47,
       "title": "The Secret Service",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -16412,7 +16412,7 @@
       "level": "U",
       "num": 49,
       "title": "Strange Plants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16421,7 +16421,7 @@
       "level": "U",
       "num": 50,
       "title": "The Sun, Earth, and Moon",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -16448,7 +16448,7 @@
       "level": "U",
       "num": 53,
       "title": "Thomas Edison",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -16475,7 +16475,7 @@
       "level": "U",
       "num": 56,
       "title": "United Arab Emirates",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16529,7 +16529,7 @@
       "level": "V",
       "num": 2,
       "title": "Acadia National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -16547,7 +16547,7 @@
       "level": "V",
       "num": 4,
       "title": "Albert Einstein",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -16556,7 +16556,7 @@
       "level": "V",
       "num": 5,
       "title": "Alexander the Great",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -16583,7 +16583,7 @@
       "level": "V",
       "num": 8,
       "title": "Amelia Earhart: A Legend in Flight",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -16601,7 +16601,7 @@
       "level": "V",
       "num": 10,
       "title": "Animal Communication",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16610,7 +16610,7 @@
       "level": "V",
       "num": 11,
       "title": "Animal Discoveries",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -16673,7 +16673,7 @@
       "level": "V",
       "num": 18,
       "title": "The Bird\\u0027s Nest",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16682,7 +16682,7 @@
       "level": "V",
       "num": 19,
       "title": "Book 12: The House in the Desert",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -16691,7 +16691,7 @@
       "level": "V",
       "num": 20,
       "title": "Book 13: The Cat and the Tunnel",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16745,7 +16745,7 @@
       "level": "V",
       "num": 26,
       "title": "Clara Barton: The Angel of the Battlefield",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16781,7 +16781,7 @@
       "level": "V",
       "num": 30,
       "title": "Deep in the Ocean",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -16799,7 +16799,7 @@
       "level": "V",
       "num": 32,
       "title": "Earth\\u0027s Water",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -16808,7 +16808,7 @@
       "level": "V",
       "num": 33,
       "title": "Earthquakes, Volcanoes, and Tsunamis",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Can句式"
     },
@@ -16817,7 +16817,7 @@
       "level": "V",
       "num": 34,
       "title": "Electric Eels!",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -16835,7 +16835,7 @@
       "level": "V",
       "num": 36,
       "title": "Forests on Fire",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -16871,7 +16871,7 @@
       "level": "V",
       "num": 40,
       "title": "Gems: Treasures from the Earth",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -16880,7 +16880,7 @@
       "level": "V",
       "num": 41,
       "title": "George Washington",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -16889,7 +16889,7 @@
       "level": "V",
       "num": 42,
       "title": "George Washington Carver",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -16907,7 +16907,7 @@
       "level": "V",
       "num": 44,
       "title": "Giant Insects",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -16916,7 +16916,7 @@
       "level": "V",
       "num": 45,
       "title": "Golf",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Go句式"
     },
@@ -16934,7 +16934,7 @@
       "level": "V",
       "num": 47,
       "title": "Grasslands",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -16943,7 +16943,7 @@
       "level": "V",
       "num": 48,
       "title": "Groundwater",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -16979,7 +16979,7 @@
       "level": "V",
       "num": 52,
       "title": "Jazz Greats",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -17051,7 +17051,7 @@
       "level": "V",
       "num": 60,
       "title": "Life in Space",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -17060,7 +17060,7 @@
       "level": "V",
       "num": 61,
       "title": "Living in Deserts",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -17141,7 +17141,7 @@
       "level": "V",
       "num": 70,
       "title": "Morty and the Mousetown Gazette",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17150,7 +17150,7 @@
       "level": "V",
       "num": 71,
       "title": "Morty and the Mousetown Talent Show",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17186,7 +17186,7 @@
       "level": "V",
       "num": 75,
       "title": "Mythical Creatures of Ancient Greece",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17231,7 +17231,7 @@
       "level": "V",
       "num": 80,
       "title": "Owls Overhead",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -17312,7 +17312,7 @@
       "level": "V",
       "num": 89,
       "title": "A Selection From Robinson Crusoe",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -17330,7 +17330,7 @@
       "level": "V",
       "num": 91,
       "title": "Slithery Snakes",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17339,7 +17339,7 @@
       "level": "V",
       "num": 92,
       "title": "Snakebite!",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17348,7 +17348,7 @@
       "level": "V",
       "num": 93,
       "title": "Soccer",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -17366,7 +17366,7 @@
       "level": "V",
       "num": 95,
       "title": "The Stanley Cup: Hockey\\u0027s Greatest Prize",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "介词反义"
     },
@@ -17393,7 +17393,7 @@
       "level": "V",
       "num": 98,
       "title": "The Terry Fox Story",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17420,7 +17420,7 @@
       "level": "V",
       "num": 101,
       "title": "Treasure in Puget Sound",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "介词反义"
     },
@@ -17456,7 +17456,7 @@
       "level": "V",
       "num": 105,
       "title": "Voyagers in Space",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -17474,7 +17474,7 @@
       "level": "V",
       "num": 107,
       "title": "Water Cities",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -17537,7 +17537,7 @@
       "level": "V",
       "num": 114,
       "title": "World Traveler Ibn Battuta",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17555,7 +17555,7 @@
       "level": "V",
       "num": 116,
       "title": "The Zoo of Extinct Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17573,7 +17573,7 @@
       "level": "W",
       "num": 2,
       "title": "Adventure in Bear Valley",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -17591,7 +17591,7 @@
       "level": "W",
       "num": 4,
       "title": "American Football",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Can句式"
     },
@@ -17600,7 +17600,7 @@
       "level": "W",
       "num": 5,
       "title": "Amina and the Great Green Wall",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "颜色句式"
     },
@@ -17627,7 +17627,7 @@
       "level": "W",
       "num": 8,
       "title": "Animals Feel Emotions",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17645,7 +17645,7 @@
       "level": "W",
       "num": 10,
       "title": "The Arctic Seed Vault",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17654,7 +17654,7 @@
       "level": "W",
       "num": 11,
       "title": "Atlantic Crossing",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17663,7 +17663,7 @@
       "level": "W",
       "num": 12,
       "title": "Awesome Ants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17672,7 +17672,7 @@
       "level": "W",
       "num": 13,
       "title": "Baseball",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -17681,7 +17681,7 @@
       "level": "W",
       "num": 14,
       "title": "Basketball",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -17690,7 +17690,7 @@
       "level": "W",
       "num": 15,
       "title": "Bears",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17735,7 +17735,7 @@
       "level": "W",
       "num": 20,
       "title": "Blue Whales: Giant Mammals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "颜色句式"
     },
@@ -17744,7 +17744,7 @@
       "level": "W",
       "num": 21,
       "title": "Book 14: The Creature and the Queen",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17771,7 +17771,7 @@
       "level": "W",
       "num": 24,
       "title": "Building Big Dreams",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -17780,7 +17780,7 @@
       "level": "W",
       "num": 25,
       "title": "Building Tunnels",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -17834,7 +17834,7 @@
       "level": "W",
       "num": 31,
       "title": "Climbing Mountains: An Interview with Erik Weihenmayer",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -17861,7 +17861,7 @@
       "level": "W",
       "num": 34,
       "title": "Coral Reefs",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17888,7 +17888,7 @@
       "level": "W",
       "num": 37,
       "title": "Deserts Dry",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -17951,7 +17951,7 @@
       "level": "W",
       "num": 44,
       "title": "Expedition 40: The Secret of the Seasons",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "季节句式"
     },
@@ -18005,7 +18005,7 @@
       "level": "W",
       "num": 50,
       "title": "Goliath Bird-Eating Spiders: Giant Arachnids",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -18023,7 +18023,7 @@
       "level": "W",
       "num": 52,
       "title": "Hawaii Volcanoes National Park",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Can句式"
     },
@@ -18077,7 +18077,7 @@
       "level": "W",
       "num": 58,
       "title": "Hockey",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -18095,7 +18095,7 @@
       "level": "W",
       "num": 60,
       "title": "Hoofed Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18104,7 +18104,7 @@
       "level": "W",
       "num": 61,
       "title": "Horseshoes Aren\\u0027t Just for Good Luck",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -18131,7 +18131,7 @@
       "level": "W",
       "num": 64,
       "title": "Incredible Icebergs",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "颜色句式"
     },
@@ -18149,7 +18149,7 @@
       "level": "W",
       "num": 66,
       "title": "Komodo Dragons: Giant Reptiles",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -18194,7 +18194,7 @@
       "level": "W",
       "num": 71,
       "title": "Let\\u0027s Make Vegetable Soup",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -18221,7 +18221,7 @@
       "level": "W",
       "num": 74,
       "title": "Magnificent Meatball Maker",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -18248,7 +18248,7 @@
       "level": "W",
       "num": 77,
       "title": "Marie Curie",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -18257,7 +18257,7 @@
       "level": "W",
       "num": 78,
       "title": "Martin Luther King, Jr.",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "介词反义"
     },
@@ -18284,7 +18284,7 @@
       "level": "W",
       "num": 81,
       "title": "Miltie Math-head: Football Hero?",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -18293,7 +18293,7 @@
       "level": "W",
       "num": 82,
       "title": "Monkey Business",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18311,7 +18311,7 @@
       "level": "W",
       "num": 84,
       "title": "Morty and the Fancy-Pants Wedding",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18347,7 +18347,7 @@
       "level": "W",
       "num": 88,
       "title": "Mysteries of Flight",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -18365,7 +18365,7 @@
       "level": "W",
       "num": 90,
       "title": "Mythical Creatures of Ancient Greece",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18383,7 +18383,7 @@
       "level": "W",
       "num": 92,
       "title": "A New Skyline",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -18392,7 +18392,7 @@
       "level": "W",
       "num": 93,
       "title": "New Year Celebrations",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18419,7 +18419,7 @@
       "level": "W",
       "num": 96,
       "title": "Penguins",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18437,7 +18437,7 @@
       "level": "W",
       "num": 98,
       "title": "Plight of the Polar Bear",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18455,7 +18455,7 @@
       "level": "W",
       "num": 100,
       "title": "Rattlers",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18482,7 +18482,7 @@
       "level": "W",
       "num": 103,
       "title": "Robots",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -18491,7 +18491,7 @@
       "level": "W",
       "num": 104,
       "title": "Rumpelstiltskin",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -18518,7 +18518,7 @@
       "level": "W",
       "num": 107,
       "title": "Scratching a Good Story",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -18527,7 +18527,7 @@
       "level": "W",
       "num": 108,
       "title": "Sea Turtles",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -18536,7 +18536,7 @@
       "level": "W",
       "num": 109,
       "title": "Seahorses",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -18572,7 +18572,7 @@
       "level": "W",
       "num": 113,
       "title": "Space Camp",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -18635,7 +18635,7 @@
       "level": "W",
       "num": 120,
       "title": "Temperate Deciduous Forests",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18644,7 +18644,7 @@
       "level": "W",
       "num": 121,
       "title": "The Trouble with Exotic Pets",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18725,7 +18725,7 @@
       "level": "W",
       "num": 130,
       "title": "Volcanoes",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Can句式"
     },
@@ -18752,7 +18752,7 @@
       "level": "W",
       "num": 133,
       "title": "Whale Sharks: Giant Fish",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18770,7 +18770,7 @@
       "level": "W",
       "num": 135,
       "title": "Wild Horses",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18797,7 +18797,7 @@
       "level": "W",
       "num": 138,
       "title": "World Cup Soccer",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "介词反义"
     },
@@ -18815,7 +18815,7 @@
       "level": "W",
       "num": 140,
       "title": "Yee Haw! The Real Lives of the Cowboys",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18950,7 +18950,7 @@
       "level": "X",
       "num": 15,
       "title": "Amazing Animal Adaptations",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -18959,7 +18959,7 @@
       "level": "X",
       "num": 16,
       "title": "The Balloon Brothers",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -18986,7 +18986,7 @@
       "level": "X",
       "num": 19,
       "title": "Catching Air",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -19013,7 +19013,7 @@
       "level": "X",
       "num": 22,
       "title": "Deserts",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -19022,7 +19022,7 @@
       "level": "X",
       "num": 23,
       "title": "Dust Bowl Disaster",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -19076,7 +19076,7 @@
       "level": "X",
       "num": 29,
       "title": "Jacey Nova: Starship Pilot",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Not反义句式"
     },
@@ -19085,7 +19085,7 @@
       "level": "X",
       "num": 30,
       "title": "Jackie Robinson",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -19112,7 +19112,7 @@
       "level": "X",
       "num": 33,
       "title": "The Last Great Race",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -19121,7 +19121,7 @@
       "level": "X",
       "num": 34,
       "title": "Leo the Lion",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -19193,7 +19193,7 @@
       "level": "X",
       "num": 42,
       "title": "National Parks",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -19202,7 +19202,7 @@
       "level": "X",
       "num": 43,
       "title": "Oceans",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -19238,7 +19238,7 @@
       "level": "X",
       "num": 47,
       "title": "Rainforests",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -19463,7 +19463,7 @@
       "level": "Y",
       "num": 4,
       "title": "Abraham Lincoln: From Log Cabin to the White House",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "颜色句式"
     },
@@ -19490,7 +19490,7 @@
       "level": "Y",
       "num": 7,
       "title": "The Amazing Brain",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -19499,7 +19499,7 @@
       "level": "Y",
       "num": 8,
       "title": "The Amazing Undersea Food Web",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -19508,7 +19508,7 @@
       "level": "Y",
       "num": 9,
       "title": "Amelia Earhart: A Legend in Flight",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -19553,7 +19553,7 @@
       "level": "Y",
       "num": 14,
       "title": "Attila and the Fall of the Roman Empire",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "季节句式"
     },
@@ -19562,7 +19562,7 @@
       "level": "Y",
       "num": 15,
       "title": "Battling for Independence",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -19589,7 +19589,7 @@
       "level": "Y",
       "num": 18,
       "title": "Book 17: The Cat in the Palace",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -19625,7 +19625,7 @@
       "level": "Y",
       "num": 22,
       "title": "Early Immigration in the United States",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -19634,7 +19634,7 @@
       "level": "Y",
       "num": 23,
       "title": "Earthquakes, Volcanoes, and Tsunamis",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Can句式"
     },
@@ -19652,7 +19652,7 @@
       "level": "Y",
       "num": 25,
       "title": "Eight Billion and Counting",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "数字句式"
     },
@@ -19670,7 +19670,7 @@
       "level": "Y",
       "num": 27,
       "title": "Fearless Felix",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -19679,7 +19679,7 @@
       "level": "Y",
       "num": 28,
       "title": "The Firefighter",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -19697,7 +19697,7 @@
       "level": "Y",
       "num": 30,
       "title": "Gems: Treasures from the Earth",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -19706,7 +19706,7 @@
       "level": "Y",
       "num": 31,
       "title": "George Washington",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -19715,7 +19715,7 @@
       "level": "Y",
       "num": 32,
       "title": "George Washington Carver",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -19724,7 +19724,7 @@
       "level": "Y",
       "num": 33,
       "title": "Going to the Super Bowl",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -19733,7 +19733,7 @@
       "level": "Y",
       "num": 34,
       "title": "The Great Charter",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -19742,7 +19742,7 @@
       "level": "Y",
       "num": 35,
       "title": "The Great Hunger",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -19751,7 +19751,7 @@
       "level": "Y",
       "num": 36,
       "title": "Groundwater",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -19877,7 +19877,7 @@
       "level": "Y",
       "num": 50,
       "title": "Life in Space",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -20084,7 +20084,7 @@
       "level": "Y",
       "num": 73,
       "title": "Living in Deserts",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -20183,7 +20183,7 @@
       "level": "Y",
       "num": 84,
       "title": "Neil deGrasse Tyson: Star Man",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -20210,7 +20210,7 @@
       "level": "Y",
       "num": 87,
       "title": "Ostriches: Giant Birds",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -20219,7 +20219,7 @@
       "level": "Y",
       "num": 88,
       "title": "Our Solar System",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -20255,7 +20255,7 @@
       "level": "Y",
       "num": 92,
       "title": "Prehistoric Giants (Other Than Dinosaurs)",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Not反义句式"
     },
@@ -20300,7 +20300,7 @@
       "level": "Y",
       "num": 97,
       "title": "Seeds of Revolution",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -20363,7 +20363,7 @@
       "level": "Y",
       "num": 104,
       "title": "The Story of Plastic",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -20372,7 +20372,7 @@
       "level": "Y",
       "num": 105,
       "title": "The Sun",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -20399,7 +20399,7 @@
       "level": "Y",
       "num": 108,
       "title": "Ukraine",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -20417,7 +20417,7 @@
       "level": "Y",
       "num": 110,
       "title": "Voyagers in Space",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -20435,7 +20435,7 @@
       "level": "Y",
       "num": 112,
       "title": "Water Cities",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -20606,7 +20606,7 @@
       "level": "Y",
       "num": 131,
       "title": "World Traveler Ibn Battuta",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -20615,7 +20615,7 @@
       "level": "Y",
       "num": 132,
       "title": "The Zoo of Extinct Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -20642,7 +20642,7 @@
       "level": "Z",
       "num": 3,
       "title": "Albert Einstein",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -20651,7 +20651,7 @@
       "level": "Z",
       "num": 4,
       "title": "Alexander the Great",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -20660,7 +20660,7 @@
       "level": "Z",
       "num": 5,
       "title": "Amazing Migrations",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -20678,7 +20678,7 @@
       "level": "Z",
       "num": 7,
       "title": "Animal Discoveries",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -20777,7 +20777,7 @@
       "level": "Z",
       "num": 18,
       "title": "Building a Nation",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -20786,7 +20786,7 @@
       "level": "Z",
       "num": 19,
       "title": "The Case of the Disappearing Honeybees",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -20795,7 +20795,7 @@
       "level": "Z",
       "num": 20,
       "title": "Cathy Freeman",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -20912,7 +20912,7 @@
       "level": "Z",
       "num": 33,
       "title": "Condors: Giant Birds",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -20930,7 +20930,7 @@
       "level": "Z",
       "num": 35,
       "title": "Dinner Around the World",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -20957,7 +20957,7 @@
       "level": "Z",
       "num": 38,
       "title": "Dust Storms and Sandstorms",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -20975,7 +20975,7 @@
       "level": "Z",
       "num": 40,
       "title": "Electric Eels!",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -20984,7 +20984,7 @@
       "level": "Z",
       "num": 41,
       "title": "Elephants: Giant Mammals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -21002,7 +21002,7 @@
       "level": "Z",
       "num": 43,
       "title": "Empire State Building",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -21011,7 +21011,7 @@
       "level": "Z",
       "num": 44,
       "title": "Energy Sources: The Pros and Cons",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -21047,7 +21047,7 @@
       "level": "Z",
       "num": 48,
       "title": "Expedition 60: The Subarctic",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -21110,7 +21110,7 @@
       "level": "Z",
       "num": 55,
       "title": "Goliath Beetles: Giant Insects",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -21119,7 +21119,7 @@
       "level": "Z",
       "num": 56,
       "title": "Great Mosque of Djenn\\u00e9",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -21128,7 +21128,7 @@
       "level": "Z",
       "num": 57,
       "title": "The Great Wall of China",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -21137,7 +21137,7 @@
       "level": "Z",
       "num": 58,
       "title": "Great Zimbabwe",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -21164,7 +21164,7 @@
       "level": "Z",
       "num": 61,
       "title": "A Hip-Hop History",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -21209,7 +21209,7 @@
       "level": "Z",
       "num": 66,
       "title": "Hybrid Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -21245,7 +21245,7 @@
       "level": "Z",
       "num": 70,
       "title": "Isaac Newton: Matter, Math, and Motion",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -21254,7 +21254,7 @@
       "level": "Z",
       "num": 71,
       "title": "Joe Kittinger: An Unsung Hero",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -21281,7 +21281,7 @@
       "level": "Z",
       "num": 74,
       "title": "Lighter Than Air",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -21317,7 +21317,7 @@
       "level": "Z",
       "num": 78,
       "title": "The Metropolitan Museum of Art",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -21434,7 +21434,7 @@
       "level": "Z",
       "num": 91,
       "title": "Petra",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -21461,7 +21461,7 @@
       "level": "Z",
       "num": 94,
       "title": "Private Spaceships",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -21506,7 +21506,7 @@
       "level": "Z",
       "num": 99,
       "title": "The Remarkable Case of Davidson\\u0027s Eyes",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -21524,7 +21524,7 @@
       "level": "Z",
       "num": 101,
       "title": "The Round Earth",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -21560,7 +21560,7 @@
       "level": "Z",
       "num": 105,
       "title": "A Selection From Robinson Crusoe",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -21569,7 +21569,7 @@
       "level": "Z",
       "num": 106,
       "title": "Sergeant Stubby",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -21596,7 +21596,7 @@
       "level": "Z",
       "num": 109,
       "title": "Skin Color",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "颜色句式"
     },
@@ -21605,7 +21605,7 @@
       "level": "Z",
       "num": 110,
       "title": "So You Want to Go to Mars?",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -21641,7 +21641,7 @@
       "level": "Z",
       "num": 114,
       "title": "Storm Chasers",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -21686,7 +21686,7 @@
       "level": "Z",
       "num": 119,
       "title": "Telescopes: Eyes on Space",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -21695,7 +21695,7 @@
       "level": "Z",
       "num": 120,
       "title": "The Terry Fox Story",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -21713,7 +21713,7 @@
       "level": "Z",
       "num": 122,
       "title": "Threats to Our Atmosphere",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -21722,7 +21722,7 @@
       "level": "Z",
       "num": 123,
       "title": "Tsunamis",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -21758,7 +21758,7 @@
       "level": "Z",
       "num": 127,
       "title": "Volcanoes",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Can句式"
     },
@@ -21812,7 +21812,7 @@
       "level": "Z1",
       "num": 1,
       "title": "Abraham Lincoln: From Log Cabin to the White House",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "颜色句式"
     },
@@ -21857,7 +21857,7 @@
       "level": "Z1",
       "num": 6,
       "title": "The Amazing Undersea Food Web",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -21884,7 +21884,7 @@
       "level": "Z1",
       "num": 9,
       "title": "The Balloon Brothers",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -21893,7 +21893,7 @@
       "level": "Z1",
       "num": 10,
       "title": "Battling for Independence",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -21929,7 +21929,7 @@
       "level": "Z1",
       "num": 14,
       "title": "The Blues: More Than A Feeling",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "颜色句式"
     },
@@ -21938,7 +21938,7 @@
       "level": "Z1",
       "num": 15,
       "title": "The Bones of a King",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -21965,7 +21965,7 @@
       "level": "Z1",
       "num": 18,
       "title": "Building a Nation",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -22001,7 +22001,7 @@
       "level": "Z1",
       "num": 22,
       "title": "Condors: Giant Birds",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -22046,7 +22046,7 @@
       "level": "Z1",
       "num": 27,
       "title": "Early Birds: Fossils and Feathers",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -22055,7 +22055,7 @@
       "level": "Z1",
       "num": 28,
       "title": "Eight Billion and Counting",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "数字句式"
     },
@@ -22064,7 +22064,7 @@
       "level": "Z1",
       "num": 29,
       "title": "Electric Cars: History and Future",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -22109,7 +22109,7 @@
       "level": "Z1",
       "num": 34,
       "title": "Gems: Treasures from the Earth",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -22127,7 +22127,7 @@
       "level": "Z1",
       "num": 36,
       "title": "Great City Fires",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -22136,7 +22136,7 @@
       "level": "Z1",
       "num": 37,
       "title": "Groundwater",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22154,7 +22154,7 @@
       "level": "Z1",
       "num": 39,
       "title": "A Hip-Hop History",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -22235,7 +22235,7 @@
       "level": "Z1",
       "num": 48,
       "title": "Komodo Dragons: Giant Reptiles",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -22289,7 +22289,7 @@
       "level": "Z1",
       "num": 54,
       "title": "Life in Space",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "介词反义"
     },
@@ -22298,7 +22298,7 @@
       "level": "Z1",
       "num": 55,
       "title": "Make an Impression",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -22370,7 +22370,7 @@
       "level": "Z1",
       "num": 63,
       "title": "A New Skyline",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -22388,7 +22388,7 @@
       "level": "Z1",
       "num": 65,
       "title": "Odysseus and the Bag of Winds",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22397,7 +22397,7 @@
       "level": "Z1",
       "num": 66,
       "title": "Ostriches: Giant Birds",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -22406,7 +22406,7 @@
       "level": "Z1",
       "num": 67,
       "title": "Otzi: The Iceman",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22433,7 +22433,7 @@
       "level": "Z1",
       "num": 70,
       "title": "The Rise of Rock \\u0027n\\u0027 Roll",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -22469,7 +22469,7 @@
       "level": "Z1",
       "num": 74,
       "title": "Seeds of Revolution",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -22478,7 +22478,7 @@
       "level": "Z1",
       "num": 75,
       "title": "Space Camp",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -22496,7 +22496,7 @@
       "level": "Z1",
       "num": 77,
       "title": "The Stanley Cup: Hockey\\u0027s Greatest Prize",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "介词反义"
     },
@@ -22505,7 +22505,7 @@
       "level": "Z1",
       "num": 78,
       "title": "The Story of Lewis and Clark Book 1: Up the Missouri River",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "天气水句式"
     },
@@ -22523,7 +22523,7 @@
       "level": "Z1",
       "num": 80,
       "title": "The Reluctant Dragon (Part 1)",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -22532,7 +22532,7 @@
       "level": "Z1",
       "num": 81,
       "title": "The Reluctant Dragon (Part 2)",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -22541,7 +22541,7 @@
       "level": "Z1",
       "num": 82,
       "title": "The Reluctant Dragon (Part 3)",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -22586,7 +22586,7 @@
       "level": "Z1",
       "num": 87,
       "title": "United Arab Emirates",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -22595,7 +22595,7 @@
       "level": "Z1",
       "num": 88,
       "title": "The Velveteen Rabbit",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -22604,7 +22604,7 @@
       "level": "Z1",
       "num": 89,
       "title": "Water Cities",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22631,7 +22631,7 @@
       "level": "Z1",
       "num": 92,
       "title": "Whale Sharks: Giant Fish",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -22649,7 +22649,7 @@
       "level": "Z1",
       "num": 94,
       "title": "The Wind in the Willows (Part 1)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22658,7 +22658,7 @@
       "level": "Z1",
       "num": 95,
       "title": "The Wind in the Willows (Part 2)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22667,7 +22667,7 @@
       "level": "Z1",
       "num": 96,
       "title": "The Wind in the Willows (Part 3)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22676,7 +22676,7 @@
       "level": "Z1",
       "num": 97,
       "title": "The Wind in the Willows (Part 4)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22685,7 +22685,7 @@
       "level": "Z1",
       "num": 98,
       "title": "The Wind in the Willows (Part 5)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22694,7 +22694,7 @@
       "level": "Z1",
       "num": 99,
       "title": "The Wind in the Willows (Part 6)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22703,7 +22703,7 @@
       "level": "Z1",
       "num": 100,
       "title": "The Wind in the Willows (Part 7)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22712,7 +22712,7 @@
       "level": "Z1",
       "num": 101,
       "title": "The Wind in the Willows (Part 8)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22721,7 +22721,7 @@
       "level": "Z1",
       "num": 102,
       "title": "The Wind in the Willows (Part 9)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22730,7 +22730,7 @@
       "level": "Z1",
       "num": 103,
       "title": "The Wind in the Willows (Part 10)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22739,7 +22739,7 @@
       "level": "Z1",
       "num": 104,
       "title": "The Wind in the Willows (Part 11)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22748,7 +22748,7 @@
       "level": "Z1",
       "num": 105,
       "title": "The Wind in the Willows (Part 12)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22757,7 +22757,7 @@
       "level": "Z1",
       "num": 106,
       "title": "The Wind in the Willows (Part 13)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22766,7 +22766,7 @@
       "level": "Z1",
       "num": 107,
       "title": "The Wind in the Willows (Part 14)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22775,7 +22775,7 @@
       "level": "Z1",
       "num": 108,
       "title": "The Wind in the Willows (Part 15)",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22802,7 +22802,7 @@
       "level": "Z1",
       "num": 111,
       "title": "The Zoo of Extinct Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -22820,7 +22820,7 @@
       "level": "Z2",
       "num": 2,
       "title": "Abraham Lincoln: From Log Cabin to the White House",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "颜色句式"
     },
@@ -22856,7 +22856,7 @@
       "level": "Z2",
       "num": 6,
       "title": "Albert Einstein",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -22865,7 +22865,7 @@
       "level": "Z2",
       "num": 7,
       "title": "Alexander the Great",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -22874,7 +22874,7 @@
       "level": "Z2",
       "num": 8,
       "title": "The Amazing Brain",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -22883,7 +22883,7 @@
       "level": "Z2",
       "num": 9,
       "title": "The Amazing Undersea Food Web",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -22901,7 +22901,7 @@
       "level": "Z2",
       "num": 11,
       "title": "American Football",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Can句式"
     },
@@ -22937,7 +22937,7 @@
       "level": "Z2",
       "num": 15,
       "title": "The Balloon Brothers",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -22946,7 +22946,7 @@
       "level": "Z2",
       "num": 16,
       "title": "Baseball",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -22955,7 +22955,7 @@
       "level": "Z2",
       "num": 17,
       "title": "Basketball",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -22964,7 +22964,7 @@
       "level": "Z2",
       "num": 18,
       "title": "Battle Over Britain",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -22973,7 +22973,7 @@
       "level": "Z2",
       "num": 19,
       "title": "Battling for Independence",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -23018,7 +23018,7 @@
       "level": "Z2",
       "num": 24,
       "title": "Blue Whales: Giant Mammals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "颜色句式"
     },
@@ -23027,7 +23027,7 @@
       "level": "Z2",
       "num": 25,
       "title": "Building a Nation",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -23036,7 +23036,7 @@
       "level": "Z2",
       "num": 26,
       "title": "The Case of the Disappearing Honeybees",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -23045,7 +23045,7 @@
       "level": "Z2",
       "num": 27,
       "title": "The Celebrated Jumping Frog of Calaveras County",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "数字句式"
     },
@@ -23108,7 +23108,7 @@
       "level": "Z2",
       "num": 34,
       "title": "Elephants: Giant Mammals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -23117,7 +23117,7 @@
       "level": "Z2",
       "num": 35,
       "title": "Empire State Building",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -23126,7 +23126,7 @@
       "level": "Z2",
       "num": 36,
       "title": "Endurance on the Ice",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -23171,7 +23171,7 @@
       "level": "Z2",
       "num": 41,
       "title": "George Washington",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -23180,7 +23180,7 @@
       "level": "Z2",
       "num": 42,
       "title": "Golf",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "Go句式"
     },
@@ -23189,7 +23189,7 @@
       "level": "Z2",
       "num": 43,
       "title": "Goliath Beetles: Giant Insects",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -23198,7 +23198,7 @@
       "level": "Z2",
       "num": 44,
       "title": "Goliath Bird-Eating Spiders: Giant Arachnids",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Go句式"
     },
@@ -23207,7 +23207,7 @@
       "level": "Z2",
       "num": 45,
       "title": "The Great Charter",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -23216,7 +23216,7 @@
       "level": "Z2",
       "num": 46,
       "title": "Great Mosque of Djenn\\u00e9",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -23225,7 +23225,7 @@
       "level": "Z2",
       "num": 47,
       "title": "The Great Wall of China",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -23234,7 +23234,7 @@
       "level": "Z2",
       "num": 48,
       "title": "Great Zimbabwe",
-      "type": "F",
+      "type": "NF",
       "theme": "身体与健康",
       "lang": "综合"
     },
@@ -23243,7 +23243,7 @@
       "level": "Z2",
       "num": 49,
       "title": "High-Speed Trains",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -23252,7 +23252,7 @@
       "level": "Z2",
       "num": 50,
       "title": "A Hip-Hop History",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -23279,7 +23279,7 @@
       "level": "Z2",
       "num": 53,
       "title": "Hockey",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -23306,7 +23306,7 @@
       "level": "Z2",
       "num": 56,
       "title": "Hybrid Animals",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -23315,7 +23315,7 @@
       "level": "Z2",
       "num": 57,
       "title": "Ivory or Elephants",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -23324,7 +23324,7 @@
       "level": "Z2",
       "num": 58,
       "title": "Japanese American Incarceration During World War II",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Can句式"
     },
@@ -23378,7 +23378,7 @@
       "level": "Z2",
       "num": 64,
       "title": "Living in Deserts",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -23414,7 +23414,7 @@
       "level": "Z2",
       "num": 68,
       "title": "Marie Curie",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -23423,7 +23423,7 @@
       "level": "Z2",
       "num": 69,
       "title": "The Metropolitan Museum of Art",
-      "type": "F",
+      "type": "NF",
       "theme": "思维与创意",
       "lang": "综合"
     },
@@ -23522,7 +23522,7 @@
       "level": "Z2",
       "num": 80,
       "title": "Petra",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -23531,7 +23531,7 @@
       "level": "Z2",
       "num": 81,
       "title": "Prehistoric Giants (Other Than Dinosaurs)",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "Not反义句式"
     },
@@ -23540,7 +23540,7 @@
       "level": "Z2",
       "num": 82,
       "title": "Private Spaceships",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "综合"
     },
@@ -23585,7 +23585,7 @@
       "level": "Z2",
       "num": 87,
       "title": "Ready for Rising Seas?",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -23612,7 +23612,7 @@
       "level": "Z2",
       "num": 90,
       "title": "Seeds of Revolution",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "综合"
     },
@@ -23621,7 +23621,7 @@
       "level": "Z2",
       "num": 91,
       "title": "A Selection From Robinson Crusoe",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "介词反义"
     },
@@ -23630,7 +23630,7 @@
       "level": "Z2",
       "num": 92,
       "title": "Soccer",
-      "type": "F",
+      "type": "NF",
       "theme": "社会与人文",
       "lang": "综合"
     },
@@ -23657,7 +23657,7 @@
       "level": "Z2",
       "num": 95,
       "title": "The Story of Lewis and Clark Book 2: To the Pacific Ocean",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "天气水句式"
     },
@@ -23738,7 +23738,7 @@
       "level": "Z2",
       "num": 104,
       "title": "Violent Weather",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
@@ -23747,7 +23747,7 @@
       "level": "Z2",
       "num": 105,
       "title": "Volcanoes",
-      "type": "F",
+      "type": "NF",
       "theme": "地球与宇宙",
       "lang": "Can句式"
     },
@@ -23774,7 +23774,7 @@
       "level": "Z2",
       "num": 108,
       "title": "Zoos: Pro or Con?",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
@@ -23783,7 +23783,7 @@
       "level": "Z2",
       "num": 109,
       "title": "Zoos Through the Ages",
-      "type": "F",
+      "type": "NF",
       "theme": "生命世界",
       "lang": "动物认知"
     },
