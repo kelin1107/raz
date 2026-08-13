@@ -256,6 +256,57 @@
     #nfPlan .day{break-inside:avoid}
   }
 
+  /* ===== SAZ 科学主题周（复用 NF 周计划样式） ===== */
+  #sazWeek .nf-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 6px}
+  #sazWeek .nf-tab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:8px 12px;border-radius:20px;cursor:pointer;font-size:13px;transition:.15s}
+  #sazWeek .nf-tab:hover{border-color:var(--accent)}
+  #sazWeek .nf-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  #sazWeek .ovnote{font-size:12.5px;color:var(--muted);margin:6px 2px 4px}
+  #sazWeek .ov-wrap{border:1px solid var(--line);border-radius:10px;background:#fff;margin-top:6px}
+  #sazWeek table.ov{width:100%;border-collapse:collapse;background:transparent}
+  #sazWeek table.ov th{font-size:12px;color:var(--muted);text-align:left;padding:8px 10px;background:#faf7f1;border-bottom:1px solid var(--line)}
+  #sazWeek table.ov td{padding:9px 10px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:top}
+  #sazWeek table.ov tbody tr:nth-child(odd){background:#fcfaf7}
+  #sazWeek table.ov tr:last-child td{border-bottom:none}
+  #sazWeek table.ov thead tr:first-child th:first-child{border-top-left-radius:10px}
+  #sazWeek table.ov thead tr:first-child th:last-child{border-top-right-radius:10px}
+  #sazWeek table.ov tbody tr:last-child td:first-child{border-bottom-left-radius:10px}
+  #sazWeek table.ov tbody tr:last-child td:last-child{border-bottom-right-radius:10px}
+  #sazWeek .wk{white-space:nowrap;font-weight:600}
+  #sazWeek .wf{white-space:nowrap;color:var(--accent2);font-weight:600}
+  #sazWeek .wb code{background:#f4efe6;padding:1px 5px;border-radius:5px;font-size:11.5px;color:#6b6356}
+  #sazWeek .sep{color:var(--line)}
+  #sazWeek .mini-exp{display:inline-block;background:#eef6f3;color:#2f7d6e;border-radius:5px;padding:1px 6px;font-size:11.5px;margin:1px 0}
+  #sazWeek .nf-week{display:none;margin-top:14px}
+  #sazWeek .nf-week.active{display:block}
+  #sazWeek .whead{font-size:19px;font-weight:700;margin:18px 0 4px}
+  #sazWeek .whead .badge{margin-left:8px;font-size:12px;font-weight:600;background:#eef2ff;color:#4f5bd5;border-radius:6px;padding:2px 9px;vertical-align:middle}
+  #sazWeek .wintro{color:#5f594f;font-size:13.5px;background:#fff;border-left:4px solid var(--accent2);padding:10px 14px;border-radius:0 8px 8px 0;margin:6px 0 14px}
+  #sazWeek .days{display:grid;gap:11px}
+  #sazWeek .day{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  #sazWeek .day.exp{background:#f3f9f6;border-color:#d8ebd3}
+  #sazWeek .dh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px}
+  #sazWeek .dnum{background:var(--accent);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:2px 8px}
+  #sazWeek .dtitle{font-weight:700;font-size:15px}
+  #sazWeek .drow{display:grid;grid-template-columns:108px 1fr;gap:8px;padding:4px 0;font-size:13.3px}
+  #sazWeek .drow b{color:#6b6356;font-weight:600}
+  #sazWeek .drow span{color:#36322c}
+  #sazWeek .drow code{background:#f4efe6;padding:1px 5px;border-radius:5px;font-size:11.5px;color:#2f7d6e;margin:0 1px}
+  #sazWeek .ext{margin-top:14px;background:#faf7f1;border:1px dashed var(--line);border-radius:10px;padding:10px 13px;font-size:12.5px;color:#5f594f}
+  #sazWeek .ext code{background:#eef6f3;color:#2f7d6e;padding:1px 5px;border-radius:5px;font-size:11.5px;margin:0 1px}
+  #sazWeek .printbtn{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;border:none;border-radius:24px;padding:11px 18px;font-size:14px;cursor:pointer;box-shadow:0 3px 10px rgba(224,122,63,.35)}
+  .modeTabs{display:flex;gap:8px;margin:0 0 14px}
+  .modeTabs .mtab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:8px 14px;border-radius:20px;cursor:pointer;font-size:13.5px;font-weight:600;transition:.15s}
+  .modeTabs .mtab:hover{border-color:var(--brand)}
+  .modeTabs .mtab.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+  @media print{
+    body.print-nf .tabs{display:none!important}
+    body.print-nf .modeTabs{display:none!important}
+    #sazWeek .nf-tabs{display:none!important}
+    #sazWeek .nf-week{display:block!important;margin-top:18px}
+    #sazWeek .day{break-inside:avoid}
+  }
+
 </style>
 
 <!-- ===== Cloudflare Web Analytics（免费·无 cookie·合规）=====
@@ -266,7 +317,7 @@
 </head>
 <body>
 <header>
-  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.24</span></h1>
+  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.25</span></h1>
   <p>aa–Z2 + GK–G6 全级别元数据索引 · 非官方整理，仅供研究/教学用途</p>
 </header>
 
@@ -284,7 +335,7 @@
     <div class="tab" data-t="ar">🔢 分级对照</div>
     <div class="tab" data-t="themes">🏷️ 主题分类</div>
     <div class="tab" data-t="nf">📅 NF 周计划</div>
-    <div class="tab" data-t="saz">🔬 SAZ 书单</div>
+    <div class="tab" data-t="saz">🔬 SAZ</div>
 
   </div>
 
@@ -433,19 +484,56 @@
   <!-- ===== SAZ ===== -->
   <section class="panel" id="saz">
     <div class="card">
-      <h2>🔬 Science A-Z (SAZ) 书目清单</h2>
-      <p style="color:var(--muted);font-size:13.5px;margin:0 0 14px">Learning A-Z 旗下独立科学分级读物，纯非虚构（科普），与 RAZ 的 non-fiction 互补。下表是库内全部 SAZ 真实书目，可按主题域、档位、书名/编号筛选。</p>
-      <div class="controls">
-        <input type="text" id="sazSearch" placeholder="搜书名 / 编号" style="min-width:220px">
-        <select id="sazDomain"><option value="">全部主题域</option></select>
-        <select id="sazBand"><option value="">全部档位</option></select>
-        <span id="sazCount" style="color:var(--muted);font-size:13px"></span>
+      <h2>🔬 Science A-Z (SAZ) 科学分级读物</h2>
+      <div class="modeTabs" id="sazModeTabs">
+        <button class="mtab active" data-m="list">📚 书目清单</button>
+        <button class="mtab" data-m="week">🧪 科学主题周</button>
       </div>
-      <div style="overflow:auto;max-height:560px">
-        <table id="sazTable">
-          <thead><tr><th>编号</th><th>书名</th><th>档位</th><th>主题域</th><th>Lexile</th><th>🔤 核心词</th><th>类型</th></tr></thead>
-          <tbody id="sazBody"></tbody>
-        </table>
+      <div id="sazList">
+        <p style="color:var(--muted);font-size:13.5px;margin:0 0 14px">Learning A-Z 旗下独立科学分级读物，纯非虚构（科普），与 RAZ 的 non-fiction 互补。下表是库内全部 SAZ 真实书目，可按主题域、档位、书名/编号筛选。</p>
+        <div class="controls">
+          <input type="text" id="sazSearch" placeholder="搜书名 / 编号" style="min-width:220px">
+          <select id="sazDomain"><option value="">全部主题域</option></select>
+          <select id="sazBand"><option value="">全部档位</option></select>
+          <span id="sazCount" style="color:var(--muted);font-size:13px"></span>
+        </div>
+        <div style="overflow:auto;max-height:560px">
+          <table id="sazTable">
+            <thead><tr><th>编号</th><th>书名</th><th>档位</th><th>主题域</th><th>Lexile</th><th>🔤 核心词</th><th>类型</th></tr></thead>
+            <tbody id="sazBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="sazWeek" style="display:none">
+        <p class="nf-note">🧪 一周一个 SAZ 科学单元：按「单元制（Low / Mid / High 三档）」组织——每天读一档，周末做实验 / 观察。每单元附真实书目核心词（来自 SAZ 官方 TOC 抽取），在家做 PBL / 科学启蒙一站搞定。SAZ 最低档为 K–2（约 5 岁+）。</p>
+        <div id="sazwPlan">
+          <div class="controls" style="margin-bottom:6px;align-items:center;flex-wrap:wrap">
+            <label style="color:var(--muted);font-size:13px">主题域：</label>
+            <select id="sazwTheme"></select>
+            <label style="color:var(--muted);font-size:13px;margin-left:8px">年级档：</label>
+            <select id="sazwBand">
+              <option value="">全部年级</option>
+              <option value="K-2">K–2（约 5–8 岁）</option>
+              <option value="3-4">G3–4（约 8–10 岁）</option>
+              <option value="5-6">G5–6（约 10–12 岁）</option>
+            </select>
+            <label style="color:var(--muted);font-size:13px;margin-left:8px">周数：</label>
+            <select id="sazwWeeks">
+              <option value="2">2 周</option>
+              <option value="3">3 周</option>
+              <option value="4" selected>4 周</option>
+              <option value="6">6 周</option>
+              <option value="all">全部单元</option>
+            </select>
+            <button id="sazwRebuild" class="act">生成周计划</button>
+            <span id="sazwNote" style="color:var(--muted);font-size:12px"></span>
+          </div>
+          <div class="nf-tabs" id="sazwTabs"></div>
+          <div class="ovnote">🗂 总览（点上方标签看每周详情）：</div>
+          <div class="ov-wrap"><table class="ov"><thead><tr><th style="width:74px">周</th><th style="width:130px">科学单元</th><th>每日核心书 / 实验</th></tr></thead><tbody id="sazwOv"></tbody></table></div>
+          <div id="sazwWeeks"></div>
+          <button class="printbtn" id="sazwPrintBtn">🖨 打印 / 存 PDF</button>
+        </div>
       </div>
     </div>
   </section>
@@ -497,7 +585,7 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.24 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.25 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
@@ -26950,7 +27038,16 @@ $$('.tab').forEach(t=>t.addEventListener('click',()=>{
   $$('.panel').forEach(x=>x.classList.remove('active'));
   t.classList.add('active');
   $('#'+t.dataset.t).classList.add('active');
+  if(t.dataset.t==='saz' && document.querySelector('#sazModeTabs .mtab[data-m="week"]').classList.contains('active')) renderSAZWeek();
   window.scrollTo({top:0,behavior:'smooth'});
+}));
+$$('#sazModeTabs .mtab').forEach(btn=>btn.addEventListener('click',()=>{
+  $$('#sazModeTabs .mtab').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+  var m=btn.dataset.m;
+  $('#sazList').style.display = m==='list'?'':'none';
+  $('#sazWeek').style.display = m==='week'?'':'none';
+  if(m==='week') renderSAZWeek();
 }));
 
 /* ---------- 总表 ---------- */
@@ -27261,6 +27358,166 @@ function renderSAZ(){
   $('#sazDomain').addEventListener('change',draw);
   $('#sazBand').addEventListener('change',draw);
   draw();
+}
+
+/* ---------- SAZ 科学主题周 ---------- */
+const SAZ_EXP = {
+  '生命世界':[
+    {t:'种子发芽观察', c:['seed','germinate','sprout','root','soil'], m:['豆子几颗','棉花','水','透明杯','记录本'], s:['杯底铺湿棉花，放 2–3 颗豆','每天喷水保持湿润','记录第几天冒根、长叶','用核心词画一张「豆子长大图」']},
+    {t:'叶子与阳光', c:['leaf','photosynthesis','plant','sunlight','stem'], m:['绿叶','放大镜','阳光','纸笔'], s:['找一片绿叶在阳光下观察叶脉','讨论叶子怎么用阳光做食物','用放大镜看气孔','画一片叶并标出叶脉']},
+    {t:'动物分类游戏', c:['classify','habitat','vertebrate','invertebrate','species'], m:['动物图卡或绘本','分类表'], s:['选 5 种动物','按栖息地分(天空/陆地/水里)','再按有无脊椎分','说出一类动物的共同特征']}
+  ],
+  '地球与宇宙':[
+    {t:'密封袋里的水循环', c:['water','cycle','evaporate','condense','cloud'], m:['密封袋','少量水','蓝墨水','胶带','窗户'], s:['袋内加带色水封好','贴窗上晒太阳','观察水珠凝结滑落','讲蒸发→凝结→降雨']},
+    {t:'影子与太阳', c:['shadow','sun','light','position','rotate'], m:['小玩具','白纸','笔','晴天'], s:['上午把玩具放纸上描影子','中午再描一次','比较影子长短与方向','讲太阳位置变化→影子变化']},
+    {t:'岩石风化', c:['rock','weathering','erosion','change','soil'], m:['两块糖或粉笔','水','放大镜','冰箱'], s:['一块保持干燥','另一块滴水后冻融反复','观察哪块更易碎','类比岩石被风化']}
+  ],
+  '物质与能量':[
+    {t:'浮与沉', c:['float','sink','matter','heavy','light'], m:['水盆','瓶盖 / 石头 / 木块 / 纸'], s:['先猜每样浮或沉','逐一放水试','记录结果','讨论轻重与空心的关系']},
+    {t:'摩擦力', c:['force','friction','motion','surface','push'], m:['小车','书','桌面与地毯'], s:['同本书在桌面推','在地毯上推','比哪边推得远','摸表面讲摩擦']},
+    {t:'声音与振动', c:['sound','vibrate','pitch','volume','wave'], m:['橡皮筋','纸盒','几粒米'], s:['橡皮筋套盒上弹','放几粒米看跳动','讲振动传声','捂耳听变化']}
+  ],
+  '身体与健康':[
+    {t:'心跳与运动', c:['heart','blood','circulate','pulse','exercise'], m:['计时器','手'], s:['静坐数 15 秒脉搏×4','跳 30 秒后再数','比较前后次数','讲心脏把血送到全身']},
+    {t:'消化小模型', c:['nutrient','digest','health','food','stomach'], m:['密封袋','饼干','水'], s:['袋里放饼干+水','揉捏模拟胃的消化','讲食物变糊进入小肠','画一条消化路线']},
+    {t:'五感配对', c:['sense','see','hear','smell','taste'], m:['眼罩','不同气味 / 质地小物'], s:['蒙眼摸物猜是什么','闻味猜物','听声猜物','讲眼耳鼻舌皮肤五种感官']}
+  ]
+};
+const SAZ_EMO = {'生命世界':'🐾','地球与宇宙':'🌍','物质与能量':'⚡','身体与健康':'❤️','社会与人文':'👥'};
+function sazNorm(t){ return (t||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
+function sazTierKey(band){
+  if(/LOW$/.test(band)) return 0;
+  if(/MID$/.test(band)) return 1;
+  if(/HIGH$/.test(band)) return 2;
+  return 1;
+}
+function sazGB(bands){
+  if(bands.some(b=>b.indexOf('G5-6')===0)) return '5-6';
+  if(bands.some(b=>b.indexOf('G3-4')===0)) return '3-4';
+  return 'K-2';
+}
+function sazMeta(b){ return SAZ_META[sazNorm(b.title)]||{}; }
+function sazUnits(){
+  var saz = DATA.books.filter(b=>b.level==='SAZ');
+  var map={};
+  saz.forEach(function(b){
+    var k=sazNorm(b.title);
+    if(!map[k]) map[k]={title:b.title, theme:b.theme, tiers:[]};
+    map[k].tiers.push(b);
+  });
+  return Object.keys(map).map(function(k){
+    var u=map[k];
+    u.tiers.sort(function(a,b){ return sazTierKey(a.band)-sazTierKey(b.band); });
+    u.gb=sazGB(u.tiers.map(function(t){return t.band;}));
+    var seen={}, core=[];
+    u.tiers.forEach(function(t){
+      (SAZ_VOCAB[sazNorm(t.title)]||[]).forEach(function(w){ if(!seen[w]){seen[w]=1;core.push(w);} });
+    });
+    u.core=core.slice(0,8);
+    return u;
+  });
+}
+function sazReadDay(dow,b,title){
+  var m=sazMeta(b), lex=m.lexile?(' · Lexile '+m.lexile):'';
+  return {dow:dow, icon:'📖', title:title, kind:'read', book:b, lex:lex};
+}
+function sazActDay(dow,icon,title,text){ return {dow:dow, icon:icon, title:title, kind:'act', text:text}; }
+function sazWeekDays(u, exp){
+  var tiers=u.tiers, d=[];
+  if(tiers[0]) d.push(sazReadDay('周一',tiers[0],'读 Low 档'));
+  else d.push(sazActDay('周一','🔍','观察','重读《'+u.title+'》，找一找书里讲的现象'));
+  if(tiers[1]) d.push(sazReadDay('周二',tiers[1],'读 Mid 档'));
+  else d.push(sazActDay('周二','🔍','观察','重读并找一找：书中哪幅图展示了核心概念？'));
+  if(tiers[2]) d.push(sazReadDay('周三',tiers[2],'读 High 档'));
+  else d.push(sazActDay('周三','🧱','做模型','用积木 / 画画做出本单元的核心概念模型'));
+  d.push({dow:'周四', icon:'🔬', title:'主题实验：'+exp.t, kind:'exp', exp:exp});
+  d.push(sazActDay('周五','🗣','讲给你听','用 3–5 个核心词给爸妈讲一遍这个单元；画一张科学海报'));
+  return d;
+}
+function sazBuildWeeks(theme, gb, n){
+  var units=sazUnits().filter(function(u){ return (!theme||u.theme===theme) && (!gb||u.gb===gb); });
+  units.sort(function(a,b){ return a.theme.localeCompare(b.theme)|| a.title.localeCompare(b.title); });
+  if(n && n>0) units=units.slice(0, n);
+  var bank = SAZ_EXP;
+  return units.map(function(u,i){
+    var emo=SAZ_EMO[u.theme]||'🔬';
+    var expList = bank[u.theme] || bank['生命世界'];
+    var exp = expList[i % expList.length];
+    var days = sazWeekDays(u, exp);
+    var intro = '本单元《'+u.title+'》'+u.gb+' 档 · '+u.theme+'。每天读一档（Low→Mid→High），周末动手做实验、用核心词复述。';
+    return {week:i+1, emo:emo, title:u.title, theme:u.theme, gb:u.gb, core:u.core, days:days, intro:intro};
+  });
+}
+function sazDayCard(d, core){
+  var body='';
+  if(d.kind==='read'){
+    body='<div class="drow"><b>📖 读</b><span>《'+esc(d.book.title)+'》 <span class="pill b-saz">'+esc(d.book.band)+'</span>'+esc(d.lex)+'</span></div>'+
+         '<div class="drow"><b>🔤 核心词</b><span>'+core.map(function(w){return '<code>'+esc(w)+'</code>';}).join(' ')+'</span></div>'+
+         '<div class="drow"><b>✍️ 做</b><span>朗读后圈出今天的核心词；用 1 句英文说说这本书讲了什么。</span></div>';
+  } else if(d.kind==='act'){
+    body='<div class="drow"><b>'+esc(d.icon)+' '+esc(d.title)+'</b><span>'+esc(d.text)+'</span></div>';
+  } else if(d.kind==='exp'){
+    body='<div class="drow"><b>🧪 材料</b><span>'+d.exp.m.map(esc).join('、')+'</span></div>'+
+         '<div class="drow"><b>📋 步骤</b><span>'+d.exp.s.map(function(s,i){return (i+1)+'. '+esc(s);}).join('　')+'</span></div>'+
+         '<div class="drow"><b>🔤 关联词</b><span>'+d.exp.c.map(function(w){return '<code>'+esc(w)+'</code>';}).join(' ')+'</span></div>';
+  }
+  return '<div class="day'+(d.kind==='exp'?' exp':'')+'"><div class="dh"><span class="dnum">'+esc(d.dow)+'</span><span class="dtitle">'+esc(d.icon)+' '+esc(d.title)+'</span></div>'+body+'</div>';
+}
+function sazWeekPanel(w){
+  return '<div class="nf-week" id="sazwW'+w.week+'">'+
+    '<div class="whead">'+w.emo+' 第 '+w.week+' 周 · '+esc(w.title)+' <span class="badge">'+esc(w.theme)+' · '+esc(w.gb)+'</span></div>'+
+    '<p class="wintro">'+esc(w.intro)+'</p>'+
+    '<div class="days">'+w.days.map(function(d){return sazDayCard(d,w.core);}).join('')+'</div>'+
+    '<div class="ext">🔤 本单元核心词（'+w.core.length+'）：'+w.core.map(function(w2){return '<code>'+esc(w2)+'</code>';}).join(' ')+'</div></div>';
+}
+function renderSAZWeek(){
+  var theme=$('#sazwTheme').value, gb=$('#sazwBand').value, weeks=$('#sazwWeeks').value;
+  var all=sazUnits();
+  if(!$('#sazwTheme').options.length){
+    var themes=[...new Set(all.map(u=>u.theme))].sort();
+    $('#sazwTheme').innerHTML='<option value="">全部主题域</option>'+themes.map(function(t){return '<option value="'+esc(t)+'">'+esc(t)+'</option>';}).join('');
+  }
+  var units=all.filter(function(u){ return (!theme||u.theme===theme) && (!gb||u.gb===gb); });
+  var n = weeks==='all' ? Math.min(units.length,20) : (parseInt(weeks,10)||4);
+  var wks=sazBuildWeeks(theme,gb,n);
+  var note = units.length===0
+    ? '⚠️ 该范围暂无 SAZ 单元，请放宽主题域或年级档。'
+    : '已生成 '+wks.length+' 周（范围：'+(theme||'全部主题域')+' · '+(gb?('G'+gb):'全部年级')+'）。该范围内共 '+units.length+' 个科学单元可选。';
+  $('#sazwNote').textContent=note;
+  $('#sazwTabs').innerHTML=wks.map(function(w){return '<button class="nf-tab" data-w="'+w.week+'">'+w.emo+' 第'+w.week+'周 '+esc(w.title)+'</button>';}).join('');
+  $('#sazwOv').innerHTML=wks.map(function(w){
+    var cells=w.days.map(function(d){
+      if(d.kind==='exp') return '<span class="mini-exp">🔬'+esc(d.exp.t)+'</span>';
+      if(d.kind==='read') return '<code>'+esc(d.book.id)+'</code> '+esc(d.book.title);
+      return '<span class="mini-exp">'+esc(d.icon)+esc(d.title)+'</span>';
+    }).join(' <span class="sep">·</span> ');
+    return '<tr><td class="wk">'+w.emo+' W'+w.week+'</td><td class="wf">'+esc(w.title)+'</td><td class="wb">'+cells+'</td></tr>';
+  }).join('');
+  $('#sazwWeeks').innerHTML=wks.map(sazWeekPanel).join('');
+  var tabEls=document.querySelectorAll('#sazWeek .nf-tab');
+  tabEls.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabEls.forEach(function(x){x.classList.remove('active');});
+      document.querySelectorAll('#sazWeek .nf-week').forEach(function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      document.getElementById('sazwW'+t.dataset.w).classList.add('active');
+      window.scrollTo({top:document.querySelector('#sazWeek .nf-tabs').offsetTop-8,behavior:'smooth'});
+    });
+  });
+  if(tabEls[0]) tabEls[0].classList.add('active');
+  var first=document.getElementById('sazwW'+wks[0].week); if(first) first.classList.add('active');
+  if(!$('#sazwRebuild').dataset.bound){
+    var r=function(){ renderSAZWeek(); };
+    $('#sazwRebuild').addEventListener('click',r);
+    $('#sazwTheme').addEventListener('change',r);
+    $('#sazwBand').addEventListener('change',r);
+    $('#sazwWeeks').addEventListener('change',r);
+    $('#sazwPrintBtn').addEventListener('click',function(){
+      document.body.classList.add('print-nf'); window.print();
+      setTimeout(function(){ document.body.classList.remove('print-nf'); },400);
+    });
+    $('#sazwRebuild').dataset.bound='1';
+  }
 }
 
 /* ---------- 分级对照辅助函数 ---------- */
