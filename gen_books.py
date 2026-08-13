@@ -629,7 +629,7 @@ if __name__ == "__main__":
         "seedCount": len(books),
     }
     data["meta"]["levelOrder"] = ["aa","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Z1","Z2","SAZ"]
-    data["meta"]["version"] = "3.29"
+    data["meta"]["version"] = "3.30"
     data["meta"]["updated"] = "2026-08-10"
     json.dump(data, open(JSON_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     # 校验
