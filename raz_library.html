@@ -237,7 +237,9 @@
   #nfPlan .dtag.nf{background:#e7f3ef;color:#2f7d6e}
   #nfPlan .dtag.f{background:#fdeee2;color:#e07a3f}
   #nfPlan .dtag.exp{background:#d8ebd3;color:#3f7d4f}
+  #nfPlan .nf-note{color:var(--muted);font-size:13px;margin:0 0 12px;line-height:1.6}
   #nfPlan .drow{display:grid;grid-template-columns:108px 1fr;gap:8px;padding:4px 0;font-size:13.3px}
+  #nfPlan .ext3{margin:6px 0 2px;border-left:3px solid var(--brand);background:var(--soft);border-radius:0 8px 8px 0;padding:4px 0 4px 8px}
   #nfPlan .drow b{color:#6b6356;font-weight:600}
   #nfPlan .drow span{color:#36322c}
   #nfPlan .ext{margin-top:14px;background:#faf7f1;border:1px dashed var(--line);border-radius:10px;padding:10px 13px;font-size:12.5px;color:#5f594f}
@@ -261,7 +263,7 @@
 <body>
 <header>
   <h1>📚 RAZ + SAZ 知识库</h1>
-  <p>总表 · 使用导读 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 级别总览 · 分级对照 · SAZ 书单 · 主题分类 · NF 周计划 · v3.15</p>
+  <p>总表 · 使用导读 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 级别总览 · 分级对照 · 主题分类 · NF 周计划 · SAZ 书单 · v3.16</p>
 </header>
 
 <div class="compliance">
@@ -283,9 +285,9 @@
     <div class="tab" data-t="repeat">🔁 重复规则</div>
     <div class="tab" data-t="levels">📊 级别总览</div>
     <div class="tab" data-t="ar">🔢 分级对照</div>
-    <div class="tab" data-t="saz">🔬 SAZ 书单</div>
     <div class="tab" data-t="themes">🏷️ 主题分类</div>
     <div class="tab" data-t="nf">📅 NF 周计划</div>
+    <div class="tab" data-t="saz">🔬 SAZ 书单</div>
 
   </div>
 
@@ -475,7 +477,8 @@
   <!-- ===== NF 优先主题周计划 ===== -->
   <section class="panel" id="nf">
     <div class="card">
-      <h2>📅 NF 优先主题周计划 <span class="tag">6 周科普循环</span></h2>
+      <h2>📅 NF 优先主题周计划 <span class="tag">6 周科普循环 · 画话+手工+STEAM</span></h2>
+      <p class="nf-note">🏕 借鉴 Khan Academy 夏令营「主题周」思路：每周一个主题、每天一个小焦点，把 App 阅读 + 线下动手串起来。每天给三选一（或全做）的拓展：✏️ 画+话认字 / 🧩 手工 / 🔬 STEAM。</p>
       <div id="nfPlan">
         <div class="controls" style="margin-bottom:6px;align-items:center">
           <label style="color:var(--muted);font-size:13px">级别范围：</label>
@@ -494,14 +497,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.15 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.16 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.15",
+    "version": "3.16",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -27670,6 +27673,38 @@ function nfActivity(fam, b){
 }
 function nfLang(fam, b){ return b ? (b.lang||"主题词汇与书中句式") : "主题核心词（见活动）"; }
 function nfDraw(fam, b){ return b ? "画《"+b.title+"》里的关键事物，写 1-2 个英文词。" : "画今天活动里最重要的一个事物，标英文。"; }
+function nfCraft(fam, b){
+  var map={
+    "生命世界":"纸盘/纸箱做动物面具，或捡落叶树枝拼贴一只「自然小动物」。",
+    "地球与宇宙":"画+贴「一周天气表」（棉花做云、蓝纸做雨），或做水循环转盘。",
+    "物质与能量":"纸盒+吸管搭「小车跑道」贴箭头标推/拉，或做纸磁铁钓鱼游戏。",
+    "身体与健康":"画+拼贴「我的身体」图贴五官四肢，或做洗手步骤翻翻书。",
+    "社会与人文":"鞋盒做「迷你超市/车站」场景画价签标英文，或做角色头饰。",
+    "思维与创意":"剪彩纸拼颜色/形状画，或做「反义词配对卡」。"
+  };
+  return (map[fam]||"用家里材料做一项主题手工（拼贴/面具/模型）。")+" 3 岁版：大人备料裁剪，孩子负责贴/画/命名。";
+}
+function nfSteam(fam, b){
+  var map={
+    "生命世界":"种一颗豆子/洋葱根，每天画高度，练「观察+测量+记录」。",
+    "地球与宇宙":"水感官盆放沉/浮小物记录哪些下沉，或镜+水+阳光做彩虹。",
+    "物质与能量":"不同高度斜坡滚小球看谁更远（力与运动），磁铁能吸哪些分类记。",
+    "身体与健康":"蒙眼尝酸/甜/咸猜一猜（感官科学），镜子找左右对称。",
+    "社会与人文":"在家画简单地图按指令（左/右/上）走到目标（方位+空间思维）。",
+    "思维与创意":"纽扣按颜色/形状分堆并数数（数学+分类），积木搭对称图形。"
+  };
+  return (map[fam]||"做一项小实验或自然观察，记录 1 个发现。")+" 记录 1 个发现就够，不追求结论。";
+}
+function nfExtTracks(day, fam){
+  var bk = day.bookId ? NF_BOOKS[day.bookId] : null;
+  var craft = (day.craft!=null) ? day.craft : nfCraft(fam, bk);
+  var steam = (day.steam!=null) ? day.steam : nfSteam(fam, bk);
+  return '<div class="ext3">'+
+    '<div class="drow"><b>✏️ 画+话认字</b><span>'+esc(day.draw)+'</span></div>'+
+    '<div class="drow"><b>🧩 手工</b><span>'+esc(craft)+'</span></div>'+
+    '<div class="drow"><b>🔬 STEAM</b><span>'+esc(steam)+'</span></div>'+
+  '</div>';
+}
 function nfExpTitle(fam){
   var titles={"生命世界":"观察小动物或植物","地球与宇宙":"天气/水感官盆","物质与能量":"沉与浮 · 磁铁","身体与健康":"五感小游戏","社会与人文":"社会场景角色扮演","思维与创意":"颜色/数字/形状寻宝"};
   return "实验日 · "+(titles[fam]||"主题探索");
@@ -27700,12 +27735,12 @@ var NF_BOOKS = Object.fromEntries(DATA.books.map(function(b){ return [b.id,b]; }
 function nfExtRead(fam, core){
   return DATA.books.filter(function(b){ var g=famOfTheme(b.theme); return b.type==='NF' && g && g.family.indexOf(fam)>=0 && !core.has(b.id); }).sort(function(a,b){ return (a.level===b.level?a.num-b.num:a.level.localeCompare(b.level)); });
 }
-function nfDayCard(day){
+function nfDayCard(day, fam){
   if(day.kind==='exp'){
     return '<div class="day exp"><div class="dh"><span class="dnum">Day '+day.d+'</span><span class="dtitle">🔬 '+esc(day.title)+'</span><span class="dtag exp">动手实验</span></div>'+
       '<div class="drow"><b>🌿 活动</b><span>'+esc(day.activity)+'</span></div>'+
       '<div class="drow"><b>🔤 语言点</b><span>'+esc(day.lang)+'</span></div>'+
-      '<div class="drow"><b>✏️ 画+话认字</b><span>'+esc(day.draw)+'</span></div></div>';
+      nfExtTracks(day, fam)+'</div>';
   }
   var b=NF_BOOKS[day.bookId];
   if(!b) return '<div class="day"><div class="dh"><span class="dnum">Day '+day.d+'</span><span class="dtitle">(书目未找到)</span></div></div>';
@@ -27714,12 +27749,12 @@ function nfDayCard(day){
     '<div class="drow"><b>📖 今日书</b><span><code>'+esc(b.id)+'</code> '+esc(b.title)+'（Level '+esc(b.level)+'，句式：'+esc(b.lang)+'）</span></div>'+
     '<div class="drow"><b>🌿 活动</b><span>'+esc(day.activity)+'</span></div>'+
     '<div class="drow"><b>🔤 语言点</b><span>'+esc(day.lang)+'</span></div>'+
-    '<div class="drow"><b>✏️ 画+话认字</b><span>'+esc(day.draw)+'</span></div></div>';
+    nfExtTracks(day, fam)+'</div>';
 }
 function nfWeekPanel(w, core){
   var ext=nfExtRead(w.fam, core);
   var extHtml=ext.length? '<div class="ext"><b>📚 本族延伸阅读（'+ext.length+' 本，从总表挑）：</b> '+ext.map(function(b){ return '<code>'+esc(b.id)+'</code> '+esc(b.title); }).join('、')+'</div>' : '<div class="ext">本族在所选级别内 NF 书已全部纳入本周核心。</div>';
-  return '<div class="nf-week" id="nfW'+w.week+'"><div class="whead">'+w.emoji+' 第 '+w.week+' 周 · '+esc(w.fam)+'</div><p class="wintro">'+esc(w.intro)+'</p><div class="days">'+w.days.map(nfDayCard).join('')+'</div>'+extHtml+'</div>';
+  return '<div class="nf-week" id="nfW'+w.week+'"><div class="whead">'+w.emoji+' 第 '+w.week+' 周 · '+esc(w.fam)+'</div><p class="wintro">'+esc(w.intro)+'</p><div class="days">'+w.days.map(function(d){ return nfDayCard(d, w.fam); }).join('')+'</div>'+extHtml+'</div>';
 }
 function renderNFPlan(){
   var levels=DATA.meta.levelOrder.filter(function(l){ return l!=='SAZ'; });
