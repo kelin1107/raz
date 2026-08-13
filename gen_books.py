@@ -7,7 +7,7 @@
   - lang  : 语言pattern（句式/高频词聚类，用于"重复语言"）
   - type  : F(虚构)/NF(非虚构)/SAZ
 """
-import json, os
+import json, os, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 JSON_PATH = os.path.join(HERE, "raz_library.json")
@@ -335,20 +335,57 @@ def tag_aa(title):
 
 # ---------------- D 及以上通用关键词自动打标（与 aa–C 共用同一套主题族/句式词表） ----------------
 # 说明：aa–C 为人工精标；D 及以上书目量大，采用关键词自动推导，质量足以支撑"重复规则/勾选主题"功能。
-ANIMALS = ["animal","whale","frog","bee","fish","swamp","bat","cat","dog","bird","robin","robins","penguin","shark",
-    "octopus","crab","seal","deer","horse","cow","pig","chicken","duck","owl","insect","snake",
-    "turtle","lizard","worm","ant","butterfly","monkey","lion","tiger","elephant","fox","wolf",
-    "rabbit","mouse","rat","goat","sheep","farm","zoo","ocean","sea","pond","forest","desert",
-    "polar","arctic","jungle","reef","coral","dinosaur","otter","reindeer","fox","sloth","bear",
-    "kangaroo","loon","tadpole","horns","tongues","pet","creature","creatures","hop","hops","hopping"]
-PLANTS = ["plant","tree","flower","seed","leaf","garden","grass","vegetable","fruit","pumpkin",
-    "bean","grow","root","strawberry","berry","carve","lemonade"]
+# v3.32 扩词：补全常见 RAZ 动物名（orca/coyote/eagle/crocodile/hedgehog/moose/dolphin/crane/woodpecker/puffin/manatee/tortoise 等）、
+# 植物名、地球科学词（beach/tornado/glacier/canyon/cave/flood/hurricane 等）及身体科学短语，降低动物/科普书误落社会与人文。
+ANIMALS = [
+    # 海洋哺乳/鱼类（ray/eel 易与 gray/feel 等混淆，不放）
+    "animal","whale","orca","dolphin","porpoise","narwhal","beluga","manatee","seal","sea lion",
+    "walrus","otter","fish","shark","octopus","crab","lobster","shrimp","oyster","clam",
+    "jellyfish","starfish","seahorse","squid","ray","coral","reef",
+    # 陆地哺乳
+    "beaver","raccoon","squirrel","skunk","porcupine","hedgehog","moose","deer","horse","cow",
+    "pig","goat","sheep","rabbit","mouse","rat","hamster","chipmunk","bat","bear",
+    "wolf","fox","coyote","dog","cat","lion","tiger","elephant","monkey","gorilla",
+    "chimp","sloth","kangaroo","koala","wombat","platypus","meerkat","armadillo","anteater",
+    "hyena","cheetah","leopard","giraffe","zebra","hippo","rhino","camel","llama","alpaca",
+    "donkey","mule",
+    # 鸟类（loon 前加空格，避免 Balloon 误伤）
+    "bird","robin","robins","eagle","hawk","crow","raven","magpie","stork","crane",
+    "woodpecker","puffin","pelican","seagull","heron","flamingo","hummingbird","albatross",
+    "peacock","parrot","canary","sparrow","wren","owl","penguin","duck","goose","turkey",
+    "chicken","swan"," loon",
+    # 爬行/两栖
+    "snake","turtle","tortoise","lizard","frog","toad","salamander","newt","tadpole",
+    "crocodile","alligator","chameleon","iguana","gecko",
+    # 昆虫/无脊椎（moth 用复数 moths 避 mother；fly 为动词故不放）
+    "insect","butterfly","moths","beetle","ladybug","spider","scorpion","ant","bee",
+    "wasp","hornet","worm","caterpillar","dragonfly","grasshopper","cricket","mantis",
+    "mosquito","centipede","millipede","snail","slug",
+    # 栖息地/通用（nest/den 易与 honesty/garden 混淆，不放）
+    "farm","zoo","ocean","sea","pond","forest","rainforest","desert","polar","arctic",
+    "jungle","savanna","prairie","wetland","swamp","dinosaur","pet","creature","creatures",
+    "hop","hops","hopping","pouch","joey","marsupial","egg","eggs","hive",
+]
+PLANTS = ["plant","tree","flower","seed","leaf","leaves","garden","grass","vegetable","fruit",
+    "pumpkin","bean","grow","root","roots","strawberry","berry","berries","carve","lemonade",
+    "apple","orange","banana","corn","wheat","rice","tomato","potato","onion","carrot",
+    "cabbage","lettuce","mushroom","fungus","algae","bamboo","cactus","cacti","oak","pine",
+    "rose","sunflower","tulip","daisy","weed","vine","bush"]
 EARTH = ["weather","fog","cloud","rain","snow","wind","sun","moon","star","space","earth","rock",
     "mountain","volcano","season","spring","summer","fall","winter","water","ice","storm","sky",
-    "light","shadow","solar","planet","fire","heat","cold","temperature","tide","blastoff"]
+    "light","shadow","solar","planet","fire","heat","cold","temperature","tide","blastoff",
+    "beach","beaches","canyon","canyons","tornado","tornadoes","glacier","glaciers","cave","caves",
+    "flood","floods","hurricane","hurricanes","thunder","lightning","rainbow","sunset","sunrise",
+    "earthquake","tsunami","drought","geology","mineral","crystal","sand","soil","river",
+    "pond","ocean","sea","coast","shore","tide","wave","waves"]
 BODY = ["teeth","tooth","brush","hand","wash","body","healthy","sick","eye","ear","nose","food",
     "eat","breakfast","lunch","dinner","exercise","sleep","feeling","calm","hospital","doctor",
-    "bath","hair","clothes","wear","shoes","snoring","bed","tired","hug","scare","scares"]
+    "bath","hair","clothes","wear","shoes","snoring","bed","tired","hug","scare","scares",
+    # v3.32 增补身体科学书短语（避免短词误伤 legend/hill 等）
+    "my bones","my lungs","my muscles","my skin","my stomach","my brain","my heart","my body",
+    "my eyes","my ears","my teeth","my hair",
+    "all about bones","all about muscles","all about teeth","all about skin",
+    "digestion","legs, wings, fins, and flippers"]
 SOCIETY = ["school","teacher","class","library","store","shop","market","city","community","family",
     "friend","helper","police","fire","mail","post","worker","job","holiday","birthday","festival",
     "party","home","house","neighbor","money","buy","sell","truck","car","bus","train","road",
@@ -465,9 +502,10 @@ def tag_generic(title):
         lang = "What句式"
     elif t.startswith("this ") or "this is" in t:
         lang = "This句式"
-    elif "can" in t:
+    # can/go 用单词边界，避免 canyon/hurricane/gorilla 等子串误伤
+    elif re.search(r'\bcan\b|\bcannot\b', t):
         lang = "Can句式"
-    elif "go" in t or "going" in t:
+    elif re.search(r'\bgo(?:es|ing)?\b', t):
         lang = "Go句式"
     elif "all kinds of" in t:
         lang = "AllKinds句式"
@@ -483,10 +521,11 @@ def tag_generic(title):
         lang = "季节句式"
     elif any(k in t for k in ["weather","fog","cloud","rain","snow","wind","water","ice","storm","sea","ocean","tide","river","pond","swamp"]):
         lang = "天气水句式"
-    elif any(k in t for k in ["under","over","in ","on ","out","off","up","down","away","back"]):
-        lang = "介词反义"
+    # 动物认知优先于介词（避免 "All About Orcas" 因 about 含 out 被误归介词反义）
     elif any(k in t for k in ANIMALS):
         lang = "动物认知"
+    elif any(k in t for k in ["under","over","in ","on ","out","off","up","down","away","back"]):
+        lang = "介词反义"
     else:
         lang = "综合"
     return (theme, lang, "NF" if is_nf else "F")
@@ -647,8 +686,8 @@ if __name__ == "__main__":
         "seedCount": len(books),
     }
     data["meta"]["levelOrder"] = ["aa","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Z1","Z2","SAZ"]
-    data["meta"]["version"] = "3.31"
-    data["meta"]["updated"] = "2026-08-10"
+    data["meta"]["version"] = "3.32"
+    data["meta"]["updated"] = "2026-08-13"
     json.dump(data, open(JSON_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     # 校验
     print("books:", len(books))

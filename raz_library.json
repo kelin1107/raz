@@ -1,8 +1,8 @@
 {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.31",
-    "updated": "2026-08-10",
+    "version": "3.32",
+    "updated": "2026-08-13",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
     "levelsCount": 29,
@@ -4605,7 +4605,7 @@
       "num": 22,
       "title": "Cranberries",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -4633,7 +4633,7 @@
       "title": "All About Foxes",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "D26",
@@ -4802,8 +4802,8 @@
       "level": "D",
       "num": 44,
       "title": "Imagine the Beach",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -4840,7 +4840,7 @@
       "title": "Our Good Night Story",
       "type": "F",
       "theme": "思维与创意",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "D49",
@@ -5253,8 +5253,8 @@
       "num": 2,
       "title": "All About Orcas",
       "type": "NF",
-      "theme": "社会与人文",
-      "lang": "介词反义"
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "E03",
@@ -5307,7 +5307,7 @@
       "num": 8,
       "title": "What's in That Pouch?",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "生命世界",
       "lang": "What句式"
     },
     {
@@ -5388,8 +5388,8 @@
       "num": 18,
       "title": "All About Coyotes",
       "type": "NF",
-      "theme": "社会与人文",
-      "lang": "介词反义"
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "E19",
@@ -5524,7 +5524,7 @@
       "title": "Goodbye Snow",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Go句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "E34",
@@ -5938,7 +5938,7 @@
       "title": "Wake Up, Bear!",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "E80",
@@ -6386,9 +6386,9 @@
       "level": "F",
       "num": 38,
       "title": "Hatching Eggs",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "F39",
@@ -6593,9 +6593,9 @@
       "level": "F",
       "num": 61,
       "title": "Smart Crows",
-      "type": "F",
-      "theme": "思维与创意",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "F62",
@@ -6685,7 +6685,7 @@
       "title": "A Pet for Jupe",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "F72",
@@ -6738,8 +6738,8 @@
       "num": 77,
       "title": "The Tortoise and the Hare",
       "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "F78",
@@ -6774,7 +6774,7 @@
       "num": 81,
       "title": "Scaredy Crow",
       "type": "NF",
-      "theme": "身体与健康",
+      "theme": "生命世界",
       "lang": "颜色句式"
     },
     {
@@ -6854,9 +6854,9 @@
       "level": "F",
       "num": 90,
       "title": "The Bald Eagle",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "G01",
@@ -6955,7 +6955,7 @@
       "title": "Gordon Finds His Way",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "介词反义"
     },
     {
       "id": "G12",
@@ -6991,7 +6991,7 @@
       "title": "Long Ago And Today",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "G16",
@@ -7036,7 +7036,7 @@
       "title": "Stormingo!",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Go句式"
+      "lang": "天气水句式"
     },
     {
       "id": "G21",
@@ -7277,9 +7277,9 @@
       "level": "G",
       "num": 47,
       "title": "Miles the Nile Crocodile",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "G48",
@@ -7360,7 +7360,7 @@
       "title": "Good Luck!",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "G57",
@@ -7521,8 +7521,8 @@
       "num": 74,
       "title": "The Spider's Web",
       "type": "NF",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "G75",
@@ -7538,9 +7538,9 @@
       "level": "G",
       "num": 76,
       "title": "Whose Eggs Are These?",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "G77",
@@ -7548,7 +7548,7 @@
       "num": 77,
       "title": "Why Do Leaves Change Color?",
       "type": "NF",
-      "theme": "思维与创意",
+      "theme": "生命世界",
       "lang": "颜色句式"
     },
     {
@@ -7583,9 +7583,9 @@
       "level": "G",
       "num": 81,
       "title": "Scorpions",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "G82",
@@ -7594,7 +7594,7 @@
       "title": "American Symbols",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "G83",
@@ -7639,7 +7639,7 @@
       "title": "The Golden Rule",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "G88",
@@ -7684,7 +7684,7 @@
       "title": "American Football",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "H05",
@@ -7700,9 +7700,9 @@
       "level": "H",
       "num": 6,
       "title": "Anna and The Dancing Goose",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "Go句式"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "H07",
@@ -7873,7 +7873,7 @@
       "title": "Goats Are Great!",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "H26",
@@ -7900,16 +7900,16 @@
       "title": "Hawaii Volcanoes National Park",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "H29",
       "level": "H",
       "num": 29,
       "title": "Hedgehogs",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "H30",
@@ -7970,8 +7970,8 @@
       "level": "H",
       "num": 36,
       "title": "Legs, Wings, Fins, and Flippers",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "身体与健康",
       "lang": "综合"
     },
     {
@@ -8006,9 +8006,9 @@
       "level": "H",
       "num": 40,
       "title": "Moose on the Move",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "介词反义"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "H41",
@@ -8016,7 +8016,7 @@
       "num": 41,
       "title": "My Bones",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "身体与健康",
       "lang": "My句式"
     },
     {
@@ -8132,8 +8132,8 @@
       "level": "H",
       "num": 54,
       "title": "Sister Daisy, Sister Rose",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -8187,7 +8187,7 @@
       "num": 60,
       "title": "Statues in the Sand",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "地球与宇宙",
       "lang": "介词反义"
     },
     {
@@ -8206,7 +8206,7 @@
       "title": "Tag-Along Goat",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "H63",
@@ -8269,7 +8269,7 @@
       "title": "The Goat and the Singing Wolf",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "H70",
@@ -8277,8 +8277,8 @@
       "num": 70,
       "title": "THE Grand CANYON",
       "type": "NF",
-      "theme": "社会与人文",
-      "lang": "Can句式"
+      "theme": "地球与宇宙",
+      "lang": "综合"
     },
     {
       "id": "H71",
@@ -8393,9 +8393,9 @@
       "level": "H",
       "num": 83,
       "title": "Welcome to Turkey",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "I01",
@@ -8429,8 +8429,8 @@
       "level": "I",
       "num": 4,
       "title": "Amazing Beaches",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -8447,9 +8447,9 @@
       "level": "I",
       "num": 6,
       "title": "Armadillo's Song",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "I07",
@@ -8582,9 +8582,9 @@
       "level": "I",
       "num": 21,
       "title": "Dolphins",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "I22",
@@ -8593,7 +8593,7 @@
       "title": "Dragonflies!",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "I23",
@@ -8629,7 +8629,7 @@
       "title": "Goldilocks and the Three Bears",
       "type": "F",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "I27",
@@ -8637,8 +8637,8 @@
       "num": 27,
       "title": "Hippo's Toothache",
       "type": "F",
-      "theme": "身体与健康",
-      "lang": "综合"
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "I28",
@@ -8647,7 +8647,7 @@
       "title": "Goldilocks and the Other Three Bears",
       "type": "F",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "I29",
@@ -8665,7 +8665,7 @@
       "title": "Golf",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "I31",
@@ -8681,9 +8681,9 @@
       "level": "I",
       "num": 32,
       "title": "Here Come the Cranes!",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "I33",
@@ -8728,7 +8728,7 @@
       "title": "Jane Goodall",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "I38",
@@ -8773,7 +8773,7 @@
       "title": "The Lion and the Mouse",
       "type": "F",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "I43",
@@ -8782,7 +8782,7 @@
       "title": "Komodo Dragons: Giant Reptiles",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "I44",
@@ -8818,7 +8818,7 @@
       "title": "Mike's Good Bad Day",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "I48",
@@ -8888,8 +8888,8 @@
       "level": "I",
       "num": 55,
       "title": "My Lungs",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "身体与健康",
       "lang": "My句式"
     },
     {
@@ -8898,7 +8898,7 @@
       "num": 56,
       "title": "My Muscles",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "身体与健康",
       "lang": "My句式"
     },
     {
@@ -8907,7 +8907,7 @@
       "num": 57,
       "title": "My Skin",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "身体与健康",
       "lang": "My句式"
     },
     {
@@ -8915,8 +8915,8 @@
       "level": "I",
       "num": 58,
       "title": "My Stomach",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "身体与健康",
       "lang": "My句式"
     },
     {
@@ -8926,7 +8926,7 @@
       "title": "Owls Overhead",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "I60",
@@ -8978,8 +8978,8 @@
       "level": "I",
       "num": 65,
       "title": "Soup and a Sandwish",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "介词反义"
     },
     {
@@ -9016,7 +9016,7 @@
       "title": "Turkeys in the Trees",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "I70",
@@ -9068,9 +9068,9 @@
       "level": "I",
       "num": 75,
       "title": "The Wild Swans",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "I76",
@@ -9151,7 +9151,7 @@
       "title": "A Wolf in Sheep's Clothing",
       "type": "F",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "J01",
@@ -9293,9 +9293,9 @@
       "level": "J",
       "num": 16,
       "title": "The Woodpecker",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "J17",
@@ -9375,7 +9375,7 @@
       "num": 25,
       "title": "Why Do Leaves Change Color?",
       "type": "NF",
-      "theme": "思维与创意",
+      "theme": "生命世界",
       "lang": "颜色句式"
     },
     {
@@ -9385,7 +9385,7 @@
       "title": "Daisy in the Desert",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "J27",
@@ -9430,7 +9430,7 @@
       "title": "Goliath Beetles: Giant Insects",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "J32",
@@ -9583,7 +9583,7 @@
       "title": "Goliath Bird-Eating Spiders: Giant Arachnids",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "J49",
@@ -9626,9 +9626,9 @@
       "level": "J",
       "num": 53,
       "title": "Rent a Llama",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "J54",
@@ -9653,9 +9653,9 @@
       "level": "J",
       "num": 56,
       "title": "Leopard, Ram, and Jackal",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "J57",
@@ -9799,16 +9799,16 @@
       "title": "Canada",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "J73",
       "level": "J",
       "num": 73,
       "title": "Cricket",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "J74",
@@ -9833,8 +9833,8 @@
       "level": "J",
       "num": 76,
       "title": "Tornadoes",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -9844,7 +9844,7 @@
       "title": "All About Snakes",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "J78",
@@ -9860,9 +9860,9 @@
       "level": "J",
       "num": 79,
       "title": "Where's the Joey?",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "J80",
@@ -9943,7 +9943,7 @@
       "title": "All About Snakes",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "K03",
@@ -9979,7 +9979,7 @@
       "title": "Chickens in My Backyard",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "K07",
@@ -9997,7 +9997,7 @@
       "title": "Community Government",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "介词反义"
     },
     {
       "id": "K09",
@@ -10015,7 +10015,7 @@
       "title": "The Dragon in the Closet",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "介词反义"
     },
     {
       "id": "K11",
@@ -10094,9 +10094,9 @@
       "level": "K",
       "num": 19,
       "title": "Gorillas",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "Go句式"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "K20",
@@ -10104,8 +10104,8 @@
       "num": 20,
       "title": "The Grand Canyon",
       "type": "NF",
-      "theme": "社会与人文",
-      "lang": "Can句式"
+      "theme": "地球与宇宙",
+      "lang": "综合"
     },
     {
       "id": "K21",
@@ -10157,8 +10157,8 @@
       "level": "K",
       "num": 26,
       "title": "I Fly Hot-Air Balloons",
-      "type": "NF",
-      "theme": "生命世界",
+      "type": "F",
+      "theme": "社会与人文",
       "lang": "I句式"
     },
     {
@@ -10256,9 +10256,9 @@
       "level": "K",
       "num": 37,
       "title": "Lola the Llama",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "K38",
@@ -10321,7 +10321,7 @@
       "title": "Mongo\\u0027s Migration",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "K45",
@@ -10562,9 +10562,9 @@
       "level": "K",
       "num": 71,
       "title": "Where\\u0027s the Joey?",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "K72",
@@ -10598,9 +10598,9 @@
       "level": "L",
       "num": 3,
       "title": "Anna and the Painted Eggs",
-      "type": "F",
-      "theme": "思维与创意",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "L04",
@@ -10688,9 +10688,9 @@
       "level": "L",
       "num": 13,
       "title": "Eggy\\u0027s Easy Out",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "介词反义"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "L14",
@@ -10726,7 +10726,7 @@
       "title": "Goldilocks and the Other Three Bears",
       "type": "F",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "L18",
@@ -10735,7 +10735,7 @@
       "title": "Goldilocks and the Three Bears",
       "type": "F",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "L19",
@@ -10850,9 +10850,9 @@
       "level": "L",
       "num": 31,
       "title": "Joey\\u0027s Stop Sign",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "L32",
@@ -10960,7 +10960,7 @@
       "title": "Teotihuacan",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "L44",
@@ -11212,7 +11212,7 @@
       "title": "Horseshoes Aren\\u0027t Just for Good Luck",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "M20",
@@ -11336,9 +11336,9 @@
       "level": "M",
       "num": 33,
       "title": "Parrots",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "M34",
@@ -11427,8 +11427,8 @@
       "num": 43,
       "title": "Spiders",
       "type": "NF",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "M44",
@@ -11471,8 +11471,8 @@
       "level": "M",
       "num": 48,
       "title": "Tornadoes",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -11500,7 +11500,7 @@
       "title": "Vacation Time!",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "M52",
@@ -11617,7 +11617,7 @@
       "title": "Canada",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "N12",
@@ -11660,9 +11660,9 @@
       "level": "N",
       "num": 16,
       "title": "Crows Share a Pie",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "N17",
@@ -11796,7 +11796,7 @@
       "num": 31,
       "title": "Making Rice",
       "type": "NF",
-      "theme": "地球与宇宙",
+      "theme": "生命世界",
       "lang": "天气水句式"
     },
     {
@@ -11860,7 +11860,7 @@
       "title": "Puppets",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "N39",
@@ -11903,9 +11903,9 @@
       "level": "N",
       "num": 43,
       "title": "The Secret Lives of Snails and Slugs",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "N44",
@@ -11948,9 +11948,9 @@
       "level": "N",
       "num": 48,
       "title": "Spare the Turkey",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "N49",
@@ -12047,9 +12047,9 @@
       "level": "N",
       "num": 59,
       "title": "The Wild Swans",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "O01",
@@ -12083,8 +12083,8 @@
       "level": "O",
       "num": 4,
       "title": "Annie Oakley",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -12272,9 +12272,9 @@
       "level": "O",
       "num": 25,
       "title": "Hooray! Arrays!",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "O26",
@@ -12346,7 +12346,7 @@
       "title": "Jane Goodall",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "O34",
@@ -12472,7 +12472,7 @@
       "title": "Owls Overhead",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "O48",
@@ -12489,7 +12489,7 @@
       "num": 49,
       "title": "Pecos Bill Rides a Tornado",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -12607,7 +12607,7 @@
       "title": "Thurgood Marshall",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "O63",
@@ -12616,7 +12616,7 @@
       "title": "Troika: Canine Superhero",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "介词反义"
     },
     {
       "id": "O64",
@@ -12633,7 +12633,7 @@
       "num": 65,
       "title": "Why Do Leaves Change Color?",
       "type": "NF",
-      "theme": "思维与创意",
+      "theme": "生命世界",
       "lang": "颜色句式"
     },
     {
@@ -12778,7 +12778,7 @@
       "title": "Dragonflies!",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "P16",
@@ -12823,7 +12823,7 @@
       "title": "A Golden Tragedy",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "P21",
@@ -12832,7 +12832,7 @@
       "title": "Goldilocks and the Other Three Bears",
       "type": "F",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "P22",
@@ -12841,7 +12841,7 @@
       "title": "Goldilocks and the Three Bears",
       "type": "F",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "P23",
@@ -12850,7 +12850,7 @@
       "title": "Gotta Get Away from Gravity",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "介词反义"
     },
     {
       "id": "P24",
@@ -13028,9 +13028,9 @@
       "level": "P",
       "num": 43,
       "title": "Rent a Llama",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "P44",
@@ -13147,7 +13147,7 @@
       "title": "The Ant in the Photograph",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Q04",
@@ -13172,8 +13172,8 @@
       "level": "Q",
       "num": 7,
       "title": "Book 2: The Cave of the Lost",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -13190,8 +13190,8 @@
       "level": "Q",
       "num": 9,
       "title": "The Castaway Pines",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "介词反义"
     },
     {
@@ -13361,8 +13361,8 @@
       "level": "Q",
       "num": 28,
       "title": "Morty and the Teacher\\u0027s Apples",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -13425,7 +13425,7 @@
       "num": 35,
       "title": "On Eagle River",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "生命世界",
       "lang": "天气水句式"
     },
     {
@@ -13570,7 +13570,7 @@
       "title": "American Football",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "Q52",
@@ -13660,7 +13660,7 @@
       "title": "Earthquakes, Volcanoes, and Tsunamis",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "Q62",
@@ -13714,7 +13714,7 @@
       "title": "Goliath Bird-Eating Spiders Giant Arachnids",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Q68",
@@ -13723,7 +13723,7 @@
       "title": "Good for Thurgood!",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "Q69",
@@ -13732,7 +13732,7 @@
       "title": "Horseshoes Aren't Just for Good Luck",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Q70",
@@ -13759,7 +13759,7 @@
       "title": "Komodo Dragons Giant Reptiles",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Q73",
@@ -13820,9 +13820,9 @@
       "level": "Q",
       "num": 79,
       "title": "Puffins",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "Q80",
@@ -13840,7 +13840,7 @@
       "title": "Robin Hood and the King",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Q82",
@@ -13883,8 +13883,8 @@
       "level": "Q",
       "num": 86,
       "title": "Sweet Potato Challenge",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -13903,7 +13903,7 @@
       "title": "The Golden Flute",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "Q89",
@@ -13919,8 +13919,8 @@
       "level": "Q",
       "num": 90,
       "title": "The Kingdom of Happiness",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -14172,7 +14172,7 @@
       "num": 22,
       "title": "The Hard Stuff! All About Bones",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "身体与健康",
       "lang": "介词反义"
     },
     {
@@ -14182,7 +14182,7 @@
       "title": "How the Robin Stole Fire",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "R24",
@@ -14308,7 +14308,7 @@
       "title": "Owls Overhead",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "R38",
@@ -14407,7 +14407,7 @@
       "title": "Thurgood Marshall",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "R49",
@@ -14506,7 +14506,7 @@
       "title": "1849: The California Gold Rush",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "S03",
@@ -14542,7 +14542,7 @@
       "title": "Animal Discoveries",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "S07",
@@ -14666,9 +14666,9 @@
       "level": "S",
       "num": 20,
       "title": "Butterflies and Moths",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "S21",
@@ -14785,7 +14785,7 @@
       "title": "Dragonflies!",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "S34",
@@ -14794,7 +14794,7 @@
       "title": "Earthquakes, Volcanoes, and Tsunamis",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "S35",
@@ -14902,7 +14902,7 @@
       "title": "Guardian Dogs: Penguin Protectors",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "S47",
@@ -14938,7 +14938,7 @@
       "title": "Hawaii Volcanoes National Park",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "S51",
@@ -14956,7 +14956,7 @@
       "title": "Horseshoes Aren\\u0027t Just for Good Luck",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "S53",
@@ -15017,8 +15017,8 @@
       "level": "S",
       "num": 59,
       "title": "The Kingdom of Happiness",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -15072,7 +15072,7 @@
       "num": 65,
       "title": "Mighty Glaciers",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -15343,7 +15343,7 @@
       "title": "The U.S. Government At Work",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "介词反义"
     },
     {
       "id": "S96",
@@ -15395,9 +15395,9 @@
       "level": "S",
       "num": 101,
       "title": "The Wild Swans",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "S102",
@@ -15478,15 +15478,15 @@
       "title": "Ants in My Bed",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "T07",
       "level": "T",
       "num": 7,
       "title": "An Apple a Day",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -15523,7 +15523,7 @@
       "title": "Bats in the Attic",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "T12",
@@ -15640,7 +15640,7 @@
       "title": "C Is for Canada",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "T25",
@@ -15765,8 +15765,8 @@
       "num": 38,
       "title": "The Grand Canyon",
       "type": "NF",
-      "theme": "社会与人文",
-      "lang": "Can句式"
+      "theme": "地球与宇宙",
+      "lang": "综合"
     },
     {
       "id": "T39",
@@ -15874,7 +15874,7 @@
       "title": "Jane Goodall",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "T51",
@@ -15953,9 +15953,9 @@
       "level": "T",
       "num": 59,
       "title": "Manatees",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "T60",
@@ -16070,9 +16070,9 @@
       "level": "T",
       "num": 72,
       "title": "Owen and the Tortoise",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "T73",
@@ -16115,8 +16115,8 @@
       "level": "T",
       "num": 77,
       "title": "Popcorn Through the Ages",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -16286,8 +16286,8 @@
       "level": "T",
       "num": 96,
       "title": "Tornadoes",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -16477,7 +16477,7 @@
       "title": "Book 10: The Thing in the Forest",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "U10",
@@ -16547,9 +16547,9 @@
       "level": "U",
       "num": 17,
       "title": "Fabulous Faberg\\u00e9 Eggs",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "U18",
@@ -16557,7 +16557,7 @@
       "num": 18,
       "title": "Get Moving! All About Muscles",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "身体与健康",
       "lang": "介词反义"
     },
     {
@@ -16584,7 +16584,7 @@
       "num": 21,
       "title": "The Hard Stuff! All About Bones",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "身体与健康",
       "lang": "介词反义"
     },
     {
@@ -16700,8 +16700,8 @@
       "level": "U",
       "num": 34,
       "title": "The Mighty Saguaro Cactus",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -16827,7 +16827,7 @@
       "num": 48,
       "title": "Snow White and Rose Red",
       "type": "F",
-      "theme": "地球与宇宙",
+      "theme": "生命世界",
       "lang": "Not反义句式"
     },
     {
@@ -16864,7 +16864,7 @@
       "title": "Teotihuacan",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "U53",
@@ -16882,7 +16882,7 @@
       "title": "Thurgood Marshall",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "U55",
@@ -16945,7 +16945,7 @@
       "title": "1849: The California Gold Rush",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "V02",
@@ -17035,7 +17035,7 @@
       "title": "Animal Discoveries",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "V12",
@@ -17107,7 +17107,7 @@
       "title": "Book 12: The House in the Desert",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "V20",
@@ -17233,7 +17233,7 @@
       "title": "Earthquakes, Volcanoes, and Tsunamis",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "V34",
@@ -17260,7 +17260,7 @@
       "title": "Forests on Fire",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "V37",
@@ -17341,7 +17341,7 @@
       "title": "Golf",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "V46",
@@ -17350,7 +17350,7 @@
       "title": "The Gossip Monster",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "V47",
@@ -17447,8 +17447,8 @@
       "level": "V",
       "num": 57,
       "title": "The Kingdom of Happiness",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -17485,7 +17485,7 @@
       "title": "Living in Deserts",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "V62",
@@ -17591,8 +17591,8 @@
       "level": "V",
       "num": 73,
       "title": "Mysterious Caves",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -17656,7 +17656,7 @@
       "title": "Owls Overhead",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "V81",
@@ -17690,9 +17690,9 @@
       "level": "V",
       "num": 84,
       "title": "Puffins",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "V85",
@@ -17737,7 +17737,7 @@
       "title": "A Selection From Robinson Crusoe",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "V90",
@@ -17852,8 +17852,8 @@
       "level": "V",
       "num": 102,
       "title": "A Trip to a Prehistoric Cave",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -17863,7 +17863,7 @@
       "title": "The U.S. Government At Work",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "介词反义"
     },
     {
       "id": "V104",
@@ -17998,7 +17998,7 @@
       "title": "Adventure in Bear Valley",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "W03",
@@ -18016,7 +18016,7 @@
       "title": "American Football",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "W05",
@@ -18034,7 +18034,7 @@
       "title": "Ancient Greek and Roman Gods and Goddesses",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "W07",
@@ -18223,7 +18223,7 @@
       "title": "Canada",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "W28",
@@ -18293,9 +18293,9 @@
       "level": "W",
       "num": 35,
       "title": "Cricket",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "W36",
@@ -18329,8 +18329,8 @@
       "level": "W",
       "num": 39,
       "title": "Digestion",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "身体与健康",
       "lang": "综合"
     },
     {
@@ -18392,8 +18392,8 @@
       "level": "W",
       "num": 46,
       "title": "Floods",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -18412,7 +18412,7 @@
       "title": "Galapagos Wonder",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "W49",
@@ -18430,7 +18430,7 @@
       "title": "Goliath Bird-Eating Spiders: Giant Arachnids",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "W51",
@@ -18448,7 +18448,7 @@
       "title": "Hawaii Volcanoes National Park",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "W53",
@@ -18529,7 +18529,7 @@
       "title": "Horseshoes Aren\\u0027t Just for Good Luck",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "W62",
@@ -18545,9 +18545,9 @@
       "level": "W",
       "num": 63,
       "title": "Hurricanes",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "Can句式"
+      "type": "NF",
+      "theme": "地球与宇宙",
+      "lang": "综合"
     },
     {
       "id": "W64",
@@ -18574,7 +18574,7 @@
       "title": "Komodo Dragons: Giant Reptiles",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "W67",
@@ -18835,7 +18835,7 @@
       "title": "Paving the Way: American Sports Legends",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "W96",
@@ -18943,7 +18943,7 @@
       "title": "Scratching a Good Story",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "W108",
@@ -19103,8 +19103,8 @@
       "level": "W",
       "num": 125,
       "title": "Tornadoes",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -19150,7 +19150,7 @@
       "title": "Volcanoes",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "W131",
@@ -19382,8 +19382,8 @@
       "level": "X",
       "num": 16,
       "title": "The Balloon Brothers",
-      "type": "NF",
-      "theme": "生命世界",
+      "type": "F",
+      "theme": "社会与人文",
       "lang": "介词反义"
     },
     {
@@ -19402,7 +19402,7 @@
       "title": "Canada",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "X19",
@@ -19427,8 +19427,8 @@
       "level": "X",
       "num": 21,
       "title": "Deep Trouble: The Gulf Coast Oil Spill",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "地球与宇宙",
       "lang": "综合"
     },
     {
@@ -19600,7 +19600,7 @@
       "title": "The Mongol Empire",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "X41",
@@ -19609,7 +19609,7 @@
       "title": "More Valuable Than Gold",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "X42",
@@ -19636,7 +19636,7 @@
       "title": "The Panama Canal",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "X45",
@@ -19699,7 +19699,7 @@
       "title": "Takehito\\u0027s Tango",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "X52",
@@ -19861,7 +19861,7 @@
       "title": "1849: The California Gold Rush",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "Y02",
@@ -19942,7 +19942,7 @@
       "title": "American Women in Sports",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "介词反义"
     },
     {
       "id": "Y11",
@@ -20014,7 +20014,7 @@
       "title": "Book 17: The Cat in the Palace",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Y19",
@@ -20050,7 +20050,7 @@
       "title": "Early Immigration in the United States",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Y23",
@@ -20059,7 +20059,7 @@
       "title": "Earthquakes, Volcanoes, and Tsunamis",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "Y24",
@@ -20193,7 +20193,7 @@
       "num": 38,
       "title": "The Hard Stuff! All About Bones",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "身体与健康",
       "lang": "介词反义"
     },
     {
@@ -20246,8 +20246,8 @@
       "level": "Y",
       "num": 44,
       "title": "The Kingdom of Happiness",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -20509,7 +20509,7 @@
       "title": "Living in Deserts",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Y74",
@@ -20545,7 +20545,7 @@
       "title": "Meegor and the Master",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "Y78",
@@ -20687,9 +20687,9 @@
       "level": "Y",
       "num": 93,
       "title": "Puffins",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "Y94",
@@ -21103,7 +21103,7 @@
       "title": "Animal Discoveries",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Z08",
@@ -21445,7 +21445,7 @@
       "title": "The Erie Canal",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "Z46",
@@ -21472,7 +21472,7 @@
       "title": "Expedition 60: The Subarctic",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Z49",
@@ -21481,7 +21481,7 @@
       "title": "Famous Hispanic Americans: A Proud Heritage",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "Z50",
@@ -21535,7 +21535,7 @@
       "title": "Goliath Beetles: Giant Insects",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Z56",
@@ -21669,8 +21669,8 @@
       "num": 70,
       "title": "Isaac Newton: Matter, Math, and Motion",
       "type": "NF",
-      "theme": "思维与创意",
-      "lang": "综合"
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "Z71",
@@ -21850,7 +21850,7 @@
       "title": "Paving the Way: American Sports Legends",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "Z91",
@@ -21876,8 +21876,8 @@
       "num": 93,
       "title": "Prairies Alive!",
       "type": "NF",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "Z94",
@@ -21985,7 +21985,7 @@
       "title": "A Selection From Robinson Crusoe",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Z106",
@@ -22183,7 +22183,7 @@
       "title": "Volcanoes",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "Z128",
@@ -22307,8 +22307,8 @@
       "level": "Z1",
       "num": 9,
       "title": "The Balloon Brothers",
-      "type": "NF",
-      "theme": "生命世界",
+      "type": "F",
+      "theme": "社会与人文",
       "lang": "介词反义"
     },
     {
@@ -22433,18 +22433,18 @@
       "level": "Z1",
       "num": 23,
       "title": "Cricket",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "Z124",
       "level": "Z1",
       "num": 24,
       "title": "Crowdsourcing",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "Z125",
@@ -22523,8 +22523,8 @@
       "level": "Z1",
       "num": 33,
       "title": "Fungus Among Us",
-      "type": "F",
-      "theme": "社会与人文",
+      "type": "NF",
+      "theme": "生命世界",
       "lang": "综合"
     },
     {
@@ -22660,7 +22660,7 @@
       "title": "Komodo Dragons: Giant Reptiles",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Z149",
@@ -22840,7 +22840,7 @@
       "title": "The Panama Canal",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "Z169",
@@ -22929,7 +22929,7 @@
       "num": 78,
       "title": "The Story of Lewis and Clark Book 1: Up the Missouri River",
       "type": "NF",
-      "theme": "思维与创意",
+      "theme": "地球与宇宙",
       "lang": "天气水句式"
     },
     {
@@ -22939,7 +22939,7 @@
       "title": "Teotihuacan",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "Z180",
@@ -22948,7 +22948,7 @@
       "title": "The Reluctant Dragon (Part 1)",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Z181",
@@ -22957,7 +22957,7 @@
       "title": "The Reluctant Dragon (Part 2)",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Z182",
@@ -22966,7 +22966,7 @@
       "title": "The Reluctant Dragon (Part 3)",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Z183",
@@ -23002,7 +23002,7 @@
       "title": "The U.S. Government At Work",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "介词反义"
     },
     {
       "id": "Z187",
@@ -23317,7 +23317,7 @@
       "title": "American Farms: Past, Present, and Future",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Can句式"
+      "lang": "动物认知"
     },
     {
       "id": "Z211",
@@ -23326,7 +23326,7 @@
       "title": "American Football",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "Z212",
@@ -23360,8 +23360,8 @@
       "level": "Z2",
       "num": 15,
       "title": "The Balloon Brothers",
-      "type": "NF",
-      "theme": "生命世界",
+      "type": "F",
+      "theme": "社会与人文",
       "lang": "介词反义"
     },
     {
@@ -23389,7 +23389,7 @@
       "title": "Battle Over Britain",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Z219",
@@ -23605,7 +23605,7 @@
       "title": "Golf",
       "type": "NF",
       "theme": "社会与人文",
-      "lang": "Go句式"
+      "lang": "综合"
     },
     {
       "id": "Z243",
@@ -23614,7 +23614,7 @@
       "title": "Goliath Beetles: Giant Insects",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Z244",
@@ -23623,7 +23623,7 @@
       "title": "Goliath Bird-Eating Spiders: Giant Arachnids",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Go句式"
+      "lang": "动物认知"
     },
     {
       "id": "Z245",
@@ -23749,7 +23749,7 @@
       "title": "Japanese American Incarceration During World War II",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "Can句式"
+      "lang": "动物认知"
     },
     {
       "id": "Z259",
@@ -23803,7 +23803,7 @@
       "title": "Living in Deserts",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Z265",
@@ -23911,7 +23911,7 @@
       "title": "The Panama Canal",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "Z277",
@@ -23929,7 +23929,7 @@
       "title": "Paving the Way: American Sports Legends",
       "type": "F",
       "theme": "社会与人文",
-      "lang": "Can句式"
+      "lang": "综合"
     },
     {
       "id": "Z279",
@@ -23972,9 +23972,9 @@
       "level": "Z2",
       "num": 83,
       "title": "Puffins",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "Z284",
@@ -23999,9 +23999,9 @@
       "level": "Z2",
       "num": 86,
       "title": "The Raven",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "Z287",
@@ -24046,7 +24046,7 @@
       "title": "A Selection From Robinson Crusoe",
       "type": "NF",
       "theme": "生命世界",
-      "lang": "介词反义"
+      "lang": "动物认知"
     },
     {
       "id": "Z292",
@@ -24062,9 +24062,9 @@
       "level": "Z2",
       "num": 93,
       "title": "Stephen Hawking: Traveling Through the Universe",
-      "type": "F",
-      "theme": "社会与人文",
-      "lang": "综合"
+      "type": "NF",
+      "theme": "生命世界",
+      "lang": "动物认知"
     },
     {
       "id": "Z294",
@@ -24172,7 +24172,7 @@
       "title": "Volcanoes",
       "type": "NF",
       "theme": "地球与宇宙",
-      "lang": "Can句式"
+      "lang": "Not反义句式"
     },
     {
       "id": "Z2106",
