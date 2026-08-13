@@ -275,8 +275,10 @@
   #sazWeek .wk{white-space:nowrap;font-weight:600}
   #sazWeek .wf{white-space:nowrap;color:var(--accent2);font-weight:600}
   #sazWeek .wb code{background:#f4efe6;padding:1px 5px;border-radius:5px;font-size:11.5px;color:#6b6356}
-  #sazWeek .sep{color:var(--line)}
-  #sazWeek .mini-exp{display:inline-block;background:#eef6f3;color:#2f7d6e;border-radius:5px;padding:1px 6px;font-size:11.5px;margin:1px 0}
+  #sazWeek .wb .ov-day{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:12.5px;border-bottom:1px dashed var(--line)}
+  #sazWeek .wb .ov-day:last-child{border-bottom:none}
+  #sazWeek .wb .ov-day b{white-space:nowrap;color:#6b6356;font-weight:600;min-width:92px}
+  #sazWeek .wb .ov-day span{color:#36322c}
   #sazWeek .nf-week{display:none;margin-top:14px}
   #sazWeek .nf-week.active{display:block}
   #sazWeek .whead{font-size:19px;font-weight:700;margin:18px 0 4px}
@@ -299,6 +301,10 @@
   .modeTabs .mtab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:8px 14px;border-radius:20px;cursor:pointer;font-size:13.5px;font-weight:600;transition:.15s}
   .modeTabs .mtab:hover{border-color:var(--brand)}
   .modeTabs .mtab.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .sazw-themes{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 4px}
+  .sazw-themes .ttab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 12px;border-radius:18px;cursor:pointer;font-size:13px;transition:.15s}
+  .sazw-themes .ttab:hover{border-color:var(--accent)}
+  .sazw-themes .ttab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
   @media print{
     body.print-nf .tabs{display:none!important}
     body.print-nf .modeTabs{display:none!important}
@@ -507,10 +513,9 @@
       <div id="sazWeek" style="display:none">
         <p class="nf-note">🧪 一周一个 SAZ 科学单元：按「单元制（Low / Mid / High 三档）」组织——每天读一档，周末做实验 / 观察。每单元附真实书目核心词（来自 SAZ 官方 TOC 抽取），在家做 PBL / 科学启蒙一站搞定。SAZ 最低档为 K–2（约 5 岁+）。</p>
         <div id="sazwPlan">
-          <div class="controls" style="margin-bottom:6px;align-items:center;flex-wrap:wrap">
-            <label style="color:var(--muted);font-size:13px">主题域：</label>
-            <select id="sazwTheme"></select>
-            <label style="color:var(--muted);font-size:13px;margin-left:8px">年级档：</label>
+          <div class="sazw-themes" id="sazwThemeTabs"></div>
+          <div class="controls" style="margin-top:10px;margin-bottom:6px;align-items:center;flex-wrap:wrap">
+            <label style="color:var(--muted);font-size:13px">年级档：</label>
             <select id="sazwBand">
               <option value="">全部年级</option>
               <option value="K-2">K–2（约 5–8 岁）</option>
@@ -528,10 +533,9 @@
             <button id="sazwRebuild" class="act">生成周计划</button>
             <span id="sazwNote" style="color:var(--muted);font-size:12px"></span>
           </div>
-          <div class="nf-tabs" id="sazwTabs"></div>
-          <div class="ovnote">🗂 总览（点上方标签看每周详情）：</div>
+          <div class="ovnote">🗂 总览（下方展开每日完整安排）：</div>
           <div class="ov-wrap"><table class="ov"><thead><tr><th style="width:74px">周</th><th style="width:130px">科学单元</th><th>每日核心书 / 实验</th></tr></thead><tbody id="sazwOv"></tbody></table></div>
-          <div id="sazwWeeks"></div>
+          <div id="sazwPanels"></div>
           <button class="printbtn" id="sazwPrintBtn">🖨 打印 / 存 PDF</button>
         </div>
       </div>
@@ -27471,12 +27475,25 @@ function sazWeekPanel(w){
     '<div class="ext">🔤 本单元核心词（'+w.core.length+'）：'+w.core.map(function(w2){return '<code>'+esc(w2)+'</code>';}).join(' ')+'</div></div>';
 }
 function renderSAZWeek(){
-  var theme=$('#sazwTheme').value, gb=$('#sazwBand').value, weeks=$('#sazwWeeks').value;
   var all=sazUnits();
-  if(!$('#sazwTheme').options.length){
-    var themes=[...new Set(all.map(u=>u.theme))].sort();
-    $('#sazwTheme').innerHTML='<option value="">全部主题域</option>'+themes.map(function(t){return '<option value="'+esc(t)+'">'+esc(t)+'</option>';}).join('');
+  // 初始化主题域标签
+  var themeTabs=$('#sazwThemeTabs');
+  if(!themeTabs.dataset.inited){
+    var themes=['全部主题域', ...new Set(all.map(u=>u.theme))].sort();
+    themeTabs.innerHTML=themes.map(function(t,i){
+      return '<button class="ttab'+(i===0?' active':'')+'" data-t="'+(t==='全部主题域'?'':esc(t))+'">'+esc(t)+'</button>';
+    }).join('');
+    themeTabs.querySelectorAll('.ttab').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        themeTabs.querySelectorAll('.ttab').forEach(function(x){x.classList.remove('active');});
+        btn.classList.add('active');
+        renderSAZWeek();
+      });
+    });
+    themeTabs.dataset.inited='1';
   }
+  var theme=themeTabs.querySelector('.ttab.active')?.dataset.t||'';
+  var gb=$('#sazwBand').value, weeks=$('#sazwWeeks').value;
   var units=all.filter(function(u){ return (!theme||u.theme===theme) && (!gb||u.gb===gb); });
   var n = weeks==='all' ? Math.min(units.length,20) : (parseInt(weeks,10)||4);
   var wks=sazBuildWeeks(theme,gb,n);
@@ -27484,32 +27501,21 @@ function renderSAZWeek(){
     ? '⚠️ 该范围暂无 SAZ 单元，请放宽主题域或年级档。'
     : '已生成 '+wks.length+' 周（范围：'+(theme||'全部主题域')+' · '+(gb?('G'+gb):'全部年级')+'）。该范围内共 '+units.length+' 个科学单元可选。';
   $('#sazwNote').textContent=note;
-  $('#sazwTabs').innerHTML=wks.map(function(w){return '<button class="nf-tab" data-w="'+w.week+'">'+w.emo+' 第'+w.week+'周 '+esc(w.title)+'</button>';}).join('');
+  // 总览：每日完整说明
   $('#sazwOv').innerHTML=wks.map(function(w){
     var cells=w.days.map(function(d){
-      if(d.kind==='exp') return '<span class="mini-exp">🔬'+esc(d.exp.t)+'</span>';
-      if(d.kind==='read') return '<code>'+esc(d.book.id)+'</code> '+esc(d.book.title);
-      return '<span class="mini-exp">'+esc(d.icon)+esc(d.title)+'</span>';
-    }).join(' <span class="sep">·</span> ');
+      if(d.kind==='exp') return '<div class="ov-day"><b>🔬 '+esc(d.exp.t)+'</b><span>'+esc(d.exp.m.join('、'))+'</span></div>';
+      if(d.kind==='read') return '<div class="ov-day"><b>📖 '+esc(d.book.id)+'</b><span>《'+esc(d.book.title)+'》 '+esc(d.book.band)+'</span></div>';
+      return '<div class="ov-day"><b>'+esc(d.icon)+' '+esc(d.title)+'</b><span>'+esc(d.text)+'</span></div>';
+    }).join('');
     return '<tr><td class="wk">'+w.emo+' W'+w.week+'</td><td class="wf">'+esc(w.title)+'</td><td class="wb">'+cells+'</td></tr>';
   }).join('');
-  $('#sazwWeeks').innerHTML=wks.map(sazWeekPanel).join('');
-  var tabEls=document.querySelectorAll('#sazWeek .nf-tab');
-  tabEls.forEach(function(t){
-    t.addEventListener('click',function(){
-      tabEls.forEach(function(x){x.classList.remove('active');});
-      document.querySelectorAll('#sazWeek .nf-week').forEach(function(x){x.classList.remove('active');});
-      t.classList.add('active');
-      document.getElementById('sazwW'+t.dataset.w).classList.add('active');
-      window.scrollTo({top:document.querySelector('#sazWeek .nf-tabs').offsetTop-8,behavior:'smooth'});
-    });
-  });
-  if(tabEls[0]) tabEls[0].classList.add('active');
-  var first=document.getElementById('sazwW'+wks[0].week); if(first) first.classList.add('active');
+  $('#sazwPanels').innerHTML=wks.map(sazWeekPanel).join('');
+  // 去掉周 tab 后，所有周面板默认显示
+  document.querySelectorAll('#sazWeek .nf-week').forEach(function(x){x.classList.add('active');});
   if(!$('#sazwRebuild').dataset.bound){
     var r=function(){ renderSAZWeek(); };
     $('#sazwRebuild').addEventListener('click',r);
-    $('#sazwTheme').addEventListener('change',r);
     $('#sazwBand').addEventListener('change',r);
     $('#sazwWeeks').addEventListener('change',r);
     $('#sazwPrintBtn').addEventListener('click',function(){
