@@ -30,10 +30,7 @@ _inspect_nf.js
 _nf_update.py
 _script.js
 _shot.js
-_verify.js
-_verify_dist.js
-_verify_xlevels.js
-_verify_themes.js
+_verify*.js
 _v310.html
 lv.html
 live_*.html

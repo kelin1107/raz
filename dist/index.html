@@ -170,14 +170,8 @@
   .rung .rex{margin:6px 0 0;font-size:13px;color:var(--muted)}
   .rung .rmeta{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:12.5px;color:#475569}
   .rung .rmeta b{color:#1e293b}
-  .lvcheck{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 4px}
-  .lvcheck label{display:inline-flex;align-items:center;gap:5px;background:#fff;border:1px solid var(--line);
-    border-radius:8px;padding:5px 9px;font-size:13px;cursor:pointer}
-  .lvcheck label.on{border-color:var(--brand);background:var(--soft)}
-  .lvcheck input{accent-color:var(--brand);margin:0}
-  .presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
-  .presets button{background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 12px;font-size:13px;cursor:pointer}
-  .presets button:hover{border-color:var(--brand);background:var(--soft)}
+  .guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  @media(max-width:900px){.guide-grid{grid-template-columns:1fr}}
   .themebars{margin-top:10px}
   .themebar{display:grid;grid-template-columns:88px 1fr 40px;gap:10px;align-items:center;margin-bottom:8px;font-size:13px}
   .themebar .tb-track{background:#eef2f7;border-radius:6px;height:18px;overflow:hidden}
@@ -267,7 +261,7 @@
 <body>
 <header>
   <h1>📚 RAZ + SAZ 知识库</h1>
-  <p>总表 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 阅读方法 · 分级对照/SAZ 书单 · 主题分类 · NF 周计划 · v3.14</p>
+  <p>总表 · 使用导读 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 级别总览 · 分级对照 · SAZ 书单 · 主题分类 · NF 周计划 · v3.15</p>
 </header>
 
 <div class="compliance">
@@ -284,12 +278,11 @@
 
   <div class="tabs">
     <div class="tab active" data-t="master">📑 总表</div>
+    <div class="tab" data-t="guide">📖 使用导读</div>
     <div class="tab" data-t="lookup">🔎 查</div>
     <div class="tab" data-t="repeat">🔁 重复规则</div>
-    <div class="tab" data-t="methods">📖 阅读方法</div>
     <div class="tab" data-t="levels">📊 级别总览</div>
     <div class="tab" data-t="ar">🔢 分级对照</div>
-    <div class="tab" data-t="ladder">🪜 阅读阶梯</div>
     <div class="tab" data-t="saz">🔬 SAZ 书单</div>
     <div class="tab" data-t="themes">🏷️ 主题分类</div>
     <div class="tab" data-t="nf">📅 NF 周计划</div>
@@ -366,19 +359,6 @@
     </div>
   </section>
 
-  <!-- ===== 阅读方法 ===== -->
-  <section class="panel" id="methods">
-    <div class="card">
-      <h2>📖 阅读方法 <span class="tag">how to read & advance</span></h2>
-      <div class="rule-block"><h3>① 定级规则（从哪一级开始）</h3><div class="steplist" id="rPlacement"></div></div>
-      <div class="rule-block"><h3>② 单本日常流程：听 → 读 → 测</h3><div class="steplist" id="rDaily"></div></div>
-      <div class="rule-block"><h3>③ 阅读三遍法（黄金法则）</h3><div class="steplist" id="rPass"></div></div>
-      <div class="rule-block"><h3>④ 升级标准</h3><div class="steplist" id="rAdv"></div></div>
-      <div class="rule-block"><h3>⑤ 复习与间隔（防遗忘）</h3><div class="steplist" id="rReview"></div></div>
-      <div class="rule-block"><h3>⑥ 推进节奏参考</h3><div class="grid2" id="rPace"></div></div>
-    </div>
-  </section>
-
   <!-- ===== 级别总览 ===== -->
   <section class="panel" id="levels">
     <div class="nfbanner">
@@ -427,45 +407,27 @@
     </div>
   </section>
 
-  <!-- ===== 阅读阶梯 ===== -->
-  <section class="panel" id="ladder">
+  <!-- ===== 使用导读 ===== -->
+  <section class="panel" id="guide">
     <div class="kidnote">
-      🪜 <b>阅读阶梯</b>：把 RAZ 29 级按「能力阶段」分成 7 段（低幼启蒙 → 流利精通）。每段标注<b>适合什么水平的孩子</b>、对应 AR / 蓝思 / 年级；你也能用<b>牛津树级别 / AR / 蓝思</b>反查 RAZ 段位，并<b>勾选若干级别</b>（如 A–C）聚合看主题。
+      📖 <b>使用导读</b>：左边是「怎么读、怎么升级」的方法论，右边是 RAZ 29 级按能力阶段划分的 7 段阶梯。想查其他分级对应 RAZ，请去<b>分级对照</b>；想按主题找书，请去<b>主题分类</b>。
     </div>
 
-    <div class="card">
-      <h2>🪜 阅读阶梯总览 <span class="tag">7 段能力带</span></h2>
-      <div class="ladder" id="ladderRungs"></div>
-    </div>
-
-    <div class="card">
-      <h2>🔄 对标转换器 <span class="tag">牛津树 / AR / 蓝思 → RAZ</span></h2>
-      <div class="conv">
-        <div class="convbox">
-          <div class="controls" style="margin-bottom:10px">
-            <select id="convMode">
-              <option value="ort">牛津树 (Oxford Reading Tree)</option>
-              <option value="ar">AR (ATOS)</option>
-              <option value="lex">蓝思 (Lexile)</option>
-            </select>
-          </div>
-          <p style="margin:0 0 8px;color:var(--muted)" id="convHint">输入牛津树级别（如 3）：</p>
-          <input type="text" id="convIn" placeholder="如 3 / 1.5 / 200L">
-          <button class="act" id="convBtn">查 RAZ 段位</button>
-          <div class="result" id="convOut"></div>
-        </div>
+    <div class="guide-grid">
+      <div class="card">
+        <h2>📖 阅读方法 <span class="tag">how to read & advance</span></h2>
+        <div class="rule-block"><h3>① 定级规则（从哪一级开始）</h3><div class="steplist" id="rPlacement"></div></div>
+        <div class="rule-block"><h3>② 单本日常流程：听 → 读 → 测</h3><div class="steplist" id="rDaily"></div></div>
+        <div class="rule-block"><h3>③ 阅读三遍法（黄金法则）</h3><div class="steplist" id="rPass"></div></div>
+        <div class="rule-block"><h3>④ 升级标准</h3><div class="steplist" id="rAdv"></div></div>
+        <div class="rule-block"><h3>⑤ 复习与间隔（防遗忘）</h3><div class="steplist" id="rReview"></div></div>
+        <div class="rule-block"><h3>⑥ 推进节奏参考</h3><div class="grid2" id="rPace"></div></div>
       </div>
-      <p style="font-size:12px;color:var(--muted);margin-top:12px">
-        说明：牛津树↔RAZ、AR↔RAZ、蓝思↔RAZ 均为<b>近似对应</b>（综合 Learning A-Z 官方表与公开阅读相关性研究）。同一输入可能横跨多个 RAZ 级，这里给出<b>起始级</b>；定级请结合孩子实际朗读流畅度与 Quiz 正确率。牛津树覆盖常见 1–16 级，更高阶按公式近似。
-      </p>
-    </div>
 
-    <div class="card">
-      <h2>☑️ 勾选级别看主题 <span class="tag">A–C 举例</span></h2>
-      <p style="color:var(--muted);font-size:13px;margin:0 0 10px">勾选若干级别（或点预设区间），下方聚合这些级别的「6 大主题族分布」与书目清单。当前种子数据仅含 aa + A，其余级别显示「暂无种子书目」。</p>
-      <div class="presets" id="lvPresets"></div>
-      <div class="lvcheck" id="lvCheck"></div>
-      <div id="lvCheckOut"></div>
+      <div class="card">
+        <h2>🪜 阅读阶梯总览 <span class="tag">7 段能力带</span></h2>
+        <div class="ladder" id="ladderRungs"></div>
+      </div>
     </div>
   </section>
 
@@ -532,14 +494,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.14 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.15 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.14",
+    "version": "3.15",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -27132,10 +27094,10 @@ function renderRepeat(){
   } else box.className='detail';
 }
 
-/* ---------- 阅读方法 ---------- */
+/* ---------- 使用导读 ---------- */
 function steps(arr){ return arr.map(s=>`<div class="step"><div class="n">${s.step||''}</div><div class="body"><b>${esc(s.name)}</b><p>${esc(s.detail)}</p></div></div>`).join(''); }
 function stepsNo(arr){ return arr.map(s=>`<div class="step"><div class="n">•</div><div class="body"><b>${esc(s.name)}</b><p>${esc(s.detail)}</p></div></div>`).join(''); }
-function renderMethods(){
+function renderGuide(){
   const r=DATA.repetitionRules;
   $('#rPlacement').innerHTML=steps(r.placement);
   $('#rDaily').innerHTML=steps(r.dailyRoutine);
@@ -27143,6 +27105,39 @@ function renderMethods(){
   $('#rAdv').innerHTML=steps(r.advance||[]);
   $('#rReview').innerHTML=steps(r.review||[]);
   $('#rPace').innerHTML=(r.pace||[]).map(p=>`<div class="mini"><b>${esc(p.name)}</b><p style="margin:4px 0 0;color:var(--muted);font-size:13px">${esc(p.detail)}</p></div>`).join('');
+
+  const order=[]; const seen={};
+  DATA.levels.forEach(l=>{ if(!seen[l.stage]){ seen[l.stage]=1; order.push(l.stage); } });
+  const info={
+    '启蒙 GK':{desc:'低幼启蒙：刚接触英文、能指认图画、会说零散单词的孩子。',ex:'例：4–6 岁、幼儿园小/中班；零基础，只会 hello / apple / 颜色词这类孤立词，需大量图片辅助。',cls:'band-gk'},
+    '基础 G1':{desc:'基础起步：能读完整句子、开始理解简单情节的孩子。',ex:'例：5–8 岁、大班到小学一年级；能用英文说「我要吃苹果」「小狗在跑」这种完整句。',cls:'band-g1'},
+    '进阶 G2':{desc:'进阶阅读：能独立读段落、理解因果关系的孩子。',ex:'例：7–9 岁、小学二三年级；能读小短文并回答「为什么」「然后呢」。',cls:'band-g2'},
+    '学术 G3':{desc:'学术过渡：能读信息类文本、提取事实的孩子。',ex:'例：7–10 岁、小学三四年级；开始读科普/传记，能找出「主题是动物」这类信息。',cls:'band-g3'},
+    '学术 G4':{desc:'学术拓展：能读章节书、处理多观点的孩子。',ex:'例：8–11 岁、小学四五年级；读《神奇树屋》类初章书。',cls:'band-g4'},
+    '学术 G5':{desc:'学术高阶：接近母语同龄阅读水平的孩子。',ex:'例：9–11 岁、小学五六年级；能读纽伯瑞奖章节书、科普杂志。',cls:'band-g5'},
+    '高阶 G5+':{desc:'流利精通：阅读接近成人非虚构、能自主研究的孩子。',ex:'例：10 岁+、小升初；读科普新闻、维基类长文，准备 KET/PET 及以上。',cls:'band-g5'}
+  };
+  const byStage={};
+  DATA.levels.forEach(l=>{ (byStage[l.stage]=byStage[l.stage]||[]).push(l); });
+  $('#ladderRungs').innerHTML=order.map(stage=>{
+    const ls=byStage[stage], i=info[stage]||{desc:'',ex:'',cls:'band-g1'};
+    const lvTags=ls.map(l=>`<span class="lvtag">${esc(l.level)}</span>`).join('');
+    const aMin=Math.min(...ls.map(l=>parseInt(l.ages.split('-')[0])));
+    const aMax=Math.max(...ls.map(l=>parseInt(l.ages.split('-')[1])));
+    const lexLo=ls.map(l=>parseLevelLex(l.lexile).lo).sort((a,b)=>a-b)[0];
+    const lexHi=ls.map(l=>parseLevelLex(l.lexile).hi).sort((a,b)=>b-a)[0];
+    return `<div class="rung ${i.cls}">
+      <div class="rh"><span class="rname">${esc(stage)}</span><span class="rlvs">${lvTags}</span></div>
+      <p class="rdesc">${esc(i.desc)}</p>
+      <p class="rex">${esc(i.ex)}</p>
+      <div class="rmeta">
+        <span>👶 年龄 <b>${aMin}–${aMax}岁</b></span>
+        <span>📈 AR <b>${Math.min(...ls.map(l=>l.arLow))}–${Math.max(...ls.map(l=>l.arHigh))}</b></span>
+        <span>📚 蓝思 <b>${lexLo<0?'BR':lexLo+'L'}–${lexHi}L</b></span>
+        <span>🎓 ${esc(ls[0].grade)} 起</span>
+      </div>
+    </div>`;
+  }).join('');
 }
 
 /* ---------- 级别总览 ---------- */
@@ -27264,7 +27259,7 @@ function renderSAZ(){
   draw();
 }
 
-/* ---------- 阅读阶梯 ---------- */
+/* ---------- 分级对照辅助函数 ---------- */
 function parseLex(s){
   s=String(s).trim().toUpperCase().replace(/L$/,'');
   if(s.startsWith('BR')){ const m=s.match(/BR-?(\d+)/); return m? -parseInt(m[1]) : -1; }
@@ -27336,7 +27331,7 @@ const XL={
   '红火箭':[ {lv:'Lilac',raz:'aa'},{lv:'Magenta',raz:'A'},{lv:'Red',raz:'B'},{lv:'Yellow',raz:'C'},{lv:'Blue',raz:'D'},{lv:'Green',raz:'E'},{lv:'Orange',raz:'F'},{lv:'Turquoise',raz:'G'},{lv:'Purple',raz:'H'},{lv:'Gold',raz:'I'},{lv:'Silver',raz:'J'},{lv:'Emerald',raz:'K'},{lv:'Ruby',raz:'L'},{lv:'Diamond',raz:'M'},{lv:'Sapphire',raz:'N'} ],
   '大猫':[ {lv:'Pink A',raz:'aa'},{lv:'Pink B',raz:'A'},{lv:'Red A',raz:'A'},{lv:'Red B',raz:'B'},{lv:'Yellow A',raz:'B'},{lv:'Yellow B',raz:'C'},{lv:'Blue A',raz:'C'},{lv:'Blue B',raz:'D'},{lv:'Green A',raz:'D'},{lv:'Green B',raz:'E'},{lv:'Orange A',raz:'E'},{lv:'Orange B',raz:'F'},{lv:'Turquoise A',raz:'F'},{lv:'Turquoise B',raz:'G'},{lv:'Purple A',raz:'G'},{lv:'Purple B',raz:'H'},{lv:'Gold A',raz:'H'},{lv:'Gold B',raz:'I'},{lv:'White A',raz:'I'},{lv:'White B',raz:'J'},{lv:'Lime A',raz:'J'},{lv:'Lime B',raz:'K'},{lv:'Copper',raz:'L'},{lv:'Topaz',raz:'M'},{lv:'Ruby',raz:'N'},{lv:'Emerald',raz:'O'},{lv:'Sapphire',raz:'P'},{lv:'Diamond',raz:'Q'},{lv:'Pearl',raz:'R'} ],
   '培生':[ {lv:'预备级',raz:'aa'},{lv:'1级',raz:'A'},{lv:'2级',raz:'B'},{lv:'3级',raz:'C'},{lv:'4级',raz:'D'},{lv:'5级',raz:'E'},{lv:'6级',raz:'F'},{lv:'7级',raz:'G'},{lv:'8级',raz:'H'},{lv:'9级',raz:'I'},{lv:'10级',raz:'J'},{lv:'11级',raz:'K'},{lv:'12级',raz:'L'} ],
-  '海尼曼':[ {lv:'A',raz:'aa'},{lv:'B',raz:'A'},{lv:'C',raz:'B'},{lv:'D',raz:'C'},{lv:'E',raz:'D'},{lv:'F',raz:'E'},{lv:'G',raz:'F'},{lv:'H',raz:'G'},{lv:'I',raz:'H'},{lv:'J',raz:'I'},{lv:'K',raz:'J'},{lv:'L',raz:'K'},{lv:'M',raz:'L'},{lv:'N',raz:'M'},{lv:'O',raz:'N'},{lv:'P',raz:'O'},{lv:'Q',raz:'P'},{lv:'R',raz:'Q'},{lv:'S',raz:'R'},{lv:'T',raz:'S'},{lv:'U',raz:'T'},{lv:'V',raz:'U'},{lv:'W',raz:'V'},{lv:'X',raz:'W'},{lv:'Y',raz:'X'},{lv:'Z',raz:'Y'} ],
+  '海尼曼':[ {lv:'A',raz:'aa'},{lv:'B',raz:'A'},{lv:'C',raz:'B'},{lv:'D',raz:'C'},{lv:'E',raz:'D'},{lv:'F',raz:'E'},{lv:'G',raz:'F'},{lv:'H',raz:'G'},{lv:'I',raz:'H'},{lv:'J',raz:'I'},{lv:'K',raz:'J'},{lv:'L',raz:'K'},{lv:'M',raz:'L'},{lv:'N',raz:'M'},{lv:'O',raz:'N'},{lv:'P',raz:'O'},{lv:'Q',raz:'P'},{lv:'R',raz:'Q'},{lv:'S',raz:'R'},{lv:'T',raz:'S'},{lv:'U',raz:'T'},{lv:'V',raz:'U'},{lv:'W',raz:'V'},{lv:'X',raz:'W'},{lv:'Y',raz:'X'},{lv:'Z',raz:'Y'},{lv:'GK',raz:'aa'},{lv:'G1',raz:'D'},{lv:'G2',raz:'J'} ],
   '兰登':[ {lv:'Step 1',raz:'C'},{lv:'Step 2',raz:'E'},{lv:'Step 3',raz:'G'},{lv:'Step 4',raz:'I'},{lv:'Step 5',raz:'K'} ],
   'Wonders':[ {lv:'K',raz:'aa'},{lv:'1',raz:'D'},{lv:'2',raz:'K'},{lv:'3',raz:'Q'},{lv:'4',raz:'T'},{lv:'5',raz:'W'},{lv:'6',raz:'Z'} ],
   'Power Up':[ {lv:'Starter',raz:'aa'},{lv:'Level 1',raz:'C'},{lv:'Level 2',raz:'E'},{lv:'Level 3',raz:'G'},{lv:'Level 4',raz:'I'},{lv:'Level 5',raz:'K'},{lv:'Level 6',raz:'M'} ],
@@ -27356,7 +27351,7 @@ const CONV_MODES={
   rr:{label:'红火箭',ph:'如 Magenta / Sapphire',toRaz:v=>xToRaz('红火箭',v)},
   bc:{label:'大猫 Big Cat',ph:'如 Pink A / Ruby',toRaz:v=>xToRaz('大猫',v)},
   pearson:{label:'培生 Pearson',ph:'如 预备级 / 5',toRaz:v=>xToRaz('培生',v)},
-  heinemann:{label:'海尼曼',ph:'如 A / G',toRaz:v=>xToRaz('海尼曼',v)},
+  heinemann:{label:'海尼曼',ph:'如 A / G / GK / G1 / G2',toRaz:v=>xToRaz('海尼曼',v)},
   randhouse:{label:'兰登',ph:'如 Step 1 / Step 4',toRaz:v=>xToRaz('兰登',v)},
   wonders:{label:'Wonders',ph:'如 K / 2 / 6',toRaz:v=>xToRaz('Wonders',v)},
   powerup:{label:'Power Up',ph:'如 Starter / Level 3',toRaz:v=>xToRaz('Power Up',v)},
@@ -27407,110 +27402,6 @@ function convCard(raz, srcLabel){
    </div>
    <p style="margin:10px 0 0;font-size:13px;color:var(--muted)">${esc(lv.focus)}</p>`;
 }
-function runConverter(){
-  const mode=$('#convMode').value, out=$('#convOut');
-  if(mode==='ort'){
-    const v=parseFloat($('#convIn').value);
-    if(!isFinite(v)){ out.innerHTML='<span class="emptynote">请输入牛津树级别（数字，如 1 或 3）。</span>'; return; }
-    const raz=ortToRaz(v);
-    out.innerHTML=raz? convCard(raz, '牛津树 第 '+v+' 级') : '<span class="emptynote">无法对应。</span>';
-  } else if(mode==='ar'){
-    const v=parseFloat($('#convIn').value);
-    if(!isFinite(v)){ out.innerHTML='<span class="emptynote">请输入 AR 值（如 1.5）。</span>'; return; }
-    out.innerHTML=convCard(arToRaz(v), 'AR '+v);
-  } else {
-    const raw=$('#convIn').value.trim();
-    if(!raw){ out.innerHTML='<span class="emptynote">请输入蓝思值（如 200L 或 BR）。</span>'; return; }
-    out.innerHTML=convCard(lexToRaz(parseLex(raw)), '蓝思 '+raw);
-  }
-}
-function renderLadder(){
-  const order=[]; const seen={};
-  DATA.levels.forEach(l=>{ if(!seen[l.stage]){ seen[l.stage]=1; order.push(l.stage); } });
-  const info={
-    '启蒙 GK':{desc:'低幼启蒙：刚接触英文、能指认图画、会说零散单词的孩子。',ex:'例：4–6 岁、幼儿园小/中班；零基础，只会 hello / apple / 颜色词这类孤立词，需大量图片辅助。',cls:'band-gk'},
-    '基础 G1':{desc:'基础起步：能读完整句子、开始理解简单情节的孩子。',ex:'例：5–8 岁、大班到小学一年级；能用英文说「我要吃苹果」「小狗在跑」这种完整句。',cls:'band-g1'},
-    '进阶 G2':{desc:'进阶阅读：能独立读段落、理解因果关系的孩子。',ex:'例：7–9 岁、小学二三年级；能读小短文并回答「为什么」「然后呢」。',cls:'band-g2'},
-    '学术 G3':{desc:'学术过渡：能读信息类文本、提取事实的孩子。',ex:'例：7–10 岁、小学三四年级；开始读科普/传记，能找出「主题是动物」这类信息。',cls:'band-g3'},
-    '学术 G4':{desc:'学术拓展：能读章节书、处理多观点的孩子。',ex:'例：8–11 岁、小学四五年级；读《神奇树屋》类初章书。',cls:'band-g4'},
-    '学术 G5':{desc:'学术高阶：接近母语同龄阅读水平的孩子。',ex:'例：9–11 岁、小学五六年级；能读纽伯瑞奖章节书、科普杂志。',cls:'band-g5'},
-    '高阶 G5+':{desc:'流利精通：阅读接近成人非虚构、能自主研究的孩子。',ex:'例：10 岁+、小升初；读科普新闻、维基类长文，准备 KET/PET 及以上。',cls:'band-g5'}
-  };
-  const byStage={};
-  DATA.levels.forEach(l=>{ (byStage[l.stage]=byStage[l.stage]||[]).push(l); });
-  $('#ladderRungs').innerHTML=order.map(stage=>{
-    const ls=byStage[stage], i=info[stage]||{desc:'',ex:'',cls:'band-g1'};
-    const lvTags=ls.map(l=>`<span class="lvtag">${esc(l.level)}</span>`).join('');
-    const aMin=Math.min(...ls.map(l=>parseInt(l.ages.split('-')[0])));
-    const aMax=Math.max(...ls.map(l=>parseInt(l.ages.split('-')[1])));
-    const lexLo=ls.map(l=>parseLevelLex(l.lexile).lo).sort((a,b)=>a-b)[0];
-    const lexHi=ls.map(l=>parseLevelLex(l.lexile).hi).sort((a,b)=>b-a)[0];
-    return `<div class="rung ${i.cls}">
-      <div class="rh"><span class="rname">${esc(stage)}</span><span class="rlvs">${lvTags}</span></div>
-      <p class="rdesc">${esc(i.desc)}</p>
-      <p class="rex">${esc(i.ex)}</p>
-      <div class="rmeta">
-        <span>👶 年龄 <b>${aMin}–${aMax}岁</b></span>
-        <span>📈 AR <b>${Math.min(...ls.map(l=>l.arLow))}–${Math.max(...ls.map(l=>l.arHigh))}</b></span>
-        <span>📚 蓝思 <b>${lexLo<0?'BR':lexLo+'L'}–${lexHi}L</b></span>
-        <span>🎓 ${esc(ls[0].grade)} 起</span>
-      </div>
-    </div>`;
-  }).join('');
-
-  $('#convMode').addEventListener('change',e=>{
-    const m=e.target.value;
-    if(m==='ort'){ $('#convHint').textContent='输入牛津树级别（如 3）：'; $('#convIn').placeholder='如 3'; }
-    else if(m==='ar'){ $('#convHint').textContent='输入 AR 值（如 1.5）：'; $('#convIn').placeholder='如 1.5'; }
-    else { $('#convHint').textContent='输入蓝思值（如 200L 或 BR）：'; $('#convIn').placeholder='如 200L'; }
-  });
-  $('#convBtn').addEventListener('click',runConverter);
-
-  buildLevelCheck();
-}
-function buildLevelCheck(){
-  const wrap=$('#lvCheck');
-  wrap.innerHTML=DATA.meta.levelOrder.map(l=>`<label><input type="checkbox" value="${l}"><span>${l}</span></label>`).join('');
-  wrap.querySelectorAll('input').forEach(cb=>cb.addEventListener('change',updateLevelCheck));
-  $('#lvPresets').innerHTML=[
-    ['aa–C · 低幼','aa,C'],['D–J · 基础','D,J'],['K–P · 进阶','K,P'],
-    ['Q–T · 学术G3','Q,T'],['U–Z2 · 高阶','U,Z2'],['全选','ALL'],['清空','NONE']
-  ].map(([t,r])=>`<button data-r="${r}">${t}</button>`).join('');
-  $('#lvPresets').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
-    const r=b.dataset.r, idx=DATA.meta.levelOrder;
-    wrap.querySelectorAll('input').forEach(cb=>{
-      let on=false;
-      if(r==='ALL') on=true;
-      else if(r==='NONE') on=false;
-      else { const [a,z]=r.split(','); const ai=idx.indexOf(a), zi=idx.indexOf(z), ci=idx.indexOf(cb.value); on=(ci>=ai&&ci<=zi); }
-      cb.checked=on;
-    });
-    updateLevelCheck();
-  }));
-}
-function updateLevelCheck(){
-  const wrap=$('#lvCheck');
-  wrap.querySelectorAll('label').forEach(lab=>lab.classList.toggle('on',lab.querySelector('input').checked));
-  const selected=DATA.meta.levelOrder.filter(l=>{ const cb=wrap.querySelector('input[value="'+l+'"]'); return cb&&cb.checked; });
-  const out=$('#lvCheckOut');
-  if(selected.length===0){ out.innerHTML='<p class="emptynote">勾选上方级别（或点预设区间），下方会聚合这些级别的「主题族分布」与书目清单。</p>'; return; }
-  const books=DATA.books.filter(b=>selected.includes(b.level));
-  const seeded=selected.filter(l=>DATA.books.some(b=>b.level===l));
-  const fams=DATA.themes.mergeFamilies.map(f=>f.family);
-  const counts={}; fams.forEach(f=>counts[f]=0);
-  books.forEach(b=>{ const fam=DATA.themes.mergeFamilies.find(f=>f.family.includes(b.theme)); if(fam) counts[fam.family]++; });
-  const maxC=Math.max(1,...fams.map(f=>counts[f]));
-  const bars=fams.map(f=>{ const c=counts[f]; return `<div class="themebar"><span>${esc(f)}</span><div class="tb-track"><div class="tb-fill" style="width:${Math.round(c/maxC*100)}%"></div></div><span class="tb-c">${c}</span></div>`; }).join('');
-  const list=books.slice().sort((a,b)=>a.level.localeCompare(b.level)||a.num-b.num).slice(0,40);
-  const rows=list.map(b=>`<div class="chkrow" onclick="jumpRep('${b.id}')"><span class="cid">${esc(b.id)}</span><span class="ct">${esc(b.title)}</span><span class="cth">${esc(b.theme)}</span></div>`).join('');
-  const noSeed=selected.filter(l=>!seeded.includes(l)).map(l=>`<span class="chip">${l}（暂无种子书目）</span>`).join('');
-  out.innerHTML=`<div class="mini" style="margin-bottom:12px"><b>已选 ${selected.length} 级</b> · 含种子书目 <b>${books.length} 本</b>（来自 ${seeded.join(',')||'无'}）。${noSeed?`<div style="margin-top:8px">${noSeed}</div>`:''}</div>
-    <h3 style="font-size:15px;margin:0 0 6px">📊 主题族分布（所选级别合集）</h3>
-    <div class="themebars">${bars}</div>
-    <h3 style="font-size:15px;margin:16px 0 6px">📚 书目清单（点任一行跳「重复规则」）</h3>
-    <div class="chklist">${rows||'<p class="emptynote">所选级别暂无种子书目。</p>'}${books.length>40?`<p class="emptynote">仅显示前 40 本，共 ${books.length} 本。</p>`:''}</div>`;
-}
-
 /* ---------- 初始化下拉 & 渲染 ---------- */
 const REP_PICK_TABS=DATA.meta.levelOrder.map(l=>({key:l, label:l==='aa'?'AA':l, levels:[l]})).concat([{key:'ALL', label:'全部', levels:DATA.meta.levelOrder}]);
 function booksInRepGroup(g){ return DATA.books.filter(b=>g.levels.includes(b.level)).sort((a,c)=>(DATA.meta.levelOrder.indexOf(a.level)-DATA.meta.levelOrder.indexOf(c.level))||a.num-c.num); }
@@ -27554,7 +27445,7 @@ function init(){
   // 主题族下拉
   const themes=[...new Set(DATA.books.map(b=>b.theme))];
   themes.forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;$('#mTheme').appendChild(o);});
-  renderMaster(); renderMethods(); renderLevels(); renderAR(); renderSAZ(); initPickers(); renderLadder(); renderThemes(); renderNFPlan();
+  renderMaster(); renderGuide(); renderLevels(); renderAR(); renderSAZ(); initPickers(); renderThemes(); renderNFPlan();
   // 默认选一本用于重复规则演示
   const def=DATA.books.find(b=>b.id==='A02')||DATA.books[0];
   if(def){ $('#repPick').value=def.id; renderRepPick(); renderRepeat(); }
