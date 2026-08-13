@@ -53,9 +53,8 @@
     padding:12px 16px;border-radius:12px;margin:0 0 16px;font-size:13.5px}
   .nfbanner b{color:#15803d}
   .compliance{background:#fffbeb;border:1px solid #fde68a;color:#92400e;
-    padding:10px 16px;border-radius:12px;margin:0 0 16px;font-size:13px;line-height:1.6}
+    padding:8px 16px;border-radius:999px;margin:0 0 16px;font-size:12.5px;line-height:1.45;text-align:center}
   .compliance b{color:#b45309}
-  .compliance .src{color:#78350f}
   .controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
   select,input[type=text],input[type=number]{padding:8px 10px;border:1px solid var(--line);
     border-radius:9px;font-size:14px;background:#fff;color:var(--ink)}
@@ -268,19 +267,16 @@
 <body>
 <header>
   <h1>📚 RAZ + SAZ 知识库</h1>
-  <p>总表 · 使用导读 · 书名⇄编号查询 · 书际重复规则（语言/主题）· 级别总览 · 分级对照 · 主题分类 · NF 周计划 · SAZ 书单 · v3.17</p>
+  <p>RAZ aa–Z2 + SAZ GK–G6 元数据索引 · v3.18</p>
 </header>
 
 <div class="compliance">
-  ⚠️ <b>非官方整理 · 仅供研究 / 教学用途</b>。本库为<b>元数据参考（级别、AR/蓝思对应、主题分类、重复阅读规则、SAZ 单元）</b>，<b>不含任何书籍正文</b>。
-  书名与级别体系数据来源 <span class="src">Reading A-Z / Science A-Z（Learning A-Z 商业资产）</span>，编号与官方排序一致；完整书目请从官方 Raz-Plus / Science A-Z 账号导出。
-  <b>本页面不替代、不售卖任何官方订阅。</b>
+  ⚠️ 非官方整理，仅供研究/教学用途。元数据参考，不含书籍正文。来源 Reading A-Z / Science A-Z（Learning A-Z）。不替代官方订阅。
 </div>
 
 <div class="wrap">
   <div class="kidnote">
-        本库为元数据参考（不含任何书籍正文）。<b>编号 = 级别 + RAZ 本级书目序号</b>（如 A13 = Level A 第13本《Vegetables》），与官方排序一致。
-    已种子化 <b>RAZ aa–Z2 全 29 级 + SAZ 科学分级共 2810 本真实书目</b>；英语启蒙低龄读者最相关的区间是 aa–C（GK，3–6 岁）。
+    <b>编号规则</b>：A13 = Level A 第 13 本《Vegetables》。已覆盖 <b>RAZ aa–Z2 全 29 级 + SAZ 科学分级共 2810 本</b>；低龄启蒙优先关注 <b>aa–C（GK，3–6 岁）</b>。
   </div>
 
   <div class="tabs">
@@ -502,14 +498,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.17 · <b>非官方整理 · 仅供研究 / 教学用途</b> · 元数据参考（不含书籍正文）· 数据来源 Reading A-Z / Science A-Z（Learning A-Z）· 编号与官方排序一致 · 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.18 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.17",
+    "version": "3.18",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
