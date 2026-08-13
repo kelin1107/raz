@@ -14,7 +14,8 @@
   body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;
     background:var(--bg);color:var(--ink);line-height:1.6;font-size:15px}
   header{background:linear-gradient(120deg,#2563eb,#0ea5e9);color:#fff;padding:22px 28px}
-  header h1{margin:0;font-size:22px;font-weight:700}
+  header h1{margin:0;font-size:22px;font-weight:700;display:flex;align-items:center;gap:10px}
+  header .ver{font-size:12px;font-weight:600;background:rgba(255,255,255,.22);padding:2px 9px;border-radius:999px}
   header p{margin:6px 0 0;opacity:.92;font-size:13px}
   .wrap{max-width:1100px;margin:0 auto;padding:0 18px 60px}
   .kidnote{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;
@@ -52,9 +53,6 @@
   .nfbanner{background:var(--nf);border:1px solid #bbf7d0;color:var(--nfink);
     padding:12px 16px;border-radius:12px;margin:0 0 16px;font-size:13.5px}
   .nfbanner b{color:#15803d}
-  .compliance{background:#fffbeb;border:1px solid #fde68a;color:#92400e;
-    padding:8px 16px;border-radius:999px;margin:0 0 16px;font-size:12.5px;line-height:1.45;text-align:center}
-  .compliance b{color:#b45309}
   .controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
   select,input[type=text],input[type=number]{padding:8px 10px;border:1px solid var(--line);
     border-radius:9px;font-size:14px;background:#fff;color:var(--ink)}
@@ -266,13 +264,9 @@
 </head>
 <body>
 <header>
-  <h1>📚 RAZ + SAZ 知识库</h1>
-  <p>RAZ aa–Z2 + SAZ GK–G6 元数据索引 · v3.18</p>
+  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.19</span></h1>
+  <p>aa–Z2 + GK–G6 全级别元数据索引 · 非官方整理，仅供研究/教学用途</p>
 </header>
-
-<div class="compliance">
-  ⚠️ 非官方整理，仅供研究/教学用途。元数据参考，不含书籍正文。来源 Reading A-Z / Science A-Z（Learning A-Z）。不替代官方订阅。
-</div>
 
 <div class="wrap">
   <div class="kidnote">
@@ -498,14 +492,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.18 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.19 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.18",
+    "version": "3.19",
     "updated": "2026-08-10",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
