@@ -506,6 +506,87 @@ THEME_OVERRIDE = {
     "expedition 40 the secret of the seasons": "地球与宇宙",
     "history of the bicycle": "社会与人文",
 }
+# ---------------- v3.35 NF/F 类型 override（标题关键词判定系统性漏标修正） ----------------
+# 由 _audit_type_fix.py 比对生成：D+ 书 type 仅靠标题关键词判定(is_nf)，标题无 NF 词 → 默认 F。
+# 公民/历史/节日/货币/社区类科普书（如 Election Day）标题不含 NF 关键词而被错判 F。
+# 此处把标题明确为 NF 的书显式翻正；已剔除虚构故事(robinson crusoe / creature constitution /
+# 边界本 following the map / it's time for the park / statues in the sand / mythical creatures)。
+# key = _norm_title(书名)（与运行时一致，含源文件撇号归一化形态）；value = 正确 type。
+TYPE_OVERRIDE = {
+    # v3.35 预存子串误判（creature/robin 命中动物词表 → 错判 NF）→ 强制 F
+    "the creature constitution": "F",
+    "a selection from robinson crusoe": "F",
+    "why robins hop": "F",
+    "robin hood and the king": "F",
+    "how the robin stole fire": "F",
+    "book 14 the creature and the queen": "F",
+    "1865 the end of the civil war": "NF",
+    "a hip hop history": "NF",
+    "a monument for george": "NF",
+    "a president s day": "NF",
+    "a trip to a prehistoric cave": "NF",
+    "ancient cliff dwellers": "NF",
+    "ancient egypt": "NF",
+    "ancient greek and roman gods and goddesses": "NF",
+    "ancient mesopotamia": "NF",
+    "attila and the fall of the roman empire": "NF",
+    "can i vote": "NF",
+    "carlos u0027s family celebration": "NF",
+    "celebrating food and family": "NF",
+    "community government": "NF",
+    "community workers": "NF",
+    "edison s inventions": "NF",
+    "election day": "NF",
+    "first day of school": "NF",
+    "guess that president": "NF",
+    "historic peacemakers": "NF",
+    "history of the bicycle": "NF",
+    "history to chew on": "NF",
+    "holidays around the world": "NF",
+    "how do we use money": "NF",
+    "independence day": "NF",
+    "inventions": "NF",
+    "it u0027s about time": "NF",
+    "kid inventors": "NF",
+    "labor day": "NF",
+    "laws for kids": "NF",
+    "lewis howard latimer": "NF",
+    "lucia u0027s new school": "NF",
+    "mapping the woods maps and cartography": "NF",
+    "maria u0027s family celebration": "NF",
+    "memorial day": "NF",
+    "money in the usa": "NF",
+    "money money money": "NF",
+    "my first library card": "NF",
+    "my neighborhood": "NF",
+    "my new school": "NF",
+    "page u0027s school report": "NF",
+    "prehistoric trade": "NF",
+    "presidents u0027 day": "NF",
+    "pyramids": "NF",
+    "real outlaws of the wild west": "NF",
+    "running for freedom": "NF",
+    "sonia sotomayor joins the supreme court": "NF",
+    "the bill of rights": "NF",
+    "the history of anime": "NF",
+    "the history of halloween": "NF",
+    "the history of the piano": "NF",
+    "the industrial revolution": "NF",
+    "the last day of school": "NF",
+    "the mail carrier u0027s hat": "NF",
+    "the mongol empire": "NF",
+    "the story of the statue": "NF",
+    "the u s constitution": "NF",
+    "the u s government at work": "NF",
+    "the world u0027s biggest library": "NF",
+    "time of day": "NF",
+    "too much screen time": "NF",
+    "veterans day": "NF",
+    "what u0027s your money worth": "NF",
+    "women and the vote": "NF",
+    "women of the supreme court": "NF",
+    "world holidays": "NF",
+}
 
 
 def tag_generic(title):
@@ -570,7 +651,11 @@ def tag_generic(title):
     nt = _norm_title(t)
     if nt in THEME_OVERRIDE:
         theme = THEME_OVERRIDE[nt]
-    return (theme, lang, "NF" if is_nf else "F")
+    # v3.35 NF/F 类型 override（标题关键词漏标修正）
+    typ = "NF" if is_nf else "F"
+    if nt in TYPE_OVERRIDE:
+        typ = TYPE_OVERRIDE[nt]
+    return (theme, lang, typ)
 
 # ---------------- SAZ 专用打标：Science A-Z 是科普非虚构科学分级 ----------------
 # SAZ 书名均为科学主题，主题应归入 生命/地球/物质/身体 四族；type 固定 NF（非虚构科普）。
@@ -728,7 +813,7 @@ if __name__ == "__main__":
         "seedCount": len(books),
     }
     data["meta"]["levelOrder"] = ["aa","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Z1","Z2","SAZ"]
-    data["meta"]["version"] = "3.34"
+    data["meta"]["version"] = "3.35"
     data["meta"]["updated"] = "2026-08-14"
     json.dump(data, open(JSON_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     # 校验
