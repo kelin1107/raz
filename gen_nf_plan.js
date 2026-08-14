@@ -59,33 +59,7 @@ const WEEKS = [
     ],
   },
   {
-    week: 3, fam: "物质与能量", emoji: "⚡",
-    intro: "提醒：aa+A 级里「物质与能量」主题的 NF 书只有 3 本(都是交通工具/力)，科普密度偏低。这一周用 3 本核心书打底，再加 2 个动手实验日(沉浮、磁铁)补上「做科学」的体验——正好对应你说的「科普词汇最稳扎稳打」。",
-    days: [
-      { d: 1, bookId: "A46", kind: "book",
-        activity: "推/拉小车、滚球，感受「动起来」；聊什么让东西动。",
-        lang: "move / push / pull / roll。",
-        draw: "画一辆会动的小车，写「Move it!」" },
-      { d: 2, bookId: "A37", kind: "book",
-        activity: "玩玩具车，指认轮子/门/窗；用纸盒做一辆「车」贴轮子。",
-        lang: "wheel / door / window / car。",
-        draw: "画车，标 wheel / door。" },
-      { d: 3, bookId: "A29", kind: "book",
-        activity: "聊怎么去不同地方(走/车/公交)；用积木搭「路」和「站」。",
-        lang: "go / car / bus / walk，+ 「We go ___.」",
-        draw: "画一种交通工具，写它的名。" },
-      { d: 4, bookId: null, kind: "exp", title: "实验日 · 沉与浮",
-        activity: "碗里装水，放积木/石头/塑料玩具，先猜沉/浮再试。",
-        lang: "float / sink / heavy / light。",
-        draw: "画「浮起来」和「沉下去」两样东西。" },
-      { d: 5, bookId: null, kind: "exp", title: "实验日 · 磁铁寻宝",
-        activity: "用磁铁吸硬币/回形针/积木，分「能吸/不能吸」。",
-        lang: "magnet / metal / stick。",
-        draw: "画磁铁和它能吸的东西。" },
-    ],
-  },
-  {
-    week: 4, fam: "身体与健康", emoji: "🧍",
+    week: 3, fam: "身体与健康", emoji: "🧍",
     intro: "身体、五感、卫生——最贴近孩子自己的科普。这一周用照镜子、味觉小尝、洗手步骤图，把「我的身体」变成可说的英语+可画的认字素材。",
     days: [
       { d: 1, bookId: "A74", kind: "book",
@@ -111,7 +85,7 @@ const WEEKS = [
     ],
   },
   {
-    week: 5, fam: "社会与人文", emoji: "👥",
+    week: 4, fam: "社会与人文", emoji: "👥",
     intro: "学校、超市、地铁、家——孩子每天穿行其间的「社会地图」。这一周用角色扮演和观察，把地点词和「I / We」句型变成生活用语。",
     days: [
       { d: 1, bookId: "AA61", kind: "book",
@@ -137,7 +111,7 @@ const WEEKS = [
     ],
   },
   {
-    week: 6, fam: "思维与创意", emoji: "🔢",
+    week: 5, fam: "思维与创意", emoji: "🔢",
     intro: "颜色、数字、方位、形状、反义词——这些是 RAZ 在低级别里 NF 密度最高的一类(49 本)。这一周把它们全变成「出门就能找」的游戏，词汇最稳扎稳打。",
     days: [
       { d: 1, bookId: "AA26", kind: "book",
@@ -278,7 +252,7 @@ code{background:#f4efe6;padding:1px 5px;border-radius:5px;font-size:11.5px;color
 <body>
 <header>
   <h1>📘 RAZ · NF 优先主题周计划</h1>
-  <div class="sub">以 <b>non-fiction（科普）为优先</b> 的 6 周主题循环。每周一个主题族、5 个学习日：每日 1 本核心 NF 书 + 自然/感官活动 + 语言点 + 「画+话」认字贴士。书名/级别/句式自动对齐「RAZ 知识库 v3.10」种子数据（aa + A 级）。</div>
+  <div class="sub">以 <b>non-fiction（科普）为优先</b> 的 5 周主题循环。每周一个主题族、5 个学习日：每日 1 本核心 NF 书 + 自然/感官活动 + 语言点 + 「画+话」认字贴士。书名/级别/句式自动对齐「RAZ 知识库 v3.10」种子数据（aa + A 级）。</div>
   <div class="meta">种子 NF 书共 <b>${nfTotal}</b> 本（aa+A）｜ 编号约定：级别+本级顺序号（如 A03 = Level A 第 3 本）｜ 完整 B–Z2 与 SAZ 需从 Raz-Plus 导出补齐</div>
 </header>
 <div class="wrap">
