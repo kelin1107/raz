@@ -470,6 +470,37 @@ def _title_is_nf(t):
         return True
     return False
 
+# ---------------- v3.33 正文 OCR 审计 override ----------------
+# 由 _audit_pdf_theme.py 对照 _pdf_text.json（本地 OCR 正文索引）产出。
+# 仅收录「正文强主题信号 (>=2) 且明显 != 标题关键词判定」的确认错分。
+# key = 书名归一化(小写+去标点+去序号)；value = 正确 theme。type/lang 仍按标题逻辑推导，不覆盖。
+import re as _re
+
+
+def _norm_title(s):
+    s = s.lower()
+    s = _re.sub(r"[^a-z0-9 ]", " ", s)
+    return _re.sub(r"\s+", " ", s).strip()
+
+
+THEME_OVERRIDE = {
+    "under that rock": "生命世界",
+    "to the woods": "生命世界",
+    "who runs faster": "生命世界",
+    "how do they swim": "生命世界",
+    "the sky is falling": "生命世界",
+    "at a fall fair": "社会与人文",
+    "new year celebrations": "社会与人文",
+    # v3.33 续（OCR 正文审计新增确认错分）
+    "gaggle herd and murder": "生命世界",
+    "where is cub": "生命世界",
+    "yellowstone a place of wild wonders": "生命世界",
+    "a place for wild things": "生命世界",
+    "fantastic flying machines": "物质与能量",
+    "using less energy": "物质与能量",
+}
+
+
 def tag_generic(title):
     t = title.lower()
     # 类型（v3.29 修复：NF_MARK 或 具体主题关键词命中 且 非虚构黑名单 → NF）
@@ -528,6 +559,10 @@ def tag_generic(title):
         lang = "介词反义"
     else:
         lang = "综合"
+    # v3.33 正文 OCR 审计 override（确认错分固化，仅覆盖 theme）
+    nt = _norm_title(t)
+    if nt in THEME_OVERRIDE:
+        theme = THEME_OVERRIDE[nt]
     return (theme, lang, "NF" if is_nf else "F")
 
 # ---------------- SAZ 专用打标：Science A-Z 是科普非虚构科学分级 ----------------
@@ -686,8 +721,8 @@ if __name__ == "__main__":
         "seedCount": len(books),
     }
     data["meta"]["levelOrder"] = ["aa","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Z1","Z2","SAZ"]
-    data["meta"]["version"] = "3.32"
-    data["meta"]["updated"] = "2026-08-13"
+    data["meta"]["version"] = "3.33"
+    data["meta"]["updated"] = "2026-08-14"
     json.dump(data, open(JSON_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     # 校验
     print("books:", len(books))
