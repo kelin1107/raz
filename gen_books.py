@@ -706,9 +706,12 @@ def tag_saz(title):
     return (theme, lang, typ)
 
 def load_official_types():
-    # v3.36: 官方 Reading A-Z NF/F 金标准（本地爬取 _official_types.json，不进 git）
-    # 来源：https://www.readinga-z.com/books/books-by-grade-level/ 内嵌 JSON（title/level/g2=Fiction|Nonfiction）
-    # 仅用于校正自有库的 type 字段（元数据，非书籍正文），符合版权标注约定（非官方·研究/教学用途·注明来源）。
+    # v3.36+: 官方 Reading A-Z 金标准（本地爬取 _official_types.json，不进 git）
+    # 来源：https://www.readinga-z.com/books/books-by-grade-level/ 内嵌 JSON
+    #   每条含 title / level / grade / lx(官方蓝思) / g1(官方体裁) / g2(Fiction|Nonfiction)
+    # 仅用于校正自有库的核心字段（书名/类型/蓝思/体裁），均为元数据、非书籍正文，
+    # 符合版权标注约定（非官方·研究/教学用途·注明来源）。
+    # 按 (level, 归一化书名) 建索引，避免同名书跨级别串味。
     fp = os.path.join(HERE, "_official_types.json")
     if not os.path.exists(fp):
         return {}
@@ -718,8 +721,13 @@ def load_official_types():
         return {}
     m = {}
     for r in rows:
-        t = _norm_title(r["title"])
-        m[t] = "NF" if r.get("g2") == "Nonfiction" else "F"
+        key = (r["level"], _norm_title(r["title"]))
+        m[key] = {
+            "type": "NF" if r.get("g2") == "Nonfiction" else "F",
+            "title": r["title"],
+            "lx": r.get("lx") or "",
+            "g1": r.get("g1") or "",
+        }
     return m
 
 
@@ -815,19 +823,25 @@ def build():
                 "level": "SAZ", "num": num, "title": title,
                 "type": typ, "theme": theme, "lang": lang, "band": band,
             })
-    # v3.36: 官方 NF/F 金标准覆盖（一次性修正标题猜测错分）
+    # v3.36+: 官方核心字段覆盖（书名/类型/蓝思/体裁），全部以官方 readinga-z 清单为准；
+    # SAZ 不在该清单（Science A-Z 独立体系），保持 tag_saz 结果不变。
     _ot = load_official_types()
     if _ot:
         _fixed = 0
         for b in books:
             if b.get("level") == "SAZ":
-                continue  # SAZ 全 NF，官方 readinga-z 列表不含 SAZ
-            k = _norm_title(b["title"])
-            nv = _ot.get(k)
-            if nv and b["type"] != nv:
-                b["type"] = nv
-                _fixed += 1
-        print("官方NF/F覆盖修正:", _fixed, "本")
+                continue
+            rec = _ot.get((b["level"], _norm_title(b["title"])))
+            if rec:
+                if b["title"] != rec["title"]:
+                    b["title"] = rec["title"]
+                if b.get("type") != rec["type"]:
+                    b["type"] = rec["type"]
+                    _fixed += 1
+                b["lx"] = rec["lx"]
+                b["g1"] = rec["g1"]
+                b["official"] = True
+        print("官方核心字段覆盖(类型修正):", _fixed, "本；书名/蓝思/体裁同步官方")
     return books
 
 if __name__ == "__main__":
@@ -844,7 +858,7 @@ if __name__ == "__main__":
         "seedCount": len(books),
     }
     data["meta"]["levelOrder"] = ["aa","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Z1","Z2","SAZ"]
-    data["meta"]["version"] = "3.36"
+    data["meta"]["version"] = "3.37"
     data["meta"]["updated"] = "2026-08-14"
     json.dump(data, open(JSON_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     # 校验
