@@ -498,6 +498,13 @@ THEME_OVERRIDE = {
     "a place for wild things": "生命世界",
     "fantastic flying machines": "物质与能量",
     "using less energy": "物质与能量",
+    # v3.34 全量 OCR 审计新增确认错分（6 本 NF 科普/历史书被错归）
+    "electric cars history and future": "物质与能量",
+    "energy sources the pros and cons": "物质与能量",
+    "how sound works": "物质与能量",
+    "hubble an out of this world telescope": "地球与宇宙",
+    "expedition 40 the secret of the seasons": "地球与宇宙",
+    "history of the bicycle": "社会与人文",
 }
 
 

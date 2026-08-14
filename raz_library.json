@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.33",
+    "version": "3.34",
     "updated": "2026-08-14",
     "source": "Learning A-Z 官方级别对应表 (Handley Regional Library 版) + Science A-Z 单元结构 + 公开教研整理；AR/蓝思/DRA/F&P/RR/非虚构占比 为近似值",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -11193,7 +11193,7 @@
       "num": 17,
       "title": "History of the Bicycle",
       "type": "NF",
-      "theme": "思维与创意",
+      "theme": "社会与人文",
       "lang": "综合"
     },
     {
@@ -16602,7 +16602,7 @@
       "num": 23,
       "title": "How Sound Works",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "物质与能量",
       "lang": "综合"
     },
     {
@@ -16611,7 +16611,7 @@
       "num": 24,
       "title": "Hubble: An Out-of-This-World Telescope",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "地球与宇宙",
       "lang": "介词反义"
     },
     {
@@ -18375,7 +18375,7 @@
       "num": 44,
       "title": "Expedition 40: The Secret of the Seasons",
       "type": "NF",
-      "theme": "生命世界",
+      "theme": "地球与宇宙",
       "lang": "季节句式"
     },
     {
@@ -21435,7 +21435,7 @@
       "num": 44,
       "title": "Energy Sources: The Pros and Cons",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "物质与能量",
       "lang": "综合"
     },
     {
@@ -22488,7 +22488,7 @@
       "num": 29,
       "title": "Electric Cars: History and Future",
       "type": "NF",
-      "theme": "社会与人文",
+      "theme": "物质与能量",
       "lang": "综合"
     },
     {
