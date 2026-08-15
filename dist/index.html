@@ -359,7 +359,7 @@
 </head>
 <body>
 <header>
-  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.44</span></h1>
+  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.45</span></h1>
   <p>aa–Z2 + GK–G6 全级别元数据索引 · 非官方整理，仅供研究/教学用途</p>
 </header>
 
@@ -642,14 +642,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.44 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.45 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.44",
+    "version": "3.45",
     "updated": "2026-08-15",
     "source": "Learning A-Z 官方书库 (readinga-z.com/books/books-by-grade-level, 2572 本) 提供书名/级别/F·NF/蓝思/体裁；Science A-Z 提供 SAZ 单元结构；主题分类与核心词为自研教研整理。非官方、仅供研究/教学用途。",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -78520,11 +78520,25 @@ function renderNfDay(){
         if(window.nfdaySel.has(l)) window.nfdaySel.delete(l);
         else window.nfdaySel.add(l);
         chipsEl.querySelectorAll('.lvchip').forEach(function(x){ x.classList.toggle('active', window.nfdaySel.has(x.dataset.l)); });
-        renderNfDay();
+        var s=Array.from(window.nfdaySel);
+        $('#nfdayNote').textContent = s.length ? ('已选 '+s.map(function(x){return x==='aa'?'AA':x;}).join('+')+' · 按「✅ 生成主题簇」查看') : '请选择 1 个或多个级别，再点「✅ 生成主题簇」。';
+        $('#nfdayDays').innerHTML = s.length ? '' : '<p class="nf-empty">尚未选择级别。点击上方级别芯片（可多选，如 E+F+G），然后按「✅ 生成主题簇」即可按主题聚类出阅读规划。</p>';
       });
       chipsEl.appendChild(c);
     });
     chipsEl.dataset.built='1';
+  }
+  if(!$('#nfdayGenBtn').dataset.bound){
+    $('#nfdayGenBtn').addEventListener('click',function(){ renderNfDay(); });
+    $('#nfdayGenBtn').dataset.bound='1';
+  }
+  if(!$('#nfdayAuthor').dataset.bound){
+    $('#nfdayAuthor').addEventListener('change',function(){ document.getElementById('nfDaysView').classList.toggle('author', $('#nfdayAuthor').checked); });
+    $('#nfdayAuthor').dataset.bound='1';
+  }
+  if(!$('#nfdayPrintBtn').dataset.bound){
+    $('#nfdayPrintBtn').addEventListener('click',function(){ document.body.classList.add('print-nf'); window.print(); setTimeout(function(){ document.body.classList.remove('print-nf'); },400); });
+    $('#nfdayPrintBtn').dataset.bound='1';
   }
   var sel=Array.from(window.nfdaySel);
   if(!sel.length){
@@ -78553,22 +78567,6 @@ function renderNfDay(){
     '</div>';
   }).join('');
   $('#nfdayDays').innerHTML=html;
-  var auth=$('#nfdayAuthor');
-  if(!auth.dataset.bound){
-    auth.addEventListener('change',function(){ document.getElementById('nfDaysView').classList.toggle('author', auth.checked); });
-    auth.dataset.bound='1';
-  }
-  if(!$('#nfdayPrintBtn').dataset.bound){
-    $('#nfdayPrintBtn').addEventListener('click',function(){
-      document.body.classList.add('print-nf'); window.print();
-      setTimeout(function(){ document.body.classList.remove('print-nf'); },400);
-    });
-    $('#nfdayPrintBtn').dataset.bound='1';
-  }
-  if(!$('#nfdayGenBtn').dataset.bound){
-    $('#nfdayGenBtn').addEventListener('click',function(){ renderNfDay(); });
-    $('#nfdayGenBtn').dataset.bound='1';
-  }
 }
 
 init();
