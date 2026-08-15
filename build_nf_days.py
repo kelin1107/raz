@@ -77,7 +77,7 @@ SUBTOPICS = [
      '哺乳动物一家：河边水獭 + 枝头蝙蝠同框不同格，毛绒质感，暖色水彩。'),
 
     # ---------------- 地球与宇宙 ----------------
-    ('地球与宇宙', 'weather', r'\bweathers?\b|\bclouds?\b|\brains?\b|\brainings?\b|\bwinds?\b|\bwindys?\b|\bstorms?\b|\bsnows?\b|\bsunnys?\b|\btemperatures?\b|\bseasons?\b|\bforecasts?\b|\bthunders?\b|\btornados?\b|\bhurricanes?\b',   '🌤️ 天气',
+    ('地球与宇宙', 'weather', r'\bweathers?\b|\bclouds?\b|\brains?\b|\brainings?\b|\brainstorms?\b|\bfogs?\b|\bspring\b|\bfall\b|\bwinds?\b|\bwindys?\b|\bstorms?\b|\bsnows?\b|\bsunnys?\b|\btemperatures?\b|\bseasons?\b|\bforecasts?\b|\bthunders?\b|\btornados?\b|\bhurricanes?\b',   '🌤️ 天气',
      '天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。',
      '1) 天气表：连续 3 天画符号记录，对应书里的词。\n2) 风实验：用扇子/吹气让小物动，理解 wind。\n3) 云朵：棉花贴出不同云，说名字。', 'strong',
      '天气四宫格：微风/大雨/雪花/雷电各一格，拟人云朵娃娃，明快水彩。'),
