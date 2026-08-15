@@ -149,6 +149,10 @@ SUBTOPICS = [
      '习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。',
      '1) 步骤：演刷牙/洗手步骤。\n2) 图表：做一周 sleep/brush 打卡。\n3) 画：画一个健康习惯。', 'opt',
      '习惯打卡图：刷牙/洗手/睡觉三格小图，清新水彩。'),
+    ('身体与健康', 'emotion', r'\bcalms?\b|\bcalmings?\b|\bangrys?\b|\bangers?\b|\bhappy\b|\bhappiness\b|\bsads?\b|\bsadness\b|\bworried\b|\bworries?\b|\bscared?\b|\bafraids?\b|\bfears?\b|\bbraves?\b|\bbravery\b|\bfeelings?\b|\bemotions?\b|\bmoods?\b|\bshys?\b|\bprouds?\b|\bjealous\b|\bkindness\b|\bsorry\b|\bgrumpy\b|\blonely\b|\bexcited\b|\bbored\b|\btired\b|\bsleepy\b|\bfrustrated\b',   '🧘 情绪与感受',
+     '情绪书讲怎么辨认和安放自己的感受。一天读，calm/happy/sad/worried 反复出现，孩子开始给情绪命名，并知道「有情绪很正常」。',
+     '1) 情绪卡：画 today I feel ___，贴到脸上或日记里。\n2) 冷静角：找一个舒服角落，读 calm 书时练习深呼吸三次。\n3) 角色：演一种情绪，让对方猜。', 'opt',
+     '情绪小怪兽：红黄蓝紫小毛球各代表一种情绪，围坐一圈，温暖水彩。'),
 
     # ---------------- 社会与人文 ----------------
     ('社会与人文', 'community', r'\bcommunitys?\b|\bcitys?\b|\btowns?\b|\bneighborhoods?\b|\bmaps?\b|\bplaces?\b|\bbuildings?\b|\bstreets?\b|\bparks?\b|\bschools?\b|\blibrarys?\b|\bhospitals?\b|\bstores?\b',   '🏘️ 社区与地点',
@@ -207,6 +211,13 @@ SUBTOPICS = [
      '（建议不做合成图：创作重动手，不做生图。）'),
 ]
 
+# 标题级覆盖：正则只看关键词，不懂整句话意；这些书名语义明确，强制归位。
+# key: 归一化后小写书名；value: (family, subtopic_key)
+OVERRIDES = {
+    'calming down': ('身体与健康', 'emotion'),
+    'what makes me happy?': ('身体与健康', 'emotion'),
+}
+
 # 建 (theme,key)->内容 与 匹配表
 CLUSTER = {}
 MATCHERS = []
@@ -216,6 +227,8 @@ for theme, key, kw, label, intro, ext, verdict, desc in SUBTOPICS:
 
 def classify(theme, title):
     nt = re.sub(r'[^a-z0-9 ]', ' ', title.lower()).strip()
+    if nt in OVERRIDES:
+        return OVERRIDES[nt]
     for theme_m, key, rg in MATCHERS:
         if rg.search(nt):
             return theme_m, key
