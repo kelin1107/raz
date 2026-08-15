@@ -243,6 +243,14 @@
   .vbadge.opt{background:#fff5e2;color:#b07d12;border:1px solid #f0dca6}
   .vbadge.no{background:#f1f1f1;color:#888;border:1px solid #ddd}
   .nfday-imgdesc{color:var(--muted);line-height:1.6;flex:1;min-width:200px}
+  #nfDaysView:not(.author) .nfday-img{display:none}
+  .nfplan-tabs{display:flex;gap:8px;margin:12px 0 16px;flex-wrap:wrap}
+  .nfp-tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 16px;font-size:13.5px;cursor:pointer;color:var(--ink);font-family:inherit}
+  .nfp-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .lvchips{display:flex;gap:6px;flex-wrap:wrap}
+  .lvchip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 11px;font-size:12.5px;cursor:pointer;color:var(--muted)}
+  .lvchip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .nfday-lv{background:#eee;color:#6b6356;border-radius:6px;padding:1px 7px;font-size:11px;font-weight:700}
   #nfPlan .nf-week.active{display:block}
   #nfPlan .whead{font-size:19px;font-weight:700;margin:18px 0 4px}
   #nfPlan .wsub{font-size:13.5px;font-weight:700;color:var(--accent2);margin:14px 0 6px;padding-left:8px;border-left:3px solid var(--accent2)}
@@ -348,7 +356,7 @@
 </head>
 <body>
 <header>
-  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.40</span></h1>
+  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.41</span></h1>
   <p>aa–Z2 + GK–G6 全级别元数据索引 · 非官方整理，仅供研究/教学用途</p>
 </header>
 
@@ -365,8 +373,7 @@
     <div class="tab" data-t="levels">📊 级别总览</div>
     <div class="tab" data-t="ar">🔢 分级对照</div>
     <div class="tab" data-t="themes">🏷️ 主题分类</div>
-    <div class="tab" data-t="nf">📅 NF 周计划</div>
-    <div class="tab" data-t="nfday">📆 NF 阅读日</div>
+    <div class="tab" data-t="nfplan">📚 NF 阅读规划</div>
     <div class="tab" data-t="saz">🔬 SAZ</div>
 
   </div>
@@ -590,40 +597,43 @@
   </section>
 
   <!-- ===== NF 优先主题周计划 ===== -->
-  <section class="panel" id="nf">
+  <section class="panel" id="nfplan">
     <div class="card">
-      <h2>📅 NF 优先主题周计划 <span class="tag">5 周科普循环 · 画话+手工+STEAM</span></h2>
-      <p class="nf-note">🏕 一周一个科普主题：读 5 本 NF + 做 2 个动手（1 手工 + 1 STEAM），每天 10 分钟「画+话认字」。每周只备 2 次材料，不费妈也能做科研。每本 NF 书附「核心词」来自真实书目抽取。</p>
-      <div id="nfPlan">
-        <div class="controls" style="margin-bottom:6px;align-items:center">
-          <label style="color:var(--muted);font-size:13px">级别范围：</label>
-          <select id="nfFrom"></select>
-          <span style="color:var(--muted)">→</span>
-          <select id="nfTo"></select>
-          <label style="color:var(--muted);font-size:13px;margin-left:8px">孩子年龄：</label>
-          <input type="number" id="nfAge" value="3" min="2" max="12" step="1" style="width:64px">
-          <span style="color:var(--muted);font-size:13px">岁</span>
-          <button id="nfRebuild" class="act">重新生成周计划</button>
-          <span id="nfRangeNote" style="color:var(--muted);font-size:12px"></span>
-        </div>
-        <div class="nf-tabs" id="nfTabs"></div>
-        <div class="ovnote">🗂 总览（点上方标签看每周详情）：</div>
-        <div class="ov-wrap"><table class="ov"><thead><tr><th style="width:74px">周</th><th style="width:96px">主题族</th><th>每日核心书 / 实验</th></tr></thead><tbody id="nfOv"></tbody></table></div>
-        <div id="nfWeeks"></div>
-        <button class="printbtn" id="nfPrintBtn">🖨 打印 / 存 PDF</button>
+      <h2>📚 NF 阅读规划 <span class="tag">两种规划法 · 目的一样</span></h2>
+      <p class="nf-note">同一批 NF 科普书，两种规划法，<b>目的相同</b>：成簇读、有拓展、可生图。
+      <b>🗓️ 周计划</b>：适合「照着读」——6 大主题族轮转成周，每周 5 本 + 每周手工/STEAM + 每本小问题/活动/认字。
+      <b>🧩 主题选书</b>：适合「先挑簇、再决定做不做海报」——同子话题成簇，每天 1–4 本 + 导读 + 详细拓展 + 生图建议。</p>
+      <div class="nfplan-tabs" id="nfplanTabs">
+        <button class="nfp-tab active" data-v="week">🗓️ 周计划（按周执行）</button>
+        <button class="nfp-tab" data-v="days">🧩 主题选书（按簇规划）</button>
       </div>
-    </div>
-  </section>
-
-  <section class="panel" id="nfday">
-    <div class="card">
-      <h2>📆 NF 阅读日 <span class="tag">同主题集中读 · 自动聚类</span></h2>
-      <p class="nf-note">为什么把主题相近的书放在同一天读？<b>重复是低龄语言学习的核心</b>。同一天集中读「鸟／恐龙／天气／交通」这类同主题书，孩子会在反复出现的同一批词（feather·wing、cloud·rain、car·bus）里自然建立图式，并练习用同一组语言描述不同事物——比把同类书拆到不同天、每次从头建语境高效得多。本页把每个级别 NF 书按「主题族＋子话题」自动聚类成「阅读日」，每天 1–4 本相近主题；每张卡片给<b>导读建议</b>、<b>详细拓展</b>、以及<b>是否值得生图</b>的提示，方便你判断要不要做成一张复盘海报。</p>
-      <div id="nfdayPlan">
-        <div class="controls" style="margin-bottom:6px;align-items:center">
-          <label style="color:var(--muted);font-size:13px">级别：</label>
-          <select id="nfdayLv"></select>
+      <div id="nfWeekView">
+        <div id="nfPlan">
+          <div class="controls" style="margin-bottom:6px;align-items:center">
+            <label style="color:var(--muted);font-size:13px">级别范围：</label>
+            <select id="nfFrom"></select>
+            <span style="color:var(--muted)">→</span>
+            <select id="nfTo"></select>
+            <label style="color:var(--muted);font-size:13px;margin-left:8px">孩子年龄：</label>
+            <input type="number" id="nfAge" value="3" min="2" max="12" step="1" style="width:64px">
+            <span style="color:var(--muted);font-size:13px">岁</span>
+            <button id="nfRebuild" class="act">重新生成周计划</button>
+            <span id="nfRangeNote" style="color:var(--muted);font-size:12px"></span>
+          </div>
+          <div class="nf-tabs" id="nfTabs"></div>
+          <div class="ovnote">🗂 总览（点上方标签看每周详情）：</div>
+          <div class="ov-wrap"><table class="ov"><thead><tr><th style="width:74px">周</th><th style="width:96px">主题族</th><th>每日核心书 / 实验</th></tr></thead><tbody id="nfOv"></tbody></table></div>
+          <div id="nfWeeks"></div>
+          <button class="printbtn" id="nfPrintBtn">🖨 打印 / 存 PDF</button>
+        </div>
+      </div>
+      <div id="nfDaysView" style="display:none">
+        <p class="nf-note">为什么把主题相近的书放在同一天读？<b>重复是低龄语言学习的核心</b>。同一天集中读「鸟／恐龙／天气／交通」这类同主题书，孩子会在反复出现的同一批词（feather·wing、cloud·rain、car·bus）里自然建立图式，并练习用同一组语言描述不同事物——比把同类书拆到不同天、每次从头建语境高效得多。本页把每个级别 NF 书按「主题族＋子话题」自动聚类成「阅读日」，每天 1–4 本相近主题；每张卡片给<b>导读建议</b>、<b>详细拓展</b>、以及<b>是否值得生图</b>的提示，方便你判断要不要做成一张复盘海报。</p>
+        <div class="controls" style="margin-bottom:6px;align-items:center;flex-wrap:wrap;gap:8px">
+          <label style="color:var(--muted);font-size:13px">级别（可多选）：</label>
+          <div id="nfdayLvChips" class="lvchips"></div>
           <span id="nfdayNote" style="color:var(--muted);font-size:12px"></span>
+          <label style="color:var(--muted);font-size:13px;margin-left:auto;display:inline-flex;align-items:center;gap:5px"><input type="checkbox" id="nfdayAuthor"> 作者视图（显示生图建议）</label>
         </div>
         <div id="nfdayDays"></div>
         <button class="printbtn" id="nfdayPrintBtn">🖨 打印 / 存 PDF</button>
@@ -631,14 +641,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.40 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.41 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.40",
+    "version": "3.41",
     "updated": "2026-08-15",
     "source": "Learning A-Z 官方书库 (readinga-z.com/books/books-by-grade-level, 2572 本) 提供书名/级别/F·NF/蓝思/体裁；Science A-Z 提供 SAZ 单元结构；主题分类与核心词为自研教研整理。非官方、仅供研究/教学用途。",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -77053,9 +77063,20 @@ $$('.tab').forEach(t=>t.addEventListener('click',()=>{
   t.classList.add('active');
   $('#'+t.dataset.t).classList.add('active');
   if(t.dataset.t==='saz' && document.querySelector('#sazModeTabs .mtab[data-m="week"]').classList.contains('active')) renderSAZWeek();
-  if(t.dataset.t==='nfday') renderNfDay();
+  if(t.dataset.t==='nfplan') renderNfDay();
   window.scrollTo({top:0,behavior:'smooth'});
 }));
+$$('#nfplanTabs .nfp-tab').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    $$('#nfplanTabs .nfp-tab').forEach(function(x){ x.classList.remove('active'); });
+    btn.classList.add('active');
+    var v=btn.dataset.v;
+    document.getElementById('nfWeekView').style.display = v==='week'?'block':'none';
+    document.getElementById('nfDaysView').style.display = v==='days'?'block':'none';
+    if(v==='days') renderNfDay();
+    window.scrollTo({top:document.getElementById('nfplanTabs').offsetTop-8,behavior:'smooth'});
+  });
+});
 $$('#sazModeTabs .mtab').forEach(btn=>btn.addEventListener('click',()=>{
   $$('#sazModeTabs .mtab').forEach(x=>x.classList.remove('active'));
   btn.classList.add('active');
@@ -78504,18 +78525,31 @@ function renderNFPlan(){
 }
 
 function renderNfDay(){
-  var sel=$('#nfdayLv');
-  if(!sel.options.length){
-    (DATA.meta.levelOrder||Object.keys(DATA.nfDays||{})).forEach(function(l){
-      if(!DATA.nfDays || !DATA.nfDays[l]) return;
-      var o=document.createElement('option'); o.value=l; o.textContent=(l==='aa'?'AA':l); sel.appendChild(o);
+  var chipsEl=$('#nfdayLvChips');
+  if(!chipsEl.dataset.built){
+    var levels=(DATA.meta.levelOrder||[]).filter(function(l){ return DATA.nfDays && DATA.nfDays[l]; });
+    if(!window.nfdaySel || !window.nfdaySel.size) window.nfdaySel=new Set(['F']);
+    levels.forEach(function(l){
+      var c=document.createElement('span');
+      c.className='lvchip'+(window.nfdaySel.has(l)?' active':'');
+      c.textContent=(l==='aa'?'AA':l);
+      c.dataset.l=l;
+      c.addEventListener('click',function(){
+        if(window.nfdaySel.has(l)){ if(window.nfdaySel.size>1) window.nfdaySel.delete(l); }
+        else window.nfdaySel.add(l);
+        chipsEl.querySelectorAll('.lvchip').forEach(function(x){ x.classList.toggle('active', window.nfdaySel.has(x.dataset.l)); });
+        renderNfDay();
+      });
+      chipsEl.appendChild(c);
     });
-    if(DATA.nfDays && DATA.nfDays['F']) sel.value='F';
+    chipsEl.dataset.built='1';
   }
-  var lv=sel.value;
-  var days=DATA.nfDays[lv]||[];
-  $('#nfdayNote').textContent='级别 '+lv+'：共 '+days.length+' 个阅读日（按主题族 + 子话题聚类，每天 1–4 本相近主题）。';
-  var html=days.map(function(d){
+  var sel=Array.from(window.nfdaySel);
+  var all=[];
+  sel.forEach(function(lv){ (DATA.nfDays[lv]||[]).forEach(function(d){ all.push({d:d,lv:lv}); }); });
+  $('#nfdayNote').textContent='已选 '+sel.map(function(l){return l==='aa'?'AA':l;}).join('+')+'：共 '+all.length+' 个阅读日（按主题族 + 子话题聚类，每天 1–4 本相近主题）。';
+  var html=all.map(function(o){
+    var d=o.d, lv=o.lv;
     var books=d.books.map(function(b){
       return '<span class="nfday-book"><code>'+esc(b.id)+'</code> '+esc(b.title)+' <span class="rl">'+esc(b.level)+'</span></span>';
     }).join('');
@@ -78524,7 +78558,7 @@ function renderNfDay(){
     var vbadge = vd==='strong'?'<span class="vbadge strong">强烈建议生图</span>' : vd==='opt'?'<span class="vbadge opt">可选生图</span>' : '<span class="vbadge no">不建议生图</span>';
     var imgDesc = d.img&&d.img.desc ? '<span class="nfday-imgdesc">'+esc(d.img.desc)+'</span>' : '';
     return '<div class="nfday-card">'+
-      '<div class="nfday-h"><span class="nfday-day">Day '+d.day+'</span> <span class="nfday-topic">'+esc(d.topic)+'</span> <span class="nfday-theme">'+esc(d.theme)+'</span></div>'+
+      '<div class="nfday-h"><span class="nfday-day">Day '+d.day+'</span> <span class="nfday-lv">'+esc(lv==='aa'?'AA':lv)+'</span> <span class="nfday-topic">'+esc(d.topic)+'</span> <span class="nfday-theme">'+esc(d.theme)+'</span></div>'+
       '<p class="nfday-intro">'+esc(d.intro)+'</p>'+
       '<div class="nfday-books">'+books+'</div>'+
       '<div class="nfday-ext"><b>🌿 详细拓展</b><ul>'+ext+'</ul></div>'+
@@ -78532,9 +78566,10 @@ function renderNfDay(){
     '</div>';
   }).join('');
   $('#nfdayDays').innerHTML=html;
-  if(!sel.dataset.bound){
-    sel.addEventListener('change',renderNfDay);
-    sel.dataset.bound='1';
+  var auth=$('#nfdayAuthor');
+  if(!auth.dataset.bound){
+    auth.addEventListener('change',function(){ document.getElementById('nfDaysView').classList.toggle('author', auth.checked); });
+    auth.dataset.bound='1';
   }
   if(!$('#nfdayPrintBtn').dataset.bound){
     $('#nfdayPrintBtn').addEventListener('click',function(){
