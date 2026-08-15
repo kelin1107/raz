@@ -218,6 +218,13 @@ OVERRIDES = {
     'what makes me happy?': ('身体与健康', 'emotion'),
 }
 
+# LLM 语义分类主映射（按 id + 标题 复合键），由 llm_map.json 提供；正则仅作兜底。
+# 复合键 = book['id'] + '\x00' + book['title']，可唯一区分源数据中同 id 的不同书。
+LLM_MAP = {}
+_LLM_PATH = os.path.join(HERE, 'llm_map.json')
+if os.path.exists(_LLM_PATH):
+    LLM_MAP = json.load(open(_LLM_PATH, encoding='utf-8'))
+
 # 建 (theme,key)->内容 与 匹配表
 CLUSTER = {}
 MATCHERS = []
@@ -255,7 +262,11 @@ def build():
         if b.get('type') != 'NF':
             continue
         theme = b.get('theme') or '生命世界'
-        t, key = classify(theme, b['title'])
+        comp = b['id'] + '\x00' + b['title']
+        if comp in LLM_MAP:
+            t, key = LLM_MAP[comp]
+        else:
+            t, key = classify(theme, b['title'])
         levels.setdefault(lv, {}).setdefault((t, key), []).append(b)
     nfDays = {}
     for lv, groups in levels.items():
