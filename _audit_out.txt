@@ -1,0 +1,109 @@
+D+ 库书总数(已抽范围内): 1034 匹配到正文
+高置信冲突(正文强信号>=2 且 != 库theme): 28
+
+[D07] Bats Day and Night
+    库:生命世界  ->  正文:地球与宇宙 (命中3)  分布:{'地球与宇宙': 3, '社会与人文': 1}
+    正文: www.readinga-z.com LEVELED BOOK • D Written by Becca Hughes Bats Day and Night www.readinga-z.com Written by Becca Hughes Bats Day and Night 3 The Sun comes up.
+[D46] We Give Away
+    库:社会与人文  ->  正文:生命世界 (命中2)  分布:{'生命世界': 2, '社会与人文': 1}
+    正文: www.readinga-z.com We Give Away Written by Karen Mockler Illustrated by Christopher Baldwin LEVELED BOOK • D Written by Karen Mockler Illustrated by Christopher
+[D57] Shave It Off!
+    库:社会与人文  ->  正文:生命世界 (命中2)  分布:{'生命世界': 2, '社会与人文': 2}
+    正文: www.readinga-z.com LEVELED BOOK • D Written by Gawain Douglas Illustrated by Nicholas Jackson Shave It Off! www.readinga-z.com Why does the family want Daddy to
+[D78] Best Friends Q and U
+    库:社会与人文  ->  正文:地球与宇宙 (命中2)  分布:{'地球与宇宙': 2, '社会与人文': 1}
+    正文: www.readinga-z.com Written by Karen Mockler • Illustrated by Jeff Ebbeler LEVELED BOOK • D Best Friends Q and U www.readinga-z.com Best Friends Q and U Written 
+[D86] Do Not Eat That!
+    库:身体与健康  ->  正文:地球与宇宙 (命中2)  分布:{'地球与宇宙': 2, '社会与人文': 1}
+    正文: www.readinga-z.com LEVELED BOOK • D Written by Rus Buyok • Illustrated by Matt Loveridge Do Not Eat That! www.readinga-z.com What does Abby tell Zots not to eat
+[D87] What to Wear?
+    库:身体与健康  ->  正文:地球与宇宙 (命中2)  分布:{'地球与宇宙': 2, '社会与人文': 1}
+    正文: www.readinga-z.com LEVELED BOOK • D Written by Rus Buyok • Illustrated by Matt Loveridge What to Wear? www.readinga-z.com Why does Abby say that Zots has his ow
+[F16] Color Wheel Colors
+    库:思维与创意  ->  正文:物质与能量 (命中3)  分布:{'物质与能量': 3}
+    正文: LEVELED BOOK·F Color Wheel Colors Written by Racheal Rice Illustrated by Shirley Ng-Benitez www.readinga-z.com Wheel or ors Written by RachealRice Illustrated b
+[M17] History of the Bicycle
+    库:思维与创意  ->  正文:社会与人文 (命中2)  分布:{'社会与人文': 2}
+    正文: LEVELED BOOKM History of Bicycle the Written by Dana Duclo www.readinga-z.com History of Bicycl the le AMERICAN DISTRICT EGRAPH MPANY UNION Written by Dana Ducl
+[Q68] Good for Thurgood!
+    库:社会与人文  ->  正文:生命世界 (命中2)  分布:{'生命世界': 2}
+    正文: LEVELED BOOK ·Q Good tor hurgood! MuLti level K·N·Q Written by Marvin Bird www.readinga-z.com Good for' EQUAL JUSTICE THURG 008-122 Written by Marvin Bird www.r
+[U03] Alien Collective I: Resistance
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Alien Collective Lesistance MUlti level Z·zo.Z Written by Rus Buyok·Illustrated by Toma Feizo Gas www.readinga-z.com Alien Collective I: Lesistan
+[U04] Alien Collective II: The Link
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Alien Collective he Multi level Z·Zo.Z Written by Rus Buyok·Illustrated by Toma Feizo Gas www.readinga-z.com Alien Collective ink he Written by R
+[U05] Alien Collective III: Transition
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Collective Alien Transifion Muti level Z.zo.Z Written by Rus Buyok ·Illustrated by Toma Feizo Gas www.readinga-z.com Alien Collective m: Transiti
+[U23] How Sound Works
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·U How Sound Works Written by Penny Atcheson www.readinga-z.com Sound How Works 10 10 VOLUME VERB Written by Penny Atcheson www.readinga-z.com
+[U24] Hubble: An Out-of-This-World Telescope
+    库:社会与人文  ->  正文:地球与宇宙 (命中2)  分布:{'地球与宇宙': 2, '物质与能量': 1}
+    正文: LEVELED BOOK.U bble: An Out-of-This-World Telescope Written by Amy S. Hansen www.readinga-z.com jle: An Out-of-This-World radio antenna light shield secondary m
+[V25] Chick-a-Dude
+    库:社会与人文  ->  正文:生命世界 (命中3)  分布:{'生命世界': 3}
+    正文: LEVELED BOOKU Chick-a-Du ude Wriften by Alyse Sweeney Illustrated by Frank Mayo www.readinga-z.com Chick-a-Du ude Written by Alyse Sweeney Ilustrated by Frank M
+[V110] Wild and Wacky World of Wigs
+    库:社会与人文  ->  正文:生命世界 (命中2)  分布:{'生命世界': 2}
+    正文: LEVELED BOOK·Y d Wacky Wild and Word of Wigs Multi level S.V.Y Written by Mary Ann Marazzi www.readinga-z.com Wild and Wacky World of Wigs Written by Mary Ann M
+[W44] Expedition 40: The Secret of the Seasons
+    库:生命世界  ->  正文:地球与宇宙 (命中2)  分布:{'地球与宇宙': 2}
+    正文: LEVELED BOOK·R Expedition 40: The Secret of the Seasons series Written by Celeste Fraser www.readinga-z.com The Secret of the Seasons Written by Celeste Fraser 
+[X11] Alien Collective I: Resistance
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Alien Collective Lesistance MUlti level Z·zo.Z Written by Rus Buyok·Illustrated by Toma Feizo Gas www.readinga-z.com Alien Collective I: Lesistan
+[X12] Alien Collective II: The Link
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Alien Collective he Multi level Z·Zo.Z Written by Rus Buyok·Illustrated by Toma Feizo Gas www.readinga-z.com Alien Collective ink he Written by R
+[X13] Alien Collective III: Transition
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Collective Alien Transifion Muti level Z.zo.Z Written by Rus Buyok ·Illustrated by Toma Feizo Gas www.readinga-z.com Alien Collective m: Transiti
+[Z44] Energy Sources: The Pros and Cons
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Energy Sources: The Pros and Cons Written by David L. Dreier www.readinga-z.com Energy Sources: Pros and Cons The Written by David L. Dreier www.
+[Z128] Wild and Wacky World of Wigs
+    库:社会与人文  ->  正文:生命世界 (命中2)  分布:{'生命世界': 2}
+    正文: LEVELED BOOK·Y d Wacky Wild and Word of Wigs Multi level S.V.Y Written by Mary Ann Marazzi www.readinga-z.com Wild and Wacky World of Wigs Written by Mary Ann M
+[Z103] Alien Collective I: Resistance
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Alien Collective Lesistance MUlti level Z·zo.Z Written by Rus Buyok·Illustrated by Toma Feizo Gas www.readinga-z.com Alien Collective I: Lesistan
+[Z104] Alien Collective II: The Link
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Alien Collective he Multi level Z·Zo.Z Written by Rus Buyok·Illustrated by Toma Feizo Gas www.readinga-z.com Alien Collective ink he Written by R
+[Z105] Alien Collective III: Transition
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2}
+    正文: LEVELED BOOK·Z Collective Alien Transifion Muti level Z.zo.Z Written by Rus Buyok ·Illustrated by Toma Feizo Gas www.readinga-z.com Alien Collective m: Transiti
+[Z115] The Bones of a King
+    库:社会与人文  ->  正文:身体与健康 (命中2)  分布:{'身体与健康': 2}
+    正文: LEVELED BOOK·Y Bones The of Written by Karen Mockler www.readinga-z.com Bones The King of Written by Karen Mockler www.readinga-z.com
+[Z129] Electric Cars: History and Future
+    库:社会与人文  ->  正文:物质与能量 (命中2)  分布:{'物质与能量': 2, '社会与人文': 2}
+    正文: LEVELED BOOK W Electric Cars: History and Future Written by Steven Accardi www.readinga-z.com Electric Cars: History and Future iMiEV SPORT Written by Steven Ac
+[Z2106] Wild and Wacky World of Wigs
+    库:社会与人文  ->  正文:生命世界 (命中2)  分布:{'生命世界': 2}
+    正文: LEVELED BOOK·Y d Wacky Wild and Word of Wigs Multi level S.V.Y Written by Mary Ann Marazzi www.readinga-z.com Wild and Wacky World of Wigs Written by Mary Ann M
+
+=== 可直接粘贴进 THEME_OVERRIDE 的片段 ===
+    "alien collective i resistance": "物质与能量",
+    "alien collective ii the link": "物质与能量",
+    "alien collective iii transition": "物质与能量",
+    "bats day and night": "地球与宇宙",
+    "best friends q and u": "地球与宇宙",
+    "chick a dude": "生命世界",
+    "color wheel colors": "物质与能量",
+    "do not eat that": "地球与宇宙",
+    "electric cars history and future": "物质与能量",
+    "energy sources the pros and cons": "物质与能量",
+    "expedition 40 the secret of the seasons": "地球与宇宙",
+    "good for thurgood": "生命世界",
+    "history of the bicycle": "社会与人文",
+    "how sound works": "物质与能量",
+    "hubble an out of this world telescope": "地球与宇宙",
+    "shave it off": "生命世界",
+    "the bones of a king": "身体与健康",
+    "we give away": "生命世界",
+    "what to wear": "地球与宇宙",
+    "wild and wacky world of wigs": "生命世界",

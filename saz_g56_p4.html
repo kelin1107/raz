@@ -1,0 +1,981 @@
+
+<!DOCTYPE html>
+<html lang="zh" ng-app="demo">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SAZ G5-G6包含图书 - 小花生</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="robots" content="index,follow"/>
+    <meta property="og:title" content="SAZ G5-G6包含图书 - 小花生"/>
+    <meta property="og:description"/>
+    <meta property="og:site_name" content="小花生"/>
+    <link href="https://www.xiaohuasheng.cn/kiddobc.ico" rel="icon"/>
+    <link href="/Content/css?v=jGmhwqqmoo5oY7GJYOuZHFV-V_oxagKU_7RAZp6IQqA1" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="/vendor/jqueryrebox/jquery-rebox-0.1.0.css" />
+    <link href="/Content/rongyun/RongIMWidget.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/page-1.0.css" type="text/css" rel="stylesheet"/>
+    <link href="https://img.xiaohuasheng.cn/Content/template-7.6.0.css" type="text/css" rel="stylesheet"/>
+    <script src="/bundles/modernizr?v=rGcoDow97GYrNMSwHq7xCCjlcB3UIY4_OhPRc6BBSQA1"></script>
+
+    <style type="text/css">
+        .hei
+        {
+            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+            filter: gray;
+        }
+    </style>
+        <script type="text/javascript">
+            var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?cc6ff23b343982f6abc5d493e2b702d5";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+       </script>
+</head>
+<body style="padding-top: 94px !important;background-color: #f6f6f6;" ng-controller="main">
+    
+<link href="/Content/dropdown.css?v=1.0" rel="stylesheet" type="text/css" />
+<script src="/Scripts/modernizr.custom.js" type="text/javascript"></script>
+<div class="all_nav_sty">
+    <div class="all_nav_stybg">
+        <div class="all_nav_content">
+            <div class="nav_logo_head" onclick="kiddoBCCommon.jumpPage($GlobalIndexUrl)" style="padding-left:20px;">
+                <div class="nav_logo_img">
+                    <img alt="logo" src="/Images/share_icon.png"/>
+                </div>
+                <div class="nav_logo_name"><span class="site_name">小花生网</span><span class="site_des">带孩子读书学英语的地方</span></div>
+            </div>
+            <div class="nav_content_right" style="padding-right:20px;">
+                <table>
+                    <tr valign="middle">
+                      
+                        <td>
+                            <a onclick="buryingPoint.addBehaviorLog(2, 7, '')" class="all_nav_rightlink nav_message_pos" href="/app">下载App</a>
+                        </td>
+                        <td>
+                            <a onclick="buryingPoint.addBehaviorLog(2, 8, '')" class="all_nav_rightlink nav_message_pos" href="/gzh">公众号</a>
+                        </td>
+                                    <td>
+                                    <a class="all_nav_rightlink" style="margin-right: 15px;" href="javascript:void(0);" onclick="commonLoginDialogFunction.show()">登录</a>
+                                </td>
+                                <td>
+                                    <div class="nav_right_line">
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="all_nav_rightlink sign_up" href="javascript:void(0);" onclick="commonLoginDialogFunction.show()">注册</a>
+                                </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+   
+
+<div class="all_tab_style site_tab_height">
+    <div class="all_tab_content site_content_width">
+        <div class="left2" style="display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center; height:100%;">
+            <a class="logo_title"  href="https://www.xiaohuasheng.cn/"><img src="https://www.xiaohuasheng.cn/Images/app_logo.png" alt=""/></a>
+            <a onclick="buryingPoint.addBehaviorLog(2, 1, '')" class="tab_item" style="color:#533a22;" href="https://www.xiaohuasheng.cn/">首页</a>
+            <a onclick="buryingPoint.addBehaviorLog(2, 2, '')" class="tab_item" style="color:#1f89cd;" href="/readingpunch">阅读打卡</a>
+            <a onclick="buryingPoint.addBehaviorLog(2, 9, '')" class="tab_item" style="color:#f37d00;" href="/englishguide">英语启蒙</a>
+            <a onclick="buryingPoint.addBehaviorLog(16, 3, '-1')" class="tab_item" style="color:#0c949c;" href="/subjects">精华专题</a>
+            
+        </div>
+        <div class="right">
+            <div class="nav_logo_search">
+                <div class="search_exp_sty3 search_exp_divsty" style="width:261px;">
+                    <input id="nav_search" class="search_exp_inputsty" placeholder="搜索 经验 图书" type="text" style="width:190px;" jqautocomplete="off" class="ac_input" />
+                    <div id="btnNavSearch"><img id='nimg1' src="https://www.xiaohuasheng.cn/Images/home_search_icon.png" alt=""/><img id='nimg2' style="display:none;" src="https://www.xiaohuasheng.cn/Images/search_w.png" alt=""/></div>
+                </div>
+                    <a class="nav_add_article search_exp_buttonsty" href="javascript:void(0);" onclick="indexExperience.jumpAddLogPage('/add_blog')">写日志</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div></div>
+<script src="/bundles/jquery?v=0A7s0OuTJJcoZqp6iUEoHJ_qhc9t_P0vSRDOFrEQpuM1"></script>
+
+<script type="text/javascript">
+    var $SignInPage = "https://www.xiaohuasheng.cn/login";
+    var $GlobalIndexUrl = "https://www.xiaohuasheng.cn/";
+    var $UserExperienceUserId = parseInt("0");
+    var $IsExperiencePage = "";
+
+    function DropDown(el) {
+        this.dd = el;
+        this.initEvents();
+    }
+
+    DropDown.prototype = {
+        initEvents: function () {
+            var obj = this;
+
+            obj.dd.on('click', function (event) {
+                $(this).toggleClass('active');
+                event.stopPropagation();
+            });
+        }
+    }
+
+    function loginOut() {
+        $.post("/Account/LoginOut",
+        function (data, status) {
+            window.location.reload();
+        });
+    }
+
+    function loginIn() {
+        window.location.href = $SignInPage;
+
+        if (window.location.href.indexOf("Account") == -1) {
+            $.cookie('SignInJumpCurrentPageCookie', window.location.href, { expires: 7, path: '/', domain: document.domain, secure: false });
+        }
+    }
+
+    // 0不加水印/1加水印
+    function setWatermark(action, event) {
+        if (!kiddoBCCommon.judgeLogin()) {
+            return;
+        }
+
+        $.post("/Home/setWatermark",
+        {
+            action: action,
+            time: new Date().toString()
+        },
+        function (data, status) {
+            if (data && data.length > 0) {
+                alert(data);
+                return;
+            }
+
+            if (action == 0) {
+                $('#nav_open_watermark i').removeClass('ic-navigation-selected');
+                $('#nav_open_watermark i').addClass("ic-navigation-empty ");
+                $('#nav_close_watermark i').removeClass("ic-navigation-empty ");
+                $('#nav_close_watermark i').addClass('ic-navigation-selected');
+            } else {
+                $('#nav_close_watermark i').removeClass('ic-navigation-selected');
+                $('#nav_close_watermark i').addClass("ic-navigation-empty ");
+                $('#nav_open_watermark i').removeClass("ic-navigation-empty ");
+                $('#nav_open_watermark i').addClass('ic-navigation-selected');
+            }
+
+            event.stopPropagation();
+            kiddoBCCommon.showTip(action == 0 ? '关闭水印成功' : '打开水印成功');
+
+            setTimeout(function () {
+                $('.wrapper-dropdown-5').removeClass('active');
+            }, 1500);
+        });
+    }
+
+    $(function () {
+        var dd = new DropDown($('#nav_content_dropdown'));
+
+        $('#nav_item_watermark').on('click', function (event) {
+            $('#nav_content_dropdown_sub').toggleClass('active');
+            event.stopPropagation();
+        });
+
+        $('#nav_open_watermark').on('click', function (event) {
+            setWatermark(1, event);
+        });
+
+        $('#nav_close_watermark').on('click', function (event) {
+            setWatermark(0, event);
+        });
+
+        $(document).click(function () {
+            $('.wrapper-dropdown-5').removeClass('active');
+        });
+
+        if ($IsExperiencePage.indexOf("experience") == -1) {
+            $(".search_exp_inputsty").focus(function () {
+                $(".search_exp_buttonsty").hide();
+                $(".search_exp_divsty").css("width", "334px");
+                $(".search_exp_inputsty").css("width", "260px");
+                otherPageStyle();
+            });
+//            $(".search_exp_inputsty").blur(function () {
+//                $(".search_exp_buttonsty").show();
+//                $(".search_exp_divsty").css("width", "261px");
+//                $(".search_exp_inputsty").css("width", "190px");
+//            });
+            $('.search_exp_inputsty').bind('input propertychange', function () {
+                otherPageStyle();
+            });
+        }
+    });
+
+    function otherPageStyle() {
+        var inputText = $("#nav_search").val();
+
+        if (inputText.length > 0) {
+            $("#btnNavSearch").css("background-color", "#ff5050");
+            $("#nimg1").hide();
+            $("#nimg2").show();
+        } else {
+            $("#btnNavSearch").css("background-color", "");
+            $("#nimg1").show();
+            $("#nimg2").hide();
+        } 
+    }
+</script>
+
+    <div style="margin-bottom: 20px;">
+        
+
+<div class="container">
+    <a title="回到顶部" class="w-top" href="javascript:void(0)" onclick="window.scrollTo('0','0')" id="gtotop" hidefocus="true" style="visibility: hidden;
+        opacity: 0;">回到顶部</a>
+    <div class="tab_selected_Content">
+        <table>
+            <tr>
+                <td class='biglayout_left'>
+                    <div class="div_biglayout_left">
+                        <div style="background: #fff; width: 100%; padding-top: 20px; padding-bottom: 15px; text-align: left;">
+                            <span style="margin-left: 20px; margin-bottom: 10px; font-size: 18px; font-weight: bold;">&lt;SAZ G5-G6&gt; 包含图书</span>
+                        </div>
+                        <div class="index_category_content" style="background:#ffffff; padding-top: 15px; margin-bottom: 0px;">
+
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/21e5fb420c71a889" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023181234.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/21e5fb420c71a889" >71 SAZ5-6 Roller Coasters</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/21e5fb420c71a889" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>8</span>个孩子打卡<span>5</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (25.0%),  <span>8-9岁</span> (25.0%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/4db831e4700be4c3" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023181324.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/4db831e4700be4c3" >72 SAZ5-6 Perpetual Motion: Fact or Fiction?</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/4db831e4700be4c3" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>11</span>个孩子打卡<span>7</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (18.2%),  <span>7-8岁</span> (18.2%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/541b895fa857f0bc" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023181426.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/541b895fa857f0bc" >76 SAZ5-6 Green Towns</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/541b895fa857f0bc" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>9</span>个孩子打卡<span>7</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (22.2%),  <span>7-8岁</span> (22.2%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/8ecb93c1ef6f1943" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023181521.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/8ecb93c1ef6f1943" >77 SAZ5-6 Before the Gas Pump</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/8ecb93c1ef6f1943" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>7</span>个孩子打卡<span>5</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (28.6%),  <span>7-8岁</span> (28.6%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/f2d70a20f4ee3332" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023181620.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/f2d70a20f4ee3332" >78 SAZ5-6 Now We're Cooking!</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/f2d70a20f4ee3332" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>9</span>个孩子打卡<span>6</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>7-8岁</span> (33.3%),  <span>6-7岁</span> (22.2%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/57b93fedef6d4e50" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023181719.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/57b93fedef6d4e50" >79 SAZ5-6 River Power</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/57b93fedef6d4e50" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>7</span>个孩子打卡<span>4</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (28.6%),  <span>9-10岁</span> (28.6%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/c3ab3cd72f6c93e1" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023181806.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/c3ab3cd72f6c93e1" >80 SAZ5-6 Bioenergy</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/c3ab3cd72f6c93e1" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>7</span>个孩子打卡<span>4</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (28.6%),  <span>9-10岁</span> (28.6%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/c7b86b78ef69e8b9" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023182101.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/c7b86b78ef69e8b9" >83 SAZ5-6 Light</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/c7b86b78ef69e8b9" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>7</span>个孩子打卡<span>4</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (28.6%),  <span>8-9岁</span> (28.6%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/f202815d9cf8d604" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023182212.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/f202815d9cf8d604" >84 SAZ5-6 Luminescence in Nature</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/f202815d9cf8d604" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>6</span>个孩子打卡<span>3</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (33.3%),  <span>7-8岁</span> (16.7%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/73f7722a5b67dce4" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023182316.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/73f7722a5b67dce4" >85 SAZ5-6 Light Pollution</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/73f7722a5b67dce4" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>7</span>个孩子打卡<span>3</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (28.6%),  <span>9-10岁</span> (28.6%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/1533f1bb7e71dde" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023182404.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/1533f1bb7e71dde" >86 SAZ5-6 Light and Art</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/1533f1bb7e71dde" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>7</span>个孩子打卡<span>3</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (28.6%),  <span>9-10岁</span> (28.6%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/3ace842cef65b0cb" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023182538.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/3ace842cef65b0cb" >87 SAZ5-6 Lighting Our World</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/3ace842cef65b0cb" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>6</span>个孩子打卡<span>5</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (33.3%),  <span>9-10岁</span> (33.3%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/c9f49ce214e4f860" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023182625.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/c9f49ce214e4f860" >88 SAZ5-6 Lasers</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/c9f49ce214e4f860" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>7</span>个孩子打卡<span>5</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (33.3%),  <span>9-10岁</span> (33.3%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/3fe253116f622b87" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023182929.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/3fe253116f622b87" >92 SAZ5-6 The Science of Lemonade</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/3fe253116f622b87" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>9</span>个孩子打卡<span>6</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (22.2%),  <span>8-9岁</span> (22.2%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/3d8b2c9d3f614b98" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023183026.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/3d8b2c9d3f614b98" >93 SAZ5-6 Dmitri's Table</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/3d8b2c9d3f614b98" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>9</span>个孩子打卡<span>5</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (22.2%),  <span>8-9岁</span> (22.2%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/23ae30bd55ec87f" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023183311.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/23ae30bd55ec87f" >95 SAZ5-6 The Science of Baking</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/23ae30bd55ec87f" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>10</span>个孩子打卡<span>5</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (20.0%),  <span>7-8岁</span> (20.0%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/50cad2493f95fb70" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023183403.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/50cad2493f95fb70" >96 SAZ5-6 Curious Marie Curie</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/50cad2493f95fb70" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>12</span>个孩子打卡<span>8</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (16.7%),  <span>7-8岁</span> (16.7%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/c828cd94ff4a989f" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023185513.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/c828cd94ff4a989f" >100 SAZ5-6 Blackout!</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/c828cd94ff4a989f" >saz5-6</a></div>
+                                                                <div><a href="/book/c828cd94ff4a989f" >Lexile 960</a></div>
+                                            <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>12</span>个孩子打卡<span>8</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>8-9岁</span> (23.1%),  <span>6-7岁</span> (15.4%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/8922a1b96f49c07f" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023185609.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/8922a1b96f49c07f" >101 SAZ5-6 Battle of the Currents</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/8922a1b96f49c07f" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>11</span>个孩子打卡<span>7</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (18.2%),  <span>8-9岁</span> (18.2%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad'>
+        </div>
+        <div style="position:relative;">
+            <div style="margin-left:20px; margin-right:20px; position:relative;">
+                <div class='review_book_photo'>
+                    <a target='_blank' href="/book/27194d277f4810c2" >
+                        <img alt='' src='https://img.xiaohuasheng.cn/1336654/Book/20251023185759.jpg?imageView2/1/w/216/h/288'/></a></div>
+                <div class='review_book_info'>
+                    <div class='review_book_photoTitle'>
+                        <a href="/book/27194d277f4810c2" >103 SAZ5-6 Remote Control</a></div>
+                    <div class="pc_booklist_info">
+                        <div><a href="/book/27194d277f4810c2" >saz5-6</a></div>
+                                                                                    <div class="book_punch_info" style="margin-bottom:0px;">
+                                <div class="punch_count"><span>9</span>个孩子打卡<span>6</span>次</div>
+                                                            <div class="reading_age">阅读年龄 <span>6-7岁</span> (22.2%),  <span>8-9岁</span> (22.2%)</div>
+                        </div>
+                </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class='review_book_bookpad' style='margin-bottom:0;'>
+        </div>
+                        </div>
+                            <div class="page" style=" padding-top: 20px; padding-bottom: 20px;">
+                                    <li class='pageItem'><a href="/series/fbb2fa2ad2314a1e/page_1">第一页</a></li>
+                                    <li class='pageItem'><a href="/series/fbb2fa2ad2314a1e/page_3">&lt;前页</a></li>
+                                
+
+                                        <li class='pageItem'><a href="/series/fbb2fa2ad2314a1e/page_1">1</a></li>
+                                        <li class='pageItem'><a href="/series/fbb2fa2ad2314a1e/page_2">2</a></li>
+                                        <li class='pageItem'><a href="/series/fbb2fa2ad2314a1e/page_3">3</a></li>
+                                        <li class='pageItemActive'>4</li>
+                                        <li class='pageItem'><a href="/series/fbb2fa2ad2314a1e/page_5">5</a></li>
+
+                                
+                                    <li class='pageItem'><a href="/series/fbb2fa2ad2314a1e/page_5">后页&gt;</a></li>
+                                    <li class='pageItem'><a href="/series/fbb2fa2ad2314a1e/page_5">最后页</a></li>
+                            </div>
+                    </div>
+                </td>
+                <td class='biglayout_padding'>
+                </td>
+                <td align="left" valign="top" class="biglayout_right">
+                    <div style="width: 334px; position: fixed;">
+
+    <div class="box_shadow">
+        <div class="card-section right_book_info">
+            <div class="title"><a href="/book/fbb2fa2ad2314a1e">SAZ G5-G6</a></div>
+            <div class="book_cover">
+                <a href="/book/fbb2fa2ad2314a1e" title="SAZ G5-G6"><img alt='SAZ G5-G6' src='https://img.xiaohuasheng.cn/124244/Book/20251027160700.png?imageView2/3/w/60/h/80' /></a></div>
+            <div class="book_attr">
+                                                                                                                                                                            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+                            <div style="height:10px;"></div>
+                            <div class='kiddo_bc_advertisement box_shadow'>
+            <div class="kiddobc_advertisement_top">
+                <a href="https://www.xiaohuasheng.cn/gzh">
+                    <img src="https://img.xiaohuasheng.cn/EditPicture/AdvPicture/20220707174911616.jpg" alt="上公号"/></a>
+            </div>
+    </div>
+
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+ 
+    </div>
+    <script src="/bundles/jquery?v=0A7s0OuTJJcoZqp6iUEoHJ_qhc9t_P0vSRDOFrEQpuM1"></script>
+
+    <script src="/bundles/KiddoBC?v=nv7QYIOqK-tyMQvJA0FIh3sJ6ICcNkA49sxmMxXckkc1"></script>
+
+    <script src="/Scripts/jquery.lazyload.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.qrcode.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var vAddExperience = '/add_blog';
+        var vAddPosts = '/addpost_0';
+        var vServerBaseUrl = 'https://www.xiaohuasheng.cn/';
+        var $IsLogin = "false";
+        var $LoginPage = 'https://www.xiaohuasheng.cn/login';
+        var vSearchWord = "";
+        var vSearchPress = "";
+
+        function dealSearchContent(content) {
+            if (content == undefined || content.length == 0) {
+                return content;
+            }
+
+            return $.trim(content.replace(/\"/g, "").replace(/\./g, "").replace(/\&#183;/g, "·"));
+        }
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($("#gtotop").size() > 0) {
+                    $("#gtotop").attr("style", $(document).scrollTop() > 500 ? "visibility: visible;opacity: 1;" : "visibility: hidden;opacity:0;");
+                }
+            });
+
+            $("#btnCreateArticle").click(function () {
+                if (!kiddoBCCommon.judgeLogin()) {
+                    return;
+                }
+
+                kiddoBCCommon.jumpPage(vAddExperience);
+            });
+
+            if (vSearchWord.length > 0) {
+                $('#nav_search').val(decodeURIComponent(dealSearchContent(vSearchWord)));
+            }
+
+            if (vSearchPress.length > 0) {
+                $('#nav_search').val(decodeURIComponent(vSearchPress));
+            }
+
+            // 导航栏搜索
+            $("#btnNavSearch").click(function () {
+                var vContent = $.trim($('#nav_search').val());
+
+                if (vSearchWord.length > 0 || vSearchPress.length > 0) {
+                    if (vContent.length == 0) {
+                        window.location.href = vSearchWord.length > 0 ? '/book/search/' : '/press/search';
+                    } else {
+                        window.location.href = vSearchWord.length > 0 ? '/book/search/' + "1/" + encodeURIComponent(dealSearchContent(vContent)) : '/press/search' + "/1/" + encodeURIComponent(dealSearchContent(vContent));
+                    }
+                } else {
+                    if ($UserExperienceUserId > 0) {
+                        window.location.href = '/searchuserexperience' + "/userid_" + $UserExperienceUserId + "/content_" + encodeURIComponent(dealSearchContent(vContent));
+                    } else {
+                        var vUrl = window.location.href;
+                        var vSearchIndex = vUrl.indexOf("/search/");
+
+                        if (vSearchIndex != -1) {
+                            var vNewUrl = vUrl.substr(vSearchIndex + 1, vUrl.length);
+                            var vNewUrlArray = vNewUrl.split("/");
+                            window.location.href = "/" + vNewUrlArray[0] + "/" + vNewUrlArray[1] + "/1/" + encodeURIComponent(dealSearchContent(vContent));
+                        } else {
+                            window.location.href = '/search/all/1' + "/" + encodeURIComponent(dealSearchContent(vContent));
+                        }
+                    }
+                }
+            });
+
+            $('#nav_search').keydown(function (e) {
+                if (e.keyCode == 13) {
+                    $("#btnNavSearch").click();
+                }
+            });
+
+            if ($UserExperienceUserId == 0) {
+                autoComplete.nav(vServerBaseUrl);
+            }
+
+            // 搜索体验
+            $("#btnExpSearch").click(function () {
+                var vContent = $('#index_search').val();
+                window.location.href = '/search' + "/" + kiddoBCCommon.filterSpecialSymbols(vContent);
+            });
+
+            $('#index_search').keydown(function (e) {
+                if (e.keyCode == 13) {
+                    $("#btnExpSearch").click();
+                }
+            });
+
+            autoComplete.experience(vServerBaseUrl);
+
+            $("#btnCreatePosts").click(function () {
+                if (!kiddoBCCommon.judgeLogin()) {
+                    return;
+                }
+
+                kiddoBCCommon.jumpPage(vAddPosts);
+            });
+
+            // 搜索讨论
+            $("#btnDiscussSearch").click(function () {
+                var vContent = $('#Discuss_Search').val();
+                window.location.href = '/discussion/search' + "/" + kiddoBCCommon.filterSpecialSymbols(vContent);
+            });
+
+            $('#Discuss_Search').keydown(function (e) {
+                if (e.keyCode == 13) {
+                    $("#btnDiscussSearch").click();
+                }
+            });
+
+            autoComplete.discuss(vServerBaseUrl);
+
+            $('#index_user').keydown(function (e) {
+                if (e.keyCode == 13) {
+                    $("#btnUserSearch").click();
+                }
+            });
+
+            autoComplete.user(vServerBaseUrl);
+
+            // 搜索问题
+            $("#btnQuestionSearch").click(function () {
+                var vContent = $('#question_search').val();
+                window.location.href = '/question/search' + "/" + kiddoBCCommon.filterSpecialSymbols(vContent);
+            });
+
+            $('#question_search').keydown(function (e) {
+                if (e.keyCode == 13) {
+                    $("#btnQuestionSearch").click();
+                }
+            });
+
+            autoComplete.question(vServerBaseUrl);
+
+            if ($IsExperiencePage.indexOf("experience") == -1) {
+                otherPageStyle();
+            }
+        });
+    </script>
+
+<div class="common_footer">
+    <div class="common_footer_content" style="margin-bottom:0px; width: 1230px;padding-right:0px; padding-bottom:0px;">
+        <div>
+            <div class="nav-list-cont" style="float:left; width:calc(100% - 350px)">
+                <ul class="nav-list">
+                    <li>
+                        <span>英语学习攻略</span>
+                        <ul class="sub-nav-list">
+                            <li><a href="/resourcetopic/741">英语启蒙</a></li>
+                            <li><a href="/resourcetopic/5522">自然拼读</a></li>
+                            <li><a href="/resourcetopic/2373">分级阅读</a></li>
+                            <li><a href="/resourcetopic/6039">章节书阅读</a></li>
+                            <li><a href="/resourcetopic/2409">英语水平测试</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>学科辅导方法</span>
+                        <ul class="sub-nav-list">
+                            <li><a href="/resourcetopic/5239">大语文</a></li>
+                            <li><a href="/resourcetopic/2485">数学</a></li>
+                            <li><a href="/resourcetopic/13">历史地理</a></li>
+                            <li><a href="/resourcetopic/6048">科学</a></li>
+                            <li><a href="/resourcetopic/155">运动</a></li>
+                            <li><a href="/resourcetopic/507">艺术</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>教育成长经验</span>
+                        <ul class="sub-nav-list">
+                            <li><a href="/resourcetopic/430">素质培养</a></li>
+                            <li><a href="/resourcetopic/6302">阅读习惯培养</a></li>
+                            <li><a href="/resourcetopic/2441">儿童健康</a></li>
+                            <li><a href="/resourcetopic/307">亲子生活</a></li>
+                        </ul>
+                    </li>
+                     <li>
+                        <span>关于小花生</span>
+                        <ul class="sub-nav-list">
+                            <li><a href="/Other/AboutUs" target="_blank" rel="nofollow">关于我们</a></li>
+                            <li><a href="/Other/JoinUs" target="_blank" rel="nofollow">加入我们</a></li>
+                            <li><a href="/Other/Links" target="_blank" rel="nofollow">友情链接</a></li>
+                            <li><a href="/Other/Disclaimer" target="_blank" rel="nofollow">免责声明</a></li>
+                            <li><a href="/Other/BusinessCooperation" target="_blank" rel="nofollow">商务合作</a></li>
+                            <li><a href="/blog/b73f2baa586bb8a7" target="_blank" rel="nofollow">建议反馈</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div style="float:right;">
+                <section class="qr-section">
+                    <div class="qr-section--item">
+                        <img src="https://img.xiaohuasheng.cn/Images/app_down_twocode2.png" alt="下载小花生APP"/>
+                        <p>下载小花生APP</p>
+                    </div>
+                    <div class="qr-section--item" style="margin-left:20px;">
+                        <img src="/Images/twocode.jpg" alt="关注小花生公众号"/>
+                        <p>关注小花生公众号</p>
+                    </div>
+                </section>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="index_category_contentborder4" style="margin-top: 30px; margin-bottom:0px;"></div>
+         <div class="zh-footer2" style="  display: block;text-align: center;width: auto;">
+            <div class="content2 zg-wrap2">
+                <ul>
+                    <li><span class="copy">©2022 小花生</span></li>
+                    <li>
+                        <a target="_blank" rel="nofollow" href="http://beian.miit.gov.cn">沪ICP备09005969号-2</a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202210176">沪公网安备31011202210176号</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div></body>
+</html>

@@ -1,0 +1,846 @@
+AA02	aa	NF	F	Go, Go, Go
+AA03	aa	NF	F	Jump Over
+AA51	aa	F	NF	Lunch at School
+AA52	aa	F	NF	Valentine's Day Gifts
+AA53	aa	F	NF	Pasta!
+AA56	aa	F	NF	Play Ball!
+AA57	aa	F	NF	The Baseball Game
+AA63	aa	NF	F	Summer Camp
+AA65	aa	NF	F	The Post Office
+AA67	aa	NF	F	On an Airplane
+AA68	aa	NF	F	The Subway
+AA69	aa	NF	F	At the Lake
+AA76	aa	F	NF	Show Some Love
+AA79	aa	F	NF	Toys
+AA80	aa	NF	F	We Build
+AA82	aa	F	NF	The Fort
+AA83	aa	NF	F	My Garden
+AA93	aa	NF	F	Under
+AA94	aa	NF	F	On
+AA95	aa	NF	F	In
+AA96	aa	NF	F	Out
+AA97	aa	NF	F	Off
+AA98	aa	NF	F	Over
+AA100	aa	NF	F	These Are Opposites
+A03	A	NF	F	The Big Cat
+A05	A	F	NF	Mom and I
+A09	A	NF	F	Hamster Home
+A11	A	NF	F	Bird Goes Home
+A21	A	NF	F	I See My Colors
+A23	A	NF	F	Bedtime Counting
+A24	A	NF	F	Carlos Counts Kittens
+A25	A	NF	F	Maria Counts Pumpkins
+A35	A	NF	F	This Feels
+A36	A	F	NF	Where to Go
+A38	A	F	NF	Fun in the Water
+A39	A	F	NF	I Draw a Bunny
+A41	A	NF	F	This Tastes
+A42	A	NF	F	What Do I Hear?
+A45	A	F	NF	Make a Salad
+A47	A	NF	F	Our Apartment Building
+A48	A	F	NF	This Is My Bear
+A49	A	F	NF	Write!
+A50	A	NF	F	This Sounds
+A52	A	NF	F	This Looks
+A55	A	NF	F	A Fish Sees
+A56	A	F	NF	Go Fly a Kite
+A60	A	NF	F	I Can
+A61	A	F	NF	Getting Dressed
+A62	A	F	NF	These Shoes
+A67	A	NF	F	Clean, Not Clean
+A68	A	NF	F	Building with Blocks
+A69	A	F	NF	My House
+A72	A	F	NF	I Set the Table
+A75	A	F	NF	What Makes Me Happy?
+A76	A	NF	F	My Hair
+A79	A	NF	F	Safe, Not Safe
+A80	A	F	NF	You Can Dance
+A84	A	F	NF	Dad and I
+A85	A	F	NF	For Mom
+A88	A	F	NF	Grandparents Are Great!
+A90	A	NF	F	In and Out
+A91	A	NF	F	Up and Down
+A93	A	NF	F	This Smells!
+A96	A	F	NF	Christmas Cookies
+B01	B	F	NF	Taking Care of Chase
+B02	B	F	NF	The Pet Rats
+B06	B	NF	F	On the Farm
+B35	B	F	NF	Fun with Paper
+B38	B	F	NF	Applesauce
+B39	B	F	NF	We Pack a Picnic
+B42	B	F	NF	Halloween Costumes
+B50	B	NF	F	Go Animals Go
+B60	B	F	NF	Beach Fun
+B65	B	NF	F	Firefly
+B71	B	F	NF	Old and New
+B75	B	F	NF	It Is School Time
+B76	B	F	NF	Time for Soccer
+B78	B	F	NF	Winter Fun
+B82	B	F	NF	Near and Far Away
+B86	B	NF	F	Where?
+B87	B	F	NF	Are These His or Hers?
+B91	B	NF	F	Three Baby Birds
+B92	B	NF	F	Two Little Dicky Birds
+B96	B	NF	F	Crows On a Wire
+C07	C	F	NF	Moms Do So Much
+C29	C	F	NF	Making Salsa!
+C34	C	F	NF	A Place Called Home
+C45	C	F	NF	Busy at School
+C49	C	F	NF	At the Fair
+C50	C	NF	F	Teeth Brushing Fun
+C63	C	F	NF	New Again
+C68	C	F	NF	What's for Breakfast?
+C69	C	F	NF	Winter Hats
+C75	C	F	NF	What Do I Wear?
+C80	C	NF	F	Feelings
+C81	C	NF	F	What's My Job?
+C82	C	NF	F	When Is Nighttime?
+C84	C	NF	F	Fall
+C89	C	NF	F	Open and Close
+C94	C	NF	F	Who, Who, Who?
+D03	D	NF	F	Whale Watching
+D04	D	NF	F	Frog Is Hungry
+D12	D	NF	F	Future Flowers
+D13	D	NF	F	Under That Rock
+D16	D	NF	F	Lily the Cat
+D21	D	NF	F	Tadpole Teasing
+D27	D	F	NF	Who Runs Faster?
+D30	D	NF	F	Why Does an Octopus Need Eight Arms?
+D31	D	F	NF	Less Than
+D33	D	F	NF	I Count 100 Things
+D34	D	F	NF	At the Library
+D36	D	NF	F	My Neighborhood
+D41	D	NF	F	My New School
+D45	D	F	NF	Bubbles
+D49	D	NF	F	Nothing Scares Me!
+D52	D	F	NF	Mud Balls!
+D56	D	NF	F	Buddy the Bear
+D61	D	F	NF	Backyard Camping
+D65	D	F	NF	Dollars and Cents
+D68	D	NF	F	Who Wants to Play Basketball?
+D69	D	F	NF	Hobbies
+D72	D	F	NF	Caretakers
+D74	D	F	NF	The Team
+D76	D	NF	F	Why Can't I?
+D77	D	NF	F	Sky High!
+D79	D	NF	F	The Sky Is Falling
+D81	D	NF	F	Swamp Music
+D84	D	NF	F	Little Loon
+D86	D	NF	F	Do Not Eat That!
+D87	D	NF	F	What to Wear?
+D91	D	NF	F	These Bees
+E05	E	NF	F	Not Enough Snow
+E12	E	NF	F	The Storm
+E14	E	NF	F	Sloth Wants to Snooze
+E15	E	NF	F	Class Pets
+E22	E	NF	F	Five Seconds to Blastoff!
+E28	E	F	NF	Say "Cheese"
+E31	E	NF	F	KADEN'S KWANZAA
+E34	E	NF	F	Muddy Boots
+E36	E	F	NF	At the Rodeo!
+E38	E	NF	F	Hooray for the Farmer's Market!
+E39	E	NF	F	Fantastic Phil
+E43	E	NF	F	Stop Snoring
+E44	E	NF	F	When I Grow Up
+E46	E	NF	F	Make a Tree Friend
+E48	E	NF	F	What Is in the Box?
+E50	E	NF	F	Hugs
+E53	E	NF	F	The Class Pet
+E56	E	NF	F	Bath Time
+E58	E	F	NF	A Day of Firsts
+E60	E	F	NF	I Am Thankful
+E63	E	F	NF	Sew Who?
+E65	E	NF	F	Doctor Jen
+E66	E	F	NF	I'd Like to Be
+E67	E	F	NF	I Work at The Stables
+E69	E	NF	F	Time for Bed
+E73	E	NF	F	The Boy Who Cried "Wolf!"
+E74	E	NF	F	What's for Dinner?
+E79	E	NF	F	Wake Up, Bear!
+E80	E	NF	F	Tiny Tugboat
+E81	E	NF	F	Bear and Kangaroo
+E82	E	NF	F	Runaway Snowball
+E85	E	NF	F	Where Are My Things?
+E87	E	NF	F	Zots Learns to Play
+E90	E	F	NF	I'd Like to Be
+F10	F	NF	F	Who Needs Rain?
+F11	F	NF	F	How Is the Weather Today?
+F13	F	F	NF	What's in That Shell?
+F14	F	F	NF	Hibernation
+F15	F	F	NF	Taste This
+F16	F	F	NF	Color Wheel Colors
+F19	F	F	NF	Tunnels
+F21	F	F	NF	A Clown Face
+F22	F	NF	F	Flashlight Shadow Show
+F23	F	NF	F	Friends in the Stars
+F24	F	F	NF	.Does It Sink or Float?
+F25	F	NF	F	Following the Map
+F30	F	F	NF	.Sleds
+F32	F	F	NF	At the Airport
+F33	F	F	NF	Motorcycles
+F37	F	NF	F	Fishtank Fun
+F39	F	F	NF	Cascarones
+F42	F	F	NF	At the MOVIES
+F44	F	NF	F	Fishing with Grandpa
+F46	F	F	NF	Trucking
+F48	F	NF	F	The Snowstorm
+F52	F	NF	F	Using Less Energy
+F53	F	NF	F	I Need a Snow Day!
+F55	F	NF	F	Ramadan Is Here
+F57	F	F	NF	Many Roads
+F63	F	F	NF	I Am a Gymnast
+F67	F	NF	F	Eat Like a Pig
+F69	F	F	NF	Glassblowing
+F71	F	NF	F	A Pet for Jupe
+F72	F	NF	F	.Farm Friends
+F76	F	NF	F	The Giant Turnip
+F81	F	NF	F	Scaredy Crow
+F82	F	NF	F	. Where Is Cub?
+G04	G	NF	F	Beanie and the Missing Bear
+G05	G	F	NF	Signs Are Everywhere
+G19	G	NF	F	Rude Robot
+G20	G	NF	F	Stormingo!
+G21	G	NF	F	The Camel and the Pig
+G25	G	NF	F	We Build a Robot
+G27	G	F	NF	Moving Bridges
+G28	G	NF	F	How Many Rhymes?
+G29	G	NF	F	Laws for Kids
+G30	G	NF	F	Loose Tooth
+G38	G	NF	F	The Queen Ant's Birthday
+G40	G	F	NF	Places People Live
+G41	G	NF	F	Penny the Rude Penguin
+G47	G	NF	F	Miles the Nile Crocodile
+G48	G	NF	F	Science Fair
+G49	G	F	NF	The Reason For Sneezing
+G51	G	F	NF	A Taste for Blood
+G52	G	NF	F	A Trip to Petra
+G55	G	F	NF	Chess
+G56	G	F	NF	Good Luck!
+G62	G	F	NF	Amazing Mummies
+G63	G	F	NF	Being a Leftie
+G64	G	F	NF	Cockroaches
+G66	G	F	NF	Living or Nonliving?
+G70	G	NF	F	Rock Hunting
+G82	G	F	NF	American Symbols
+G84	G	NF	F	Zots Learns to Share
+G87	G	F	NF	The Golden Rule
+H01	H	NF	F	A Desert Counting Book
+H03	H	F	NF	Abigail Adams
+H06	H	NF	F	Anna and The Dancing Goose
+H07	H	F	NF	At a Touch Tank
+H08	H	F	NF	Blackbeard the Pirate
+H11	H	NF	F	Brainstorm Bear
+H12	H	NF	F	Brother Messy, Brother Neat
+H20	H	F	NF	Dr.King's Memorial
+H23	H	F	NF	Flies
+H24	H	F	NF	Friends Around the World
+H26	H	NF	F	. Grasshopper's Gross Lunch
+H27	H	NF	F	Grounded to Earth
+H32	H	F	NF	I Collect That!
+H33	H	F	NF	I Live in the City
+H34	H	F	NF	I'd Like to Be
+H35	H	NF	F	Leap Year Birthday
+H40	H	NF	F	Moose on the Move
+H45	H	F	NF	Nature Stinks!
+H48	H	F	NF	PIZZA!
+H53	H	F	NF	Ships and Boats
+H54	H	NF	F	Sister Daisy, Sister Rose
+H62	H	NF	F	Tag-Along Goat
+H69	H	NF	F	The Goat and the Singing Wolf
+H71	H	F	NF	The Mighty Mississippi
+H72	H	NF	F	The Owl and the Pussycat
+H73	H	NF	F	The Parking Ticket
+H79	H	F	NF	Yellowstone: A Place of Wild Wonders
+H80	H	F	NF	You Can Cross
+I05	I	NF	F	The Animal Bridge
+I06	I	NF	F	Armadillo's Song
+I09	I	F	NF	Bigger Than a Monster Truck
+I11	I	F	NF	Blizzards!
+I22	I	F	NF	Dragonflies!
+I25	I	F	NF	Families
+I31	I	NF	F	Healthy Me
+I33	I	F	NF	Hibernation
+I39	I	NF	F	The Last Day of School
+I61	I	NF	F	A Pocket Park for Tiny
+I62	I	F	NF	Roadside Oddities
+I63	I	F	NF	Ruby Bridges
+I64	I	F	NF	Slow and Slower
+I65	I	NF	F	Soup and a Sandwish
+I69	I	NF	F	Turkeys in the Trees
+I70	I	F	NF	Two Make Twins
+I72	I	NF	F	We Make Maple Syrup
+I75	I	NF	F	The Wild Swans
+I77	I	NF	F	Winter Vacation
+I78	I	F	NF	The Everglades
+I80	I	F	NF	Istanbul
+I81	I	F	NF	Lice Aren't Nice
+J02	J	F	NF	Let's Make Shapes!
+J04	J	NF	F	Uzzle, the Football Star
+J06	J	F	NF	Garrett Morgan and the Traffic Signal
+J10	J	NF	F	Riding With Rosa Parks
+J16	J	NF	F	The Woodpecker
+J17	J	NF	F	When Bad Things Happen
+J18	J	F	NF	Being Bilingual
+J20	J	NF	F	The Disappearing Moon
+J24	J	F	NF	Whose Tracks Are These?
+J26	J	NF	F	Daisy in the Desert
+J34	J	F	NF	Number Twelve
+J36	J	NF	F	Why I'm Late Today
+J37	J	F	NF	Wonders of Nature
+J41	J	F	NF	I'm the Tall One
+J45	J	F	NF	Sugar, Sugar, Everywhere
+J46	J	NF	F	The Heart of a Monkey
+J49	J	F	NF	Ichiro Suzuki
+J53	J	NF	F	Rent a Llama
+J55	J	NF	F	The Legend of the Giant's Causeway
+J56	J	NF	F	Leopard, Ram, and Jackal
+J58	J	NF	F	Fall Forward Spring Back
+J61	J	F	NF	Lacrosse
+J62	J	NF	F	Monkey and Crocodile
+J66	J	F	NF	Heroes of September 11
+J71	J	F	NF	Argentina
+J74	J	F	NF	Incredible Places to Stay
+J83	J	F	NF	Mud Runs
+K04	K	NF	F	Brainstorm Bear
+K14	K	F	NF	Fast and Faster
+K15	K	NF	F	Fishing in the Rain
+K25	K	NF	F	Hugs for Daddy
+K26	K	F	NF	I Fly Hot-Air Balloons
+K34	K	NF	F	Leap Year Birthday
+K37	K	NF	F	Lola the Llama
+K40	K	F	NF	The Mighty Mississippi
+K45	K	NF	F	New Planet, New School
+K48	K	F	NF	Playing It Safe
+K49	K	NF	F	Ratty Rats
+K51	K	NF	F	Sadko and the Sea Kingdom
+K53	K	F	NF	Ships and Boats
+K55	K	F	NF	Slithery and Slimy
+K56	K	F	NF	Slow and Slower
+K62	K	F	NF	Sugar, Sugar, Everywhere
+K69	K	NF	F	To the Pumpkin Patch
+K72	K	F	NF	Yellowstone: A Place of Wild Wonders
+L03	L	NF	F	Anna and the Painted Eggs
+L04	L	F	NF	Big Ben and Westminster Palace
+L06	L	F	NF	Bigger Than a Monster Truck
+L10	L	F	NF	Coins Count
+L11	L	F	NF	Crocs and Gators
+L12	L	F	NF	Diabetes and Me
+L16	L	F	NF	Ghost Towns
+L20	L	NF	F	Harold the Hungry Plant
+L23	L	NF	F	How to Become a Superhero
+L25	L	NF	F	How We Measure
+L27	L	NF	F	Independence Day
+L30	L	NF	F	Jessica Loves Soccer
+L33	L	NF	F	The Lonely Woman and the Sea Spirit
+L37	L	F	NF	Oil: A Messy Resource
+L40	L	F	NF	Sign Language
+L43	L	F	NF	Teotihuacan
+L51	L	NF	F	Wonderful Winter
+M03	M	F	NF	Art Around Us
+M05	M	F	NF	The Baobab
+M07	M	NF	F	Can I Vote?
+M09	M	NF	F	The Day It Rained Tortillas
+M14	M	NF	F	Go Away, Sun!
+M18	M	NF	F	The Hoppers Start School
+M22	M	F	NF	Incredible Places to Stay
+M28	M	F	NF	Louis Braille: A Man and His Method
+M30	M	F	NF	Measuring Is Believing
+M38	M	NF	F	The Sleeping Dog
+M39	M	NF	F	Snow Camping in a Quinzhee
+M45	M	NF	F	Story of the Sun
+M47	M	F	NF	Tokyo Imperial Palace
+M51	M	NF	F	Vacation Time!
+M53	M	F	NF	You Stink!
+N01	N	F	NF	Abigail Adams
+N02	N	NF	F	The Animal Bridge
+N03	N	F	NF	Asthma
+N05	N	F	NF	Barack Obama
+N09	N	NF	F	Bringing Back the Buffalo
+N16	N	NF	F	Crows Share a Pie
+N22	N	NF	F	The Fishing Derby
+N23	N	F	NF	Friends Around the World
+N26	N	NF	F	Grounded to Earth
+N27	N	F	NF	Istanbul
+N29	N	NF	F	The Last Day of School
+N32	N	F	NF	Measuring Tails
+N33	N	NF	F	Memorial Day
+N34	N	F	NF	My Asthma Attack
+N35	N	NF	F	Old Fears, New Trade
+N42	N	F	NF	Roadside Oddities
+N45	N	F	NF	Ships and Boats
+N47	N	F	NF	Smart Savings
+N48	N	NF	F	Spare the Turkey
+N51	N	F	NF	Stonehenge
+N52	N	F	NF	Taj Mahal
+N54	N	F	NF	Valley of the Kings
+N59	N	NF	F	The Wild Swans
+O02	O	NF	F	Anansi and the Talking Watermelon
+O04	O	NF	F	Annie Oakley
+O08	O	F	NF	Baltic Rescue
+O10	O	F	NF	Bigger Than a Monster Truck
+O11	O	F	NF	Blizzards!
+O20	O	F	NF	The Everglades
+O22	O	NF	F	The Great Land Run
+O24	O	F	NF	Hibernation
+O25	O	NF	F	Hooray! Arrays!
+O26	O	F	NF	Hoover Dam
+O27	O	F	NF	I Collect That!
+O28	O	NF	F	I Just Want to Go to School!
+O29	O	F	NF	Ichiro Suzuki
+O34	O	F	NF	Jenny Loves Yoga
+O40	O	F	NF	Machu Picchu
+O43	O	F	NF	Mud Runs
+O44	O	F	NF	Nature Stinks!
+O45	O	F	NF	Off to Join the Circus
+O49	O	NF	F	Pecos Bill Rides a Tornado
+O52	O	NF	F	Rainy-Day Savings
+O56	O	NF	F	The Shadow People
+O66	O	F	NF	Wonders of Nature
+P03	P	F	NF	Adding It Up
+P08	P	F	NF	Blackbeard the Pirate
+P09	P	F	NF	Colosseum
+P10	P	F	NF	Deep Inside a Copper Mine
+P15	P	F	NF	Dragonflies!
+P16	P	F	NF	Eiffel Tower
+P17	P	NF	F	Fall Forward, Spring Back
+P29	P	F	NF	Kenya
+P32	P	NF	F	The Legend of Sleepy Hollow
+P35	P	F	NF	The Mona Lisa Mystery
+P36	P	F	NF	Mother Teresa
+P43	P	NF	F	Rent a Llama
+P51	P	F	NF	Two Make Twins
+Q03	Q	NF	F	The Ant in the Photograph
+Q07	Q	NF	F	Book 2: The Cave of the Lost
+Q08	Q	NF	F	Book 2: Who Likes Lemonade?
+Q09	Q	NF	F	The Castaway Pines
+Q14	Q	NF	F	The Farmer and the Horse
+Q17	Q	NF	F	The Great Lemon Bake-Off
+Q25	Q	NF	F	The Little Fir Tree
+Q31	Q	NF	F	My Earth Day Birthday
+Q33	Q	NF	F	Mystery at Camp White Cloud
+Q34	Q	NF	F	The New Soccer Ball
+Q35	Q	NF	F	On Eagle River
+Q37	Q	F	NF	Queen Elizabeth I
+Q47	Q	NF	F	The WeatherBot Warning
+Q50	Q	F	NF	A Visit to Kitt Peak
+Q58	Q	F	NF	Color Blindness
+Q64	Q	F	NF	Famous First Ladies
+Q65	Q	NF	F	First Day of School
+Q69	Q	NF	F	Horseshoes Aren't Just for Good Luck
+Q74	Q	F	NF	Lost Cities
+Q75	Q	F	NF	March Madness
+Q76	Q	F	NF	Mike Van Zee, Special Olympian
+Q80	Q	F	NF	Ramses II
+Q82	Q	F	NF	Route 66
+Q91	Q	F	NF	The Legend of Nessie
+R01	R	F	NF	The Amazing Amazon
+R02	R	NF	F	The Animal Bridge
+R04	R	F	NF	Barack Obama
+R11	R	NF	F	Book 3: Seeds and Sunflowers
+R12	R	NF	F	Book 4: Raining Cats, Dogs, and Other Animals
+R13	R	NF	F	Book 4: Scaredy Camp
+R14	R	NF	F	Book 4: Trick or Treat?
+R26	R	F	NF	King George III
+R39	R	F	NF	Remembering September 11
+R40	R	NF	F	Saved by the Stars
+R45	R	F	NF	Sugar, Sugar, Everywhere
+R49	R	F	NF	Treasure Found
+R51	R	NF	F	Turtle Tom
+R56	R	F	NF	Wonders of Nature
+S02	S	F	NF	1849: The California Gold Rush
+S03	S	F	NF	A Crafty Escape
+S08	S	F	NF	Argentina
+S12	S	F	NF	Blizzards!
+S19	S	NF	F	Brainstorm Bear
+S28	S	F	NF	Critter Crossings
+S33	S	F	NF	Dragonflies!
+S35	S	F	NF	The Everglades
+S36	S	F	NF	The Executive Branch
+S39	S	F	NF	Frederick Douglass: Forever Free
+S43	S	F	NF	Ghost Towns
+S48	S	F	NF	Guy Fawkes Day
+S51	S	F	NF	Here Come the Locusts
+S53	S	F	NF	Ichiro Suzuki
+S55	S	F	NF	Introducing the Penny
+S56	S	F	NF	Istanbul
+S57	S	F	NF	John Muir
+S58	S	F	NF	The Judicial Branch
+S60	S	NF	F	The Last Day of School
+S61	S	F	NF	The Legislative Branch
+S64	S	F	NF	Michelle Obama
+S66	S	F	NF	The Mighty Mississippi
+S68	S	NF	F	Miguel in the Secret Garden
+S70	S	F	NF	Morocco
+S72	S	F	NF	A Nation on Wheels
+S79	S	F	NF	Roadside Oddities
+S82	S	NF	F	Samson: A Horse Story
+S83	S	F	NF	Say It With Pictures
+S84	S	NF	F	Science Dad: Lessons in Light
+S88	S	F	NF	Shirley Chisholm
+S90	S	F	NF	Supply and Demand
+S98	S	NF	F	Wheeling the Snake
+S101	S	NF	F	The Wild Swans
+S102	S	F	NF	Woods of Wonder
+S103	S	F	NF	The Yanomami: Deep in the Amazon
+S104	S	F	NF	Yellowstone: A Place of Wild Wonders
+T01	T	F	NF	Abigail Adams
+T06	T	NF	F	Ants in My Bed
+T08	T	F	NF	Art Around Us
+T11	T	NF	F	Bats in the Attic
+T13	T	F	NF	Bessie Coleman
+T16	T	F	NF	Blackbeard the Pirate
+T26	T	NF	F	Captain Morty Commands the Sky
+T28	T	F	NF	Code Talkers
+T31	T	F	NF	Dr. Elizabeth Blackwell
+T32	T	F	NF	Edible Bugs
+T33	T	F	NF	Expedition Zero
+T35	T	F	NF	Famous First Ladies
+T41	T	F	NF	Hiking the Appalachian Trail
+T42	T	F	NF	Hillary Clinton
+T46	T	F	NF	I Collect That!
+T47	T	F	NF	Incredible Places to Stay
+T51	T	F	NF	Jesse Owens
+T54	T	F	NF	Laura Ingalls Wilder
+T60	T	F	NF	Maria Tallchief: Prima Ballerina
+T61	T	NF	F	Morty Finds It No Laughing Matter
+T62	T	F	NF	Mount Rushmore
+T63	T	F	NF	Mud Runs
+T64	T	F	NF	Muhammad Ali
+T65	T	F	NF	Musical Instruments
+T68	T	F	NF	Nature Stinks!
+T71	T	F	NF	On the Lookout
+T72	T	NF	F	Owen and the Tortoise
+T82	T	F	NF	Route 66
+T83	T	NF	F	Running for Freedom
+T93	T	F	NF	Thomas Jefferson
+T94	T	F	NF	Through a Microscope
+T95	T	F	NF	Titanic Treasure
+T97	T	F	NF	Totem Poles
+T98	T	F	NF	Two Make Twins
+T100	T	F	NF	Weather Wizards: Floods
+U01	U	F	NF	A Crafty Escape
+U06	U	F	NF	The Amazing Amazon
+U09	U	NF	F	Book 10: The Thing in the Forest
+U11	U	F	NF	Dawn of the Doughnut
+U16	U	F	NF	The Executive Branch
+U19	U	NF	F	Growing Up Green
+U22	U	F	NF	Hillary Clinton
+U26	U	F	NF	The Inuit: Northern Living
+U29	U	F	NF	Kenya
+U31	U	F	NF	Life Cycles
+U33	U	F	NF	Microbes: Friend or Foe?
+U37	U	NF	F	Mystery in the Moonlight
+U38	U	F	NF	Napoleon Bonaparte
+U44	U	F	NF	Pirate Ships and Flags
+U46	U	F	NF	Say It With Pictures
+U52	U	F	NF	Teotihuacan
+U59	U	F	NF	Wimbledon
+V01	V	F	NF	1849: The California Gold Rush
+V07	V	F	NF	Alternative Fuel Cars
+V13	V	F	NF	Art Around Us
+V15	V	F	NF	Barack Obama
+V16	V	F	NF	Before the Internet
+V19	V	NF	F	Book 12: The House in the Desert
+V20	V	NF	F	Book 13: The Cat and the Tunnel
+V21	V	F	NF	Book of Blood
+V23	V	F	NF	Bullying Hurts Everyone
+V27	V	F	NF	Color Blindness
+V29	V	F	NF	Daniel Inouye
+V35	V	F	NF	The Eurovision Song Contest!
+V43	V	F	NF	Ghost Towns
+V53	V	F	NF	John Muir
+V54	V	F	NF	The Judicial Branch
+V55	V	F	NF	Julius Caesar
+V56	V	F	NF	Katherine Johnson
+V59	V	F	NF	Laura Ingalls Wilder
+V62	V	F	NF	Machu Picchu
+V63	V	F	NF	The Magic of Migration
+V64	V	F	NF	March Madness
+V66	V	F	NF	Maria Tallchief: Prima Ballerina
+V70	V	NF	F	Morty and the Mousetown Gazette
+V71	V	NF	F	Morty and the Mousetown Talent Show
+V76	V	F	NF	Natural Wonders of the World
+V79	V	F	NF	The Olympics: Past and Present
+V82	V	F	NF	The Plague!
+V83	V	F	NF	Polynesia
+V85	V	F	NF	Ramses II
+V87	V	F	NF	Route 66
+V90	V	F	NF	Ships of Discovery
+V97	V	F	NF	Sugar, Sugar, Everywhere
+V99	V	F	NF	Test Anxiety
+V100	V	F	NF	Tokyo Imperial Palace
+V101	V	NF	F	Treasure in Puget Sound
+V102	V	NF	F	A Trip to a Prehistoric Cave
+V104	V	F	NF	Underground Cities
+V110	V	F	NF	Wild and Wacky World of Wigs
+V112	V	F	NF	Woods of Wonder
+V116	V	NF	F	The Zoo of Extinct Animals
+W02	W	NF	F	Adventure in Bear Valley
+W03	W	F	NF	Alaska
+W05	W	NF	F	Amina and the Great Green Wall
+W11	W	NF	F	Atlantic Crossing
+W16	W	F	NF	Ben Franklin
+W17	W	F	NF	Big Ben and Westminster Palace
+W26	W	F	NF	Camouflage
+W28	W	F	NF	Cheerleading
+W32	W	F	NF	Code Talkers
+W33	W	F	NF	Colosseum
+W40	W	F	NF	Drums and Drumming
+W43	W	F	NF	Expedition 25: The Subtropics
+W45	W	NF	F	First Day of School
+W47	W	F	NF	Frederick Douglass: Forever Free
+W48	W	F	NF	Galapagos Wonder
+W49	W	F	NF	The Genius of Tesla
+W51	W	F	NF	Guy Fawkes Day
+W55	W	F	NF	Hiking the Appalachian Trail
+W65	W	F	NF	InFLUenza
+W67	W	F	NF	Lacrosse
+W69	W	F	NF	The Legend of Nessie
+W70	W	F	NF	The Legislative Branch
+W72	W	F	NF	Life Spans
+W73	W	F	NF	Lost Cities
+W74	W	NF	F	Magnificent Meatball Maker
+W75	W	F	NF	Making Mosaics
+W79	W	F	NF	Microbes: Friend or Foe?
+W80	W	F	NF	Mike Van Zee, Special Olympian
+W81	W	NF	F	Miltie Math-head: Football Hero?
+W83	W	F	NF	Morocco
+W84	W	NF	F	Morty and the Fancy-Pants Wedding
+W86	W	F	NF	Mudslides
+W87	W	F	NF	Mummies
+W94	W	F	NF	The Nobel Prize
+W95	W	F	NF	Paving the Way: American Sports Legends
+W97	W	F	NF	Pirates and Privateers
+W99	W	F	NF	Puerto Rico
+W101	W	F	NF	Return of the Jaguar
+W102	W	F	NF	Roadside Oddities
+W104	W	NF	F	Rumpelstiltskin
+W106	W	F	NF	Salah al-Din
+W107	W	NF	F	Scratching a Good Story
+W111	W	F	NF	The Secrets of Skara Brae
+W115	W	F	NF	Speed
+W116	W	F	NF	St. Augustine
+W117	W	F	NF	The Super School Bus System
+W118	W	F	NF	Supply and Demand
+W119	W	F	NF	Surfing
+W122	W	F	NF	Through a Microscope
+W123	W	F	NF	The Titanic: Lost and Found
+W129	W	F	NF	A Visit to Kitt Peak
+W132	W	F	NF	Weather Wizards: High Winds
+W136	W	F	NF	Wildlife Rescue
+X14	X	F	NF	The Amazing Amazon
+X16	X	F	NF	The Balloon Brothers
+X20	X	F	NF	Comic Cons
+X26	X	F	NF	Hungry Right Here?
+X27	X	F	NF	The Internet
+X28	X	F	NF	Invasion of the Pythons
+X29	X	NF	F	Jacey Nova: Starship Pilot
+X31	X	F	NF	King George III
+X34	X	NF	F	Leo the Lion
+X36	X	F	NF	Malala the Brave
+X37	X	F	NF	Many Faces of Autism
+X41	X	F	NF	More Valuable Than Gold
+X44	X	F	NF	The Panama Canal
+X45	X	F	NF	Pat Summitt: Coaching Legend
+X49	X	F	NF	Saving the Salmon
+X62	X	F	NF	To Drill or Not to Drill?
+X66	X	F	NF	The Wonderful World Series
+X68	X	F	NF	Your Road to the White House
+Y01	Y	F	NF	1849: The California Gold Rush
+Y02	Y	F	NF	9\/11: A Dark Day
+Y03	Y	F	NF	A Crafty Escape
+Y10	Y	F	NF	American Women in Sports
+Y11	Y	F	NF	Andrew Carnegie
+Y13	Y	F	NF	The Art of Photography
+Y16	Y	F	NF	Believe It or Not?
+Y17	Y	F	NF	Biomimicry
+Y18	Y	NF	F	Book 17: The Cat in the Palace
+Y19	Y	NF	F	Born on Sable Island
+Y20	Y	F	NF	The Calgary Stampede
+Y21	Y	F	NF	D-Day
+Y24	Y	F	NF	Eclipses
+Y26	Y	F	NF	Escape From the Holocaust
+Y41	Y	F	NF	Jamestown
+Y42	Y	F	NF	The Jr. Iditarod
+Y43	Y	F	NF	Julius Caesar
+Y46	Y	F	NF	Lakes
+Y74	Y	F	NF	The Magellan Expedition
+Y75	Y	F	NF	March Madness
+Y76	Y	F	NF	Marco Polo and the Silk Road
+Y79	Y	F	NF	Muhammad Ali
+Y80	Y	F	NF	Mysteries of the Lost Civilization
+Y82	Y	F	NF	Mysterious Shipwrecks
+Y86	Y	F	NF	The Olympics: Past and Present
+Y89	Y	F	NF	Pi Day
+Y90	Y	F	NF	The Plague!
+Y91	Y	F	NF	Plate Tectonics
+Y94	Y	F	NF	Refugees
+Y95	Y	F	NF	Sacagawea and the Corps of Discovery
+Y96	Y	F	NF	Say It With Pictures
+Y98	Y	F	NF	Seeing the Evidence: Forensic Scientists at Work
+Y99	Y	F	NF	Seven Wonders of the Modern World
+Y100	Y	F	NF	Ships of Discovery
+Y101	Y	F	NF	The Smithsonian Institution
+Y106	Y	F	NF	Taiga
+Y109	Y	F	NF	The United Nations
+Y111	Y	F	NF	The War for North America
+Y130	Y	F	NF	Woods of Wonder
+Y132	Y	NF	F	The Zoo of Extinct Animals
+Z08	Z	F	NF	Anne Frank
+Z09	Z	F	NF	Apollo 11
+Z11	Z	F	NF	A Big League for Little Players
+Z14	Z	F	NF	Bites and Stings
+Z31	Z	F	NF	Code Talkers
+Z32	Z	F	NF	Color Blindness
+Z34	Z	F	NF	COVID-19: A Challenging Pandemic
+Z36	Z	F	NF	Dino Duel
+Z37	Z	F	NF	Drones
+Z39	Z	F	NF	Eiffel Tower
+Z42	Z	F	NF	Ella Fitzgerald
+Z45	Z	F	NF	The Erie Canal
+Z46	Z	F	NF	The Eurovision Song Contest!
+Z47	Z	F	NF	Everest: On Top of the World
+Z49	Z	F	NF	Famous Hispanic Americans: A Proud Heritage
+Z50	Z	F	NF	Fun by Remote Control
+Z51	Z	F	NF	Genetics at Work
+Z52	Z	F	NF	The Genius of Tesla
+Z53	Z	F	NF	The Gettysburg Address
+Z59	Z	F	NF	Guy Fawkes Day
+Z60	Z	F	NF	Hiking the Appalachian Trail
+Z64	Z	F	NF	Hoover Dam
+Z73	Z	F	NF	Laura Ingalls Wilder
+Z76	Z	F	NF	Maria Tallchief: Prima Ballerina
+Z79	Z	F	NF	Microbes: Friend or Foe?
+Z82	Z	F	NF	Mount Fuji
+Z83	Z	F	NF	Mount Kilimanjaro
+Z84	Z	F	NF	The Mystery of King Tut
+Z85	Z	F	NF	Napoleon Bonaparte
+Z86	Z	F	NF	Natural Wonders of the World
+Z88	Z	F	NF	Paragliding
+Z89	Z	F	NF	The Paralympics
+Z90	Z	F	NF	Paving the Way: American Sports Legends
+Z96	Z	F	NF	Queen Elizabeth I
+Z97	Z	F	NF	Rachel Carson
+Z98	Z	F	NF	Ramses II
+Z100	Z	F	NF	Remembering the Alamo
+Z102	Z	F	NF	Route 66
+Z103	Z	F	NF	Salah al-Din
+Z104	Z	F	NF	Scuba
+Z107	Z	F	NF	Seven Wonders You Can Visit
+Z108	Z	F	NF	Should Anyone Own the North Pole?
+Z111	Z	F	NF	Special Effects
+Z112	Z	F	NF	Stonehenge
+Z115	Z	F	NF	The Super School Bus System
+Z116	Z	F	NF	Supply and Demand
+Z117	Z	F	NF	Symbiotic Wildlife
+Z118	Z	F	NF	Taj Mahal
+Z124	Z	F	NF	Valley of the Kings
+Z125	Z	F	NF	Vanishing Languages
+Z126	Z	F	NF	Venus: Beauty and Beast
+Z128	Z	F	NF	Wild and Wacky World of Wigs
+Z129	Z	F	NF	Wildlife Rescue
+Z130	Z	F	NF	The World of NASCAR
+Z131	Z	F	NF	X Games
+Z108	Z1	F	NF	Are GMOs Safe?
+Z109	Z1	F	NF	The Balloon Brothers
+Z111	Z1	F	NF	Believe It or Not?
+Z112	Z1	F	NF	Big Ben and Westminster Palace
+Z113	Z1	F	NF	Biomimicry
+Z121	Z1	F	NF	Comic Cons
+Z125	Z1	F	NF	D-Day
+Z126	Z1	F	NF	Digital Reality Tech
+Z130	Z1	F	NF	Escape From the Holocaust
+Z132	Z1	F	NF	Frederick Douglass: Forever Free
+Z135	Z1	F	NF	The Gettysburg Address
+Z141	Z1	F	NF	InFLUenza
+Z142	Z1	F	NF	Introverts and Extroverts
+Z144	Z1	F	NF	John Muir
+Z145	Z1	F	NF	Jonas Salk
+Z146	Z1	F	NF	The Judicial Branch
+Z147	Z1	F	NF	Kenya
+Z151	Z1	F	NF	The Lakota
+Z153	Z1	F	NF	The Legislative Branch
+Z158	Z1	F	NF	Morocco
+Z159	Z1	F	NF	Muhammad Ali
+Z161	Z1	F	NF	Mysterious Shipwrecks
+Z162	Z1	F	NF	The Mystery of King Tut
+Z164	Z1	F	NF	The Nobel Prize
+Z165	Z1	NF	F	Odysseus and the Bag of Winds
+Z168	Z1	F	NF	The Panama Canal
+Z169	Z1	F	NF	The Plague!
+Z173	Z1	F	NF	Satellites
+Z176	Z1	F	NF	Spoiled Sports: The Dangers of Steroids
+Z179	Z1	F	NF	Teotihuacan
+Z180	Z1	NF	F	The Reluctant Dragon (Part 1)
+Z181	Z1	NF	F	The Reluctant Dragon (Part 2)
+Z182	Z1	NF	F	The Reluctant Dragon (Part 3)
+Z183	Z1	F	NF	Through a Microscope
+Z184	Z1	F	NF	Tokyo Imperial Palace
+Z188	Z1	NF	F	The Velveteen Rabbit
+Z190	Z1	F	NF	Weave It!
+Z191	Z1	F	NF	Weaving Around the World
+Z194	Z1	NF	F	The Wind in the Willows (Part 1)
+Z195	Z1	NF	F	The Wind in the Willows (Part 2)
+Z196	Z1	NF	F	The Wind in the Willows (Part 3)
+Z197	Z1	NF	F	The Wind in the Willows (Part 4)
+Z198	Z1	NF	F	The Wind in the Willows (Part 5)
+Z199	Z1	NF	F	The Wind in the Willows (Part 6)
+Z1100	Z1	NF	F	The Wind in the Willows (Part 7)
+Z1101	Z1	NF	F	The Wind in the Willows (Part 8)
+Z1102	Z1	NF	F	The Wind in the Willows (Part 9)
+Z1103	Z1	NF	F	The Wind in the Willows (Part 10)
+Z1104	Z1	NF	F	The Wind in the Willows (Part 11)
+Z1105	Z1	NF	F	The Wind in the Willows (Part 12)
+Z1106	Z1	NF	F	The Wind in the Willows (Part 13)
+Z1107	Z1	NF	F	The Wind in the Willows (Part 14)
+Z1108	Z1	NF	F	The Wind in the Willows (Part 15)
+Z1110	Z1	F	NF	You Can Print What?
+Z1111	Z1	NF	F	The Zoo of Extinct Animals
+Z212	Z2	F	NF	Anne Frank
+Z213	Z2	F	NF	Are GMOs Safe?
+Z214	Z2	F	NF	Argentina
+Z215	Z2	F	NF	The Balloon Brothers
+Z220	Z2	F	NF	Believe It or Not?
+Z221	Z2	F	NF	The Berlin Wall
+Z223	Z2	F	NF	Biomimicry
+Z227	Z2	NF	F	The Celebrated Jumping Frog of Calaveras County
+Z229	Z2	F	NF	Color Blindness
+Z230	Z2	F	NF	Colosseum
+Z231	Z2	F	NF	Comic Cons
+Z232	Z2	F	NF	D-Day
+Z233	Z2	F	NF	Eiffel Tower
+Z237	Z2	F	NF	Escape From the Holocaust
+Z238	Z2	F	NF	The Executive Branch
+Z239	Z2	F	NF	Fun by Remote Control
+Z240	Z2	F	NF	Genetics at Work
+Z254	Z2	F	NF	Hoover Dam
+Z255	Z2	F	NF	Hungry Right Here?
+Z259	Z2	F	NF	Jonas Salk
+Z260	Z2	F	NF	Julius Caesar
+Z261	Z2	F	NF	King George III
+Z263	Z2	F	NF	Lacrosse
+Z266	Z2	F	NF	Machu Picchu
+Z267	Z2	F	NF	March Madness
+Z271	Z2	F	NF	The Mystery of King Tut
+Z272	Z2	F	NF	Napoleon Bonaparte
+Z273	Z2	F	NF	Natural Wonders of the World
+Z274	Z2	F	NF	Nellie Bly
+Z275	Z2	F	NF	The Olympics: Past and Present
+Z276	Z2	F	NF	The Panama Canal
+Z277	Z2	F	NF	The Paralympics
+Z278	Z2	F	NF	Paving the Way: American Sports Legends
+Z279	Z2	F	NF	The Peloponnesian War: Athens Versus Sparta
+Z284	Z2	F	NF	Queen Elizabeth I
+Z285	Z2	F	NF	Ramses II
+Z286	Z2	NF	F	The Raven
+Z289	Z2	F	NF	Salah al-Din
+Z294	Z2	F	NF	Stonehenge
+Z296	Z2	F	NF	Success Stories
+Z297	Z2	F	NF	The Super School Bus System
+Z298	Z2	F	NF	Symbiotic Wildlife
+Z299	Z2	F	NF	Taj Mahal
+Z2101	Z2	F	NF	The Tuskegee Airmen
+Z2102	Z2	F	NF	The United Nations
+Z2103	Z2	F	NF	Valley of the Kings
+Z2106	Z2	F	NF	Wild and Wacky World of Wigs
+Z2107	Z2	F	NF	Wildlife Rescue
