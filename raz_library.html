@@ -250,6 +250,9 @@
   .lvchips{display:flex;gap:6px;flex-wrap:wrap}
   .lvchip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 11px;font-size:12.5px;cursor:pointer;color:var(--muted)}
   .lvchip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .nfgen-btn{border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:8px;padding:5px 14px;font-size:13px;cursor:pointer;font-weight:600}
+  .nfgen-btn:hover{filter:brightness(1.06)}
+  .nf-empty{color:var(--muted);font-size:14px;background:#fff;border:1px dashed var(--line);border-radius:10px;padding:14px 16px;line-height:1.6}
   .nfday-lv{background:#eee;color:#6b6356;border-radius:6px;padding:1px 7px;font-size:11px;font-weight:700}
   #nfPlan .nf-week.active{display:block}
   #nfPlan .whead{font-size:19px;font-weight:700;margin:18px 0 4px}
@@ -356,7 +359,7 @@
 </head>
 <body>
 <header>
-  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.42</span></h1>
+  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.43</span></h1>
   <p>aa–Z2 + GK–G6 全级别元数据索引 · 非官方整理，仅供研究/教学用途</p>
 </header>
 
@@ -632,6 +635,7 @@
         <div class="controls" style="margin-bottom:6px;align-items:center;flex-wrap:wrap;gap:8px">
           <label style="color:var(--muted);font-size:13px">级别（可多选）：</label>
           <div id="nfdayLvChips" class="lvchips"></div>
+          <button class="nfgen-btn" id="nfdayGenBtn">✅ 生成主题簇</button>
           <span id="nfdayNote" style="color:var(--muted);font-size:12px"></span>
           <label style="color:var(--muted);font-size:13px;margin-left:auto;display:inline-flex;align-items:center;gap:5px"><input type="checkbox" id="nfdayAuthor"> 作者视图（显示生图建议）</label>
         </div>
@@ -641,14 +645,14 @@
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.42 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.43 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.42",
+    "version": "3.43",
     "updated": "2026-08-15",
     "source": "Learning A-Z 官方书库 (readinga-z.com/books/books-by-grade-level, 2572 本) 提供书名/级别/F·NF/蓝思/体裁；Science A-Z 提供 SAZ 单元结构；主题分类与核心词为自研教研整理。非官方、仅供研究/教学用途。",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -78528,14 +78532,14 @@ function renderNfDay(){
   var chipsEl=$('#nfdayLvChips');
   if(!chipsEl.dataset.built){
     var levels=(DATA.meta.levelOrder||[]).filter(function(l){ return DATA.nfDays && DATA.nfDays[l]; });
-    if(!window.nfdaySel || !window.nfdaySel.size) window.nfdaySel=new Set(['F']);
+    if(!window.nfdaySel) window.nfdaySel=new Set();
     levels.forEach(function(l){
       var c=document.createElement('span');
       c.className='lvchip'+(window.nfdaySel.has(l)?' active':'');
       c.textContent=(l==='aa'?'AA':l);
       c.dataset.l=l;
       c.addEventListener('click',function(){
-        if(window.nfdaySel.has(l)){ if(window.nfdaySel.size>1) window.nfdaySel.delete(l); }
+        if(window.nfdaySel.has(l)) window.nfdaySel.delete(l);
         else window.nfdaySel.add(l);
         chipsEl.querySelectorAll('.lvchip').forEach(function(x){ x.classList.toggle('active', window.nfdaySel.has(x.dataset.l)); });
         renderNfDay();
@@ -78545,6 +78549,11 @@ function renderNfDay(){
     chipsEl.dataset.built='1';
   }
   var sel=Array.from(window.nfdaySel);
+  if(!sel.length){
+    $('#nfdayNote').textContent='请选择 1 个或多个级别，再点「✅ 生成主题簇」。';
+    $('#nfdayDays').innerHTML='<p class="nf-empty">尚未选择级别。点击上方级别芯片（可多选，如 E+F+G），然后按「✅ 生成主题簇」即可按主题聚类出阅读规划。</p>';
+    return;
+  }
   var all=[];
   sel.forEach(function(lv){ (DATA.nfDays[lv]||[]).forEach(function(d){ all.push({d:d,lv:lv}); }); });
   $('#nfdayNote').textContent='已选 '+sel.map(function(l){return l==='aa'?'AA':l;}).join('+')+'：共 '+all.length+' 个主题簇（按主题族 + 子话题聚类，每簇 1–4 本相近主题）。';
@@ -78577,6 +78586,10 @@ function renderNfDay(){
       setTimeout(function(){ document.body.classList.remove('print-nf'); },400);
     });
     $('#nfdayPrintBtn').dataset.bound='1';
+  }
+  if(!$('#nfdayGenBtn').dataset.bound){
+    $('#nfdayGenBtn').addEventListener('click',function(){ renderNfDay(); });
+    $('#nfdayGenBtn').dataset.bound='1';
   }
 }
 
