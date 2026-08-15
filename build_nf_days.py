@@ -75,6 +75,10 @@ SUBTOPICS = [
      '这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。',
      '1) 摸材质：用毛绒/布模仿 fur，比手感冷暖软硬。\n2) 配对：动物卡 + 它的家卡（森林/草原/河边）。\n3) 画：画一种哺乳动物，标 body/fur/leg。', 'opt',
      '哺乳动物一家：河边水獭 + 枝头蝙蝠同框不同格，毛绒质感，暖色水彩。'),
+    ('生命世界', 'animals', r'\banimals?\b',   '🦒 动物（其他）',
+     '这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。',
+     '1) 分类墙：把书里动物按「会飞/会游/四条腿/没腿」分贴。\n2) 画：选一种最喜欢的动物画下来，标 body 部位。\n3) 找家：说出每种动物可能住哪（farm/forest/pond/zoo）。', 'opt',
+     '农场/动物园场景：牛/羊/鸡/马在栅栏内外，明亮水彩，孩子客串饲养员。'),
 
     # ---------------- 地球与宇宙 ----------------
     ('地球与宇宙', 'weather', r'\bweathers?\b|\bclouds?\b|\brains?\b|\brainings?\b|\brainstorms?\b|\bfogs?\b|\bspring\b|\bfall\b|\bwinds?\b|\bwindys?\b|\bstorms?\b|\bsnows?\b|\bsunnys?\b|\btemperatures?\b|\bseasons?\b|\bforecasts?\b|\bthunders?\b|\btornados?\b|\bhurricanes?\b',   '🌤️ 天气',
