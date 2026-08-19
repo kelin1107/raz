@@ -360,7 +360,7 @@
 </head>
 <body>
 <header>
-  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.56</span></h1>
+  <h1>📚 RAZ + SAZ 知识库 <span class="ver">v3.57</span></h1>
   <p>aa–Z2 + GK–G6 全级别元数据索引 · 非官方整理，仅供研究/教学用途</p>
 </header>
 
@@ -610,6 +610,7 @@
       <div class="nfplan-tabs" id="nfplanTabs">
         <button class="nfp-tab active" data-v="week">🗓️ 主题周读（按周执行）</button>
         <button class="nfp-tab" data-v="days">🧩 主题选书（按簇规划）</button>
+        <button class="nfp-tab" data-v="search">🔍 主题搜索（跨级别）</button>
       </div>
       <div id="nfWeekView">
         <div id="nfPlan">
@@ -640,17 +641,28 @@
         <div id="nfdayDays"></div>
         <button class="printbtn" id="nfdayPrintBtn">🖨 打印 / 存 PDF</button>
       </div>
+      <div id="nfSearchView" style="display:none">
+        <p class="nf-note">🔍 <b>主题搜索（跨级别）</b>：输入任意主题词（英文或中文，如 <b>dinosaur / 恐龙</b>、<b>weather / 天气</b>、<b>space / 太空</b>、<b>ocean / 海洋</b>），列出<b>所有级别</b>与该主题相关的书（按主题簇分组）。支持语义匹配（如输入 dinosaur 会命中 A Look at Fossils 等标题不带 dinosaur 的书）。</p>
+        <div class="controls" style="margin-bottom:6px;align-items:center;flex-wrap:wrap;gap:8px">
+          <input type="text" id="nfSearchInput" placeholder="输入主题：dinosaur / 恐龙 / weather / 太空…" style="min-width:280px;padding:8px 12px;border:1px solid var(--line);border-radius:9px;font-size:14px;font-family:inherit">
+          <button class="nfgen-btn" id="nfSearchBtn">🔍 搜索</button>
+          <span id="nfSearchNote" style="color:var(--muted);font-size:12px"></span>
+        </div>
+        <div id="nfSearchHints" style="margin:4px 0 10px;display:flex;flex-wrap:wrap;gap:6px"></div>
+        <div id="nfSearchRes"></div>
+        <button class="printbtn" id="nfSearchPrintBtn">🖨 打印 / 存 PDF</button>
+      </div>
     </div>
   </section>
 
-  <footer>RAZ + SAZ 知识库 v3.56 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
+  <footer>RAZ + SAZ 知识库 v3.57 · 非官方整理 · 仅供研究/教学用途 · 元数据参考（不含书籍正文）· 来源 Reading A-Z / Science A-Z（Learning A-Z）· 不替代官方订阅</footer>
 </div>
 
 <script>
 const DATA = {
   "meta": {
     "name": "RAZ + SAZ 知识库 (Reading A-Z & Science A-Z Reference Library)",
-    "version": "3.56",
+    "version": "3.57",
     "updated": "2026-08-15",
     "source": "Learning A-Z 官方书库 (readinga-z.com/books/books-by-grade-level, 2572 本) 提供书名/级别/F·NF/蓝思/体裁；Science A-Z 提供 SAZ 单元结构；主题分类与核心词为自研教研整理。非官方、仅供研究/教学用途。",
     "note": "本库为元数据参考（级别、AR 对应、主题分类、重复阅读规则、SAZ 单元），不含任何书籍正文。完整书目需从 Raz-Plus / Raz-Plus (Science A-Z) 账号导出后结构化导入。",
@@ -60954,6 +60966,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -60997,6 +61010,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -61025,6 +61039,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -61048,6 +61063,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -61071,6 +61087,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -61089,6 +61106,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -61112,6 +61130,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -61150,6 +61169,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -61168,6 +61188,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🧘 情绪与感受",
+        "key": "emotion",
         "theme": "身体与健康",
         "intro": "情绪书讲怎么辨认和安放自己的感受。一天读，calm/happy/sad/worried 反复出现，孩子开始给情绪命名，并知道「有情绪很正常」。",
         "books": [
@@ -61186,6 +61207,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -61259,6 +61281,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -61277,6 +61300,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -61305,6 +61329,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -61323,6 +61348,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🎨 颜色",
+        "key": "color",
         "theme": "思维与创意",
         "intro": "颜色书讲红黄蓝与混色。一天读，red/blue/yellow 反复出现，孩子把「混出橙绿紫」试出来。",
         "books": [
@@ -61381,6 +61407,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -61454,6 +61481,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🧩 思维其他",
+        "key": "other",
         "theme": "思维与创意",
         "intro": "这几本偏思维/逻辑，建议各玩一个小游戏。",
         "books": [
@@ -61472,6 +61500,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "📏 大小",
+        "key": "size",
         "theme": "思维与创意",
         "intro": "大小书讲大/小/长/短。一天读，big/small/long 反复出现，孩子练「排一排」。",
         "books": [
@@ -61497,6 +61526,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -61525,6 +61555,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -61548,6 +61579,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -61576,6 +61608,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -61599,6 +61632,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -61622,6 +61656,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -61640,6 +61675,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -61668,6 +61704,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -61686,6 +61723,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -61704,6 +61742,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🚀 力与运动",
+        "key": "motion",
         "theme": "物质与能量",
         "intro": "力与运动书讲推/拉/滑。一天读，push/pull/move 反复出现，孩子把「怎么让东西动」试出来。",
         "books": [
@@ -61732,6 +61771,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🔊 声音",
+        "key": "sound",
         "theme": "物质与能量",
         "intro": "声音书讲怎么发声、大小。一天读，sound/loud/quiet 反复出现，孩子理解「振动出声」。",
         "books": [
@@ -61750,6 +61790,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -61768,6 +61809,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -61791,6 +61833,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -61819,6 +61862,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🧘 情绪与感受",
+        "key": "emotion",
         "theme": "身体与健康",
         "intro": "情绪书讲怎么辨认和安放自己的感受。一天读，calm/happy/sad/worried 反复出现，孩子开始给情绪命名，并知道「有情绪很正常」。",
         "books": [
@@ -61837,6 +61881,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -61855,6 +61900,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "👪 家庭与朋友",
+        "key": "family",
         "theme": "社会与人文",
         "intro": "这些书讲家人/朋友/双胞胎：妈妈、爸爸、爷爷奶奶、兄弟姐妹、同伴。一天读，mom/dad/family/friend 反复出现，孩子把「我的圈子」说出来。",
         "books": [
@@ -61893,6 +61939,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -61911,6 +61958,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -61944,6 +61992,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -61962,6 +62011,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -61980,6 +62030,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "🎨 颜色",
+        "key": "color",
         "theme": "思维与创意",
         "intro": "颜色书讲红黄蓝与混色。一天读，red/blue/yellow 反复出现，孩子把「混出橙绿紫」试出来。",
         "books": [
@@ -62008,6 +62059,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🔷 形状与规律",
+        "key": "shape",
         "theme": "思维与创意",
         "intro": "形状书讲圆/方/三角与规律。一天读，circle/square/pattern 反复出现，孩子出门「找形状」。",
         "books": [
@@ -62026,6 +62078,7 @@ const DATA = {
       {
         "day": 24,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -62044,6 +62097,7 @@ const DATA = {
       {
         "day": 25,
         "topic": "🧩 思维其他",
+        "key": "other",
         "theme": "思维与创意",
         "intro": "这几本偏思维/逻辑，建议各玩一个小游戏。",
         "books": [
@@ -62067,6 +62121,7 @@ const DATA = {
       {
         "day": 26,
         "topic": "🔁 反义词",
+        "key": "opposite",
         "theme": "思维与创意",
         "intro": "反义词书讲 大/小、上/下、快/慢。一天读，一对对词同时出现，孩子一次认两组相对概念。",
         "books": [
@@ -62092,6 +62147,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -62115,6 +62171,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -62148,6 +62205,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -62166,6 +62224,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🛡️ 动物的本领与覆盖",
+        "key": "adapt",
         "theme": "生命世界",
         "intro": "这几本讲动物怎么靠颜色/壳/羽毛/刺生存。一天读能练 compare：谁有壳、谁有羽毛、谁会藏。",
         "books": [
@@ -62189,6 +62248,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "👀 感官",
+        "key": "sense",
         "theme": "生命世界",
         "intro": "感官书讲看/听/闻/尝/摸。一天读，eye/ear/nose 反复出现，孩子把「五种感觉」一次认全。",
         "books": [
@@ -62207,6 +62267,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -62245,6 +62306,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -62263,6 +62325,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -62281,6 +62344,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -62299,6 +62363,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -62322,6 +62387,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -62340,6 +62406,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -62378,6 +62445,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🔊 声音",
+        "key": "sound",
         "theme": "物质与能量",
         "intro": "声音书讲怎么发声、大小。一天读，sound/loud/quiet 反复出现，孩子理解「振动出声」。",
         "books": [
@@ -62396,6 +62464,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🧪 物质三态",
+        "key": "matter",
         "theme": "物质与能量",
         "intro": "物质书讲固/液/气。一天读，solid/liquid/gas/water 反复出现，孩子把「同一样东西三种样子」分清。",
         "books": [
@@ -62414,6 +62483,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -62432,6 +62502,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "⚡ 科学其他",
+        "key": "other",
         "theme": "物质与能量",
         "intro": "这几本偏科学现象，建议各做一件小实验，不强行合并。",
         "books": [
@@ -62450,6 +62521,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -62468,6 +62540,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -62496,6 +62569,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -62529,6 +62603,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -62547,6 +62622,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -62575,6 +62651,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -62598,6 +62675,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -62616,6 +62694,7 @@ const DATA = {
       {
         "day": 24,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -62634,6 +62713,7 @@ const DATA = {
       {
         "day": 25,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -62652,6 +62732,7 @@ const DATA = {
       {
         "day": 26,
         "topic": "🔁 反义词",
+        "key": "opposite",
         "theme": "思维与创意",
         "intro": "反义词书讲 大/小、上/下、快/慢。一天读，一对对词同时出现，孩子一次认两组相对概念。",
         "books": [
@@ -62675,6 +62756,7 @@ const DATA = {
       {
         "day": 27,
         "topic": "🎨 颜色",
+        "key": "color",
         "theme": "思维与创意",
         "intro": "颜色书讲红黄蓝与混色。一天读，red/blue/yellow 反复出现，孩子把「混出橙绿紫」试出来。",
         "books": [
@@ -62695,6 +62777,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -62733,6 +62816,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -62771,6 +62855,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -62794,6 +62879,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -62812,6 +62898,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🍖 食物链",
+        "key": "foodchain",
         "theme": "生命世界",
         "intro": "食物链书讲「谁吃谁」。一天读，animal/plant/eat 反复出现，孩子开始理解「吃与被吃」的秩序。",
         "books": [
@@ -62830,6 +62917,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -62853,6 +62941,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🦕 恐龙",
+        "key": "dino",
         "theme": "生命世界",
         "intro": "恐龙书常讲外形、食物与灭绝。放一天读，能让孩子在对比中理解「肉食/草食」「大/小」「化石」等概念，并练习提问「它为什么消失」。",
         "books": [
@@ -62871,6 +62960,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -62889,6 +62979,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -62907,6 +62998,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -62935,6 +63027,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -62953,6 +63046,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -62976,6 +63070,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -62994,6 +63089,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "💡 光与影子",
+        "key": "light",
         "theme": "物质与能量",
         "intro": "光书讲发光、影子、折射。一天读，light/shadow/dark 反复出现，孩子把「挡光出影子」变成可试的实验。",
         "books": [
@@ -63012,6 +63108,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -63035,6 +63132,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "⚡ 科学其他",
+        "key": "other",
         "theme": "物质与能量",
         "intro": "这几本偏科学现象，建议各做一件小实验，不强行合并。",
         "books": [
@@ -63058,6 +63156,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🔊 声音",
+        "key": "sound",
         "theme": "物质与能量",
         "intro": "声音书讲怎么发声、大小。一天读，sound/loud/quiet 反复出现，孩子理解「振动出声」。",
         "books": [
@@ -63076,6 +63175,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🚀 力与运动",
+        "key": "motion",
         "theme": "物质与能量",
         "intro": "力与运动书讲推/拉/滑。一天读，push/pull/move 反复出现，孩子把「怎么让东西动」试出来。",
         "books": [
@@ -63094,6 +63194,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -63127,6 +63228,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -63155,6 +63257,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🧘 情绪与感受",
+        "key": "emotion",
         "theme": "身体与健康",
         "intro": "情绪书讲怎么辨认和安放自己的感受。一天读，calm/happy/sad/worried 反复出现，孩子开始给情绪命名，并知道「有情绪很正常」。",
         "books": [
@@ -63173,6 +63276,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "👪 家庭与朋友",
+        "key": "family",
         "theme": "社会与人文",
         "intro": "这些书讲家人/朋友/双胞胎：妈妈、爸爸、爷爷奶奶、兄弟姐妹、同伴。一天读，mom/dad/family/friend 反复出现，孩子把「我的圈子」说出来。",
         "books": [
@@ -63191,6 +63295,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -63209,6 +63314,7 @@ const DATA = {
       {
         "day": 24,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -63237,6 +63343,7 @@ const DATA = {
       {
         "day": 25,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -63255,6 +63362,7 @@ const DATA = {
       {
         "day": 26,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -63278,6 +63386,7 @@ const DATA = {
       {
         "day": 27,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -63296,6 +63405,7 @@ const DATA = {
       {
         "day": 28,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -63314,6 +63424,7 @@ const DATA = {
       {
         "day": 29,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -63347,6 +63458,7 @@ const DATA = {
       {
         "day": 30,
         "topic": "🔷 形状与规律",
+        "key": "shape",
         "theme": "思维与创意",
         "intro": "形状书讲圆/方/三角与规律。一天读，circle/square/pattern 反复出现，孩子出门「找形状」。",
         "books": [
@@ -63372,6 +63484,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -63390,6 +63503,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -63413,6 +63527,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -63446,6 +63561,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -63469,6 +63585,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -63487,6 +63604,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🛡️ 动物的本领与覆盖",
+        "key": "adapt",
         "theme": "生命世界",
         "intro": "这几本讲动物怎么靠颜色/壳/羽毛/刺生存。一天读能练 compare：谁有壳、谁有羽毛、谁会藏。",
         "books": [
@@ -63505,6 +63623,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -63523,6 +63642,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -63546,6 +63666,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "👀 感官",
+        "key": "sense",
         "theme": "生命世界",
         "intro": "感官书讲看/听/闻/尝/摸。一天读，eye/ear/nose 反复出现，孩子把「五种感觉」一次认全。",
         "books": [
@@ -63569,6 +63690,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -63587,6 +63709,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -63610,6 +63733,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -63628,6 +63752,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "⚡ 科学其他",
+        "key": "other",
         "theme": "物质与能量",
         "intro": "这几本偏科学现象，建议各做一件小实验，不强行合并。",
         "books": [
@@ -63646,6 +63771,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -63664,6 +63790,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -63687,6 +63814,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -63705,6 +63833,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -63743,6 +63872,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -63761,6 +63891,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -63789,6 +63920,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -63819,6 +63951,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -63852,6 +63985,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -63875,6 +64009,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -63908,6 +64043,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -63926,6 +64062,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -63949,6 +64086,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -63972,6 +64110,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -64000,6 +64139,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -64018,6 +64158,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -64051,6 +64192,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -64079,6 +64221,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -64097,6 +64240,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -64120,6 +64264,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -64153,6 +64298,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -64196,6 +64342,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🔷 形状与规律",
+        "key": "shape",
         "theme": "思维与创意",
         "intro": "形状书讲圆/方/三角与规律。一天读，circle/square/pattern 反复出现，孩子出门「找形状」。",
         "books": [
@@ -64214,6 +64361,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -64237,6 +64385,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🧩 思维其他",
+        "key": "other",
         "theme": "思维与创意",
         "intro": "这几本偏思维/逻辑，建议各玩一个小游戏。",
         "books": [
@@ -64257,6 +64406,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🍖 食物链",
+        "key": "foodchain",
         "theme": "生命世界",
         "intro": "食物链书讲「谁吃谁」。一天读，animal/plant/eat 反复出现，孩子开始理解「吃与被吃」的秩序。",
         "books": [
@@ -64275,6 +64425,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -64303,6 +64454,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -64336,6 +64488,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -64364,6 +64517,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -64387,6 +64541,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -64405,6 +64560,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🦕 恐龙",
+        "key": "dino",
         "theme": "生命世界",
         "intro": "恐龙书常讲外形、食物与灭绝。放一天读，能让孩子在对比中理解「肉食/草食」「大/小」「化石」等概念，并练习提问「它为什么消失」。",
         "books": [
@@ -64423,6 +64579,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -64441,6 +64598,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -64459,6 +64617,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -64477,6 +64636,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -64495,6 +64655,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -64513,6 +64674,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -64536,6 +64698,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "⚡ 能量",
+        "key": "energy",
         "theme": "物质与能量",
         "intro": "能量书讲电/太阳/风从哪来。一天读，energy/sun/wind 反复出现，孩子理解「东西要能量才动」。",
         "books": [
@@ -64554,6 +64717,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "⚡ 科学其他",
+        "key": "other",
         "theme": "物质与能量",
         "intro": "这几本偏科学现象，建议各做一件小实验，不强行合并。",
         "books": [
@@ -64572,6 +64736,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -64590,6 +64755,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -64608,6 +64774,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -64626,6 +64793,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -64654,6 +64822,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -64682,6 +64851,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -64720,6 +64890,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -64748,6 +64919,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -64766,6 +64938,7 @@ const DATA = {
       {
         "day": 24,
         "topic": "🎨 颜色",
+        "key": "color",
         "theme": "思维与创意",
         "intro": "颜色书讲红黄蓝与混色。一天读，red/blue/yellow 反复出现，孩子把「混出橙绿紫」试出来。",
         "books": [
@@ -64784,6 +64957,7 @@ const DATA = {
       {
         "day": 25,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -64804,6 +64978,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -64822,6 +64997,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "👀 感官",
+        "key": "sense",
         "theme": "生命世界",
         "intro": "感官书讲看/听/闻/尝/摸。一天读，eye/ear/nose 反复出现，孩子把「五种感觉」一次认全。",
         "books": [
@@ -64840,6 +65016,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -64863,6 +65040,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -64911,6 +65089,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -64934,6 +65113,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -64952,6 +65132,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -64980,6 +65161,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -64998,6 +65180,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -65016,6 +65199,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -65034,6 +65218,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -65052,6 +65237,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "⚠️ 安全",
+        "key": "safety",
         "theme": "身体与健康",
         "intro": "安全书讲过马路/防火/陌生人。一天读，safe/rule 反复出现，孩子记住几个保命规则。",
         "books": [
@@ -65070,6 +65256,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -65088,6 +65275,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -65126,6 +65314,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -65144,6 +65333,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -65172,6 +65362,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -65195,6 +65386,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -65218,6 +65410,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -65241,6 +65434,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -65264,6 +65458,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -65282,6 +65477,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "🧩 思维其他",
+        "key": "other",
         "theme": "思维与创意",
         "intro": "这几本偏思维/逻辑，建议各玩一个小游戏。",
         "books": [
@@ -65302,6 +65498,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -65335,6 +65532,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -65353,6 +65551,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -65381,6 +65580,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -65409,6 +65609,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -65427,6 +65628,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -65445,6 +65647,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -65463,6 +65666,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -65481,6 +65685,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -65499,6 +65704,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -65517,6 +65723,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -65555,6 +65762,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -65593,6 +65801,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -65611,6 +65820,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -65644,6 +65854,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -65662,6 +65873,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -65685,6 +65897,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🔷 形状与规律",
+        "key": "shape",
         "theme": "思维与创意",
         "intro": "形状书讲圆/方/三角与规律。一天读，circle/square/pattern 反复出现，孩子出门「找形状」。",
         "books": [
@@ -65703,6 +65916,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -65721,6 +65935,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "📏 大小",
+        "key": "size",
         "theme": "思维与创意",
         "intro": "大小书讲大/小/长/短。一天读，big/small/long 反复出现，孩子练「排一排」。",
         "books": [
@@ -65739,6 +65954,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -65759,6 +65975,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -65782,6 +65999,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -65800,6 +66018,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -65838,6 +66057,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -65861,6 +66081,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -65884,6 +66105,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -65907,6 +66129,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "👀 感官",
+        "key": "sense",
         "theme": "生命世界",
         "intro": "感官书讲看/听/闻/尝/摸。一天读，eye/ear/nose 反复出现，孩子把「五种感觉」一次认全。",
         "books": [
@@ -65925,6 +66148,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -65943,6 +66167,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -65966,6 +66191,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -65989,6 +66215,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -66012,6 +66239,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -66030,6 +66258,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -66048,6 +66277,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -66066,6 +66296,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -66084,6 +66315,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "⚠️ 安全",
+        "key": "safety",
         "theme": "身体与健康",
         "intro": "安全书讲过马路/防火/陌生人。一天读，safe/rule 反复出现，孩子记住几个保命规则。",
         "books": [
@@ -66102,6 +66334,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -66130,6 +66363,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -66163,6 +66397,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -66186,6 +66421,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -66214,6 +66450,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -66237,6 +66474,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -66255,6 +66493,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -66285,6 +66524,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -66303,6 +66543,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -66326,6 +66567,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🦕 恐龙",
+        "key": "dino",
         "theme": "生命世界",
         "intro": "恐龙书常讲外形、食物与灭绝。放一天读，能让孩子在对比中理解「肉食/草食」「大/小」「化石」等概念，并练习提问「它为什么消失」。",
         "books": [
@@ -66344,6 +66586,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -66367,6 +66610,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -66390,6 +66634,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🛡️ 动物的本领与覆盖",
+        "key": "adapt",
         "theme": "生命世界",
         "intro": "这几本讲动物怎么靠颜色/壳/羽毛/刺生存。一天读能练 compare：谁有壳、谁有羽毛、谁会藏。",
         "books": [
@@ -66408,6 +66653,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -66431,6 +66677,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -66454,6 +66701,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -66472,6 +66720,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -66490,6 +66739,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -66513,6 +66763,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -66536,6 +66787,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -66574,6 +66826,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -66607,6 +66860,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -66630,6 +66884,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -66668,6 +66923,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "👪 家庭与朋友",
+        "key": "family",
         "theme": "社会与人文",
         "intro": "这些书讲家人/朋友/双胞胎：妈妈、爸爸、爷爷奶奶、兄弟姐妹、同伴。一天读，mom/dad/family/friend 反复出现，孩子把「我的圈子」说出来。",
         "books": [
@@ -66691,6 +66947,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -66709,6 +66966,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -66727,6 +66985,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "📏 大小",
+        "key": "size",
         "theme": "思维与创意",
         "intro": "大小书讲大/小/长/短。一天读，big/small/long 反复出现，孩子练「排一排」。",
         "books": [
@@ -66745,6 +67004,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -66770,6 +67030,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -66793,6 +67054,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -66816,6 +67078,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -66844,6 +67107,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -66867,6 +67131,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -66895,6 +67160,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🛡️ 动物的本领与覆盖",
+        "key": "adapt",
         "theme": "生命世界",
         "intro": "这几本讲动物怎么靠颜色/壳/羽毛/刺生存。一天读能练 compare：谁有壳、谁有羽毛、谁会藏。",
         "books": [
@@ -66913,6 +67179,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -66931,6 +67198,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -66949,6 +67217,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -66967,6 +67236,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -66985,6 +67255,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -67003,6 +67274,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -67021,6 +67293,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "⚡ 能量",
+        "key": "energy",
         "theme": "物质与能量",
         "intro": "能量书讲电/太阳/风从哪来。一天读，energy/sun/wind 反复出现，孩子理解「东西要能量才动」。",
         "books": [
@@ -67039,6 +67312,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -67062,6 +67336,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "⚠️ 安全",
+        "key": "safety",
         "theme": "身体与健康",
         "intro": "安全书讲过马路/防火/陌生人。一天读，safe/rule 反复出现，孩子记住几个保命规则。",
         "books": [
@@ -67080,6 +67355,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -67128,6 +67404,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -67146,6 +67423,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -67169,6 +67447,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -67187,6 +67466,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -67205,6 +67485,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -67228,6 +67509,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "📏 大小",
+        "key": "size",
         "theme": "思维与创意",
         "intro": "大小书讲大/小/长/短。一天读，big/small/long 反复出现，孩子练「排一排」。",
         "books": [
@@ -67256,6 +67538,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -67279,6 +67562,7 @@ const DATA = {
       {
         "day": 24,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -67302,6 +67586,7 @@ const DATA = {
       {
         "day": 25,
         "topic": "🔷 形状与规律",
+        "key": "shape",
         "theme": "思维与创意",
         "intro": "形状书讲圆/方/三角与规律。一天读，circle/square/pattern 反复出现，孩子出门「找形状」。",
         "books": [
@@ -67322,6 +67607,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -67345,6 +67631,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -67368,6 +67655,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -67411,6 +67699,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -67429,6 +67718,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -67447,6 +67737,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -67470,6 +67761,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🛡️ 动物的本领与覆盖",
+        "key": "adapt",
         "theme": "生命世界",
         "intro": "这几本讲动物怎么靠颜色/壳/羽毛/刺生存。一天读能练 compare：谁有壳、谁有羽毛、谁会藏。",
         "books": [
@@ -67488,6 +67780,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -67511,6 +67804,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -67549,6 +67843,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -67567,6 +67862,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -67590,6 +67886,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -67618,6 +67915,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -67636,6 +67934,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -67664,6 +67963,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -67687,6 +67987,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -67725,6 +68026,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -67743,6 +68045,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -67766,6 +68069,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -67784,6 +68088,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "📏 大小",
+        "key": "size",
         "theme": "思维与创意",
         "intro": "大小书讲大/小/长/短。一天读，big/small/long 反复出现，孩子练「排一排」。",
         "books": [
@@ -67802,6 +68107,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🔷 形状与规律",
+        "key": "shape",
         "theme": "思维与创意",
         "intro": "形状书讲圆/方/三角与规律。一天读，circle/square/pattern 反复出现，孩子出门「找形状」。",
         "books": [
@@ -67822,6 +68128,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -67850,6 +68157,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "👀 感官",
+        "key": "sense",
         "theme": "生命世界",
         "intro": "感官书讲看/听/闻/尝/摸。一天读，eye/ear/nose 反复出现，孩子把「五种感觉」一次认全。",
         "books": [
@@ -67868,6 +68176,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -67886,6 +68195,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -67909,6 +68219,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -67927,6 +68238,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -67955,6 +68267,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -67973,6 +68286,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -67991,6 +68305,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -68009,6 +68324,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -68027,6 +68343,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -68050,6 +68367,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -68068,6 +68386,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -68101,6 +68420,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -68134,6 +68454,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -68157,6 +68478,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "👪 家庭与朋友",
+        "key": "family",
         "theme": "社会与人文",
         "intro": "这些书讲家人/朋友/双胞胎：妈妈、爸爸、爷爷奶奶、兄弟姐妹、同伴。一天读，mom/dad/family/friend 反复出现，孩子把「我的圈子」说出来。",
         "books": [
@@ -68175,6 +68497,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -68213,6 +68536,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -68231,6 +68555,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🎨 颜色",
+        "key": "color",
         "theme": "思维与创意",
         "intro": "颜色书讲红黄蓝与混色。一天读，red/blue/yellow 反复出现，孩子把「混出橙绿紫」试出来。",
         "books": [
@@ -68254,6 +68579,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -68282,6 +68608,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -68302,6 +68629,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🛡️ 动物的本领与覆盖",
+        "key": "adapt",
         "theme": "生命世界",
         "intro": "这几本讲动物怎么靠颜色/壳/羽毛/刺生存。一天读能练 compare：谁有壳、谁有羽毛、谁会藏。",
         "books": [
@@ -68320,6 +68648,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -68338,6 +68667,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -68361,6 +68691,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐸 两栖动物",
+        "key": "amphibian",
         "theme": "生命世界",
         "intro": "这些书讲两栖动物（蛙/蟾蜍）：小时候在水里、长大上岸、皮肤湿湿会变态。一天读，tadpole/frog/water 反复出现，孩子把「从蝌蚪到蛙」的生命周期串起来。",
         "books": [
@@ -68379,6 +68710,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -68402,6 +68734,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -68425,6 +68758,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -68443,6 +68777,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -68466,6 +68801,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -68484,6 +68820,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🧪 物质三态",
+        "key": "matter",
         "theme": "物质与能量",
         "intro": "物质书讲固/液/气。一天读，solid/liquid/gas/water 反复出现，孩子把「同一样东西三种样子」分清。",
         "books": [
@@ -68502,6 +68839,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🔊 声音",
+        "key": "sound",
         "theme": "物质与能量",
         "intro": "声音书讲怎么发声、大小。一天读，sound/loud/quiet 反复出现，孩子理解「振动出声」。",
         "books": [
@@ -68520,6 +68858,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -68538,6 +68877,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -68556,6 +68896,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -68574,6 +68915,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -68597,6 +68939,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -68615,6 +68958,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -68633,6 +68977,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -68651,6 +68996,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -68669,6 +69015,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -68697,6 +69044,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -68727,6 +69075,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -68745,6 +69094,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -68768,6 +69118,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -68786,6 +69137,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -68804,6 +69156,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -68822,6 +69175,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -68840,6 +69194,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -68858,6 +69213,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -68876,6 +69232,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⚡ 能量",
+        "key": "energy",
         "theme": "物质与能量",
         "intro": "能量书讲电/太阳/风从哪来。一天读，energy/sun/wind 反复出现，孩子理解「东西要能量才动」。",
         "books": [
@@ -68894,6 +69251,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -68912,6 +69270,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -68930,6 +69289,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "⚠️ 安全",
+        "key": "safety",
         "theme": "身体与健康",
         "intro": "安全书讲过马路/防火/陌生人。一天读，safe/rule 反复出现，孩子记住几个保命规则。",
         "books": [
@@ -68948,6 +69308,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -68981,6 +69342,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -68999,6 +69361,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -69037,6 +69400,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -69055,6 +69419,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "📏 大小",
+        "key": "size",
         "theme": "思维与创意",
         "intro": "大小书讲大/小/长/短。一天读，big/small/long 反复出现，孩子练「排一排」。",
         "books": [
@@ -69073,6 +69438,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -69093,6 +69459,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -69131,6 +69498,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -69149,6 +69517,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🦕 恐龙",
+        "key": "dino",
         "theme": "生命世界",
         "intro": "恐龙书常讲外形、食物与灭绝。放一天读，能让孩子在对比中理解「肉食/草食」「大/小」「化石」等概念，并练习提问「它为什么消失」。",
         "books": [
@@ -69172,6 +69541,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -69190,6 +69560,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -69213,6 +69584,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -69241,6 +69613,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🧲 磁铁",
+        "key": "magnet",
         "theme": "物质与能量",
         "intro": "磁铁书讲吸什么、两极。一天读，magnet/metal 反复出现，孩子把「哪些被吸」做成实验。",
         "books": [
@@ -69259,6 +69632,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🔊 声音",
+        "key": "sound",
         "theme": "物质与能量",
         "intro": "声音书讲怎么发声、大小。一天读，sound/loud/quiet 反复出现，孩子理解「振动出声」。",
         "books": [
@@ -69277,6 +69651,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -69295,6 +69670,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -69333,6 +69709,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -69356,6 +69733,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -69389,6 +69767,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -69412,6 +69791,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "👪 家庭与朋友",
+        "key": "family",
         "theme": "社会与人文",
         "intro": "这些书讲家人/朋友/双胞胎：妈妈、爸爸、爷爷奶奶、兄弟姐妹、同伴。一天读，mom/dad/family/friend 反复出现，孩子把「我的圈子」说出来。",
         "books": [
@@ -69430,6 +69810,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -69448,6 +69829,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -69466,6 +69848,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🎨 颜色",
+        "key": "color",
         "theme": "思维与创意",
         "intro": "颜色书讲红黄蓝与混色。一天读，red/blue/yellow 反复出现，孩子把「混出橙绿紫」试出来。",
         "books": [
@@ -69486,6 +69869,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -69509,6 +69893,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -69547,6 +69932,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🍖 食物链",
+        "key": "foodchain",
         "theme": "生命世界",
         "intro": "食物链书讲「谁吃谁」。一天读，animal/plant/eat 反复出现，孩子开始理解「吃与被吃」的秩序。",
         "books": [
@@ -69570,6 +69956,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -69598,6 +69985,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -69616,6 +70004,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -69634,6 +70023,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -69667,6 +70057,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -69685,6 +70076,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -69718,6 +70110,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -69736,6 +70129,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -69759,6 +70153,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -69777,6 +70172,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -69795,6 +70191,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🧲 磁铁",
+        "key": "magnet",
         "theme": "物质与能量",
         "intro": "磁铁书讲吸什么、两极。一天读，magnet/metal 反复出现，孩子把「哪些被吸」做成实验。",
         "books": [
@@ -69813,6 +70210,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -69831,6 +70229,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -69854,6 +70253,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -69927,6 +70327,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -69975,6 +70376,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -69993,6 +70395,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -70031,6 +70434,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -70069,6 +70473,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -70107,6 +70512,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -70137,6 +70543,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -70155,6 +70562,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -70173,6 +70581,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -70191,6 +70600,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -70209,6 +70619,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -70227,6 +70638,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -70245,6 +70657,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -70263,6 +70676,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -70281,6 +70695,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -70299,6 +70714,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -70317,6 +70733,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -70340,6 +70757,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -70383,6 +70801,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -70401,6 +70820,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -70419,6 +70839,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -70447,6 +70868,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -70470,6 +70892,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -70488,6 +70911,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🎨 颜色",
+        "key": "color",
         "theme": "思维与创意",
         "intro": "颜色书讲红黄蓝与混色。一天读，red/blue/yellow 反复出现，孩子把「混出橙绿紫」试出来。",
         "books": [
@@ -70506,6 +70930,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "📏 大小",
+        "key": "size",
         "theme": "思维与创意",
         "intro": "大小书讲大/小/长/短。一天读，big/small/long 反复出现，孩子练「排一排」。",
         "books": [
@@ -70526,6 +70951,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -70564,6 +70990,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -70592,6 +71019,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -70650,6 +71078,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -70668,6 +71097,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -70696,6 +71126,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🛡️ 动物的本领与覆盖",
+        "key": "adapt",
         "theme": "生命世界",
         "intro": "这几本讲动物怎么靠颜色/壳/羽毛/刺生存。一天读能练 compare：谁有壳、谁有羽毛、谁会藏。",
         "books": [
@@ -70714,6 +71145,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -70747,6 +71179,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -70790,6 +71223,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -70808,6 +71242,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -70826,6 +71261,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -70859,6 +71295,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -70892,6 +71329,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -70910,6 +71348,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -70948,6 +71387,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -70966,6 +71406,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🚀 力与运动",
+        "key": "motion",
         "theme": "物质与能量",
         "intro": "力与运动书讲推/拉/滑。一天读，push/pull/move 反复出现，孩子把「怎么让东西动」试出来。",
         "books": [
@@ -70989,6 +71430,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -71007,6 +71449,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "⚡ 科学其他",
+        "key": "other",
         "theme": "物质与能量",
         "intro": "这几本偏科学现象，建议各做一件小实验，不强行合并。",
         "books": [
@@ -71025,6 +71468,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -71043,6 +71487,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -71061,6 +71506,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -71079,6 +71525,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -71097,6 +71544,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -71185,6 +71633,7 @@ const DATA = {
       {
         "day": 24,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -71218,6 +71667,7 @@ const DATA = {
       {
         "day": 25,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -71301,6 +71751,7 @@ const DATA = {
       {
         "day": 26,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -71404,6 +71855,7 @@ const DATA = {
       {
         "day": 27,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -71477,6 +71929,7 @@ const DATA = {
       {
         "day": 28,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -71505,6 +71958,7 @@ const DATA = {
       {
         "day": 29,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -71523,6 +71977,7 @@ const DATA = {
       {
         "day": 30,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -71553,6 +72008,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -71586,6 +72042,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -71614,6 +72071,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -71637,6 +72095,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -71670,6 +72129,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -71688,6 +72148,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -71706,6 +72167,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -71734,6 +72196,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -71767,6 +72230,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -71790,6 +72254,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -71818,6 +72283,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -71841,6 +72307,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "⚠️ 安全",
+        "key": "safety",
         "theme": "身体与健康",
         "intro": "安全书讲过马路/防火/陌生人。一天读，safe/rule 反复出现，孩子记住几个保命规则。",
         "books": [
@@ -71859,6 +72326,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🧘 情绪与感受",
+        "key": "emotion",
         "theme": "身体与健康",
         "intro": "情绪书讲怎么辨认和安放自己的感受。一天读，calm/happy/sad/worried 反复出现，孩子开始给情绪命名，并知道「有情绪很正常」。",
         "books": [
@@ -71877,6 +72345,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -71895,6 +72364,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -71953,6 +72423,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -72071,6 +72542,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -72109,6 +72581,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -72152,6 +72625,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -72175,6 +72649,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -72228,6 +72703,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -72256,6 +72732,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "🎨 颜色",
+        "key": "color",
         "theme": "思维与创意",
         "intro": "颜色书讲红黄蓝与混色。一天读，red/blue/yellow 反复出现，孩子把「混出橙绿紫」试出来。",
         "books": [
@@ -72274,6 +72751,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -72309,6 +72787,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -72332,6 +72811,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -72355,6 +72835,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -72378,6 +72859,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -72396,6 +72878,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -72419,6 +72902,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -72437,6 +72921,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -72455,6 +72940,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -72473,6 +72959,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -72496,6 +72983,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🪥 健康习惯",
+        "key": "habit",
         "theme": "身体与健康",
         "intro": "习惯书讲运动/洗手/刷牙/睡。一天读，sleep/wash/brush 反复出现，孩子把日常习惯串成节奏。",
         "books": [
@@ -72514,6 +73002,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -72532,6 +73021,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -72550,6 +73040,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -72568,6 +73059,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -72591,6 +73083,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -72634,6 +73127,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -72657,6 +73151,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -72675,6 +73170,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -72700,6 +73196,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -72728,6 +73225,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -72751,6 +73249,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -72794,6 +73293,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -72827,6 +73327,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🦕 恐龙",
+        "key": "dino",
         "theme": "生命世界",
         "intro": "恐龙书常讲外形、食物与灭绝。放一天读，能让孩子在对比中理解「肉食/草食」「大/小」「化石」等概念，并练习提问「它为什么消失」。",
         "books": [
@@ -72845,6 +73346,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -72863,6 +73365,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -72881,6 +73384,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -72899,6 +73403,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -72922,6 +73427,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -72950,6 +73456,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "⚡ 能量",
+        "key": "energy",
         "theme": "物质与能量",
         "intro": "能量书讲电/太阳/风从哪来。一天读，energy/sun/wind 反复出现，孩子理解「东西要能量才动」。",
         "books": [
@@ -72968,6 +73475,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "💡 光与影子",
+        "key": "light",
         "theme": "物质与能量",
         "intro": "光书讲发光、影子、折射。一天读，light/shadow/dark 反复出现，孩子把「挡光出影子」变成可试的实验。",
         "books": [
@@ -72986,6 +73494,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "⚡ 科学其他",
+        "key": "other",
         "theme": "物质与能量",
         "intro": "这几本偏科学现象，建议各做一件小实验，不强行合并。",
         "books": [
@@ -73004,6 +73513,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -73032,6 +73542,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "⚠️ 安全",
+        "key": "safety",
         "theme": "身体与健康",
         "intro": "安全书讲过马路/防火/陌生人。一天读，safe/rule 反复出现，孩子记住几个保命规则。",
         "books": [
@@ -73050,6 +73561,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -73068,6 +73580,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -73171,6 +73684,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -73194,6 +73708,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -73247,6 +73762,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -73290,6 +73806,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -73333,6 +73850,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -73351,6 +73869,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -73374,6 +73893,7 @@ const DATA = {
       {
         "day": 24,
         "topic": "👪 家庭与朋友",
+        "key": "family",
         "theme": "社会与人文",
         "intro": "这些书讲家人/朋友/双胞胎：妈妈、爸爸、爷爷奶奶、兄弟姐妹、同伴。一天读，mom/dad/family/friend 反复出现，孩子把「我的圈子」说出来。",
         "books": [
@@ -73392,6 +73912,7 @@ const DATA = {
       {
         "day": 25,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -73432,6 +73953,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🍖 食物链",
+        "key": "foodchain",
         "theme": "生命世界",
         "intro": "食物链书讲「谁吃谁」。一天读，animal/plant/eat 反复出现，孩子开始理解「吃与被吃」的秩序。",
         "books": [
@@ -73450,6 +73972,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -73478,6 +74001,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -73496,6 +74020,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -73514,6 +74039,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -73537,6 +74063,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -73555,6 +74082,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -73578,6 +74106,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -73616,6 +74145,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -73644,6 +74174,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -73677,6 +74208,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🧪 物质三态",
+        "key": "matter",
         "theme": "物质与能量",
         "intro": "物质书讲固/液/气。一天读，solid/liquid/gas/water 反复出现，孩子把「同一样东西三种样子」分清。",
         "books": [
@@ -73695,6 +74227,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -73713,6 +74246,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -73736,6 +74270,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -73819,6 +74354,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -73927,6 +74463,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -74000,6 +74537,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "👷 职业",
+        "key": "job",
         "theme": "社会与人文",
         "intro": "职业书讲医生/警察/农民/厨师。一天读，work/help/tool 反复出现，孩子把「大人做什么」认全。",
         "books": [
@@ -74023,6 +74561,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -74056,6 +74595,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -74079,6 +74619,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -74107,6 +74648,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🔢 数字与运算",
+        "key": "math",
         "theme": "思维与创意",
         "intro": "数学书讲数数/加减/多少。一天读，number/count/more 反复出现，孩子把「数」变成游戏。",
         "books": [
@@ -74127,6 +74669,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🔄 生命周期",
+        "key": "lifecycle",
         "theme": "生命世界",
         "intro": "生命周期书讲从小到大怎么变。一天读，egg/young/adult/grow 反复出现，孩子把「变化」变成可讲的词。",
         "books": [
@@ -74145,6 +74688,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -74163,6 +74707,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -74186,6 +74731,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -74214,6 +74760,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -74232,6 +74779,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🔊 声音",
+        "key": "sound",
         "theme": "物质与能量",
         "intro": "声音书讲怎么发声、大小。一天读，sound/loud/quiet 反复出现，孩子理解「振动出声」。",
         "books": [
@@ -74250,6 +74798,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "⚙️ 简单机械",
+        "key": "machine",
         "theme": "物质与能量",
         "intro": "简单机械书讲杠杆/轮/斜面。一天读，wheel/lever/ramp 反复出现，孩子认出生活里的「省力工具」。",
         "books": [
@@ -74268,6 +74817,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -74286,6 +74836,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -74309,6 +74860,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -74337,6 +74889,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -74355,6 +74908,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -74408,6 +74962,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -74431,6 +74986,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -74474,6 +75030,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -74492,6 +75049,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -74517,6 +75075,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🛡️ 动物的本领与覆盖",
+        "key": "adapt",
         "theme": "生命世界",
         "intro": "这几本讲动物怎么靠颜色/壳/羽毛/刺生存。一天读能练 compare：谁有壳、谁有羽毛、谁会藏。",
         "books": [
@@ -74535,6 +75094,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -74558,6 +75118,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -74576,6 +75137,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐠 海洋动物",
+        "key": "sea",
         "theme": "生命世界",
         "intro": "海洋动物书集中讲鳍、游泳、呼吸。一天读下来，fin/tail/water/swim 反复出现，孩子容易把「在水里生活」这件事想明白。",
         "books": [
@@ -74594,6 +75156,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -74612,6 +75175,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -74635,6 +75199,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -74653,6 +75218,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -74671,6 +75237,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🚀 力与运动",
+        "key": "motion",
         "theme": "物质与能量",
         "intro": "力与运动书讲推/拉/滑。一天读，push/pull/move 反复出现，孩子把「怎么让东西动」试出来。",
         "books": [
@@ -74689,6 +75256,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -74707,6 +75275,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -74725,6 +75294,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🏘️ 社区与地点",
+        "key": "community",
         "theme": "社会与人文",
         "intro": "社区书讲学校/公园/医院/商店。一天读，school/park/shop 反复出现，孩子把「家附近有什么」画成地图。",
         "books": [
@@ -74748,6 +75318,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -74771,6 +75342,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -74814,6 +75386,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -74847,6 +75420,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -74870,6 +75444,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -74893,6 +75468,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -74913,6 +75489,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -74961,6 +75538,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -74989,6 +75567,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -75012,6 +75591,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -75030,6 +75610,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🦕 恐龙",
+        "key": "dino",
         "theme": "生命世界",
         "intro": "恐龙书常讲外形、食物与灭绝。放一天读，能让孩子在对比中理解「肉食/草食」「大/小」「化石」等概念，并练习提问「它为什么消失」。",
         "books": [
@@ -75048,6 +75629,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -75071,6 +75653,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -75109,6 +75692,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -75132,6 +75716,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -75165,6 +75750,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -75193,6 +75779,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -75211,6 +75798,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "⚡ 能量",
+        "key": "energy",
         "theme": "物质与能量",
         "intro": "能量书讲电/太阳/风从哪来。一天读，energy/sun/wind 反复出现，孩子理解「东西要能量才动」。",
         "books": [
@@ -75229,6 +75817,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "⚠️ 安全",
+        "key": "safety",
         "theme": "身体与健康",
         "intro": "安全书讲过马路/防火/陌生人。一天读，safe/rule 反复出现，孩子记住几个保命规则。",
         "books": [
@@ -75247,6 +75836,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -75270,6 +75860,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -75288,6 +75879,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -75306,6 +75898,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -75429,6 +76022,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -75537,6 +76131,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -75625,6 +76220,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -75643,6 +76239,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -75676,6 +76273,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -75714,6 +76312,7 @@ const DATA = {
       {
         "day": 23,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -75744,6 +76343,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🍖 食物链",
+        "key": "foodchain",
         "theme": "生命世界",
         "intro": "食物链书讲「谁吃谁」。一天读，animal/plant/eat 反复出现，孩子开始理解「吃与被吃」的秩序。",
         "books": [
@@ -75762,6 +76362,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -75795,6 +76396,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -75823,6 +76425,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🦎 爬行动物",
+        "key": "reptile",
         "theme": "生命世界",
         "intro": "这些书都讲爬行动物（蛇/蜥蜴/龟/鳄）：鳞片、冷血、卵生。一天读，scale/egg/cold 反复出现，孩子把「爬行动物长什么样、怎么动」想明白，并练习用同一组词描述不同爬行类。",
         "books": [
@@ -75841,6 +76444,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -75859,6 +76463,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "⛰️ 岩石与土壤",
+        "key": "earth",
         "theme": "地球与宇宙",
         "intro": "岩石土壤书讲地球表面。一天读，rock/soil/mountain 反复出现，孩子理解「脚下的地」从哪来。",
         "books": [
@@ -75877,6 +76482,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -75905,6 +76511,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -75933,6 +76540,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "⚡ 能量",
+        "key": "energy",
         "theme": "物质与能量",
         "intro": "能量书讲电/太阳/风从哪来。一天读，energy/sun/wind 反复出现，孩子理解「东西要能量才动」。",
         "books": [
@@ -75951,6 +76559,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -75974,6 +76583,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -76027,6 +76637,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -76135,6 +76746,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -76158,6 +76770,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -76216,6 +76829,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -76284,6 +76898,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -76322,6 +76937,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -76360,6 +76976,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🧩 思维其他",
+        "key": "other",
         "theme": "思维与创意",
         "intro": "这几本偏思维/逻辑，建议各玩一个小游戏。",
         "books": [
@@ -76380,6 +76997,7 @@ const DATA = {
       {
         "day": 1,
         "topic": "🍖 食物链",
+        "key": "foodchain",
         "theme": "生命世界",
         "intro": "食物链书讲「谁吃谁」。一天读，animal/plant/eat 反复出现，孩子开始理解「吃与被吃」的秩序。",
         "books": [
@@ -76398,6 +77016,7 @@ const DATA = {
       {
         "day": 2,
         "topic": "🌱 植物",
+        "key": "plant",
         "theme": "生命世界",
         "intro": "植物书讲根、茎、叶、种子与生长。一天读，root/leaf/seed/water/sun 反复出现，孩子能把「植物怎么长大」串成一条线。",
         "books": [
@@ -76416,6 +77035,7 @@ const DATA = {
       {
         "day": 3,
         "topic": "🌿 生命其他",
+        "key": "other",
         "theme": "生命世界",
         "intro": "这几本都属生命科学但主题较散，可挑孩子最感兴趣的一本深读，其余作泛读。",
         "books": [
@@ -76459,6 +77079,7 @@ const DATA = {
       {
         "day": 4,
         "topic": "🐾 哺乳动物",
+        "key": "mammal",
         "theme": "生命世界",
         "intro": "这些书都讲哺乳动物：胎生、吃奶、有毛发（fur），如河狸/蝙蝠/狐狸/狼/虎/猩猩/海牛等。一天读，fur/body/baby 反复出现，孩子把「哺乳动物长什么样、怎么带宝宝」想明白，并练习用同一组词描述不同的哺乳动物。",
         "books": [
@@ -76487,6 +77108,7 @@ const DATA = {
       {
         "day": 5,
         "topic": "🐛 mini-beasts",
+        "key": "insect",
         "theme": "生命世界",
         "intro": "mini-beasts 书讲腿、身体分段、栖息地（昆虫有翅膀和蜕变，蜘蛛/蝎子等多足、无翅膀）。一天读这几本，leg/body/segment 反复出现，还能串起「毛毛虫→蝴蝶」的生命周期。",
         "books": [
@@ -76510,6 +77132,7 @@ const DATA = {
       {
         "day": 6,
         "topic": "🦒 动物（其他）",
+        "key": "animals",
         "theme": "生命世界",
         "intro": "这几本以「动物」为总称（农场/乡村/动物园等），没有更具体的物种关键词。放在一天泛读，练 animal/live/habitat 等总称词，并让孩子自己给书里的动物按哺乳/鸟/虫等归类。",
         "books": [
@@ -76538,6 +77161,7 @@ const DATA = {
       {
         "day": 7,
         "topic": "🏠 动物的家",
+        "key": "habitat",
         "theme": "生命世界",
         "intro": "这几本讲不同动物住哪（窝/洞/农场/森林）。一天读能练「谁住哪儿」的对应，建立 habitat 概念。",
         "books": [
@@ -76556,6 +77180,7 @@ const DATA = {
       {
         "day": 8,
         "topic": "🐦 鸟类",
+        "key": "bird",
         "theme": "生命世界",
         "intro": "这几本都讲鸟的外形、飞行或食物。同一天读，孩子会在反复出现的 feather/wing/beak/nest 里自然建立「鸟」的图式，并练习用同一组词描述不同鸟。",
         "books": [
@@ -76574,6 +77199,7 @@ const DATA = {
       {
         "day": 9,
         "topic": "🌍 地球其他",
+        "key": "other",
         "theme": "地球与宇宙",
         "intro": "这几本都讲自然世界但角度不同，建议各读一本、用「今天天气/在外面看到什么」串起来。",
         "books": [
@@ -76602,6 +77228,7 @@ const DATA = {
       {
         "day": 10,
         "topic": "🪐 太空与日月",
+        "key": "space",
         "theme": "地球与宇宙",
         "intro": "太空书讲太阳/月亮/行星/白天黑夜。一天读，sun/moon/earth/star 反复出现，孩子把「天为啥会亮」讲明白。",
         "books": [
@@ -76620,6 +77247,7 @@ const DATA = {
       {
         "day": 11,
         "topic": "💧 水",
+        "key": "water",
         "theme": "地球与宇宙",
         "intro": "水书讲流动、沉浮、循环。一天读，water/rain/ice 反复出现，孩子把「水去哪了」想清楚。",
         "books": [
@@ -76638,6 +77266,7 @@ const DATA = {
       {
         "day": 12,
         "topic": "🌤️ 天气",
+        "key": "weather",
         "theme": "地球与宇宙",
         "intro": "天气书讲云/雨/风/雪。一天读，cloud/rain/wind/snow 反复出现，还能练「今天像哪本」的真实观察。",
         "books": [
@@ -76656,6 +77285,7 @@ const DATA = {
       {
         "day": 13,
         "topic": "🫀 身体器官",
+        "key": "body",
         "theme": "身体与健康",
         "intro": "身体器官书讲心/肺/骨/脑。一天读，heart/lung/bone 反复出现，孩子把「身体里面有什么」认出来。",
         "books": [
@@ -76674,6 +77304,7 @@ const DATA = {
       {
         "day": 14,
         "topic": "💪 健康其他",
+        "key": "other",
         "theme": "身体与健康",
         "intro": "这几本讲身体或健康但角度不同，各读一本、用「我今天做了什么」串。",
         "books": [
@@ -76692,6 +77323,7 @@ const DATA = {
       {
         "day": 15,
         "topic": "🍎 食物与健康",
+        "key": "food",
         "theme": "身体与健康",
         "intro": "食物书讲吃什么、怎么均衡。一天读，food/fruit/vegetable 反复出现，孩子练「这顿健康吗」。",
         "books": [
@@ -76710,6 +77342,7 @@ const DATA = {
       {
         "day": 16,
         "topic": "🕰️ 过去与现在",
+        "key": "history",
         "theme": "社会与人文",
         "intro": "过去现在书讲事物怎么变。一天读，old/new/past 反复出现，孩子练「以前 vs 现在」。",
         "books": [
@@ -76858,6 +77491,7 @@ const DATA = {
       {
         "day": 17,
         "topic": "📖 名人传记",
+        "key": "bio",
         "theme": "社会与人文",
         "intro": "传记书讲真实名人（总统/科学家/艺术家/探险家）的一生与成就。一天读，work/help/make 反复出现，孩子理解「一个人能做大事」，并练 name/life/invent 等词。",
         "books": [
@@ -76961,6 +77595,7 @@ const DATA = {
       {
         "day": 18,
         "topic": "🏙️ 社会其他",
+        "key": "other",
         "theme": "社会与人文",
         "intro": "这几本讲人或社会但角度不同，建议各做一张小卡。",
         "books": [
@@ -77049,6 +77684,7 @@ const DATA = {
       {
         "day": 19,
         "topic": "🌍 国家与文化",
+        "key": "culture",
         "theme": "社会与人文",
         "intro": "国家文化书讲不同地方的旗/衣/食。一天读，flag/food/country 反复出现，孩子练「我和你不一样」。",
         "books": [
@@ -77067,6 +77703,7 @@ const DATA = {
       {
         "day": 20,
         "topic": "🚗 交通工具",
+        "key": "transport",
         "theme": "社会与人文",
         "intro": "交通书讲车/船/飞机/火车。一天读，car/bus/train 反复出现，孩子练「怎么去、多快」。",
         "books": [
@@ -77105,6 +77742,7 @@ const DATA = {
       {
         "day": 21,
         "topic": "🤝 好公民",
+        "key": "citizen",
         "theme": "社会与人文",
         "intro": "公民书讲规则/投票/助人。一天读，people/rule/help 反复出现，孩子理解「我是社区一员」。",
         "books": [
@@ -77133,6 +77771,7 @@ const DATA = {
       {
         "day": 22,
         "topic": "🎶 艺术与创作",
+        "key": "art",
         "theme": "思维与创意",
         "intro": "艺术书讲画/唱/做。一天读，color/shape/music 反复出现，孩子把书当创作灵感。",
         "books": [
@@ -77205,7 +77844,9 @@ $$('#nfplanTabs .nfp-tab').forEach(function(btn){
     var v=btn.dataset.v;
     document.getElementById('nfWeekView').style.display = v==='week'?'block':'none';
     document.getElementById('nfDaysView').style.display = v==='days'?'block':'none';
+    document.getElementById('nfSearchView').style.display = v==='search'?'block':'none';
     if(v==='days') renderNfDay();
+    if(v==='search') renderNfSearch();
     window.scrollTo({top:document.getElementById('nfplanTabs').offsetTop-8,behavior:'smooth'});
   });
 });
@@ -78719,6 +79360,137 @@ function renderNfDay(){
     '</div>';
   }).join('');
   $('#nfdayDays').innerHTML=html;
+}
+
+/* ===== 🔍 主题搜索（跨级别） ===== */
+var NF_SEARCH_ALIAS = {
+  '恐龙':'dino','dino':'dino','dinosaur':'dino','dinosaurs':'dino',
+  '天气':'weather','weather':'weather',
+  '太空':'space','space':'space','宇宙':'space',
+  '海洋':'sea','sea':'sea','ocean':'ocean','oceans':'ocean',
+  '昆虫':'insect','insect':'insect','bug':'insect','bugs':'insect','虫':'insect',
+  '鸟':'bird','bird':'bird','birds':'bird',
+  '动物':'animals','animal':'animals','animals':'animals','哺乳':'mammal','mammal':'mammal',
+  '爬行':'reptile','reptile':'reptile','两栖':'amphibian','amphibian':'amphibian',
+  '植物':'plant','plant':'plant','plants':'plant',
+  '名人':'bio','名人传记':'bio','传记':'bio','bio':'bio',
+  '家庭':'family','family':'family','朋友':'family',
+  '情绪':'emotion','emotion':'emotion','感受':'emotion',
+  '交通':'transport','transport':'transport','车':'transport',
+  '身体':'body','body':'body','健康':'body',
+  '食物':'food','food':'food','foods':'food','吃':'food',
+  '光':'light','light':'light','光影':'light',
+  '声音':'sound','sound':'sound','声':'sound',
+  '磁':'magnet','magnet':'magnet',
+  '能量':'energy','energy':'energy','能源':'energy',
+  '机器':'machine','machine':'machine','机械':'machine',
+  '运动':'motion','motion':'motion','力':'motion','force':'motion',
+  '水':'water','water':'water',
+  '地球':'earth','earth':'earth','earth science':'earth','地质':'earth',
+  '历史':'history','history':'history',
+  '文化':'culture','culture':'culture','国家':'culture','country':'culture',
+  '社区':'community','community':'community','邻里':'community',
+  '工作':'job','job':'job','jobs':'job','职业':'job',
+  '安全':'safety','safety':'safety',
+  '数学':'math','math':'math','数数':'math','counting':'math',
+  '形状':'shape','shape':'shape','shapes':'shape',
+  '颜色':'color','color':'color','colours':'color','colour':'color',
+  '大小':'size','size':'size','big':'size','small':'size','对比':'size','opposite':'size',
+  '相反':'opposite','opposite':'opposite',
+  '习惯':'habit','habit':'habit',
+  '生命周期':'lifecycle','lifecycle':'lifecycle','life cycle':'lifecycle','成长':'lifecycle',
+  '食物链':'foodchain','foodchain':'foodchain',
+  '栖息地':'habitat','habitat':'habitat',
+  '感官':'sense','sense':'sense','五感':'sense',
+  '公民':'citizen','citizen':'citizen',
+  '美术':'art','art':'art','艺术':'art',
+  '其他':'other','other':'other'
+};
+var NF_SEARCH_HINTS = ['dinosaur 恐龙','weather 天气','space 太空','ocean 海洋','insect 昆虫','bird 鸟','bio 名人传记','family 家庭','emotion 情绪','transport 交通','plant 植物','magnet 磁铁','light 光','water 水','food 食物','body 身体'];
+function nfSearchMatch(q){
+  var ql=q.toLowerCase();
+  var alias=NF_SEARCH_ALIAS[ql] || NF_SEARCH_ALIAS[q];
+  var alias2 = null;
+  if(!alias){
+    var kk=Object.keys(NF_SEARCH_ALIAS).filter(function(k){ return ql===k.toLowerCase() || k.toLowerCase().indexOf(ql)>=0 || ql.indexOf(k.toLowerCase())>=0; });
+    if(kk.length) alias=NF_SEARCH_ALIAS[kk[0]];
+  }
+  if(alias && alias!==ql && alias!==q) alias2=alias.toLowerCase();
+  var out=[]; var seen={};
+  Object.keys(DATA.nfDays||{}).forEach(function(lv){
+    (DATA.nfDays[lv]||[]).forEach(function(day){
+      var key=day.key||'';
+      var topic=day.topic||'';
+      var theme=day.theme||'';
+      var hit = (key && (ql.indexOf(key.toLowerCase())>=0 || key.toLowerCase().indexOf(ql)>=0)) ||
+                (alias2 && key.toLowerCase().indexOf(alias2)>=0) ||
+                topic.toLowerCase().indexOf(ql)>=0 ||
+                theme.indexOf(q)>=0 ||
+                (day.books||[]).some(function(b){ return (b.title||'').toLowerCase().indexOf(ql)>=0; });
+      if(hit){
+        var k=key||topic;
+        if(!(k in seen)){ seen[k]=out.length; out.push({key:key,topic:topic,theme:theme,days:[]}); }
+        out[seen[k]].days.push({lv:lv,day:day});
+      }
+    });
+  });
+  return out;
+}
+function renderNfSearch(){
+  var input=$('#nfSearchInput'), res=$('#nfSearchRes'), note=$('#nfSearchNote');
+  if(!input.dataset.bound){
+    function go(){ renderNfSearch(); }
+    $('#nfSearchBtn').addEventListener('click',go);
+    input.addEventListener('keydown',function(e){ if(e.key==='Enter') go(); });
+    input.addEventListener('input',function(){ $('#nfSearchNote').textContent=''; });
+    input.dataset.bound='1';
+  }
+  if(!$('#nfSearchPrintBtn').dataset.bound){
+    $('#nfSearchPrintBtn').addEventListener('click',function(){ document.body.classList.add('print-nf'); window.print(); setTimeout(function(){ document.body.classList.remove('print-nf'); },400); });
+    $('#nfSearchPrintBtn').dataset.bound='1';
+  }
+  if(!$('#nfSearchHints').dataset.bound){
+    $('#nfSearchHints').innerHTML=NF_SEARCH_HINTS.map(function(h){
+      return '<span class="lvchip" style="cursor:pointer" data-h="'+esc(h.split(' ')[0])+'">'+esc(h)+'</span>';
+    }).join('');
+    $('#nfSearchHints').querySelectorAll('.lvchip').forEach(function(c){
+      c.addEventListener('click',function(){ input.value=c.dataset.h; renderNfSearch(); });
+    });
+    $('#nfSearchHints').dataset.bound='1';
+  }
+  var q=input.value.trim();
+  if(!q){
+    note.textContent='输入主题词后回车或点「🔍 搜索」。试试：dinosaur、weather、space…';
+    res.innerHTML='<p class="nf-empty">输入任意主题（英文或中文）即可跨级别检索全部 NF 书。支持语义匹配：搜 dinosaur 会命中 A Look at Fossils 这类标题不含 dinosaur 的书。</p>';
+    return;
+  }
+  var groups=nfSearchMatch(q);
+  if(!groups.length){
+    note.textContent='未找到与「'+q+'」相关的主题簇';
+    res.innerHTML='<p class="nf-empty">没有命中。换个词试试：dinosaur / weather / space / ocean / bio / family / magnet…</p>';
+    return;
+  }
+  var LO=DATA.meta.levelOrder||[];
+  function lidx(l){ var i=LO.indexOf(l); return i<0?999:i; }
+  groups.sort(function(a,b){ return (a.theme||'').localeCompare(b.theme||'') || (a.topic||'').localeCompare(b.topic||''); });
+  var total=groups.reduce(function(n,g){ return n+g.days.reduce(function(m,o){ return m+o.day.books.length; },0); },0);
+  note.textContent='「'+q+'」命中 '+groups.length+' 个主题簇 · 共 '+total+' 本（跨全部级别）';
+  var html=groups.map(function(g){
+    g.days.sort(function(a,b){ return lidx(a.lv)-lidx(b.lv); });
+    var lvs=g.days.map(function(o){ return o.lv==='aa'?'AA':o.lv; }).join(' · ');
+    var booksHtml=g.days.map(function(o){
+      return o.day.books.map(function(b){ return '<span class="nfday-book"><code>'+esc(b.id)+'</code> '+esc(b.title)+' <span class="rl">'+esc(b.level)+'</span></span>'; }).join('');
+    }).join('');
+    var extLines=[]; g.days.forEach(function(o){ (o.day.ext||'').split('\n').forEach(function(s){ s=s.trim(); if(s && extLines.indexOf(s)<0) extLines.push(s); }); });
+    var extHtml=extLines.map(function(s){return '<li>'+esc(s)+'</li>';}).join('');
+    var intro=(g.days[0].day.intro||'');
+    return '<div class="nfday-card merged"><div class="nfday-h"><span class="nfday-lv">'+esc(lvs)+'</span> <span class="nfday-topic">'+esc(g.topic)+'</span> <span class="nfday-theme">'+esc(g.theme)+'</span></div>'+
+      '<p class="nfday-intro">'+esc(intro)+'</p>'+
+      '<div class="nfday-books">'+booksHtml+'</div>'+
+      (extHtml?'<div class="nfday-ext"><b>🌿 详细拓展</b><ul>'+extHtml+'</ul></div>':'')+
+    '</div>';
+  }).join('');
+  res.innerHTML=html;
 }
 
 init();

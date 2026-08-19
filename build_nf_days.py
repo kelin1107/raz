@@ -288,6 +288,7 @@ def build():
             days.append({
                 'day': di,
                 'topic': label,
+                'key': key,
                 'theme': t,
                 'intro': intro,
                 'books': [{'id': b['id'], 'title': b['title'], 'level': b['level']} for b in blist_sorted],
